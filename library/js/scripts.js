@@ -116,5 +116,10 @@ jQuery(document).ready(function($) {
   */
   loadGravatars();
 
+	jQuery('#fullpage').fullpage({
+		verticalCentered: false
+
+	});
+
 
 }); /* end of as page load scripts */

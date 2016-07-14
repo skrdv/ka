@@ -21,6 +21,7 @@ body {
 	line-height: 1.5;
 	color: $text-color;
 	background-color: $gray;
+	background-color: red;
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
 }
@@ -157,7 +158,9 @@ HEADER STYLES
 }
 
 	#logo {
-		margin: 0.75em 0;
+		position: absolute;
+		left: 40px;
+		top: 40px;
 
 		a {
 			color: $white;
@@ -887,3 +890,60 @@ FOOTER STYLES
 
 
 	.copyright {}
+
+
+
+
+
+
+
+
+
+
+
+
+	/* Backgrounds will cover all the section
+	* --------------------------------------- */
+	.section{
+		background-size: cover;
+	}
+	.slide{
+		background-size: cover;
+	}
+
+	/* Defining each section background and styles
+	* --------------------------------------- */
+	#section0{
+		background-image: url(/wp-content/uploads/2016/07/page_ka_1testogenon.jpg);
+		padding: 30% 0 0 0;
+	}
+	#section2{
+		background-image: url(/wp-content/uploads/2016/07/page_ka_2testogenon.jpg);
+		padding: 6% 0 0 0;
+	}
+	#section3{
+		background-image: url(/wp-content/uploads/2016/07/page_ka_3testogenon.jpg);
+		padding: 6% 0 0 0;
+	}
+	#section3 h1{
+		color: #000;
+	}
+
+
+	/*Adding background for the slides
+	* --------------------------------------- */
+	#slide1{
+		background-image: url(/wp-content/uploads/2016/07/page_ka_6testogenon.jpg);
+		padding: 6% 0 0 0;
+	}
+	#slide2{
+		background-image: url(/wp-content/uploads/2016/07/page_ka_7testogenon.jpg);
+		padding: 6% 0 0 0;
+	}
+
+
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu li a {
+		color: #fff;
+	}
