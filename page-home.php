@@ -22,12 +22,15 @@
 									<div id="fullpage">
 										<div class="section" id="section0">
 											<?php for ($i=0; $i < 11 ; $i++) { ?>
-												<?php  if( get_field('case_preview_'.$i) ) { ?>
+												<?php //the_field('case_'.$i.'_image'); ?>
+												<?php if( get_field('case_'.$i.'_image') ) { ?>
 													<div class="slide" id="slide<?php echo $i; ?>"
-															 style="background-image: url(<?php the_field('case_preview_'.$i); ?>);">
-														<a class="case-link" href=""><?php the_field('case_link_'.$i); ?></a>
+															 style="background-image: url(<?php the_field('case_'.$i.'_image'); ?>);">
+														<a class="case-link" href="<?php the_field('case_'.$i.'_link'); ?>">
+															<?php the_field('case_'.$i.'_title'); ?>
+														</a>
 													</div>
-												<?php  } ?>
+												<?php } ?>
 											<?php } ?>
 										</div>
 										<div class="section " id="section1">
