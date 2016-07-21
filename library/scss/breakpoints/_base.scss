@@ -255,7 +255,7 @@ POSTS & CONTENT STYLES
 *********************/
 
 #content {
-	margin-top: 1.5em;
+	
 }
 
 		.hentry {
@@ -914,15 +914,15 @@ FOOTER STYLES
 	/* Defining each section background and styles
 	* --------------------------------------- */
 	#section0{
-		background-image: url(/wp-content/uploads/2016/07/page_ka_1testogenon.jpg);
+		background-image: url(/wp-content/uploads/2016/07/page_ka_1kite.jpg);
 		padding: 30% 0 0 0;
 	}
 	#section2{
-		background-image: url(/wp-content/uploads/2016/07/page_ka_2testogenon.jpg);
+		background-image: url(/wp-content/uploads/2016/07/page_ka_2kite.jpg);
 		padding: 6% 0 0 0;
 	}
 	#section3{
-		background-image: url(/wp-content/uploads/2016/07/page_ka_3testogenon.jpg);
+		background-image: url(/wp-content/uploads/2016/07/page_ka_3kite.jpg);
 		padding: 6% 0 0 0;
 	}
 	#section3 h1{
@@ -933,11 +933,11 @@ FOOTER STYLES
 	/*Adding background for the slides
 	* --------------------------------------- */
 	#slide1{
-		background-image: url(/wp-content/uploads/2016/07/page_ka_6testogenon.jpg);
+		background-image: url(/wp-content/uploads/2016/07/page_ka_4kite.jpg);
 		padding: 6% 0 0 0;
 	}
 	#slide2{
-		background-image: url(/wp-content/uploads/2016/07/page_ka_7testogenon.jpg);
+		background-image: url(/wp-content/uploads/2016/07/page_ka_5kite.jpg);
 		padding: 6% 0 0 0;
 	}
 
@@ -946,4 +946,12 @@ FOOTER STYLES
 	* --------------------------------------- */
 	#infoMenu li a {
 		color: #fff;
+	}
+
+	.fp-controlArrow.fp-next {
+    border-color: transparent transparent transparent gray;
+	}
+
+	.fp-controlArrow.fp-prev {
+		border-color: transparent gray transparent transparent;
 	}
