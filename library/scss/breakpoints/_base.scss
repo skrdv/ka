@@ -255,7 +255,7 @@ POSTS & CONTENT STYLES
 *********************/
 
 #content {
-	
+
 }
 
 		.hentry {
@@ -908,6 +908,7 @@ FOOTER STYLES
 		background-size: cover;
 	}
 	.slide{
+		position: relative;
 		background-size: cover;
 	}
 
@@ -930,18 +931,6 @@ FOOTER STYLES
 	}
 
 
-	/*Adding background for the slides
-	* --------------------------------------- */
-	#slide1{
-		background-image: url(/wp-content/uploads/2016/07/page_ka_4kite.jpg);
-		padding: 6% 0 0 0;
-	}
-	#slide2{
-		background-image: url(/wp-content/uploads/2016/07/page_ka_5kite.jpg);
-		padding: 6% 0 0 0;
-	}
-
-
 	/* Bottom menu
 	* --------------------------------------- */
 	#infoMenu li a {
@@ -954,4 +943,25 @@ FOOTER STYLES
 
 	.fp-controlArrow.fp-prev {
 		border-color: transparent gray transparent transparent;
+	}
+
+
+
+
+
+
+
+
+
+
+	/* Home
+	* --------------------------------------- */
+	.case-link {
+		display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 400px;
+    height: 100px;
+    border: 4px solid white;
 	}

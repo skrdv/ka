@@ -18,6 +18,23 @@
 
 
 								<section class="cf" itemprop="articleBody">
+
+									<div id="fullpage">
+										<div class="section" id="section1">
+											<?php for ($i=0; $i < 11 ; $i++) { ?>
+												<?php  if( get_field('case_preview_'.$i) ) { ?>
+													<div class="slide" id="slide<?php echo $i; ?>"
+															 style="background-image: url(<?php the_field('case_preview_'.$i); ?>);">
+														<a class="case-link" href=""><?php the_field('case_link_'.$i); ?></a>
+													</div>
+												<?php  } ?>
+											<?php } ?>
+										</div>
+										<div class="section " id="section0"></div>
+										<div class="section" id="section2"></div>
+										<div class="section" id="section3"></div>
+									</div>
+
 									<?php
 										// the content (pretty self explanatory huh)
 										the_content();
