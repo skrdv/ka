@@ -117,8 +117,10 @@ jQuery(document).ready(function($) {
   loadGravatars();
 
 	jQuery('#fullpage').fullpage({
-		verticalCentered: false
-
+		verticalCentered: false,
+		anchors: ['cases', 'services', 'team', 'contact'],
+		menu: '#menu',
+		scrollingSpeed: 1000
 	});
 
 

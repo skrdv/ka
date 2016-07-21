@@ -20,7 +20,7 @@
 								<section class="cf" itemprop="articleBody">
 
 									<div id="fullpage">
-										<div class="section" id="section1">
+										<div class="section" id="section0">
 											<?php for ($i=0; $i < 11 ; $i++) { ?>
 												<?php  if( get_field('case_preview_'.$i) ) { ?>
 													<div class="slide" id="slide<?php echo $i; ?>"
@@ -30,9 +30,15 @@
 												<?php  } ?>
 											<?php } ?>
 										</div>
-										<div class="section " id="section0"></div>
-										<div class="section" id="section2"></div>
-										<div class="section" id="section3"></div>
+										<div class="section " id="section1">
+											<h1>Услуги</h1>
+										</div>
+										<div class="section" id="section2">
+											<h1>Команда</h1>
+										</div>
+										<div class="section" id="section3">
+											<h1>Контакты</h1>
+										</div>
 									</div>
 
 									<?php

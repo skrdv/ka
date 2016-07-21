@@ -38,6 +38,8 @@
 		<?php // drop Google Analytics Here ?>
 		<?php // end analytics ?>
 
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
 	</head>
 
 	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
@@ -71,6 +73,13 @@
 						)); ?>
 
 					</nav>
+
+					<ul id="menu">
+						<li data-menuanchor="cases"><a href="#cases">Работы</a></li>
+						<li data-menuanchor="services"><a href="#services">Услуги</a></li>
+						<li data-menuanchor="team"><a href="#team">Команда</a></li>
+						<li data-menuanchor="contact"><a href="#contact">Контакты</a></li>
+					</ul>
 
 				</div>
 
