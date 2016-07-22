@@ -52,13 +52,12 @@
 
 					<div class="ui stackable container menu" id="nav">
   					<a class="item logo" href="/"></a>
+						<div class="item btn"><i class="options icon"></i></div>
   					<a class="item" href="/#cases">Работы</a>
   					<a class="item" href="/#services">Услуги</a>
   					<a class="item" href="/#team">Команда</a>
 						<a class="item" href="/#contact">Контакты</a>
-						<div class="item right">
-    					<span>+7 (812) 409-00-29</span>
-  					</div>
+						<div class="item right photo">+7 (812) 409-00-29</div>
 					</div>
 
 					<?php /*

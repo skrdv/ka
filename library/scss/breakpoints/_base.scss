@@ -187,12 +187,26 @@ NAVIGATION STYLES
 	background: none;
 	border: none;
 	box-shadow: none;
-	.logo {
-		display: block;
-		width: 40px;
-		height: 40px;
-		background: #fb0676 url(../images/logo.png) 0 0 no-repeat;
-		background-size: cover;
+	.item {
+		padding: 10px;
+		color: dimgrey;
+		font-size: 1.4em;
+		text-transform: uppercase;
+		border-radius: 0;
+		&:hover{
+			color: white;
+			background: none;
+		}
+		&.photo {
+			color: white;
+		}
+		&.logo {
+			display: block;
+			width: 40px;
+			height: 40px;
+			background: #fb0676 url(../images/logo.png) 0 0 no-repeat;
+			background-size: cover;
+		}
 	}
 	li {
 		display:inline-block;
@@ -204,14 +218,7 @@ NAVIGATION STYLES
 				color: white;
 			}
 		}
-		a {
-			color: dimgrey;
-			font-size: 1.4em;
-			text-transform: uppercase;
-			&:hover{
-				color: white;
-			}
-		}
+
 	}
 }
 
