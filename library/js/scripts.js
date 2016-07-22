@@ -119,12 +119,12 @@ jQuery(document).ready(function($) {
 	jQuery('#fullpage').fullpage({
 		verticalCentered: false,
 		anchors: ['cases', 'services', 'team', 'contact'],
-		menu: '#menu',
+		menu: '#nav',
 		scrollingSpeed: 1000
 	});
 
 	jQuery('#fullpost').fullpage({
-		
+
 	});
 
 

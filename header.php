@@ -50,13 +50,18 @@
 
 				<div id="inner-header" class="wrap cf">
 
-					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
-					<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
+					<div class="ui stackable container menu" id="nav">
+  					<a class="item logo" href="/"></a>
+  					<a class="item" href="/#cases">Работы</a>
+  					<a class="item" href="/#services">Услуги</a>
+  					<a class="item" href="/#team">Команда</a>
+						<a class="item" href="/#contact">Контакты</a>
+						<div class="item right">
+    					<span>+7 (812) 409-00-29</span>
+  					</div>
+					</div>
 
-					<?php // if you'd like to use the site description you can un-comment it below ?>
-					<?php // bloginfo('description'); ?>
-
-
+					<?php /*
 					<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 						<?php wp_nav_menu(array(
     					         'container' => false,                           // remove nav container
@@ -71,15 +76,8 @@
         			               'depth' => 0,                                   // limit the depth of the nav
     					         'fallback_cb' => ''                             // fallback function (if there is one)
 						)); ?>
-
 					</nav>
-
-					<ul id="menu">
-						<li data-menuanchor="cases"><a href="#cases">Работы</a></li>
-						<li data-menuanchor="services"><a href="#services">Услуги</a></li>
-						<li data-menuanchor="team"><a href="#team">Команда</a></li>
-						<li data-menuanchor="contact"><a href="#contact">Контакты</a></li>
-					</ul>
+					*/ ?>
 
 				</div>
 
