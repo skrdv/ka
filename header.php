@@ -42,42 +42,22 @@
 
 	</head>
 
-	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
+	<body <?php body_class(); ?>>
 
-		<div id="container">
+		<header role="banner">
 
-			<header role="banner" itemscope itemtype="http://schema.org/WPHeader">
-
-				<div id="inner-header" class="wrap cf">
+				<nav role="navigation">
 
 					<div class="ui stackable container menu" id="nav">
-  					<a class="item logo" href="/"></a>
+						<a class="item logo" href="/"></a>
 						<div class="item btn"><i class="options icon"></i></div>
-  					<a class="item" href="/#cases">Работы</a>
-  					<a class="item" href="/#services">Услуги</a>
-  					<a class="item" href="/#team">Команда</a>
+						<a class="item" href="/#cases">Работы</a>
+						<a class="item" href="/#services">Услуги</a>
+						<a class="item" href="/#team">Команда</a>
 						<a class="item" href="/#contact">Контакты</a>
 						<div class="item right photo">+7 (812) 409-00-29</div>
 					</div>
 
-					<?php /*
-					<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-						<?php wp_nav_menu(array(
-    					         'container' => false,                           // remove nav container
-    					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
-    					         'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
-    					         'menu_class' => 'nav top-nav cf',               // adding custom nav class
-    					         'theme_location' => 'main-nav',                 // where it's located in the theme
-    					         'before' => '',                                 // before the menu
-        			               'after' => '',                                  // after the menu
-        			               'link_before' => '',                            // before each link
-        			               'link_after' => '',                             // after each link
-        			               'depth' => 0,                                   // limit the depth of the nav
-    					         'fallback_cb' => ''                             // fallback function (if there is one)
-						)); ?>
-					</nav>
-					*/ ?>
+				</nav>
 
-				</div>
-
-			</header>
+		</header>
