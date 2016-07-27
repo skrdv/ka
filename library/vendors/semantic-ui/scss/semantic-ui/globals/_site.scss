@@ -152,9 +152,71 @@ input::selection {
         Global Overrides
 *******************************/
 
+#nav{
+	position:fixed;
+	top: 50px;
+	left: 100px;
+	z-index: 80;
+	margin: 0;
+	background: none;
+	border: none;
+	box-shadow: none;
+	.item {
+		padding: 10px;
+		color: dimgrey;
+		font-size: 1.4em;
+		text-transform: uppercase;
+		border-radius: 0;
+		&:hover{
+			color: white;
+			background: none;
+		}
+		&.photo {
+			color: white;
+		}
+		&.logo {
+			display: block;
+			width: 40px;
+			height: 40px;
+			background: #fb0676 url(../../../images/logo.png) 0 0 no-repeat;
+			background-size: cover;
+		}
+	}
+	li {
+		display:inline-block;
+		margin: 0 10px;
+
+		&.active{
+			color: white;
+			a:hover{
+				color: white;
+			}
+		}
+
+	}
+}
 
 
 /*******************************
          Site Overrides
 *******************************/
 
+/* Mobile */
+@media only screen and (max-width: 767px) {
+
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* Small Monitor */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* Large Monitor */
+@media only screen and (min-width: 1200px) {
+
+}
