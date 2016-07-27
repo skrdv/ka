@@ -163,10 +163,6 @@ input::selection {
 	top: 50px;
 	left: 100px;
 	z-index: 80;
-	margin: 0;
-	background: none;
-	border: none;
-	box-shadow: none;
 	.item {
 		padding: 10px;
 		color: dimgrey;
@@ -239,4 +235,26 @@ input::selection {
 /* Large Monitor */
 @media only screen and (min-width: 1200px) {
 
+}
+
+
+/*******************************
+         Site Pages Styles
+*******************************/
+
+#post-sokolniki {
+  .logo {
+    background: #fb0676 url(../images/logo.png) 0 0 no-repeat;
+  }
+
+  .case-title {
+    color: darkgreen;
+    border-color: darkgreen;
+  }
+}
+
+.postid-1 {
+  #fp-nav ul li a span {
+    background: darkgreen;
+  }
 }

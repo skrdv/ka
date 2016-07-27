@@ -127,6 +127,8 @@ jQuery(document).ready(function($) {
 
 	if (jQuery('body').hasClass('single')) {
 		jQuery('#fullpost').fullpage({
+			navigation: true,
+			navigationPosition: 'right'
 		});
 	}
 

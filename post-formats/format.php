@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
+<article id="post-<?php echo $post->post_name ; ?>" <?php post_class(); ?> role="article">
 
     <div id="fullpost">
       <section class="section" id="slide-title" style="background-image: url(<?php the_field('slide_title'); ?>);">
@@ -11,7 +11,7 @@
 
       </section>
 
-      <?php for ($i=1; $i < 5 ; $i++) { ?>
+      <?php for ($i=1; $i < 11; $i++) { ?>
         <?php if( get_field('slide_'.$i) ) { ?>
 
           <section class="section" id="slide-<?php echo($i); ?>" style="background-image: url(<?php the_field('slide_'.$i); ?>);">
