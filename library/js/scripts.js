@@ -123,9 +123,9 @@ jQuery(document).ready(function($) {
 		scrollingSpeed: 1000
 	});
 
-	jQuery('#fullpost').fullpage({
-
-	});
+	// jQuery('#fullpost').fullpage({
+	//
+	// });
 
 
 }); /* end of as page load scripts */

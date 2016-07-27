@@ -24,10 +24,10 @@ the whole project.
 *********************/
 
 // normalize: http://necolas.github.io/normalize.css/
-@import "partials/normalize";
+// @import "partials/normalize";
 
 // Sass variables
-@import "partials/variables";
+// @import "partials/variables";
 
 // typography
 // @import "partials/typography";
@@ -58,11 +58,13 @@ you hate oysters, then the world is your peanut butter & jelly sandwich.
 // forms (inputs & labels)
 // @import "modules/forms";
 
-@import 'semantic-ui/globals/all';
-// @import 'semantic-ui/elements/all';
-// @import 'semantic-ui/collections/all';
-// @import 'semantic-ui/views/all';
-// @import 'semantic-ui/modules/all';
+
+/*********************
+IMPORTING SEMANTIC-UI
+*********************/
+
+@import '../vendors/semantic-ui/scss/semantic-ui.scss';
+
 
 /*********************
 BASE (MOBILE) SIZE
