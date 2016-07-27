@@ -116,16 +116,21 @@ jQuery(document).ready(function($) {
   */
   loadGravatars();
 
-	jQuery('#fullpage').fullpage({
-		verticalCentered: false,
-		anchors: ['cases', 'services', 'team', 'contact'],
-		menu: '#nav',
-		scrollingSpeed: 1000
-	});
+	if (jQuery('body').hasClass('home')) {
+		jQuery('#fullpage').fullpage({
+			verticalCentered: false,
+			anchors: ['cases', 'services', 'team', 'contact'],
+			menu: '#nav',
+			scrollingSpeed: 1000
+		});
+	}
 
-	// jQuery('#fullpost').fullpage({
-	//
-	// });
+	if (jQuery('body').hasClass('single')) {
+		jQuery('#fullpost').fullpage({
+		});
+	}
+
+
 
 
 }); /* end of as page load scripts */

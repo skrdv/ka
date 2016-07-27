@@ -8,11 +8,11 @@
 
 			<div id="content">
 
-						<main id="main" class="cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+						<main id="main" role="main">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
 
 
 								<section class="cf" itemprop="articleBody">
@@ -23,7 +23,7 @@
 												<?php if( get_field('case_'.$i.'_image') ) { ?>
 													<div class="slide" id="slide<?php echo $i; ?>"
 															 style="background-image: url(<?php the_field('case_'.$i.'_image'); ?>);">
-														<a class="case-link" href="<?php the_field('case_'.$i.'_link'); ?>">
+														<a class="case-link" href="<?php the_field('case_'.$i.'_link'); ?>"  rel="bookmark">
 															<?php the_field('case_'.$i.'_title'); ?>
 														</a>
 													</div>
