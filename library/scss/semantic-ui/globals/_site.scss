@@ -231,6 +231,7 @@ input::selection {
 
 
 .section{
+  position: relative;
   background-size: cover;
 }
 .slide{
@@ -238,31 +239,66 @@ input::selection {
   background-size: cover;
 }
 
+.section.services {
+  .ui.grid {
+    padding-top: 200px;
+  }
+}
 
-  .case-title {
+.border {
+  display: block;
+  max-width: 400px;
+  margin: 0 auto;
+  border: 4px solid white;
+  text-align: center;
+  .ui.header {
     display: block;
-    max-width: 400px;
-    margin: 0 auto;
     padding: 20px;
-    border: 4px solid white;
-    font-size: 3em;
-    text-align: center;
+    &:hover {
+      opacity: .8;
+    }
+  }
+  .ui.header {
+    color: white;
+    font-weight: normal;
     text-transform: uppercase;
   }
 
-
-
-header.border {
-    display: block;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 4px solid white;
-    text-align: center;
+  h1.ui.header {
+    font-size: 3rem;
   }
+
+  .ui.header .sub.header {
+    color: white;
+    text-transform: uppercase;
+  }
+
+  .ui.header:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+    font-size: 3em;
+  }
+}
 
 
 .case-info {
+  .ui.card {
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .ui.card > .content > .header,
+  .ui.card > .content > .description,
+  .ui.card .meta {
+    color: white;
+  }
+
+  .ui.cards > .card > .content > .header:not(.ui),
+  .ui.card > .content > .header:not(.ui) {
+    font-weight: normal;
+    font-size: 3rem;
+    margin-top: 0;
+    line-height: 3rem;
+  }
   .ui.card {
     position: absolute;
     left: 0;
@@ -270,7 +306,6 @@ header.border {
     width: 50%;
     height: 100%;
     padding: 160px 80px;
-    visibility: hidden;
     .header {
       margin-bottom: 1em;
       text-transform: uppercase;

@@ -713,24 +713,7 @@ a.ui.inverted.grey.header:hover {
          Theme Overrides
 *******************************/
 
-.ui.header {
-  color: white;
-  font-weight: normal;
-  text-transform: uppercase;
-}
 
-h1.ui.header {
-  font-size: 3rem;
-}
-
-.ui.header .sub.header {
-  color: white;
-  text-transform: uppercase;
-}
-
-.ui.header:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
-  font-size: 3em;
-}
 
 
 /*******************************

@@ -39,9 +39,8 @@
 ?>
 
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
+	<article id="fullpage" role="article">
 
-			<div id="fullpage">
 				<section class="section portfolio">
 
 					<?php $the_query->the_post(); ?>
@@ -58,10 +57,77 @@
 					<?php wp_reset_postdata(); ?>
 
 				</section>
-				<section class="section " id="section1">
-					<h1>Услуги</h1>
+				<section class="section services">
 
-					
+					<div class="ui grid">
+					  <div class="two wide column">
+
+							<div class="ui card">
+  							<div class="content">
+    							<div class="header">PR</div>
+    							<div class="description">
+      							<p>О вас будут говорить правильно.</p>
+    							</div>
+  							</div>
+							</div>
+
+						</div>
+						<div class="two wide column">
+
+							<div class="ui card">
+  							<div class="content">
+    							<div class="header">Branding</div>
+    							<div class="description">
+      							<p>Вы будите похожи на себя, а остальные захотят быть похожими на вас.</p>
+    							</div>
+  							</div>
+							</div>
+
+						</div>
+						<div class="two wide column">
+
+							<div class="ui card">
+  							<div class="content">
+    							<div class="header">Реклама</div>
+    							<div class="description">
+      							<p>Вы хотите рассказать о своем продукте, а мы знаем, как сделать так, чтобы вас слушали.</p>
+    							</div>
+  							</div>
+							</div>
+
+						</div>
+						<div class="two wide column">
+
+							<div class="ui card">
+  							<div class="content">
+    							<div class="header">Digital</div>
+    							<div class="description">
+      							<p>Сайты, социальные сети, поисковое продвижение, контент маркетинг, вот это вот всё.</p>
+    							</div>
+  							</div>
+							</div>
+
+						</div>
+						<div class="two wide column">
+
+
+
+						</div>
+						<div class="six wide column">
+
+							<div class="ui card">
+  							<div class="content">
+    							<div class="header">Услуги</div>
+									<div class="meta">Branding</div>
+    							<div class="description">
+      							<p>Создаем бренды с нуля, делаем ребрендинги, пишем бренд-платформы, придумываем вербальную айдентику, логотипы, фирменные стили, чек-листы для текстов. Опираемся на пожелания заказчика, специфику продукта и пожелания целевой аудитории.</p>
+    							</div>
+  							</div>
+							</div>
+							
+						</div>
+					</div>
+
 				</section>
 				<section class="section" id="section2">
 					<h1>Команда</h1>
@@ -69,7 +135,6 @@
 				<section class="section" id="section3">
 					<h1>Контакты</h1>
 				</section>
-			</div>
 
 			<?php the_content(); ?>
 
