@@ -42,20 +42,26 @@
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
 
 			<div id="fullpage">
-				<section class="section" id="section-cases">
-					<?php
-					$the_query->the_post();
-					$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full', false, '' );
-					echo '<div class="slide" style="background-image: url('. $src[0] .');">';
-					echo '<a class="case-title case-'. $post->post_name .'" href="'. get_the_permalink().'" rel="bookmark" title="">'. get_the_title() .'</a>';
-					echo '</div>';
+				<section class="section portfolio">
 
-						wp_reset_postdata();
-					?>
+					<?php $the_query->the_post(); ?>
+					<?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full', false, '' ); ?>
+
+					<div class="slide" style="background-image: url('<?php echo $src[0] ?>');">
+						<header class="border <?php echo $post->post_name ?>">
+							<a class="ui header" href="<?php echo get_the_permalink() ?>" rel="bookmark"><?php the_title(); ?>
+		            <div class="sub header"><?php the_field('case_meta'); ?></div>
+		          </a>
+						</header>
+					</div>
+
+					<?php wp_reset_postdata(); ?>
 
 				</section>
 				<section class="section " id="section1">
 					<h1>Услуги</h1>
+
+					
 				</section>
 				<section class="section" id="section2">
 					<h1>Команда</h1>

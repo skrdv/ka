@@ -41,26 +41,26 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
 	</head>
-
-
-	<?php if(is_single()) { $page_slug = 'case-'.$post->post_name; } else { $page_slug = ''; } ?>
-
-	<body <?php body_class($page_slug); ?>>
+	<body <?php body_class($post->post_name); ?>>
 
 		<header role="banner">
 
 				<nav role="navigation">
-
 					<div class="ui stackable container menu" id="nav">
 						<a class="item logo" href="/"></a>
-						<div class="item btn"><i class="options icon"></i></div>
-						<a class="item" href="/#cases">Работы</a>
-						<a class="item" href="/#services">Услуги</a>
-						<a class="item" href="/#team">Команда</a>
-						<a class="item" href="/#contact">Контакты</a>
-						<div class="item right photo">+7 (812) 409-00-29</div>
+						<div class="item browse">
+							<span class="close"></span>
+							<span class="square"></span>
+							<span class="text">Меню</span>
+						</div>
+						<div class="menu">
+							<a class="item" href="/#cases">Работы</a>
+							<a class="item" href="/#services">Услуги</a>
+							<a class="item" href="/#team">Команда</a>
+							<a class="item" href="/#contact">Контакты</a>
+						</div>
+						<div class="item right phone">+7 (812) 409-00-29</div>
 					</div>
-
 				</nav>
 
 		</header>

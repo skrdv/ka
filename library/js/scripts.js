@@ -136,14 +136,17 @@ jQuery(document).ready(function($) {
 			jQuery('.ui.card').transition('fade right');
 		});
 
-		// .toggle(function(){
-		// 	jQuery(this).addClass('hidden');
-		// });
+
 
 
 	}
 
-
+	jQuery('.item.browse').on('click', function() {
+		jQuery(this).find('.close').transition('fade');
+		jQuery(this).find('.square').transition('fade');
+		jQuery(this).find('.text').transition('fade');
+		jQuery('.ui.menu').find('.menu').transition('fade');
+	});
 
 
 }); /* end of as page load scripts */

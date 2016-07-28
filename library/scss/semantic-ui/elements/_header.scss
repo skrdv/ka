@@ -728,6 +728,11 @@ h1.ui.header {
   text-transform: uppercase;
 }
 
+.ui.header:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+  font-size: 3em;
+}
+
+
 /*******************************
          Site Overrides
 *******************************/

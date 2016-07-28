@@ -163,17 +163,19 @@ input::selection {
 	top: 50px;
 	left: 100px;
 	z-index: 80;
+  .menu {
+    visibility: hidden;
+  }
 	.item {
 		padding: 10px;
-		color: dimgrey;
+		color: white;
 		font-size: 1.4em;
 		text-transform: uppercase;
 		border-radius: 0;
 		&:hover{
-			color: white;
-			background: none;
+			opacity: .8;
 		}
-		&.photo {
+		&.phone {
 			color: white;
 		}
 		&.logo {
@@ -183,8 +185,50 @@ input::selection {
 			background: #fb0676 url(../images/logo.png) 0 0 no-repeat;
 			background-size: cover;
 		}
+    &.browse {
+      position: relative;
+      width: 160px;
+      padding-left: 40px;
+      cursor: pointer;
+      .square {
+        float: left;
+        display: block;
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        border: 1px solid #fff;
+      }
+      .close {
+        position: absolute;
+        left: 40px;
+        width: 20px;
+        height: 20px;
+        visibility: hidden;
+        float: left;
+      }
+      .close:before, .close:after {
+        position: absolute;
+        top: -3px;
+        left: 10px;
+        content: ' ';
+        height: 26px;
+        width: 1px;
+        background-color: white;
+      }
+      .close:before {
+        transform: rotate(45deg);
+      }
+      .close:after {
+        transform: rotate(-45deg);
+      }
+    }
 	}
 }
+
+
+
+
+
 
 .section{
   background-size: cover;
@@ -194,8 +238,21 @@ input::selection {
   background-size: cover;
 }
 
-.case-title {
-  .border {
+
+  .case-title {
+    display: block;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 4px solid white;
+    font-size: 3em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+
+
+header.border {
     display: block;
     max-width: 400px;
     margin: 0 auto;
@@ -203,7 +260,7 @@ input::selection {
     border: 4px solid white;
     text-align: center;
   }
-}
+
 
 .case-info {
   .ui.card {
@@ -242,7 +299,7 @@ input::selection {
 
 
 
-.case-sokolniki {
+.sokolniki {
   .logo {
     background: #fb0676 url(../images/logo.png) 0 0 no-repeat;
   }
@@ -251,7 +308,12 @@ input::selection {
     color: darkgreen;
 
   }
-  .border {
+  .border,
+  &.border {
+    border-color: darkgreen !important;
+  }
+  &.case-title {
+    color: darkgreen;
     border-color: darkgreen;
   }
   .ui.card {
