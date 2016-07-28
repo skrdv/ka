@@ -10,7 +10,7 @@
         </header>
       </section>
 
-      <section class="section case-info" id="" style="background-image: url(<?php the_field('case_info'); ?>);">
+      <section class="section case-info" style="background-image: url(<?php the_field('case_info'); ?>);">
 
         <div class="ui card">
           <div class="content">
@@ -21,7 +21,7 @@
             </div>
           </div>
         </div>
-        <button class="ui primary basic button">Смотреть кейс</button>
+        <button class="ui white basic button toogle">Смотреть кейс</button>
 
       </section>
 

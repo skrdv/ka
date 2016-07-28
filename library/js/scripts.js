@@ -130,9 +130,27 @@ jQuery(document).ready(function($) {
 			navigation: true,
 			navigationPosition: 'right'
 		});
+
+		jQuery('.button.toogle').on('click', function() {
+
+			jQuery('.ui.card').transition('fade right');
+		});
+
+		// .toggle(function(){
+		// 	jQuery(this).addClass('hidden');
+		// });
+
+
 	}
 
 
 
 
 }); /* end of as page load scripts */
+
+// jQuery(document).mouseup(function (e) {
+// var card = jQuery('.ui.card');
+// if (card.has(e.target).length === 0){
+// 		jQuery('.ui.card').transition('fade right');
+// }
+// });
