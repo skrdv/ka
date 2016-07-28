@@ -43,20 +43,10 @@
 
 			<div id="fullpage">
 				<section class="section" id="section-cases">
-					<?php /* for ($i=0; $i < 11 ; $i++) { ?>
-						<?php if( get_field('case_'.$i.'_image') ) { ?>
-							<div class="slide" id="slide<?php echo $i; ?>"
-									 style="background-image: url(<?php the_field('case_'.$i.'_image'); ?>);">
-								<a class="case-link" href="<?php the_field('case_'.$i.'_link'); ?>"  rel="bookmark">
-									<?php the_field('case_'.$i.'_title'); ?>
-								</a>
-							</div>
-						<?php } ?>
-					<?php } */ ?>
 					<?php
 					$the_query->the_post();
 					$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full', false, '' );
-					echo '<div class="slide" style="background-image: url('. $src[0] .');">';
+					echo '<div class="slide" id="home-slide-'. $post->post_name .'" style="background-image: url('. $src[0] .');">';
 					echo '<a class="case-link" href="'. get_the_permalink().'" rel="bookmark" title="">'. get_the_title() .'</a>';
 					echo '</div>';
 
