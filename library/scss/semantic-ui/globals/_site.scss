@@ -194,7 +194,6 @@ input::selection {
   background-size: cover;
 }
 
-.case-link,
 .case-title {
   display: block;
   position: absolute;
@@ -242,18 +241,17 @@ input::selection {
          Site Pages Styles
 *******************************/
 
-#post-sokolniki {
+
+
+.case-sokolniki {
   .logo {
     background: #fb0676 url(../images/logo.png) 0 0 no-repeat;
   }
-
-  .case-title {
+  .case-title,
+  &.case-title {
     color: darkgreen;
     border-color: darkgreen;
   }
-}
-
-.postid-1 {
   #fp-nav ul li a span {
     background: darkgreen;
   }

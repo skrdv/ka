@@ -1,7 +1,7 @@
-<article id="post-<?php echo $post->post_name ; ?>" <?php post_class(); ?> role="article">
+<article <?php post_class(); ?> role="article">
 
     <div id="fullpost">
-      <section class="section" id="case-title" style="background-image: url(<?php the_field('case_title'); ?>);">
+      <section class="section" style="background-image: url(<?php the_field('case_title'); ?>);">
         <header>
           <h1 class="case-title"><?php the_title(); ?></h1>
         </header>

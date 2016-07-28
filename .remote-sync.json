@@ -1,0 +1,16 @@
+{
+  "transport": "ftp",
+  "uploadOnSave": true,
+  "useAtomicWrites": true,
+  "deleteLocal": true,
+  "hostname": "skrdv.com",
+  "port": "21",
+  "target": "/ka/public_html/wp-content/themes/ka",
+  "ignore": [
+    ".remote-sync.json",
+    ".git/**"
+  ],
+  "username": "skrdv2com",
+  "password": "universeTree4Five",
+  "watch": []
+}

@@ -46,8 +46,8 @@
 					<?php
 					$the_query->the_post();
 					$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full', false, '' );
-					echo '<div class="slide" id="home-slide-'. $post->post_name .'" style="background-image: url('. $src[0] .');">';
-					echo '<a class="case-link" href="'. get_the_permalink().'" rel="bookmark" title="">'. get_the_title() .'</a>';
+					echo '<div class="slide" style="background-image: url('. $src[0] .');">';
+					echo '<a class="case-title case-'. $post->post_name .'" href="'. get_the_permalink().'" rel="bookmark" title="">'. get_the_title() .'</a>';
 					echo '</div>';
 
 						wp_reset_postdata();

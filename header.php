@@ -42,7 +42,10 @@
 
 	</head>
 
-	<body <?php body_class(); ?>>
+
+	<?php if(is_single()) { $page_slug = 'case-'.$post->post_name; } else { $page_slug = ''; } ?>
+
+	<body <?php body_class($page_slug); ?>>
 
 		<header role="banner">
 
