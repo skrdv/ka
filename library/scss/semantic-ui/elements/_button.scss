@@ -3467,9 +3467,18 @@
          Theme Overrides
 *******************************/
 
+.ui.basic.primary.button {
+    box-shadow: 0px 0px 0px 2px #FFFFFF inset !important;
+    color: #FFFFFF !important;
+    border-radius: 0;
+}
 
+.ui.basic.primary.button:hover {
+    background: rgba(255,255,255,.2) !important;
+    box-shadow: 0px 0px 0px 1px #ffffff inset !important;
+    color: #fff !important;
+}
 
 /*******************************
          Site Overrides
 *******************************/
-

@@ -1,13 +1,27 @@
 <article <?php post_class(); ?> role="article">
 
     <div id="fullpost">
-      <section class="section" style="background-image: url(<?php the_field('case_title'); ?>);">
-        <header>
-          <h1 class="case-title"><?php the_title(); ?></h1>
+      <section class="section case-title" style="background-image: url(<?php the_field('case_title'); ?>);">
+        <header class="border">
+          <h1 class="ui header">
+            <?php the_title(); ?>
+            <div class="sub header"><?php the_field('case_meta'); ?></div>
+          </h1>
         </header>
       </section>
 
-      <section class="section" id="case-info" style="background-image: url(<?php the_field('case_info'); ?>);">
+      <section class="section case-info" id="" style="background-image: url(<?php the_field('case_info'); ?>);">
+
+        <div class="ui card">
+          <div class="content">
+            <div class="header"><?php the_title(); ?></div>
+            <div class="meta"><?php the_field('case_meta'); ?></div>
+            <div class="description">
+              <p><?php the_field('case_desc'); ?></p>
+            </div>
+          </div>
+        </div>
+        <button class="ui primary basic button">Смотреть кейс</button>
 
       </section>
 

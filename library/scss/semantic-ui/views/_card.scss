@@ -967,9 +967,27 @@ a.ui.card:hover,
          Theme Overrides
 *******************************/
 
+.ui.card {
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.ui.card > .content > .header,
+.ui.card > .content > .description,
+.ui.card .meta {
+  color: white;
+}
+
+.ui.cards > .card > .content > .header:not(.ui),
+.ui.card > .content > .header:not(.ui) {
+  font-weight: normal;
+  font-size: 3rem;
+  margin-top: 0;
+  line-height: 3rem;
+}
 
 
 /*******************************
     User Variable Overrides
 *******************************/
-
