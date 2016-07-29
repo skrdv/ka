@@ -10,43 +10,15 @@
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-<?php
-		// WP_Query arguments
-		$args = array (
-			'cat' => '1',
-		);
-
-		// The Query
-		$the_query = new WP_Query( $args );
-
-		// The Loop
-/*
-	echo '<ul>';
-
-		$the_query->the_post();
-		echo '<li>' . get_the_title() . '</li>';
-		echo '<a href="'. the_permalink().'" rel="bookmark" title="">'. the_title() .'</a>';
-		$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full', false, '' );
-		echo $src[0];
-
-	echo '</ul>';
-*/
-
-	/* Restore original Post Data */
-
-
-
-?>
-
-
 	<article id="fullpage" role="article">
 
 				<section class="section portfolio">
 
-					<?php $the_query->the_post(); ?>
-					<?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full', false, '' ); ?>
+					<?php $query = new WP_Query( array( 'category_name' => 'portfolio' ) ); ?>
+					<?php while ( $query->have_posts() ) { ?>
+					<?php $query->the_post(); ?>
 
-					<div class="slide" style="background-image: url('<?php echo $src[0] ?>');">
+					<div class="slide" style="background-image: url('<?php the_field('case_head'); ?>');">
 						<header class="border <?php echo $post->post_name ?>">
 							<a class="ui header" href="<?php echo get_the_permalink() ?>" rel="bookmark"><?php the_title(); ?>
 		            <div class="sub header"><?php the_field('case_meta'); ?></div>
@@ -54,6 +26,7 @@
 						</header>
 					</div>
 
+					<?php } ?>
 					<?php wp_reset_postdata(); ?>
 
 				</section>
@@ -110,8 +83,6 @@
 						</div>
 						<div class="two wide column">
 
-
-
 						</div>
 						<div class="six wide column">
 
@@ -124,15 +95,17 @@
     							</div>
   							</div>
 							</div>
-							
+
 						</div>
 					</div>
 
 				</section>
-				<section class="section" id="section2">
+
+				<section class="section team">
 					<h1>Команда</h1>
 				</section>
-				<section class="section" id="section3">
+
+				<section class="section contact">
 					<h1>Контакты</h1>
 				</section>
 
