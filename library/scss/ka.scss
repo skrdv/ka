@@ -33,7 +33,7 @@
 		}
     &.browse {
       position: relative;
-      width: 160px;
+      width: 80px;
       padding-left: 40px;
       cursor: pointer;
       .square {
@@ -111,13 +111,30 @@
     }
     &.big {
       width: 100%;
+      position: relative;
       .header {
         font-family: 'Lato Regular';
         font-size: 4em;
         text-align: right;
       }
-      .meta,
+      .meta {
+        position: absolute;
+        right: 0;
+        top: 60px;
+        font-family: 'Lato Light';
+        font-size: 1.6em;
+        text-transform: uppercase;
+        text-align: right;
+        visibility: hidden;
+      }
       .description {
+        position: absolute;
+        right: 0;
+        top: 100px;
+        color: #231f20;
+        font-family: 'Lato Regular';
+        font-size: 1.1em;
+        line-height: 1.4em;
         text-align: right;
         visibility: hidden;
       }

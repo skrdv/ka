@@ -202,11 +202,17 @@ jQuery(document).ready(function($) {
 	}
 
 	// Navigation
-	jQuery('.item.browse').on('click', function() {
-		jQuery(this).find('.close').transition('fade');
-		jQuery(this).find('.square').transition('fade');
-		jQuery(this).find('.text').transition('fade');
-		jQuery('.ui.menu').find('.menu').transition('fade');
+	$('.item.browse').on('click', function() {
+		// console.log($(this).width());
+		// if ($(this).width() == 110) {
+		// 	$(this).width(30);
+		// } else {
+		// 	$(this).width(110);
+		// }
+		$(this).find('.close').transition('fade');
+		$(this).find('.square').transition('fade');
+		$(this).find('.text').transition('fade');
+		$('.ui.menu').find('.menu').transition('fade');
 	});
 
 
