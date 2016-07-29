@@ -2,7 +2,7 @@
 
     <div id="fullpost">
       <section class="section <?php echo $post->post_name; ?> case-head" style="background-image: url(<?php the_field('case_head'); ?>);">
-        <header class="border">
+        <header class="frame">
           <h1 class="ui header">
             <?php the_title(); ?>
             <div class="sub header"><?php the_field('case_meta1'); ?></div>

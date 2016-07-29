@@ -118,12 +118,20 @@ jQuery(document).ready(function($) {
 
 	// Home
 	if (jQuery('body').hasClass('home')) {
+
 		jQuery('#fullpage').fullpage({
 			verticalCentered: false,
 			anchors: ['cases', 'services', 'team', 'contact'],
 			menu: '#nav',
 			scrollingSpeed: 1000
 		});
+
+		$('.sokolniki.slide').backstretch('/wp-content/uploads/case_fazer_head.jpg');
+		$('.2t.slide').backstretch('/wp-content/uploads/case_2t_head.jpg');
+		$('.flight.slide').backstretch('/wp-content/uploads/case_kite_head.jpg');
+		$('.fazer.slide').backstretch('/wp-content/uploads/case_fazer_head.jpg');
+		
+
 	}
 
 	// Portfolio
@@ -155,6 +163,12 @@ jQuery(document).ready(function($) {
 		$('.flight.case-info').backstretch('/wp-content/uploads/case_kite_info.jpg');
 		for ($i=1; $i < 11; $i++) {
 			$('.flight.case-'+$i).backstretch('/wp-content/uploads/case_kite_'+$i+'.jpg');
+		}
+
+		$('.fazer.case-head').backstretch('/wp-content/uploads/case_fazer_head.jpg');
+		$('.fazer.case-info').backstretch('/wp-content/uploads/case_fazer_info.jpg');
+		for ($i=1; $i < 11; $i++) {
+			$('.fazer.case-'+$i).backstretch('/wp-content/uploads/case_fazer_'+$i+'.jpg');
 		}
 
 	}

@@ -18,8 +18,8 @@
 					<?php while ( $query->have_posts() ) { ?>
 					<?php $query->the_post(); ?>
 
-					<div class="slide" style="background-image: url('<?php the_field('case_head'); ?>');">
-						<header class="border <?php echo $post->post_name ?>">
+					<div class="slide <?php echo $post->post_name ?>" style="background-image: url('<?php the_field('case_head'); ?>');">
+						<header class="frame">
 							<a class="ui header" href="<?php echo get_the_permalink() ?>" rel="bookmark"><?php the_title(); ?>
 		            <div class="sub header"><?php the_field('case_meta1'); ?></div>
 		          </a>
