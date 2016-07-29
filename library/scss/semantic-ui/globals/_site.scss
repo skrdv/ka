@@ -282,6 +282,32 @@ input::selection {
 }
 
 
+.fp-controlArrow.fp-prev {
+  width: 36px;
+  height: 36px;
+  left: 0;
+  margin-top: 0;
+  border: none;
+  background: url(../images/arrow_black.png) 0 0 no-repeat;
+}
+
+.fp-controlArrow.fp-next {
+  width: 36px;
+  height: 36px;
+  left: 0;
+  margin-top: -36px;
+  border: none;
+  background: url(../images/arrow_white.png) 0 0 no-repeat;
+}
+
+.fp-controlArrow.fp-prev.right,
+.fp-controlArrow.fp-next.right {
+  right: 0;
+  left: auto;
+}
+
+
+
 .case-info {
   .ui.card {
     background: none;

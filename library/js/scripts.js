@@ -121,9 +121,10 @@ jQuery(document).ready(function($) {
 
 		jQuery('#fullpage').fullpage({
 			verticalCentered: false,
-			anchors: ['cases', 'services', 'team', 'contact'],
+			anchors: ['portfolio', 'services', 'team', 'contact'],
 			menu: '#nav',
-			scrollingSpeed: 1000
+			scrollingSpeed: 1000,
+			fixedElements: '.footer',
 		});
 
 		$('.slide.sokolniki').backstretch('/wp-content/uploads/case_sokolniki_head.jpg');
@@ -134,6 +135,15 @@ jQuery(document).ready(function($) {
 
 		$('.slide.team-1').backstretch('/wp-content/uploads/team_bw.jpg');
 		$('.slide.team-2').backstretch('/wp-content/uploads/team_bw.jpg');
+
+		// Slider Arrows
+		// if ($('.section').find('.fp-controlArrow').length) {
+			$('.fp-controlArrow').clone().addClass('right').appendTo('.section.portfolio');
+			$('.fp-controlArrow').clone().addClass('right').appendTo('.section.team');
+		// }
+
+
+
 
 	}
 

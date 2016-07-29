@@ -29,6 +29,9 @@
 					<?php } ?>
 					<?php wp_reset_postdata(); ?>
 
+					<!-- <div class="fp-controlArrow fp-prev right"></div>
+					<div class="fp-controlArrow fp-next right"></div> -->
+
 				</section>
 				<section class="section services">
 
