@@ -116,6 +116,7 @@ jQuery(document).ready(function($) {
   */
   loadGravatars();
 
+	// Home
 	if (jQuery('body').hasClass('home')) {
 		jQuery('#fullpage').fullpage({
 			verticalCentered: false,
@@ -125,28 +126,48 @@ jQuery(document).ready(function($) {
 		});
 	}
 
+	// Portfolio
 	if (jQuery('body').hasClass('single')) {
+
 		jQuery('#fullpost').fullpage({
 			navigation: true,
 			navigationPosition: 'right'
 		});
 
 		jQuery('.button.toogle').on('click', function() {
-
 			jQuery('.ui.card').transition('fade right');
 		});
 
 
+		$('.sokolniki.case-head').backstretch('/wp-content/uploads/case_sokolniki_head.jpg');
+		$('.sokolniki.case-info').backstretch('/wp-content/uploads/case_sokolniki_info.jpg');
+		for ($i=1; $i < 11; $i++) {
+			$('.sokolniki.case-'+$i).backstretch('/wp-content/uploads/case_sokolniki_'+$i+'.jpg');
+		}
 
+		$('.2t.case-head').backstretch('/wp-content/uploads/case_2t_head.jpg');
+		$('.2t.case-info').backstretch('/wp-content/uploads/case_2t_info.jpg');
+		for ($i=1; $i < 11; $i++) {
+			$('.2t.case-'+$i).backstretch('/wp-content/uploads/case_2t_'+$i+'.jpg');
+		}
+
+		$('.flight.case-head').backstretch('/wp-content/uploads/case_kite_head.jpg');
+		$('.flight.case-info').backstretch('/wp-content/uploads/case_kite_info.jpg');
+		for ($i=1; $i < 11; $i++) {
+			$('.flight.case-'+$i).backstretch('/wp-content/uploads/case_kite_'+$i+'.jpg');
+		}
 
 	}
 
+	// Navigation
 	jQuery('.item.browse').on('click', function() {
 		jQuery(this).find('.close').transition('fade');
 		jQuery(this).find('.square').transition('fade');
 		jQuery(this).find('.text').transition('fade');
 		jQuery('.ui.menu').find('.menu').transition('fade');
 	});
+
+
 
 
 }); /* end of as page load scripts */

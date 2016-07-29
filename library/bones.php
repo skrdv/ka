@@ -130,8 +130,11 @@ function bones_scripts_and_styles() {
 		// register main stylesheet
 		wp_register_style( 'bones-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), '', 'all' );
 
+		// register backstretch js
+		wp_register_script( 'backstretch-js', get_stylesheet_directory_uri() . '/library/js/jquery.backstretch.min.js', array(), '', true );
+
 		// register semantic js
-		wp_register_script( 'semantic-js', get_stylesheet_directory_uri() . '/library/vendors/semantic-ui/js/semantic-ui.js', array(), '', false );
+		wp_register_script( 'semantic-js', get_stylesheet_directory_uri() . '/library/vendors/semantic-ui/js/semantic-ui.js', array(), '', true );
 
 		// register fullPage css
 		wp_register_style( 'fullpage-css', get_stylesheet_directory_uri() . '/library/vendors/fullpage/jquery.fullpage.min.css', array(), '', 'all' );
@@ -164,6 +167,7 @@ function bones_scripts_and_styles() {
 		and your site will load faster.
 		*/
 		wp_enqueue_script( 'jquery' );
+		wp_enqueue_script( 'backstretch-js' );
 		wp_enqueue_script( 'semantic-js' );
 		wp_enqueue_script( 'fullpage-js' );
 		wp_enqueue_script( 'bones-js' );

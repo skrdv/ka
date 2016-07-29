@@ -21,7 +21,7 @@
 					<div class="slide" style="background-image: url('<?php the_field('case_head'); ?>');">
 						<header class="border <?php echo $post->post_name ?>">
 							<a class="ui header" href="<?php echo get_the_permalink() ?>" rel="bookmark"><?php the_title(); ?>
-		            <div class="sub header"><?php the_field('case_meta'); ?></div>
+		            <div class="sub header"><?php the_field('case_meta1'); ?></div>
 		          </a>
 						</header>
 					</div>

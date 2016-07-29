@@ -1,23 +1,23 @@
 <article <?php post_class(); ?> role="article">
 
     <div id="fullpost">
-      <section class="section head" style="background-image: url(<?php the_field('case_title'); ?>);">
+      <section class="section <?php echo $post->post_name; ?> case-head" style="background-image: url(<?php the_field('case_head'); ?>);">
         <header class="border">
           <h1 class="ui header">
             <?php the_title(); ?>
-            <div class="sub header"><?php the_field('case_meta'); ?></div>
+            <div class="sub header"><?php the_field('case_meta1'); ?></div>
           </h1>
         </header>
       </section>
 
-      <section class="section case-info" style="background-image: url(<?php the_field('case_info'); ?>);">
+      <section class="section <?php echo $post->post_name; ?> case-info" style="background-image: url(<?php the_field('case_info'); ?>);">
 
         <div class="ui card">
           <div class="content">
             <div class="header"><?php the_title(); ?></div>
-            <div class="meta"><?php the_field('case_meta'); ?></div>
+            <div class="meta"><?php the_field('case_meta2'); ?></div>
             <div class="description">
-              <p><?php the_field('case_desc'); ?></p>
+              <p><?php the_content(); ?></p>
             </div>
           </div>
         </div>
@@ -28,7 +28,7 @@
       <?php for ($i=1; $i < 11; $i++) { ?>
         <?php if( get_field('case_'.$i) ) { ?>
 
-          <section class="section" id="case-<?php echo($i); ?>" style="background-image: url(<?php the_field('case_'.$i); ?>);">
+          <section class="section <?php echo $post->post_name; ?> case-<?php echo $i; ?>" style="background-image: url(<?php the_field('case_'.$i); ?>);">
           </section>
 
         <?php } ?>
@@ -36,6 +36,6 @@
 
     </div>
 
-    <?php the_content(); ?>
+
 
 </article>
