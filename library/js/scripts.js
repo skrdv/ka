@@ -126,11 +126,14 @@ jQuery(document).ready(function($) {
 			scrollingSpeed: 1000
 		});
 
-		$('.sokolniki.slide').backstretch('/wp-content/uploads/case_fazer_head.jpg');
-		$('.2t.slide').backstretch('/wp-content/uploads/case_2t_head.jpg');
-		$('.flight.slide').backstretch('/wp-content/uploads/case_kite_head.jpg');
-		$('.fazer.slide').backstretch('/wp-content/uploads/case_fazer_head.jpg');
-		
+		$('.slide.sokolniki').backstretch('/wp-content/uploads/case_sokolniki_head.jpg');
+		$('.slide.2t').backstretch('/wp-content/uploads/case_2t_head.jpg');
+		$('.slide.flight').backstretch('/wp-content/uploads/case_kite_head.jpg');
+		$('.slide.fazer').backstretch('/wp-content/uploads/case_fazer_head.jpg');
+
+
+		$('.slide.team-1').backstretch('/wp-content/uploads/team_bw.jpg');
+		$('.slide.team-2').backstretch('/wp-content/uploads/team_bw.jpg');
 
 	}
 
