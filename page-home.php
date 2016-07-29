@@ -6,11 +6,11 @@
 
 <?php get_header(); ?>
 
-<main id="main" role="main">
+<main role="main">
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-	<article id="fullpage" role="article">
+	<article id="home" role="article">
 
 				<section class="section portfolio">
 
@@ -29,16 +29,14 @@
 					<?php } ?>
 					<?php wp_reset_postdata(); ?>
 
-					<!-- <div class="fp-controlArrow fp-prev right"></div>
-					<div class="fp-controlArrow fp-next right"></div> -->
-
 				</section>
 				<section class="section services">
 
-					<div class="ui grid">
+					<div class="ui container">
+						<div class="ui grid">
 					  <div class="two wide column">
 
-							<div class="ui card">
+							<div class="ui card pr">
   							<div class="content">
     							<div class="header">PR</div>
     							<div class="description">
@@ -50,7 +48,7 @@
 						</div>
 						<div class="two wide column">
 
-							<div class="ui card">
+							<div class="ui card brand">
   							<div class="content">
     							<div class="header">Branding</div>
     							<div class="description">
@@ -62,7 +60,7 @@
 						</div>
 						<div class="two wide column">
 
-							<div class="ui card">
+							<div class="ui card adv">
   							<div class="content">
     							<div class="header">Реклама</div>
     							<div class="description">
@@ -74,7 +72,7 @@
 						</div>
 						<div class="two wide column">
 
-							<div class="ui card">
+							<div class="ui card digital">
   							<div class="content">
     							<div class="header">Digital</div>
     							<div class="description">
@@ -89,17 +87,31 @@
 						</div>
 						<div class="six wide column">
 
-							<div class="ui card">
+							<div class="ui card big">
   							<div class="content">
     							<div class="header">Услуги</div>
-									<div class="meta">Branding</div>
-    							<div class="description">
+									<div class="meta pr">PR</div>
+    							<div class="description pr">
+      							<p>Создаем и реализуем информационные поводы, инициируем публикации, организуем выступления, снимаем интервью и много чего еще делаем. В выборе инструментов опираемся на PR стратегию. У вас нет стратегии? Мы и их разрабатываем.</p>
+    							</div>
+									<div class="meta brand">Branding</div>
+    							<div class="description brand">
       							<p>Создаем бренды с нуля, делаем ребрендинги, пишем бренд-платформы, придумываем вербальную айдентику, логотипы, фирменные стили, чек-листы для текстов. Опираемся на пожелания заказчика, специфику продукта и пожелания целевой аудитории.</p>
+    							</div>
+									<div class="meta adv">Реклама</div>
+    							<div class="description adv">
+      							<p>Разработаем вам новую Big idea или будем действовать в рамках готовой. Создадим рекламный креатив, заточенный под вашу целевую аудиторию. Выполним фото и видео продакшн руками наших специалистов или же порекомендуем подрядчика. Возьмем на себя курирование рекламной кампании или станем частью системы. Работаем с заказчиком напрямую или с агентством. Мы – гибкие профессионалы, которые делают хорошую рекламу.</p>
+    							</div>
+									<div class="meta digital">Digital</div>
+    							<div class="description digital">
+      							<p>Создадим группу и наполним ее органикой, изгоним ботов, придумаем интересный контент и произведем его, настроим контекст и таргет, поддержим комментарийную программу, разработаем механики активации и реализуем, определим KPI и выполним его.</p>
     							</div>
   							</div>
 							</div>
 
 						</div>
+						</div>
+
 					</div>
 
 				</section>

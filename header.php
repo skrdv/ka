@@ -59,7 +59,7 @@
 							<a class="item" href="/#team">Команда</a>
 							<a class="item" href="/#contact">Контакты</a>
 						</div>
-						<div class="item right phone">+7 (812) 409-00-29</div>
+						<div class="item right phone">+7 (812) 402-00-29</div>
 					</div>
 				</nav>
 
