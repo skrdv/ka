@@ -218,6 +218,13 @@ jQuery(document).ready(function($) {
 
 
 
+
+	// window.addEventListener("orientationchange", function() {
+  //   alert(window.orientation);
+	// }, false);
+
+
+
 }); /* end of as page load scripts */
 
 // jQuery(document).mouseup(function (e) {

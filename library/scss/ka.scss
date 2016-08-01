@@ -251,11 +251,26 @@
 }
 
 
+
+
+
+
+/* портретная ориентация */
+@media screen and (orientation:portrait) {
+    .section.contact {
+      background: red;
+    }
+}
+/* горизонтальная ориентация */
+@media screen and (orientation:landscape) {
+  .section.contact {
+    background: green;
+  }
+}
+
 /*******************************
          Site Pages Styles
 *******************************/
-
-
 
 .sokolniki {
   .logo {
@@ -289,20 +304,58 @@
 
 /* Mobile */
 @media only screen and (max-width: 767px) {
-
+  header,
+  main {
+    display: none !important;
+  }
+  #mobile {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.88);
+    color: white;
+    font-size: 2em;
+    font-family: 'Lato Medium';
+    padding: 100px 20px;
+  }
 }
 
 /* Tablet */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-
+  header,
+  main {
+    display: none !important;
+  }
+  #mobile {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.88);
+    color: white;
+    font-size: 2em;
+    font-family: 'Lato Medium';
+    padding: 100px 20px;
+  }
 }
 
 /* Small Monitor */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-
+  header,
+  main {
+    display: none !important;
+  }
+  #mobile {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.88);
+    color: white;
+    font-size: 2em;
+    font-family: 'Lato Medium';
+    padding: 100px 20px;
+  }
 }
 
 /* Large Monitor */
 @media only screen and (min-width: 1200px) {
-
+  #mobile {
+    display: none !important;
+  }
 }
