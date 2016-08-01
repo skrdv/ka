@@ -137,7 +137,24 @@
 				</section>
 
 				<section class="section contact">
-					<h1>Контакты</h1>
+
+					<div class="slide contact-1">
+						<header class="frame">
+							<h3 class="ui header">Контакты
+								<div class="sub header">адреса и телефоны</div>
+							</a>
+						</header>
+					</div>
+
+					<div class="slide contact-2">
+						<header class="frame">
+							<h3 class="ui header">Карта
+								<div class="sub header">и возможно схема проезда</div>
+							</a>
+						</header>
+					</div>
+
+
 				</section>
 
 			<?php the_content(); ?>

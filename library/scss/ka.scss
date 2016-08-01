@@ -142,6 +142,18 @@
   }
 }
 
+.section.contact {
+  .frame {
+    border-color: black;
+    .ui.header,
+    .sub.header {
+      color: black;
+    }
+  }
+
+}
+
+
 .frame {
   display: block;
   max-width: 400px;
@@ -156,7 +168,7 @@
     }
   }
   .ui.header {
-    color: white;
+    // color: white;
     font-weight: normal;
     text-transform: uppercase;
   }
@@ -166,7 +178,7 @@
   }
 
   .ui.header .sub.header {
-    color: white;
+    // color: white;
     text-transform: uppercase;
   }
 
@@ -257,15 +269,11 @@
 
 /* портретная ориентация */
 @media screen and (orientation:portrait) {
-    .section.contact {
-      background: red;
-    }
+
 }
 /* горизонтальная ориентация */
 @media screen and (orientation:landscape) {
-  .section.contact {
-    background: green;
-  }
+
 }
 
 /*******************************

@@ -140,6 +140,7 @@ jQuery(document).ready(function($) {
 		// Slider Arrows
 		$('.fp-controlArrow').clone().addClass('right').appendTo('.section.portfolio');
 		$('.fp-controlArrow').clone().addClass('right').appendTo('.section.team');
+		$('.fp-controlArrow').clone().addClass('right').appendTo('.section.contact');
 
 		// services
 		$('.ui.card.pr').on('hover', function() {
@@ -203,12 +204,6 @@ jQuery(document).ready(function($) {
 
 	// Navigation
 	$('.item.browse').on('click', function() {
-		// console.log($(this).width());
-		// if ($(this).width() == 110) {
-		// 	$(this).width(30);
-		// } else {
-		// 	$(this).width(110);
-		// }
 		$(this).find('.close').transition('fade');
 		$(this).find('.square').transition('fade');
 		$(this).find('.text').transition('fade');
