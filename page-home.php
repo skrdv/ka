@@ -139,18 +139,55 @@
 				<section class="section contact">
 
 					<div class="slide contact-1">
-						<header class="frame">
-							<h3 class="ui header">Контакты
-								<div class="sub header">адреса и телефоны</div>
-							</a>
-						</header>
+
+						<div class="ui container">
+							<div class="ui grid">
+						  	<div class="six wide column">
+
+									<div class="ui card pr">
+	  								<div class="content">
+	    								<div class="header"></div>
+	    								<div class="description">
+	      								<p>Каменноостровский пр. 12 А 3-Н</p>
+												<p>+7 (812) 402-00-29</p>
+												<p>office@kira-all.ru</p>
+	    								</div>
+										</div>
+	  							</div>
+
+								</div>
+								<div class="ten wide column">
+
+									<div class="ui card big">
+										<div class="content">
+											<div class="header">Контакты</div>
+											<div class="meta"></div>
+											<div class="description">
+												<p></p>
+											</div>
+										</div>
+									</div>
+
+							</div>
+
+							</div>
+						</div>
+					</div>
+
 					</div>
 
 					<div class="slide contact-2">
 						<header class="frame">
 							<h3 class="ui header">Карта
 								<div class="sub header">и возможно схема проезда</div>
-							</a>
+							</h3>
+						</header>
+					</div>
+
+					<div class="slide contact-3">
+						<header class="frame">
+							<h3 class="ui header">Форма обратной связи
+							</h3>
 						</header>
 					</div>
 

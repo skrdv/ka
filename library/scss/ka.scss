@@ -11,10 +11,10 @@
     visibility: hidden;
   }
 	.item {
-		padding: 10px;
-		color: #58595b;
+		// padding: 10px;
+		color: #231f20;
     font-family: 'Lato Medium';
-		font-size: 1.4em;
+		font-size: 1.44em;
 		text-transform: uppercase;
 		border-radius: 0;
 		&:hover{
@@ -33,7 +33,7 @@
 		}
     &.browse {
       position: relative;
-      width: 80px;
+      width: 160px;
       padding-left: 40px;
       cursor: pointer;
       .square {
@@ -42,7 +42,8 @@
         width: 18px;
         height: 18px;
         margin-right: 10px;
-        border: 1px solid #58595b;
+        // border: 1px solid #58595b;
+        background: url(../images/icon_square.png) 0 0 no-repeat;
       }
       .close {
         position: absolute;
@@ -59,7 +60,7 @@
         content: ' ';
         height: 26px;
         width: 1px;
-        background-color: #58595b;
+        background-color: #231f20;
       }
       .close:before {
         transform: rotate(45deg);
@@ -99,7 +100,7 @@
       font-family: 'Lato Medium';
       font-size: 1.4em;
       line-height: 1;
-      text-transform: lowercase;
+      // text-transform: lowercase;
     }
     .description {
       font-family: 'Lato Medium Italic';
@@ -143,11 +144,54 @@
 }
 
 .section.contact {
-  .frame {
-    border-color: black;
-    .ui.header,
-    .sub.header {
-      color: black;
+  .ui.grid {
+    padding-top: 200px;
+  }
+  .ui.card {
+    width: 100%;
+    box-shadow: none;
+    .content {
+      padding: 0;
+    }
+    .header {
+    }
+    .description {
+      font-family: 'Lato Medium';
+      font-size: 1.4em;
+      p {
+        line-height: 1;
+      }
+
+    }
+    &.big {
+      width: 100%;
+      position: relative;
+      .header {
+        font-family: 'Lato Regular';
+        font-size: 4em;
+        text-align: right;
+      }
+      .meta {
+        position: absolute;
+        right: 0;
+        top: 60px;
+        font-family: 'Lato Light';
+        font-size: 1.6em;
+        text-transform: uppercase;
+        text-align: right;
+        visibility: hidden;
+      }
+      .description {
+        position: absolute;
+        right: 0;
+        top: 100px;
+        color: #231f20;
+        font-family: 'Lato Regular';
+        font-size: 1.1em;
+        line-height: 1.4em;
+        text-align: right;
+        visibility: hidden;
+      }
     }
   }
 
