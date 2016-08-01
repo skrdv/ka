@@ -148,9 +148,9 @@
 	  								<div class="content">
 	    								<div class="header"></div>
 	    								<div class="description">
-	      								<p>Каменноостровский пр. 12 А 3-Н</p>
-												<p>+7 (812) 402-00-29</p>
 												<p>office@kira-all.ru</p>
+												<p>+7 (812) 402-00-29</p>
+												<p>Каменноостровский пр. 12 А 3-Н</p>
 	    								</div>
 										</div>
 	  							</div>
@@ -161,7 +161,7 @@
 									<div class="ui card big">
 										<div class="content">
 											<div class="header">Контакты</div>
-											<div class="meta"></div>
+											<div class="meta">Рекламное агенство</div>
 											<div class="description">
 												<p></p>
 											</div>

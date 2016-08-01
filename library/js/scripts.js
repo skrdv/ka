@@ -207,7 +207,7 @@ jQuery(document).ready(function($) {
 		$(this).find('.close').transition('fade');
 		$(this).find('.square').transition('fade');
 		$(this).find('.text').transition('fade');
-		$('.ui.menu').find('.menu').transition('fade right');
+		$('.ui.menu').find('.menu').transition('fade');
 	});
 
 

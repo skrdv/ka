@@ -41,7 +41,13 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
 	</head>
-	<body <?php body_class($post->post_name); ?>>
+	<?php
+
+	if (isset($post->post_name)) { $slug = $post->post_name; } else { $slug = ''; } 
+
+	?>
+
+	<body <?php body_class($slug); ?>>
 
 		<header role="banner">
 
@@ -56,7 +62,7 @@
 						<div class="menu">
 							<a class="item" href="/#cases">Работы</a>
 							<a class="item" href="/#services">Услуги</a>
-							<a class="item" href="/#team">Команда</a>
+							<a class="item" href="/#team">Мы</a>
 							<a class="item" href="/#contact">Контакты</a>
 						</div>
 						<div class="item right phone">+7 (812) 402-00-29</div>
