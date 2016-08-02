@@ -1,7 +1,7 @@
 <article <?php post_class(); ?> role="article">
 
     <div id="fullpost">
-      <section class="section <?php echo $post->post_name; ?> case-head">
+      <section class="section <?php echo $post->post_name; ?> case-head" id="head-<?php echo $post->post_name; ?>">
         <header class="frame">
           <h1 class="ui header">
             <?php the_title(); ?>
@@ -10,7 +10,7 @@
         </header>
       </section>
 
-      <section class="section <?php echo $post->post_name; ?> case-info">
+      <section class="section case <?php echo $post->post_name; ?> case-info" id="info-<?php echo $post->post_name; ?>">
 
         <div class="ui card">
           <div class="content">
@@ -28,7 +28,7 @@
       <?php for ($i=1; $i < 11; $i++) { ?>
         <?php if( get_field('case_'.$i) ) { ?>
 
-          <section class="section <?php echo $post->post_name; ?> case-<?php echo $i; ?>">
+          <section class="section case <?php echo $post->post_name; ?> case-<?php echo $i; ?>">
 
             <?php if( get_field('text_'.$i) ) { ?>
             <div class="ui card">

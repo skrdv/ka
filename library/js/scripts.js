@@ -106,7 +106,7 @@ function loadGravatars() {
 
 function homeBg() {
 	jQuery('.slide.sokolniki').backstretch('/wp-content/uploads/case_sokolniki_head.jpg');
-	jQuery('.slide.2t-gallery').backstretch('/wp-content/uploads/case_2t_head.jpg');
+	jQuery('.slide.2t').backstretch('/wp-content/uploads/case_2t_head.jpg');
 	jQuery('.slide.flight').backstretch('/wp-content/uploads/case_kite_head.jpg');
 	jQuery('.slide.fazer').backstretch('/wp-content/uploads/case_fazer_head.jpg');
 
@@ -121,10 +121,10 @@ function portfolioBg() {
 		jQuery('.sokolniki.case-'+$i).backstretch('/wp-content/uploads/case_sokolniki_'+$i+'.jpg');
 	}
 
-	jQuery('.2t-gallery.case-head').backstretch('/wp-content/uploads/case_2t_head.jpg');
-	jQuery('.2t-gallery.case-info').backstretch('/wp-content/uploads/case_2t_info.jpg');
+	jQuery('.2t.case-head').backstretch('/wp-content/uploads/case_2t_head.jpg');
+	jQuery('.2t.case-info').backstretch('/wp-content/uploads/case_2t_info.jpg');
 	for ($i=1; $i < 11; $i++) {
-		jQuery('.2t-gallery.case-'+$i).backstretch('/wp-content/uploads/case_2t_'+$i+'.jpg');
+		jQuery('.2t.case-'+$i).backstretch('/wp-content/uploads/case_2t_'+$i+'.jpg');
 	}
 
 	jQuery('.flight.case-head').backstretch('/wp-content/uploads/case_kite_head.jpg');
@@ -190,7 +190,7 @@ jQuery(document).ready(function($) {
 		// Slider Arrows
 		$('.fp-controlArrow').clone().addClass('right').appendTo('.section.portfolio');
 		$('.fp-controlArrow').clone().addClass('right').appendTo('.section.team');
-		$('.fp-controlArrow').clone().addClass('right').appendTo('.section.contact');
+		// $('.fp-controlArrow').clone().addClass('right').appendTo('.section.contact');
 
 		// services
 		$('.ui.card.pr').on('hover', function() {
@@ -221,12 +221,12 @@ jQuery(document).ready(function($) {
 			navigationPosition: 'right'
 		});
 
-		$('.button.toogle').on('click', function() {
-			$('.ui.card').transition('fade right');
+		$('.case-info .button.toogle').on('click', function() {
+			$('.case-info .ui.card').transition('fade right');
 			if ($(this).text() == 'Скрыть описание') {
-				$(this).text('Показать описание');
+				$(this).text('Показать описание').removeClass('white').addClass('black');
 			} else {
-				$(this).text('Скрыть описание');
+				$(this).text('Скрыть описание').removeClass('black').addClass('white');
 			}
 
 		});

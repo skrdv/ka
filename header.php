@@ -47,7 +47,7 @@
 
 	?>
 
-	<body <?php body_class($slug); ?>>
+	<body <?php body_class($slug); ?> id="page-<?php echo($slug); ?>">
 
 		<header role="banner">
 

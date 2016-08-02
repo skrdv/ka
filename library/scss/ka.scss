@@ -323,7 +323,7 @@ $color-sokolniki: darkgreen;
     .meta {
       margin-bottom: 3em;
       text-transform: uppercase;
-      font-family: 'Lato Regular';
+      font-family: 'Lato Light';
     }
     .description {
       max-width: 300px;
@@ -334,9 +334,9 @@ $color-sokolniki: darkgreen;
   }
 }
 
-.section.case-info {
+.section.case {
   .ui.card {
-    // background: none;
+    background: none;
     box-shadow: none;
     border-radius: 0;
   }
@@ -344,7 +344,10 @@ $color-sokolniki: darkgreen;
   .ui.card > .content > .header,
   .ui.card > .content > .description,
   .ui.card .meta {
-    color: white;
+    // color: $color-black;
+  }
+  .ui.card .meta {
+    color: $color-black;
   }
 
   .ui.cards > .card > .content > .header:not(.ui),
@@ -352,6 +355,7 @@ $color-sokolniki: darkgreen;
     font-weight: normal;
     font-size: 3rem;
     margin-top: 0;
+    margin-bottom: 0.2em;
     line-height: 3rem;
   }
   .ui.card {
@@ -364,25 +368,30 @@ $color-sokolniki: darkgreen;
     .header {
       margin-bottom: 1em;
       text-transform: uppercase;
+      font-family: 'Lato Regular';
     }
     .meta {
-      margin-bottom: 3em;
+      margin-bottom: 1em;
       text-transform: uppercase;
+      font-family: 'Lato Light';
     }
     .description {
       max-width: 300px;
       font-size: .88em;
       text-align: justify;
+      font-family: 'Lato Regular';
     }
   }
   .button.toogle {
     position: absolute;
     bottom: 10%;
     left: 10%;
+    display: none !important;
   }
   .ui.basic.button:active,
   .ui.basic.button:focus {
     background: transparent !important;
+    border-radius: 0 !important;
   }
 }
 
@@ -396,6 +405,26 @@ $color-sokolniki: darkgreen;
 
 .fazer .section.case-info .ui.card {
   background: rgba(247,145,0,.8) !important;
+
+}
+
+#info-fazer .ui.card .header,
+#info-fazer .ui.card .meta,
+#info-fazer .ui.card .description {
+  color: $color-white !important;
+}
+
+#case-info.fazer {
+  .ui.card > .content > .header,
+  .ui.card > .content > .description,
+  .ui.card .meta {
+    color: $color-white !important;
+  }
+}
+
+.case-4 .ui.card .meta {
+  color: $color-black !important;
+  margin-bottom: 20px;
 }
 
 .fazer {
@@ -409,8 +438,10 @@ $color-sokolniki: darkgreen;
   .ui.header,
   .ui.header .sub.header {
     color: $color-fazer;
-
   }
+
+
+
   .frame,
   &.frame {
     border-color: $color-fazer !important;
@@ -424,29 +455,63 @@ $color-sokolniki: darkgreen;
   }
 }
 
-.2t-gallery.section.case-info .ui.card {
+
+
+
+
+
+
+#slide-2t .frame,
+#head-2t .frame {
+  border-color: #483d36 !important;
+}
+
+#slide-2t .frame .ui.header,
+#slide-2t .frame .ui.header .sub.header {
+  color: #483d36 !important;
+}
+
+#head-2t .frame .ui.header,
+#head-2t .frame .ui.header .sub.header {
+  color: #483d36 !important;
+}
+
+#info-2t .ui.card {
   background: rgba(72,61,54,.82) !important;
 }
 
-.2t-gallery {
+#info-2t .ui.card .header,
+#info-2t .ui.card .meta,
+#info-2t .ui.card .description {
+  color: $color-white !important;
+}
+
+#page-2t #nav .item.logo {
+    background: transparent url(../images/logo_black.png) 0 0 no-repeat !important;
+}
+
+.2t {
   .ui.menu .item {
-    color: $color-white !important;
+    color: #483d36 !important;
     border-color: $color-white !important;
     &.logo {
-      background: url(../images/logo_white.png) 0 0 no-repeat !important;
+      background: url(../images/logo_blue.png) 0 0 no-repeat !important;
+    }
+    &:hover {
+      color: #7dd3f3;
     }
   }
   .ui.header,
   h1.ui.header,
   .ui.header .sub.header {
-    color: $color-white !important;
+    color: #483d36 !important;
   }
   .ui.header {
-    color: $color-white !important;
+    color: #483d36 !important;
   }
   .frame,
   &.frame {
-    border-color: $color-white !important;
+    border-color: #483d36 !important;
   }
   &.case-title {
     color: $color-white;
@@ -458,18 +523,30 @@ $color-sokolniki: darkgreen;
   }
 }
 
+
+
+#info-flight .ui.card .header,
+#info-flight .ui.card .meta,
+#info-flight .ui.card .description {
+  color: $color-white !important;
+}
+
+.section.flight.case-info .ui.card {
+  background: rgba(9,78,147,.82);
+}
+
 .flight {
   #nav .item.browse .square {
-    border-color: $color-white !important;
+    border-color: $color-black !important;
   }
   #nav .item.browse .close:before,
   #nav .item.browse .close:after {
-    background: $color-white !important;
+    background: $color-black !important;
   }
   #nav .item {
-    color: $color-white !important;
+    color: $color-black !important;
     &.logo {
-      background: transparent url(../images/logo_white.png) 0 0 no-repeat !important;
+      background: transparent url(../images/logo_black.png) 0 0 no-repeat !important;
     }
   }
   .ui.header,
@@ -479,24 +556,51 @@ $color-sokolniki: darkgreen;
   .frame,
   &.frame {
     border-color: $color-white !important;
+    .ui.header,
+    .ui.header .sub.header {
+      color: $color-white !important;
+    }
   }
   &.case-title {
     color: $color-white;
     border-color: $color-white;
   }
-  .ui.card {
-    background: rgba(9,78,147,.82);
-  }
+
   #fp-nav ul li a span {
-    background: rgba(9,78,147,1);
+    // background: rgba(9,78,147,1);
+    background: $color-black;
   }
+}
+
+.sokolniki #nav .item.logo {
+  background: transparent url(../images/logo_black.png) 0 0 no-repeat;
+}
+
+#info-sokolniki .ui.card {
+  background: rgba(81,177,72,.6) !important;
+}
+
+#info-sokolniki .ui.card .header,
+#info-sokolniki .ui.card .meta,
+#info-sokolniki .ui.card .description {
+  color: $color-white !important;
+}
+
+#case-info.sokolniki .ui.card {
+  background: rgba(81,177,72,.6);
+}
+
+#case-info.sokolniki .ui.card .header,
+#case-info.sokolniki .ui.card .meta,
+#case-info.sokolniki .ui.card .description {
+  color: $color-white !important;
 }
 
 .sokolniki {
   .ui.menu .item {
     color: $color-sokolniki;
     &.logo {
-      background: #fb0676 url(../images/logo.png) 0 0 no-repeat;
+
     }
   }
 
@@ -513,11 +617,9 @@ $color-sokolniki: darkgreen;
     color: $color-sokolniki;
     border-color: $color-sokolniki;
   }
-  .ui.card {
-    background: rgba(81,177,72,.6);
-  }
+
   #fp-nav ul li a span {
-    background: $color-sokolniki;
+    background: $color-black;
   }
 }
 

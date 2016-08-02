@@ -18,7 +18,7 @@
 					<?php while ( $query->have_posts() ) { ?>
 					<?php $query->the_post(); ?>
 
-					<div class="slide <?php echo $post->post_name ?>">
+					<div class="slide <?php echo $post->post_name ?>" id="slide-<?php echo $post->post_name ?>">
 						<header class="frame">
 							<a class="ui header" href="<?php echo get_the_permalink() ?>" rel="bookmark"><?php the_title(); ?>
 		            <div class="sub header"><?php the_field('case_meta1'); ?></div>
@@ -137,16 +137,16 @@
 
 				</section>
 				*/ ?>
-				
+
 				<section class="section contact">
 
-					<div class="slide contact-1">
+					<?php /* <div class="slide contact"> */ ?>
 
 						<div class="ui container">
 							<div class="ui grid">
 						  	<div class="six wide column">
 
-									<div class="ui card pr">
+									<div class="ui card">
 	  								<div class="content">
 	    								<div class="header"></div>
 	    								<div class="description">
@@ -164,34 +164,51 @@
 										<div class="content">
 											<div class="header">Контакты</div>
 											<div class="meta">Рекламное агенство</div>
-											<div class="description">
-												<p></p>
-											</div>
 										</div>
 									</div>
 
-							</div>
+								</div>
 
 							</div>
 						</div>
 					</div>
 
+					<?php /* </div> */ ?>
+
+					<?php /*
+					<div class="slide feedback">
+
+						<div class="ui container">
+							<div class="ui grid">
+								<div class="six wide column">
+
+									<div class="ui card">
+										<div class="content">
+											<div class="header"></div>
+											<div class="description">
+												<?php echo do_shortcode( '[contact-form-7 id="1744" title="Обратная связь"]' ); ?>
+											</div>
+										</div>
+									</div>
+
+								</div>
+								<div class="ten wide column">
+
+									<div class="ui card big">
+										<div class="content">
+											<div class="header">Обратная связь</div>
+											<div class="meta">Рекламное агенство</div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+						</div>
+						*/ ?>
+
 					</div>
 
-					<div class="slide contact-2">
-						<header class="frame">
-							<h3 class="ui header">Карта
-								<div class="sub header">и возможно схема проезда</div>
-							</h3>
-						</header>
-					</div>
-
-					<div class="slide contact-3">
-						<header class="frame">
-							<h3 class="ui header">Форма обратной связи
-							</h3>
-						</header>
-					</div>
 
 
 				</section>
