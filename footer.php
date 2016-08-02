@@ -15,9 +15,7 @@
 		<?php // all js scripts are loaded in library/bones.php ?>
 		<?php wp_footer(); ?>
 
-    <div id="mobile">
-      поверните устройство
-    </div>
+    <div id="mobile">Мобильная версия в разработке</div>
 
 	</body>
 

@@ -49,8 +49,8 @@
       .square {
         float: left;
         display: block;
-        width: 18px;
-        height: 18px;
+        width: 17px;
+        height: 17px;
         margin-right: 10px;
         border: 1px solid #231f20;
         // background: url(../images/icon_square.png) 0 0 no-repeat;
@@ -231,7 +231,8 @@
     }
   }
   .ui.header {
-    // color: white;
+    font-family: 'Lato Regular';
+    color: white;
     font-weight: normal;
     text-transform: uppercase;
   }
@@ -241,7 +242,8 @@
   }
 
   .ui.header .sub.header {
-    // color: white;
+    color: white;
+    font-family: 'Lato Light';
     text-transform: uppercase;
   }
 
@@ -315,9 +317,9 @@
   }
 }
 
-.case-info {
+.section.case-info {
   .ui.card {
-    background: none;
+    // background: none;
     box-shadow: none;
     border-radius: 0;
   }
@@ -378,6 +380,10 @@ $color-black: #231f20;
 $color-fazer: #ffffff;
 $color-sokolniki: darkgreen;
 
+.fazer .section.case-info .ui.card {
+  background: rgba(247,145,0,.8) !important;
+}
+
 .fazer {
   .ui.menu .item {
     color: $color-black !important;
@@ -399,12 +405,13 @@ $color-sokolniki: darkgreen;
     color: $color-fazer;
     border-color: $color-fazer;
   }
-  .section-info .ui.card {
-    background: rgba(247,145,0,.8);
-  }
   #fp-nav ul li a span {
     background: $color-black;
   }
+}
+
+.2t-gallery.section.case-info .ui.card {
+  background: rgba(72,61,54,.82) !important;
 }
 
 .2t-gallery {
@@ -431,9 +438,7 @@ $color-sokolniki: darkgreen;
     color: $color-white;
     border-color: $color-white;
   }
-  .section-info .ui.card {
-    background: rgba(72,61,54,.82);
-  }
+
   #fp-nav ul li a span {
     background: $color-white;
   }
@@ -514,36 +519,63 @@ $color-sokolniki: darkgreen;
 #mobile {
   display: none;
 }
-html.portrait {
-  background: rgba(0, 0, 0, .88);
-  header,
-  main,
-  footer,
-  #fp-nav {
-    display: none !important;
-  }
-  #mobile {
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, .88) url(../images/logo_white.png) center center no-repeat;
-    color: white;
-    font-size: 2em;
-    font-family: 'Lato Medium';
-    text-align: center;
-    padding-top: 20px;
-    min-height: 200px;
-  }
-}
+
 
 
 /* Mobile */
 @media only screen and (max-width: 767px) {
 
+  html {
+    background: rgba(0, 0, 0, .88);
+    header,
+    main,
+    footer,
+    #fp-nav {
+      display: none !important;
+    }
+    #mobile {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, .88) url(../images/logo_white.png) center center no-repeat;
+      color: white;
+      font-size: 2em;
+      font-family: 'Lato Medium';
+      text-align: center;
+      padding-top: 20px;
+      min-height: 200px;
+    }
+  }
+
+
 }
 
 /* Tablet */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+
+  html {
+    background: rgba(0, 0, 0, .88);
+    header,
+    main,
+    footer,
+    #fp-nav {
+      display: none !important;
+    }
+    #mobile {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, .88) url(../images/logo_white.png) center center no-repeat;
+      color: white;
+      font-size: 1em;
+      line-height: 1;
+      font-family: 'Lato Medium';
+      text-align: center;
+      padding-top: 20px;
+      min-height: 200px;
+    }
+  }
+
 
 }
 
