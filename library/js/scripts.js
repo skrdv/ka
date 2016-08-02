@@ -162,7 +162,26 @@ jQuery(document).ready(function($) {
 			anchors: ['portfolio', 'services', 'contact'],
 			menu: '#nav',
 			scrollingSpeed: 1000,
-			fixedElements: '.footer',
+
+			//Accessibility
+			keyboardScrolling: true,
+			animateAnchor: true,
+			recordHistory: true,
+
+			//Design
+			controlArrows: true,
+			verticalCentered: true,
+			sectionsColor : ['#fff', '#fff', '#fff'],
+			paddingTop: '0',
+			paddingBottom: '0',
+			fixedElements: '#header, #footer',
+			responsiveWidth: 0,
+			responsiveHeight: 0,
+
+			//Custom selectors
+			sectionSelector: '.section',
+			slideSelector: '.slide',
+
 		});
 
 		// Backstretch
