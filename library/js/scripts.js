@@ -104,6 +104,43 @@ function loadGravatars() {
 	}
 } // end function
 
+function homeBg() {
+	jQuery('.slide.sokolniki').backstretch('/wp-content/uploads/case_sokolniki_head.jpg');
+	jQuery('.slide.2t-gallery').backstretch('/wp-content/uploads/case_2t_head.jpg');
+	jQuery('.slide.flight').backstretch('/wp-content/uploads/case_kite_head.jpg');
+	jQuery('.slide.fazer').backstretch('/wp-content/uploads/case_fazer_head.jpg');
+
+	jQuery('.slide.team-1').backstretch('/wp-content/uploads/team_bw.jpg');
+	jQuery('.slide.team-2').backstretch('/wp-content/uploads/team_bw.jpg');
+}
+
+function portfolioBg() {
+	jQuery('.sokolniki.case-head').backstretch('/wp-content/uploads/case_sokolniki_head.jpg');
+	jQuery('.sokolniki.case-info').backstretch('/wp-content/uploads/case_sokolniki_info.jpg');
+	for ($i=1; $i < 11; $i++) {
+		jQuery('.sokolniki.case-'+$i).backstretch('/wp-content/uploads/case_sokolniki_'+$i+'.jpg');
+	}
+
+	jQuery('.2t-gallery.case-head').backstretch('/wp-content/uploads/case_2t_head.jpg');
+	jQuery('.2t-gallery.case-info').backstretch('/wp-content/uploads/case_2t_info.jpg');
+	for ($i=1; $i < 11; $i++) {
+		jQuery('.2t-gallery.case-'+$i).backstretch('/wp-content/uploads/case_2t_'+$i+'.jpg');
+	}
+
+	jQuery('.flight.case-head').backstretch('/wp-content/uploads/case_kite_head.jpg');
+	jQuery('.flight.case-info').backstretch('/wp-content/uploads/case_kite_info.jpg');
+	for ($i=1; $i < 11; $i++) {
+		jQuery('.flight.case-'+$i).backstretch('/wp-content/uploads/case_kite_'+$i+'.jpg');
+	}
+
+	jQuery('.fazer.case-head').backstretch('/wp-content/uploads/case_fazer_head.jpg');
+	jQuery('.fazer.case-info').backstretch('/wp-content/uploads/case_fazer_info.jpg');
+	for ($i=1; $i < 11; $i++) {
+		jQuery('.fazer.case-'+$i).backstretch('/wp-content/uploads/case_fazer_'+$i+'.jpg');
+	}
+}
+
+
 
 /*
  * Put all your regular jQuery in here.
@@ -117,10 +154,10 @@ jQuery(document).ready(function($) {
   loadGravatars();
 
 	// Home
-	if (jQuery('body').hasClass('home')) {
+	if ($('body').hasClass('home')) {
 
 		// FullPage
-		jQuery('#home').fullpage({
+		$('#home').fullpage({
 			verticalCentered: false,
 			anchors: ['portfolio', 'services', 'team', 'contact'],
 			menu: '#nav',
@@ -129,13 +166,7 @@ jQuery(document).ready(function($) {
 		});
 
 		// Backstretch
-		$('.slide.sokolniki').backstretch('/wp-content/uploads/case_sokolniki_head.jpg');
-		$('.slide.2t').backstretch('/wp-content/uploads/case_2t_head.jpg');
-		$('.slide.flight').backstretch('/wp-content/uploads/case_kite_head.jpg');
-		$('.slide.fazer').backstretch('/wp-content/uploads/case_fazer_head.jpg');
-
-		$('.slide.team-1').backstretch('/wp-content/uploads/team_bw.jpg');
-		$('.slide.team-2').backstretch('/wp-content/uploads/team_bw.jpg');
+		homeBg();
 
 		// Slider Arrows
 		$('.fp-controlArrow').clone().addClass('right').appendTo('.section.portfolio');
@@ -163,42 +194,26 @@ jQuery(document).ready(function($) {
 	}
 
 	// Portfolio
-	if (jQuery('body').hasClass('single')) {
+	if ($('body').hasClass('single')) {
 
 		// FullPage
-		jQuery('#fullpost').fullpage({
+		$('#fullpost').fullpage({
 			navigation: true,
 			navigationPosition: 'right'
 		});
 
-		jQuery('.button.toogle').on('click', function() {
-			jQuery('.ui.card').transition('fade right');
+		$('.button.toogle').on('click', function() {
+			$('.ui.card').transition('fade right');
+			if ($(this).text() == 'Скрыть описание') {
+				$(this).text('Показать описание');
+			} else {
+				$(this).text('Скрыть описание');
+			}
+
 		});
 
+		portfolioBg();
 
-		$('.sokolniki.case-head').backstretch('/wp-content/uploads/case_sokolniki_head.jpg');
-		$('.sokolniki.case-info').backstretch('/wp-content/uploads/case_sokolniki_info.jpg');
-		for ($i=1; $i < 11; $i++) {
-			$('.sokolniki.case-'+$i).backstretch('/wp-content/uploads/case_sokolniki_'+$i+'.jpg');
-		}
-
-		$('.2t.case-head').backstretch('/wp-content/uploads/case_2t_head.jpg');
-		$('.2t.case-info').backstretch('/wp-content/uploads/case_2t_info.jpg');
-		for ($i=1; $i < 11; $i++) {
-			$('.2t.case-'+$i).backstretch('/wp-content/uploads/case_2t_'+$i+'.jpg');
-		}
-
-		$('.flight.case-head').backstretch('/wp-content/uploads/case_kite_head.jpg');
-		$('.flight.case-info').backstretch('/wp-content/uploads/case_kite_info.jpg');
-		for ($i=1; $i < 11; $i++) {
-			$('.flight.case-'+$i).backstretch('/wp-content/uploads/case_kite_'+$i+'.jpg');
-		}
-
-		$('.fazer.case-head').backstretch('/wp-content/uploads/case_fazer_head.jpg');
-		$('.fazer.case-info').backstretch('/wp-content/uploads/case_fazer_info.jpg');
-		for ($i=1; $i < 11; $i++) {
-			$('.fazer.case-'+$i).backstretch('/wp-content/uploads/case_fazer_'+$i+'.jpg');
-		}
 
 	}
 
@@ -222,9 +237,23 @@ jQuery(document).ready(function($) {
 
 }); /* end of as page load scripts */
 
-// jQuery(document).mouseup(function (e) {
-// var card = jQuery('.ui.card');
-// if (card.has(e.target).length === 0){
-// 		jQuery('.ui.card').transition('fade right');
-// }
-// });
+jQuery(window).resize(function($) {
+
+	console.log('resize');
+
+	// Home
+	if (jQuery('body').hasClass('home')) {
+
+		// Backstretch
+		homeBg();
+
+	}
+
+	// Portfolio
+	if (jQuery('body').hasClass('single')) {
+
+		portfolioBg();
+
+	}
+
+});

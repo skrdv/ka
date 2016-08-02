@@ -43,7 +43,7 @@
 	</head>
 	<?php
 
-	if (isset($post->post_name)) { $slug = $post->post_name; } else { $slug = ''; } 
+	if (isset($post->post_name)) { $slug = $post->post_name; } else { $slug = ''; }
 
 	?>
 
@@ -52,7 +52,7 @@
 		<header role="banner">
 
 				<nav role="navigation">
-					<div class="ui stackable container menu" id="nav">
+					<div class="ui container menu" id="nav">
 						<a class="item logo" href="/"></a>
 						<div class="item browse">
 							<span class="close"></span>
