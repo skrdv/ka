@@ -159,7 +159,7 @@ jQuery(document).ready(function($) {
 		// FullPage
 		$('#home').fullpage({
 			verticalCentered: false,
-			anchors: ['portfolio', 'services', 'team', 'contact'],
+			anchors: ['portfolio', 'services', 'contact'],
 			menu: '#nav',
 			scrollingSpeed: 1000,
 			fixedElements: '.footer',

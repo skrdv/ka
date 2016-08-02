@@ -60,9 +60,9 @@
 							<span class="text">Меню</span>
 						</div>
 						<div class="menu">
-							<a class="item" href="/#cases">Работы</a>
+							<a class="item" href="/#portfolio">Работы</a>
 							<a class="item" href="/#services">Услуги</a>
-							<a class="item" href="/#team">Мы</a>
+							<?php /* <a class="item" href="/#team">Мы</a> */ ?>
 							<a class="item" href="/#contact">Контакты</a>
 						</div>
 						<div class="item right phone">+7 (812) 402-00-29</div>

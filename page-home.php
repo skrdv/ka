@@ -116,6 +116,7 @@
 
 				</section>
 
+				<?php /*
 				<section class="section team">
 
 					<div class="slide team-1">
@@ -135,7 +136,8 @@
 					</div>
 
 				</section>
-
+				*/ ?>
+				
 				<section class="section contact">
 
 					<div class="slide contact-1">
