@@ -29,63 +29,55 @@
 		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
             <meta name="theme-color" content="#121212">
 
-		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-
 		<?php // wordpress head functions ?>
 		<?php wp_head(); ?>
 		<?php // end of wordpress head ?>
 
 		<?php // drop Google Analytics Here ?>
 		<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-81026057-1', 'auto');
-  ga('send', 'pageview');
+  	ga('create', 'UA-81026057-1', 'auto');
+  	ga('send', 'pageview');
 
-</script>
-		<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function (d, w, c) {
-        (w[c] = w[c] || []).push(function() {
-            try {
-                w.yaCounter38590155 = new Ya.Metrika({
-                    id:38590155,
-                    clickmap:true,
-                    trackLinks:true,
-                    accurateTrackBounce:true,
-                    webvisor:true,
-                    trackHash:true
-                });
-            } catch(e) { }
-        });
+		</script>
+		<script type="text/javascript">
+		    (function (d, w, c) {
+		        (w[c] = w[c] || []).push(function() {
+		            try {
+		                w.yaCounter38590155 = new Ya.Metrika({
+		                    id:38590155,
+		                    clickmap:true,
+		                    trackLinks:true,
+		                    accurateTrackBounce:true,
+		                    webvisor:true,
+		                    trackHash:true
+		                });
+		            } catch(e) { }
+		        });
 
-        var n = d.getElementsByTagName("script")[0],
-            s = d.createElement("script"),
-            f = function () { n.parentNode.insertBefore(s, n); };
-        s.type = "text/javascript";
-        s.async = true;
-        s.src = "https://mc.yandex.ru/metrika/watch.js";
+		        var n = d.getElementsByTagName("script")[0],
+		            s = d.createElement("script"),
+		            f = function () { n.parentNode.insertBefore(s, n); };
+		        s.type = "text/javascript";
+		        s.async = true;
+		        s.src = "https://mc.yandex.ru/metrika/watch.js";
 
-        if (w.opera == "[object Opera]") {
-            d.addEventListener("DOMContentLoaded", f, false);
-        } else { f(); }
-    })(document, window, "yandex_metrika_callbacks");
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/38590155" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
+		        if (w.opera == "[object Opera]") {
+		            d.addEventListener("DOMContentLoaded", f, false);
+		        } else { f(); }
+		    })(document, window, "yandex_metrika_callbacks");
+		</script>
+		<noscript><div><img src="https://mc.yandex.ru/watch/38590155" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
 		<?php // end analytics ?>
 
-		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-
 	</head>
-	<?php
 
-	if (isset($post->post_name)) { $slug = $post->post_name; } else { $slug = ''; }
-
-	?>
+	<?php if (isset($post->post_name)) { $slug = $post->post_name; } else { $slug = ''; } ?>
 
 	<body <?php body_class($slug); ?> id="page-<?php echo($slug); ?>">
 

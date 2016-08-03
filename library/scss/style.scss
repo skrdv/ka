@@ -22,11 +22,23 @@ IMPORTING SEMANTIC-UI
 
 // @import '../vendors/semantic-ui/scss/semantic-ui.scss';
 @import 'fonts';
-@import 'semantic-ui/globals/all';
-@import 'semantic-ui/elements/all';
-@import 'semantic-ui/collections/all';
-@import 'semantic-ui/views/all';
-@import 'semantic-ui/modules/all';
+// @import 'semantic-ui/globals/all';
+@import 'semantic-ui/globals/reset';
+@import 'semantic-ui/globals/site';
+// @import 'semantic-ui/elements/all';
+@import 'semantic-ui/elements/button';
+@import 'semantic-ui/elements/container';
+@import 'semantic-ui/elements/header';
+@import 'semantic-ui/elements/input';
+// @import 'semantic-ui/collections/all';
+@import 'semantic-ui/collections/form';
+@import 'semantic-ui/collections/grid';
+@import 'semantic-ui/collections/menu';
+// @import 'semantic-ui/views/all';
+@import 'semantic-ui/views/card';
+@import 'semantic-ui/views/item';
+// @import 'semantic-ui/modules/all';
+@import 'semantic-ui/modules/transition';
 @import 'ka';
 
 

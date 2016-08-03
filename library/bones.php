@@ -49,6 +49,20 @@ function bones_head_cleanup() {
 	// remove Wp version from scripts
 	add_filter( 'script_loader_src', 'bones_remove_wp_ver_css_js', 9999 );
 
+	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+	remove_action( 'wp_print_styles', 'print_emoji_styles' );
+	remove_action( 'admin_print_styles', 'print_emoji_styles' );
+
+	remove_action( 'wp_head', 'feed_links', 2 );
+	remove_action('wp_head', 'feed_links_extra', 3 );
+	remove_action('wp_head', 'rsd_link');
+	remove_action( 'wp_head', 'rsd_link' );
+	remove_action('wp_head', 'wp_shortlink_wp_head');
+	remove_action('wp_head', 'adjacent_posts_rel_link_wp_head');
+
+
+
 } /* end bones head cleanup */
 
 // A better title
@@ -124,40 +138,31 @@ function bones_scripts_and_styles() {
 
   if (!is_admin()) {
 
-		// modernizr (without media query polyfill)
 		wp_register_script( 'bones-modernizr', get_stylesheet_directory_uri() . '/library/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );
 
-		// register main stylesheet
 		wp_register_style( 'bones-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), '', 'all' );
 
-		// register devide js
 		wp_register_script( 'device-js', get_stylesheet_directory_uri() . '/library/js/device.min.js', array(), '', true );
 
-		// register backstretch js
 		wp_register_script( 'backstretch-js', get_stylesheet_directory_uri() . '/library/js/jquery.backstretch.min.js', array(), '', true );
 
-		// register semantic js
-		wp_register_script( 'semantic-js', get_stylesheet_directory_uri() . '/library/vendors/semantic-ui/js/semantic-ui.js', array(), '', true );
+		wp_register_script( 'semantic-js', get_stylesheet_directory_uri() . '/library/js/semantic-ui/transition.js', array(), '', true );
 
-		// register fullPage css
 		wp_register_style( 'fullpage-css', get_stylesheet_directory_uri() . '/library/vendors/fullpage/jquery.fullpage.min.css', array(), '', 'all' );
 
-		// register fullPage js
 		wp_register_script( 'fullpage-js', get_stylesheet_directory_uri() . '/library/vendors/fullpage/jquery.fullpage.min.js', array(), '', true );
 
-		// ie-only style sheet
 		wp_register_style( 'bones-ie-only', get_stylesheet_directory_uri() . '/library/css/ie.css', array(), '' );
 
     // comment reply script for threaded comments
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
-		  wp_enqueue_script( 'comment-reply' );
+		  // wp_enqueue_script( 'comment-reply' );
     }
 
-		//adding scripts file in the footer
 		wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
 
 		// enqueue styles and scripts
-		wp_enqueue_script( 'bones-modernizr' );
+		// wp_enqueue_script( 'bones-modernizr' );
 		wp_enqueue_style( 'fullpage-css' );
 		wp_enqueue_style( 'bones-stylesheet' );
 		wp_enqueue_style( 'bones-ie-only' );
@@ -175,6 +180,10 @@ function bones_scripts_and_styles() {
 		wp_enqueue_script( 'semantic-js' );
 		wp_enqueue_script( 'fullpage-js' );
 		wp_enqueue_script( 'bones-js' );
+
+
+
+		// wp_dequeue_style('contact-form-7-css');
 
 	}
 }
