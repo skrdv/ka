@@ -14,7 +14,7 @@
 
 				<section class="section portfolio">
 
-					<?php $query = new WP_Query( array( 'category_name' => 'portfolio' ) ); ?>
+					<?php $query = new WP_Query( array( 'category_name' => 'portfolio', 'orderby' => 'rand' ) ); ?>
 					<?php while ( $query->have_posts() ) { ?>
 					<?php $query->the_post(); ?>
 
