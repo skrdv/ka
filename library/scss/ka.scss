@@ -81,7 +81,19 @@ $color-sokolniki: darkgreen;
   background: #231F20;
 }
 
-
+#error404 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  .frame {
+    border-color: $color-black;
+  }
+  .ui.header {
+    color: $color-black;
+  }
+}
 
 .section{
   position: relative;

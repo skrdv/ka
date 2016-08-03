@@ -252,6 +252,14 @@ jQuery(document).ready(function($) {
 		$('.ui.menu').find('.menu').transition('fade');
 	});
 
+	// 404 page
+	if ($('body').hasClass('error404')) {
+
+		$('#error404').backstretch('http://ka.skrdv.com/wp-content/uploads/404-1600x900.jpg');
+
+	}
+
+
 
 }); /* end of as page load scripts */
 

@@ -1,43 +1,21 @@
 <?php get_header(); ?>
 
-			<div id="content">
+<main role="main">
 
-				<div id="inner-content" class="wrap cf">
+  <article id="error404">
 
-					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+    <section class="section error404">
 
-						<article id="post-not-found" class="hentry cf">
+      <header class="frame">
+        <div class="ui header">404
+          <div class="sub header"></div>
+        </a>
+      </header>
 
-							<header class="article-header">
+    </section>
 
-								<h1><?php _e( 'Epic 404 - Article Not Found', 'bonestheme' ); ?></h1>
+  </article>
 
-							</header>
-
-							<section class="entry-content">
-
-								<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'bonestheme' ); ?></p>
-
-							</section>
-
-							<section class="search">
-
-									<p><?php get_search_form(); ?></p>
-
-							</section>
-
-							<footer class="article-footer">
-
-									<p><?php _e( 'This is the 404.php template.', 'bonestheme' ); ?></p>
-
-							</footer>
-
-						</article>
-
-					</main>
-
-				</div>
-
-			</div>
+</main>
 
 <?php get_footer(); ?>
