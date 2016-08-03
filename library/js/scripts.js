@@ -105,13 +105,25 @@ function loadGravatars() {
 } // end function
 
 function homeBg() {
-	jQuery('.slide.sokolniki').backstretch('/wp-content/uploads/case_sokolniki_head.jpg');
-	jQuery('.slide.2t').backstretch('/wp-content/uploads/case_2t_head.jpg');
-	jQuery('.slide.flight').backstretch('/wp-content/uploads/case_kite_head.jpg');
-	jQuery('.slide.fazer').backstretch('/wp-content/uploads/case_fazer_head.jpg');
 
-	jQuery('.slide.team-1').backstretch('/wp-content/uploads/team_bw.jpg');
-	jQuery('.slide.team-2').backstretch('/wp-content/uploads/team_bw.jpg');
+	jQuery('.slide').each(function(){
+		var slide_bg = jQuery(this).data('bs');
+		var slide_bg_800 = slide_bg.replace('.jpg','-800x450.jpg');
+		var slide_bg_1280 = slide_bg.replace('.jpg','-1280x720.jpg');
+		var slide_bg_1600 = slide_bg.replace('.jpg','-1600x900.jpg');
+		var slide_bg_1920 = slide_bg.replace('.jpg','-1920x1080.jpg');
+		var width = jQuery(window).width();
+		if (width < 768) {
+			jQuery(this).backstretch(slide_bg_800);
+		} else if (width < 1280) {
+			jQuery(this).backstretch(slide_bg_1280);
+		}  else if (width < 1600) {
+			jQuery(this).backstretch(slide_bg_1600);
+		} else if (width >= 1600) {
+			jQuery(this).backstretch(slide_bg_1920);
+		}
+	});
+
 }
 
 function portfolioBg() {
@@ -186,6 +198,7 @@ jQuery(document).ready(function($) {
 
 		// Backstretch
 		homeBg();
+
 
 		// Slider Arrows
 		$('.fp-controlArrow').clone().addClass('right').appendTo('.section.portfolio');
