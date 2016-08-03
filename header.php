@@ -27,7 +27,7 @@
 		<?php // or, set /favicon.ico for IE10 win ?>
 		<meta name="msapplication-TileColor" content="#f01d4f">
 		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
-            <meta name="theme-color" content="#121212">
+    <meta name="theme-color" content="#121212">
 
 		<?php // wordpress head functions ?>
 		<?php wp_head(); ?>
@@ -83,12 +83,11 @@
 
 		<header role="banner">
 
-				<nav role="navigation">
-					<div class="ui container menu" id="nav">
+				<nav id="nav" class="ui fixed menu" role="navigation">
+					<div class="ui container">
 						<a class="item logo" href="/"></a>
 						<div class="item browse">
 							<span class="close"></span>
-							<span class="square"></span>
 							<span class="text">Меню</span>
 						</div>
 						<div class="menu">

@@ -248,7 +248,6 @@ jQuery(document).ready(function($) {
 	// Navigation
 	$('.item.browse').on('click', function() {
 		$(this).find('.close').transition('fade');
-		$(this).find('.square').transition('fade');
 		$(this).find('.text').transition('fade');
 		$('.ui.menu').find('.menu').transition('fade');
 	});
