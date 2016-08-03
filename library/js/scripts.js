@@ -127,29 +127,25 @@ function homeBg() {
 }
 
 function portfolioBg() {
-	jQuery('.sokolniki.case-head').backstretch('/wp-content/uploads/case_sokolniki_head.jpg');
-	jQuery('.sokolniki.case-info').backstretch('/wp-content/uploads/case_sokolniki_info.jpg');
-	for ($i=1; $i < 11; $i++) {
-		jQuery('.sokolniki.case-'+$i).backstretch('/wp-content/uploads/case_sokolniki_'+$i+'.jpg');
-	}
 
-	jQuery('.2t.case-head').backstretch('/wp-content/uploads/case_2t_head.jpg');
-	jQuery('.2t.case-info').backstretch('/wp-content/uploads/case_2t_info.jpg');
-	for ($i=1; $i < 11; $i++) {
-		jQuery('.2t.case-'+$i).backstretch('/wp-content/uploads/case_2t_'+$i+'.jpg');
-	}
+	jQuery('.section').each(function(){
+		var slide_bg = jQuery(this).data('bs');
+		var slide_bg_800 = slide_bg.replace('.jpg','-800x450.jpg');
+		var slide_bg_1280 = slide_bg.replace('.jpg','-1280x720.jpg');
+		var slide_bg_1600 = slide_bg.replace('.jpg','-1600x900.jpg');
+		var slide_bg_1920 = slide_bg.replace('.jpg','-1920x1080.jpg');
+		var width = jQuery(window).width();
+		if (width < 768) {
+			jQuery(this).backstretch(slide_bg_800);
+		} else if (width < 1280) {
+			jQuery(this).backstretch(slide_bg_1280);
+		}  else if (width < 1600) {
+			jQuery(this).backstretch(slide_bg_1600);
+		} else if (width >= 1600) {
+			jQuery(this).backstretch(slide_bg_1920);
+		}
+	});
 
-	jQuery('.flight.case-head').backstretch('/wp-content/uploads/case_kite_head.jpg');
-	jQuery('.flight.case-info').backstretch('/wp-content/uploads/case_kite_info.jpg');
-	for ($i=1; $i < 11; $i++) {
-		jQuery('.flight.case-'+$i).backstretch('/wp-content/uploads/case_kite_'+$i+'.jpg');
-	}
-
-	jQuery('.fazer.case-head').backstretch('/wp-content/uploads/case_fazer_head.jpg');
-	jQuery('.fazer.case-info').backstretch('/wp-content/uploads/case_fazer_info.jpg');
-	for ($i=1; $i < 11; $i++) {
-		jQuery('.fazer.case-'+$i).backstretch('/wp-content/uploads/case_fazer_'+$i+'.jpg');
-	}
 }
 
 
@@ -202,7 +198,7 @@ jQuery(document).ready(function($) {
 
 		// Slider Arrows
 		$('.fp-controlArrow').clone().addClass('right').appendTo('.section.portfolio');
-		$('.fp-controlArrow').clone().addClass('right').appendTo('.section.team');
+		// $('.fp-controlArrow').clone().addClass('right').appendTo('.section.team');
 		// $('.fp-controlArrow').clone().addClass('right').appendTo('.section.contact');
 
 		// services
@@ -229,7 +225,7 @@ jQuery(document).ready(function($) {
 	if ($('body').hasClass('single')) {
 
 		// FullPage
-		$('#fullpost').fullpage({
+		$('#case').fullpage({
 			navigation: true,
 			navigationPosition: 'right'
 		});
@@ -258,15 +254,6 @@ jQuery(document).ready(function($) {
 	});
 
 
-
-
-
-	// window.addEventListener("orientationchange", function() {
-  //   alert(window.orientation);
-	// }, false);
-
-
-
 }); /* end of as page load scripts */
 
 jQuery(window).resize(function($) {
@@ -276,7 +263,6 @@ jQuery(window).resize(function($) {
 	// Home
 	if (jQuery('body').hasClass('home')) {
 
-		// Backstretch
 		homeBg();
 
 	}
