@@ -120,7 +120,7 @@ function homeBg() {
 		}  else if (width < 1600) {
 			jQuery(this).backstretch(slide_bg_1600);
 		} else if (width >= 1600) {
-			jQuery(this).backstretch(slide_bg_1920);
+			jQuery(this).backstretch(slide_bg);
 		}
 	});
 
@@ -142,7 +142,7 @@ function portfolioBg() {
 		}  else if (width < 1600) {
 			jQuery(this).backstretch(slide_bg_1600);
 		} else if (width >= 1600) {
-			jQuery(this).backstretch(slide_bg_1920);
+			jQuery(this).backstretch(slide_bg);
 		}
 	});
 
