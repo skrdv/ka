@@ -1,9 +1,9 @@
 /*******************************
          Site Overrides
 *******************************/
-$color-white: rgba(255,255,255,1);
-$color-black: rgba(35,21,32,1);
-
+$color-white: rgb(255,255,255);
+$color-black: rgb(35,21,32);
+$color-pink: rgb(236,0,140);
 
 
 .hidden {
@@ -28,13 +28,12 @@ $color-black: rgba(35,21,32,1);
 		text-transform: uppercase;
 		border-radius: 0;
 		&:hover{
-			// opacity: .8;
       background: none;
+      color: $color-pink;
 		}
 		&.phone {
       padding-right: 0;
       &:hover {
-        // opacity: 1;
         color: $color-black !important;
       }
 		}
@@ -42,9 +41,17 @@ $color-black: rgba(35,21,32,1);
 			display: block;
 			width: 50px !important;
 			height: 50px;
-      margin-top: 0;
-			background: url(../images/logo.svg) 0 0 no-repeat;
-			background-size: cover;
+      padding: 0;
+      margin: 0;
+			border: none;
+      svg path {
+        fill: $color-pink;
+      }
+      &:hover {
+        svg path {
+          fill: $color-black;
+        }
+      }
 		}
     &.browse {
       position: relative;
@@ -389,19 +396,16 @@ $color-black: rgba(35,21,32,1);
          Site Pages Styles
 *******************************/
 
-$color-fazer1: rgb(255,255,255);
-$color-fazer2: #cccccc;
-$color-fazer3: #414042;
-
-$color-sokolniki: darkgreen;
+$color-fazer-active: #cccccc;
+$color-fazer-main: #414042;
 
 #home {
   #slide-fazer {
     .frame {
-      border-color: $color-fazer1;
+      border-color: $color-white;
       .ui.header,
       .ui.header .sub.header {
-        color: $color-fazer1;
+        color: $color-white;
       }
     }
   }
@@ -410,27 +414,31 @@ $color-sokolniki: darkgreen;
 #page-fazer {
   #nav .item {
     &:hover {
-      color: $color-fazer2;
+      color: $color-fazer-active;
     }
     &.logo {
-      background: url(../images/logo_black.png) 0 0 no-repeat;
+      svg path {
+        fill: $color-black;
+      }
       &:hover {
-        background: url(../images/logo_white.png) 0 0 no-repeat;
+        svg path {
+          fill: $color-fazer-active;
+        }
       }
     }
     &.browse:hover {
       .close:before,
       .close:after {
-        background-color: $color-fazer2;
+        background-color: $color-fazer-active;
       }
     }
   }
   #head-fazer {
     .frame {
-      border-color: $color-fazer1;
+      border-color: $color-white;
       .ui.header,
       .ui.header .sub.header {
-        color: $color-fazer1;
+        color: $color-white;
       }
     }
   }
@@ -442,7 +450,7 @@ $color-sokolniki: darkgreen;
       .header,
       .meta,
       .description {
-        color: $color-fazer1;
+        color: $color-white;
       }
     }
   }
@@ -451,12 +459,12 @@ $color-sokolniki: darkgreen;
       .header,
       .meta,
       .description {
-        color: $color-fazer3;
+        color: $color-fazer-main;
       }
     }
   }
   #fp-nav ul li a span:hover {
-    background:$color-fazer2;
+    background:$color-fazer-active;
   }
 }
 
@@ -482,9 +490,13 @@ $color-2t-main:   rgb(72,61,54);
       color: $color-2t-active;
     }
     &.logo {
-      background: url(../images/logo_black.png) 0 0 no-repeat;
+      svg path {
+        fill: $color-black;
+      }
       &:hover {
-        background: url(../images/logo_white.png) 0 0 no-repeat;
+        svg path {
+          fill: $color-2t-active;
+        }
       }
     }
     &.browse:hover {
@@ -554,9 +566,13 @@ $color-flight-main:   rgb(9,78,147);
       color: $color-flight-active;
     }
     &.logo {
-      background: url(../images/logo_black.png) 0 0 no-repeat;
+      svg path {
+        fill: $color-black;
+      }
       &:hover {
-        background: url(../images/logo_white.png) 0 0 no-repeat;
+        svg path {
+          fill: $color-flight-active;
+        }
       }
     }
     &.browse:hover {
@@ -625,9 +641,13 @@ $color-sokolniki-main:   rgb(77,179,72);
       color: $color-sokolniki-active;
     }
     &.logo {
-      background: url(../images/logo_black.png) 0 0 no-repeat;
+      svg path {
+        fill: $color-black;
+      }
       &:hover {
-        background: url(../images/logo_white.png) 0 0 no-repeat;
+        svg path {
+          fill: $color-sokolniki-active;
+        }
       }
     }
     &.browse:hover {
