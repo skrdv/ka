@@ -38,6 +38,7 @@
           <section id="case-<?php echo $post->post_name; ?>-<?php echo $i; ?>" class="section case <?php echo $post->post_name; ?> case-<?php echo $i; ?>" data-bs="<?php the_field('case_'.$i); ?>">
 
             <?php if( get_field('text_'.$i) ) { ?>
+            <div class="info-bg"></div>
             <div class="ui container">
               <div class="ui card">
                 <div class="content">

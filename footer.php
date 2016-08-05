@@ -15,7 +15,7 @@
 		<?php // all js scripts are loaded in library/bones.php ?>
 		<?php wp_footer(); ?>
 
-    <div id="mobile">Мобильная версия в разработке</div>
+    <div id="mobile">90&deg;</div>
 
 	</body>
 
