@@ -1,11 +1,10 @@
 /*******************************
          Site Overrides
 *******************************/
+$color-white: rgba(255,255,255,1);
+$color-black: rgba(35,21,32,1);
 
-$color-white: #ffffff;
-$color-black: #231f20;
-$color-fazer: #ffffff;
-$color-sokolniki: darkgreen;
+
 
 .hidden {
   display: none !important;
@@ -24,23 +23,27 @@ $color-sokolniki: darkgreen;
     height: 20px;
     margin-top: 5px;
 		color: #231f20;
-    font-family: 'Lato Medium';
+    font-family: 'Lato Regular';
 		font-size: 1.44em;
 		text-transform: uppercase;
 		border-radius: 0;
 		&:hover{
-			opacity: .8;
+			// opacity: .8;
       background: none;
 		}
 		&.phone {
       padding-right: 0;
+      &:hover {
+        // opacity: 1;
+        color: $color-black !important;
+      }
 		}
 		&.logo {
 			display: block;
 			width: 50px !important;
 			height: 50px;
       margin-top: 0;
-			background: url(../images/logo_pink.png) 0 0 no-repeat;
+			background: url(../images/logo.svg) 0 0 no-repeat;
 			background-size: cover;
 		}
     &.browse {
@@ -56,7 +59,8 @@ $color-sokolniki: darkgreen;
         visibility: hidden;
         float: left;
       }
-      .close:before, .close:after {
+      .close:before,
+      .close:after {
         position: absolute;
         top: 0px;
         left: 10px;
@@ -235,43 +239,7 @@ $color-sokolniki: darkgreen;
 }
 
 
-.frame {
-  display: block;
-  max-width: 400px;
-  margin: 200px auto;
-  border: 4px solid white;
-  text-align: center;
-  .ui.header {
-    display: block;
-    padding: 20px;
-    &:hover {
-      opacity: .8;
-    }
-  }
-  .ui.header {
-    font-family: 'Lato Regular';
-    color: white;
-    font-weight: normal;
-    text-transform: uppercase;
-  }
 
-  h1.ui.header {
-    font-size: 3rem;
-  }
-
-  .ui.header .sub.header {
-    color: white;
-    font-family: 'Lato Light';
-    text-transform: uppercase;
-  }
-
-  .ui.header:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
-    font-size: 3em;
-  }
-
-
-
-}
 
 .fp-controlArrow {
 
@@ -303,98 +271,116 @@ $color-sokolniki: darkgreen;
   left: auto;
 }
 
-
-
-
-.section.case-info {
-  .ui.card {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    padding: 160px 80px;
-    background: transparent;
-    box-shadow: none;
-    .header {
-      margin-bottom: 1em;
-      text-transform: uppercase;
-      font-family: 'Lato Regular';
-    }
-    .meta {
-      margin-bottom: 3em;
-      text-transform: uppercase;
-      font-family: 'Lato Light';
-    }
-    .description {
-      max-width: 300px;
-      font-size: .88em;
-      text-align: justify;
-      font-family: 'Lato Regular';
+#home {
+  .section.portfolio {
+    .slide {
+      .wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .frame {
+        max-width: 800px;
+        margin: 0 auto;
+        border: 4px solid white;
+        text-align: center;
+        .ui.header {
+          display: block;
+          margin: 0;
+          padding: 0em 1.2em 0.3em 1.2em;
+          font-family: 'Lato Regular';
+          font-size: 5em;
+          font-weight: normal;
+          text-transform: lowercase;
+          .sub.header {
+            font-family: 'Lato Light';
+            font-size: 1.6rem;
+            line-height: 1;
+            text-transform: uppercase;
+          }
+        }
+      }
     }
   }
 }
 
-.section.case {
-  .ui.card {
-    background: none;
-    box-shadow: none;
-    border-radius: 0;
-  }
 
-  .ui.card > .content > .header,
-  .ui.card > .content > .description,
-  .ui.card .meta {
-    // color: $color-black;
-  }
-  .ui.card .meta {
-    color: $color-black;
-  }
 
-  .ui.cards > .card > .content > .header:not(.ui),
-  .ui.card > .content > .header:not(.ui) {
-    font-weight: normal;
-    font-size: 3rem;
-    margin-top: 0;
-    margin-bottom: 0.2em;
-    line-height: 3rem;
-  }
-  .ui.card {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    padding: 160px 80px;
-    .header {
-      margin-bottom: 1em;
-      text-transform: uppercase;
-      font-family: 'Lato Regular';
+#case {
+  .section.case {
+    &.head {
+      .wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .frame {
+        max-width: 800px;
+        margin: 0 auto;
+        border: 4px solid white;
+        text-align: center;
+        .ui.header {
+          display: block;
+          margin: 0;
+          padding: 0em 1.2em 0.3em 1.2em;
+          font-family: 'Lato Regular';
+          font-size: 5em;
+          font-weight: normal;
+          text-transform: lowercase;
+          .sub.header {
+            font-family: 'Lato Light';
+            font-size: 1.6rem;
+            line-height: 1;
+            text-transform: uppercase;
+          }
+        }
+      }
     }
-    .meta {
-      margin-bottom: 1em;
-      text-transform: uppercase;
-      font-family: 'Lato Light';
+    .info-bg {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 50%;
+      height: 100%;
+
     }
-    .description {
-      max-width: 300px;
-      font-size: .88em;
-      text-align: justify;
-      font-family: 'Lato Regular';
+    .ui.card {
+
+      width: 50%;
+      background: none;
+      border-radius: 0;
+      box-shadow: none;
+      .content {
+        padding: 0;
+      }
+      .header {
+        font-family: 'Lato Regular';
+        font-weight: normal;
+        font-size: 4.8em;
+        line-height: 1;
+        text-transform: lowercase;
+        margin-top: 0;
+        margin-bottom: 0.2em;
+      }
+      .meta {
+        font-family: 'Lato Light';
+        font-size: 1.4em;
+        text-transform: uppercase;
+        margin-bottom: 2em;
+      }
+      .description {
+        font-family: 'Lato Regular';
+        font-size: 1.12em;
+        text-align: justify;
+        max-width: 360px;
+        p {
+          line-height: 1.2em;
+        }
+      }
     }
-  }
-  .button.toogle {
-    position: absolute;
-    bottom: 10%;
-    left: 10%;
-    display: none !important;
-  }
-  .ui.basic.button:active,
-  .ui.basic.button:focus {
-    background: transparent !important;
-    border-radius: 0 !important;
   }
 }
+
 
 
 
@@ -403,226 +389,342 @@ $color-sokolniki: darkgreen;
          Site Pages Styles
 *******************************/
 
+$color-fazer1: rgb(255,255,255);
+$color-fazer2: #cccccc;
+$color-fazer3: #414042;
 
-.fazer .section.case-info .ui.card {
-  background: rgba(247,145,0,.8) !important;
+$color-sokolniki: darkgreen;
 
-}
-
-#info-fazer .ui.card .header,
-#info-fazer .ui.card .meta,
-#info-fazer .ui.card .description {
-  color: $color-white !important;
-}
-
-#case-info.fazer {
-  .ui.card > .content > .header,
-  .ui.card > .content > .description,
-  .ui.card .meta {
-    color: $color-white !important;
-  }
-}
-
-.case-4 .ui.card .meta {
-  color: $color-black !important;
-  margin-bottom: 20px;
-}
-
-.fazer {
-  .ui.menu .item {
-    color: $color-black !important;
-    border-color: $color-black !important;
-    &.logo {
-      background: url(../images/logo_black.png) 0 0 no-repeat !important;
+#home {
+  #slide-fazer {
+    .frame {
+      border-color: $color-fazer1;
+      .ui.header,
+      .ui.header .sub.header {
+        color: $color-fazer1;
+      }
     }
   }
-  .ui.header,
-  .ui.header .sub.header {
-    color: $color-fazer;
-  }
-
-
-
-  .frame,
-  &.frame {
-    border-color: $color-fazer !important;
-  }
-  &.case-title {
-    color: $color-fazer;
-    border-color: $color-fazer;
-  }
-  #fp-nav ul li a span {
-    background: $color-black;
-  }
 }
 
-
-
-
-
-
-
-#slide-2t .frame,
-#head-2t .frame {
-  border-color: #483d36 !important;
-}
-
-#slide-2t .frame .ui.header,
-#slide-2t .frame .ui.header .sub.header {
-  color: #483d36 !important;
-}
-
-#head-2t .frame .ui.header,
-#head-2t .frame .ui.header .sub.header {
-  color: #483d36 !important;
-}
-
-#info-2t .ui.card {
-  background: rgba(72,61,54,.82) !important;
-}
-
-#info-2t .ui.card .header,
-#info-2t .ui.card .meta,
-#info-2t .ui.card .description {
-  color: $color-white !important;
-}
-
-#page-2t #nav .item.logo {
-    background: transparent url(../images/logo_black.png) 0 0 no-repeat !important;
-}
-
-.2t {
-  .ui.menu .item {
-    color: #483d36 !important;
-    border-color: $color-white !important;
-    &.logo {
-      background: url(../images/logo_blue.png) 0 0 no-repeat !important;
-    }
-    &:hover {
-      color: #7dd3f3;
-    }
-  }
-  .ui.header,
-  h1.ui.header,
-  .ui.header .sub.header {
-    color: #483d36 !important;
-  }
-  .ui.header {
-    color: #483d36 !important;
-  }
-  .frame,
-  &.frame {
-    border-color: #483d36 !important;
-  }
-  &.case-title {
-    color: $color-white;
-    border-color: $color-white;
-  }
-
-  #fp-nav ul li a span {
-    background: $color-white;
-  }
-}
-
-
-
-#info-flight .ui.card .header,
-#info-flight .ui.card .meta,
-#info-flight .ui.card .description {
-  color: $color-white !important;
-}
-
-.section.flight.case-info .ui.card {
-  background: rgba(9,78,147,.82);
-}
-
-.flight {
-  #nav .item.browse .square {
-    border-color: $color-black !important;
-  }
-  #nav .item.browse .close:before,
-  #nav .item.browse .close:after {
-    background: $color-black !important;
-  }
+#page-fazer {
   #nav .item {
-    color: $color-black !important;
+    &:hover {
+      color: $color-fazer2;
+    }
     &.logo {
-      background: transparent url(../images/logo_black.png) 0 0 no-repeat !important;
+      background: url(../images/logo_black.png) 0 0 no-repeat;
+      &:hover {
+        background: url(../images/logo_white.png) 0 0 no-repeat;
+      }
+    }
+    &.browse:hover {
+      .close:before,
+      .close:after {
+        background-color: $color-fazer2;
+      }
     }
   }
-  .ui.header,
-  .ui.header .sub.header {
-    color: $color-white !important;
-  }
-  .frame,
-  &.frame {
-    border-color: $color-white !important;
-    .ui.header,
-    .ui.header .sub.header {
-      color: $color-white !important;
+  #head-fazer {
+    .frame {
+      border-color: $color-fazer1;
+      .ui.header,
+      .ui.header .sub.header {
+        color: $color-fazer1;
+      }
     }
   }
-  &.case-title {
-    color: $color-white;
-    border-color: $color-white;
+  #info-fazer {
+    .info-bg {
+      background: rgba(247,145,0,.7);
+    }
+    .ui.card {
+      .header,
+      .meta,
+      .description {
+        color: $color-fazer1;
+      }
+    }
   }
-
-  #fp-nav ul li a span {
-    // background: rgba(9,78,147,1);
-    background: $color-black;
+  #case-fazer-4 {
+    .ui.card {
+      .header,
+      .meta,
+      .description {
+        color: $color-fazer3;
+      }
+    }
+  }
+  #fp-nav ul li a span:hover {
+    background:$color-fazer2;
   }
 }
 
-.sokolniki #nav .item.logo {
-  background: transparent url(../images/logo_black.png) 0 0 no-repeat;
+
+$color-2t-active: rgb(125,211,243);
+$color-2t-main:   rgb(72,61,54);
+
+#home {
+  #slide-2t {
+    .frame {
+      border-color: $color-2t-main;
+      .ui.header,
+      .ui.header .sub.header {
+        color: $color-2t-main;
+      }
+    }
+  }
 }
 
-#info-sokolniki .ui.card {
-  background: rgba(81,177,72,.6) !important;
-}
-
-#info-sokolniki .ui.card .header,
-#info-sokolniki .ui.card .meta,
-#info-sokolniki .ui.card .description {
-  color: $color-white !important;
-}
-
-#case-info.sokolniki .ui.card {
-  background: rgba(81,177,72,.6);
-}
-
-#case-info.sokolniki .ui.card .header,
-#case-info.sokolniki .ui.card .meta,
-#case-info.sokolniki .ui.card .description {
-  color: $color-white !important;
-}
-
-.sokolniki {
-  .ui.menu .item {
-    color: $color-sokolniki;
+#page-2t {
+  #nav .item {
+    &:hover {
+      color: $color-2t-active;
+    }
     &.logo {
-
+      background: url(../images/logo_black.png) 0 0 no-repeat;
+      &:hover {
+        background: url(../images/logo_white.png) 0 0 no-repeat;
+      }
+    }
+    &.browse:hover {
+      .close:before,
+      .close:after {
+        background-color: $color-2t-active;
+      }
     }
   }
-
-  .ui.header,
-  .ui.header .sub.header {
-    color: $color-sokolniki;
-
+  #head-2t {
+    .frame {
+      border-color: $color-2t-main;
+      .ui.header,
+      .ui.header .sub.header {
+        color: $color-2t-main;
+      }
+    }
   }
-  .frame,
-  &.frame {
-    border-color: $color-sokolniki !important;
+  #info-2t {
+    .info-bg {
+      background: $color-2t-main;
+      opacity: 0.8;
+    }
+    .ui.card {
+      .header,
+      .meta,
+      .description {
+        color: $color-white;
+      }
+    }
   }
-  &.case-title {
-    color: $color-sokolniki;
-    border-color: $color-sokolniki;
+  #case-2t-1 {
+    .ui.card {
+      .header,
+      .meta,
+      .description {
+        color: $color-black;
+      }
+    }
   }
-
-  #fp-nav ul li a span {
-    background: $color-black;
+  #fp-nav ul li a span:hover {
+    background:$color-2t-active;
   }
 }
+
+
+
+
+$color-flight-active: rgb(9,78,147);
+$color-flight-main:   rgb(9,78,147);
+
+#home {
+  #slide-flight {
+    .frame {
+      border-color: $color-white;
+      .ui.header,
+      .ui.header .sub.header {
+        color: $color-white;
+      }
+    }
+  }
+}
+
+#page-flight {
+  #nav .item {
+    &:hover {
+      color: $color-flight-active;
+    }
+    &.logo {
+      background: url(../images/logo_black.png) 0 0 no-repeat;
+      &:hover {
+        background: url(../images/logo_white.png) 0 0 no-repeat;
+      }
+    }
+    &.browse:hover {
+      .close:before,
+      .close:after {
+        background-color: $color-flight-active;
+      }
+    }
+  }
+  #head-flight {
+    .frame {
+      border-color: $color-white;
+      .ui.header,
+      .ui.header .sub.header {
+        color: $color-white;
+      }
+    }
+  }
+  #info-flight {
+    .info-bg {
+      background: $color-flight-main;
+      opacity: 0.8;
+    }
+    .ui.card {
+      .header,
+      .meta,
+      .description {
+        color: $color-white;
+      }
+    }
+  }
+  #case-flight-1 {
+    .ui.card {
+      .header,
+      .meta,
+      .description {
+        color: $color-black;
+      }
+    }
+  }
+  #fp-nav ul li a span:hover {
+    background:$color-flight-active;
+  }
+}
+
+
+
+$color-sokolniki-active: rgb(32,79,38);
+$color-sokolniki-main:   rgb(77,179,72);
+
+#home {
+  #slide-sokolniki {
+    .frame {
+      border-color: $color-sokolniki-active;
+      .ui.header,
+      .ui.header .sub.header {
+        color: $color-sokolniki-active;
+      }
+    }
+  }
+}
+
+#page-sokolniki {
+  #nav .item {
+    &:hover {
+      color: $color-sokolniki-active;
+    }
+    &.logo {
+      background: url(../images/logo_black.png) 0 0 no-repeat;
+      &:hover {
+        background: url(../images/logo_white.png) 0 0 no-repeat;
+      }
+    }
+    &.browse:hover {
+      .close:before,
+      .close:after {
+        background-color: $color-sokolniki-active;
+      }
+    }
+  }
+  #head-sokolniki {
+    .frame {
+      border-color: $color-sokolniki-active;
+      .ui.header,
+      .ui.header .sub.header {
+        color: $color-sokolniki-active;
+      }
+    }
+  }
+  #info-sokolniki {
+    .info-bg {
+      background: $color-sokolniki-main;
+      opacity: 0.8;
+    }
+    .ui.card {
+      .header,
+      .meta,
+      .description {
+        color: $color-white;
+      }
+    }
+  }
+  #case-sokolniki-1 {
+    .ui.card {
+      .header,
+      .meta,
+      .description {
+        color: $color-black;
+      }
+    }
+  }
+  #fp-nav ul li a span:hover {
+    background:$color-sokolniki-active;
+  }
+}
+
+
+
+// .sokolniki #nav .item.logo {
+//   background: transparent url(../images/logo_black.png) 0 0 no-repeat;
+// }
+//
+// #info-sokolniki .ui.card {
+//   background: rgba(81,177,72,.6) !important;
+// }
+//
+// #info-sokolniki .ui.card .header,
+// #info-sokolniki .ui.card .meta,
+// #info-sokolniki .ui.card .description {
+//   color: $color-white !important;
+// }
+//
+// #case-info.sokolniki .ui.card {
+//   background: rgba(81,177,72,.6);
+// }
+//
+// #case-info.sokolniki .ui.card .header,
+// #case-info.sokolniki .ui.card .meta,
+// #case-info.sokolniki .ui.card .description {
+//   color: $color-white !important;
+// }
+//
+// .sokolniki {
+//   .ui.menu .item {
+//     color: $color-sokolniki;
+//     &.logo {
+//
+//     }
+//   }
+//
+//   .ui.header,
+//   .ui.header .sub.header {
+//     color: $color-sokolniki;
+//
+//   }
+//   .frame,
+//   &.frame {
+//     border-color: $color-sokolniki !important;
+//   }
+//   &.case-title {
+//     color: $color-sokolniki;
+//     border-color: $color-sokolniki;
+//   }
+//
+//   #fp-nav ul li a span {
+//     background: $color-black;
+//   }
+// }
 
 
 
