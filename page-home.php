@@ -193,7 +193,7 @@
 				</div>
 
 
-				<div class="slide feedback hidden" data-bs="/wp-content/uploads/contact_form.jpg">
+				<div class="slide feedback" data-bs="/wp-content/uploads/contact_form.jpg">
 
 						<div class="ui container">
 							<div class="ui grid">
@@ -214,7 +214,7 @@
 									<div class="ui card big">
 										<div class="content">
 											<div class="header">Обратная связь</div>
-											<div class="meta">Рекламное агенство</div>
+											<div class="meta">оставить заявку и задать вопросы</div>
 										</div>
 									</div>
 

@@ -238,7 +238,7 @@
 							<?php /* <a class="item" href="/#team">Мы</a> */ ?>
 							<a class="item" href="/#contact">Контакты</a>
 						</div>
-						<div class="item right phone">+7 (812) 402-00-29</div>
+						<div class="item right phone"><a href="tel:+78124020029">+7 (812) 402-00-29</a></div>
 					</div>
 				</nav>
 

@@ -13,6 +13,19 @@ a {
   }
 }
 
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $color-grey;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $color-grey;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $color-grey;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $color-grey;
+}
+
 .hidden {
   display: none !important;
 }
@@ -250,6 +263,7 @@ a {
           .fb {
             display: block;
             margin-top: 2em;
+            font-weight: bold;
           }
         }
         &.big {
@@ -314,6 +328,50 @@ a {
         }
       }
     }
+
+    .slide.feedback {
+      .ui.card {
+        width: 100%;
+        background: transparent;
+        box-shadow: none;
+        .content {
+          padding: 0;
+        }
+        &.big {
+          width: 100%;
+          position: relative;
+          .header {
+            font-family: 'Lato Regular';
+            font-size: 4em;
+            text-align: right;
+            text-transform: lowercase;
+            color: $color-black;
+          }
+          .meta {
+            font-family: 'Lato Light';
+            font-size: 1.2em;
+            text-transform: uppercase;
+            text-align: right;
+            color: $color-black;
+          }
+        }
+      }
+      .ui.form {
+        span,
+        input,
+        textarea {
+          font-family: 'Lato Regular';
+          font-weight: normal;
+          border-radius: 0;
+          transition: 1s all;
+        }
+        input:focus,
+        textarea:focus {
+          border-color: $color-pink;
+        }
+      }
+    }
+
   }
 }
 
