@@ -155,6 +155,7 @@
 												<p>office@kira-all.ru</p>
 												<p>+7 (812) 402-00-29</p>
 												<p>Каменноостровский пр. 12 А 3-Н</p>
+												<a href="https://www.facebook.com/kiraallru" target="_blank">facebook</a>
 	    								</div>
 										</div>
 	  							</div>

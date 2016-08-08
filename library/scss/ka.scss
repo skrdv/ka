@@ -5,6 +5,12 @@ $color-white: rgb(255,255,255);
 $color-black: rgb(35,21,32);
 $color-pink: rgb(236,0,140);
 
+a {
+  color: $color-black;
+  &:hover {
+    color: $color-pink;
+  }
+}
 
 .hidden {
   display: none !important;
