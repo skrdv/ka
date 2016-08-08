@@ -4,6 +4,7 @@
 $color-white: rgb(255,255,255);
 $color-black: rgb(35,21,32);
 $color-pink: rgb(236,0,140);
+$color-grey: rgb(88,88,88);
 
 a {
   color: $color-black;
@@ -69,6 +70,7 @@ a {
 		font-size: 1.44em;
 		text-transform: uppercase;
 		border-radius: 0;
+    transition: 1s all;
 		&:hover{
       background: none;
       color: $color-pink;
@@ -88,6 +90,7 @@ a {
 			border: none;
       svg path {
         fill: $color-pink;
+        transition: 1s all;
       }
       &:hover {
         svg path {
@@ -98,7 +101,6 @@ a {
     &.browse {
       position: relative;
       width: 100px;
-      // padding-left: 40px;
       cursor: pointer;
       .close {
         position: absolute;
@@ -168,7 +170,7 @@ a {
         padding: 0;
       }
       .header {
-        font-family: 'Lato Medium';
+        font-family: 'Lato Regular';
         font-size: 1.4em;
         line-height: 1;
         text-transform: lowercase;
@@ -221,56 +223,94 @@ a {
   }
 
   .section.contact {
-    .ui.card {
-      width: 100%;
-      box-shadow: none;
-      .content {
-        padding: 0;
-      }
-      .header {
-        color: $color-black;
-      }
-      .description {
-        font-family: 'Lato Medium';
-        font-size: 1.4em;
-        p {
-          line-height: 1;
-          color: $color-black;
-        }
-      }
-      &.big {
+    .slide.contact {
+      .ui.card {
         width: 100%;
-        position: relative;
+        background: transparent;
+        box-shadow: none;
+        .content {
+          padding: 0;
+        }
         .header {
           font-family: 'Lato Regular';
-          font-size: 4em;
-          text-align: right;
-          text-transform: lowercase;
-          line-height: 0.8;
-          color: $color-black;
-        }
-        .meta {
-          position: absolute;
-          right: 0;
-          top: 60px;
-          font-family: 'Lato Light';
-          font-size: 1.6em;
-          text-transform: uppercase;
-          text-align: right;
-          visibility: hidden;
-          color: $color-black;
+          font-size: 2em;
+          font-weight: normal;
+          a {
+            color: $color-white;
+          }
         }
         .description {
-          position: absolute;
-          right: 0;
-          top: 100px;
-          color: #231f20;
           font-family: 'Lato Regular';
-          font-size: 1.1em;
-          line-height: 1.4em;
-          text-align: right;
-          visibility: hidden;
-          color: $color-black;
+          font-size: 1.2em;
+          margin-top: 2em;
+          p, a {
+            margin-bottom: 0;
+            color: $color-white;
+          }
+          .fb {
+            display: block;
+            margin-top: 2em;
+          }
+        }
+        &.big {
+          width: 100%;
+          position: relative;
+          .header {
+            font-family: 'Lato Regular';
+            font-size: 4em;
+            text-align: right;
+            text-transform: lowercase;
+            color: $color-white;
+          }
+          .meta {
+            font-family: 'Lato Light';
+            font-size: 1.2em;
+            text-transform: uppercase;
+            text-align: right;
+            color: $color-white;
+          }
+          .description {
+            position: absolute;
+            right: 0;
+            top: 100px;
+            color: #231f20;
+            font-family: 'Lato Regular';
+            font-size: 1.1em;
+            line-height: 1.4em;
+            text-align: right;
+            visibility: hidden;
+            color: $color-black;
+          }
+        }
+      }
+    }
+    .slide.map {
+      .wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .frame {
+        max-width: 800px;
+        margin: 0 auto;
+        border: 4px solid $color-grey;
+        text-align: center;
+        .ui.header {
+          display: block;
+          margin: 0;
+          padding: 0em 1.2em 0.3em 1.2em;
+          font-family: 'Lato Regular';
+          font-size: 5em;
+          font-weight: normal;
+          text-transform: lowercase;
+          color: $color-grey;
+          .sub.header {
+            font-family: 'Lato Light';
+            font-size: 1.6rem;
+            line-height: 1;
+            color: $color-grey;
+            text-transform: capitalize;
+          }
         }
       }
     }
@@ -701,7 +741,7 @@ html.portrait {
     background: rgba(0, 0, 0, .88) url(../images/logo_white.png) center center no-repeat;
     color: white;
     font-size: 2em;
-    font-family: 'Lato Medium';
+    font-family: 'Lato Regular';
     text-align: center;
     padding-top: 20px;
     min-height: 200px;

@@ -142,7 +142,7 @@
 
 				<section class="section contact">
 
-					<?php /* <div class="slide contact"> */ ?>
+					<div class="slide contact" data-bs="/wp-content/uploads/contact_circle.jpg">
 
 						<div class="ui container">
 							<div class="ui grid">
@@ -150,12 +150,14 @@
 
 									<div class="ui card">
 	  								<div class="content">
-	    								<div class="header"></div>
+	    								<div class="header">
+												<a href="tel:+78124020029">+7 (812) 402-00-29</a>
+											</div>
 	    								<div class="description">
-												<p>office@kira-all.ru</p>
-												<p>+7 (812) 402-00-29</p>
+												<p>Санкт-Петербург</p>
 												<p>Каменноостровский пр. 12 А 3-Н</p>
-												<a href="https://www.facebook.com/kiraallru" target="_blank">facebook</a>
+												<a href="mailto:office@kira-all.ru">office@kira-all.ru</p>
+												<a class="fb" href="https://www.facebook.com/kiraallru" target="_blank">facebook</a>
 	    								</div>
 										</div>
 	  							</div>
@@ -166,7 +168,7 @@
 									<div class="ui card big">
 										<div class="content">
 											<div class="header">Контакты</div>
-											<div class="meta">Рекламное агенство</div>
+											<div class="meta">поговорим от этом?</div>
 										</div>
 									</div>
 
@@ -176,10 +178,22 @@
 						</div>
 					</div>
 
-					<?php /* </div> */ ?>
+				</div>
 
-					<?php /*
-					<div class="slide feedback">
+				<div class="slide map" data-bs="/wp-content/uploads/contact_map.jpg">
+
+					<div class="wrap">
+						<header class="frame">
+							<div class="ui header">Мы здесь
+								<div class="sub header">Каменноостровский пр. 12 А 3-Н</div>
+							</a>
+						</header>
+					</div>
+
+				</div>
+
+
+				<div class="slide feedback hidden" data-bs="/wp-content/uploads/contact_form.jpg">
 
 						<div class="ui container">
 							<div class="ui grid">
@@ -205,10 +219,8 @@
 									</div>
 
 								</div>
-
 							</div>
 						</div>
-						*/ ?>
 
 					</div>
 
