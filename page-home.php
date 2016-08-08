@@ -157,7 +157,7 @@
 												<p>Санкт-Петербург</p>
 												<p>Каменноостровский пр. 12 А 3-Н</p>
 												<a href="mailto:office@kira-all.ru">office@kira-all.ru</p>
-												<a class="fb" href="https://www.facebook.com/kiraallru" target="_blank">facebook</a>
+												<a class="fb" href="https://www.facebook.com/kiraallofficial" target="_blank">facebook</a>
 	    								</div>
 										</div>
 	  							</div>

@@ -190,6 +190,42 @@ jQuery(document).ready(function($) {
 			sectionSelector: '.section',
 			slideSelector: '.slide',
 
+			afterLoad: function(index, nextIndex, direction){
+				var base_title = 'Рекламное агенство Киры Аллейновой';
+
+				if (window.location.hash == '#services') {
+					document.title = base_title+' Услуги';
+				} else if (window.location.hash == '#portfolio') {
+					document.title = base_title+' Портфолио';
+				} else if (window.location.hash == '#contact') {
+					document.title = base_title+' Контакты';
+				}
+
+				// console.log(document.title+'  '+window.location.hash);
+
+			},
+			afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
+            var base_title = 'Рекламное агенство Киры Аллейновой';
+
+						if (window.location.hash == '#contact') {
+							document.title = base_title+' Контакты';
+						} else if (window.location.hash == '#contact/1') {
+							document.title = base_title+' Карта';
+						} else if (window.location.hash == '#contact/2') {
+							document.title = base_title+' Обратная связь';
+						} else if (window.location.hash == '#portfolio') {
+							document.title = base_title+' Портфолио 0';
+						} else if (window.location.hash == '#portfolio/1') {
+							document.title = base_title+' Портфолио 1';
+						} else if (window.location.hash == '#portfolio/2') {
+							document.title = base_title+' Портфолио 2';
+						} else if (window.location.hash == '#portfolio/3') {
+							document.title = base_title+' Портфолио 3';
+						}
+
+						// console.log(document.title+'  '+window.location.hash);
+        }
+
 		});
 
 		// Backstretch
@@ -255,10 +291,11 @@ jQuery(document).ready(function($) {
 
 	// 404 page
 	if ($('body').hasClass('error404')) {
-
 		$('#error404').backstretch('http://ka.skrdv.com/wp-content/uploads/404-1600x900.jpg');
-
 	}
+
+
+
 
 
 
@@ -281,5 +318,9 @@ jQuery(window).resize(function($) {
 		portfolioBg();
 
 	}
+
+});
+
+jQuery(window).scroll(function(){
 
 });

@@ -90,6 +90,9 @@ a {
 		}
 		&.phone {
       padding-right: 0;
+      a {
+        transition: 1s all;
+      }
       &:hover {
         color: $color-black !important;
       }
@@ -236,6 +239,7 @@ a {
   }
 
   .section.contact {
+
     .slide.contact {
       .ui.card {
         width: 100%;
@@ -298,6 +302,7 @@ a {
         }
       }
     }
+
     .slide.map {
       .wrap {
         display: flex;
@@ -359,7 +364,8 @@ a {
       .ui.form {
         span,
         input,
-        textarea {
+        textarea,
+        .wpcf7-mail-sent-ok {
           font-family: 'Lato Regular';
           font-weight: normal;
           border-radius: 0;
@@ -487,9 +493,13 @@ $color-fazer-main: rgb(247,145,0);
 }
 
 #page-fazer {
+  ::selection {
+    background-color:$color-fazer-main;
+    color: $color-white;
+  }
   #nav .item {
     &:hover {
-      color: $color-fazer-active;
+      color: $color-fazer-main;
     }
     &.logo {
       svg path {
@@ -497,9 +507,12 @@ $color-fazer-main: rgb(247,145,0);
       }
       &:hover {
         svg path {
-          fill: $color-fazer-active;
+          fill: $color-fazer-main;
         }
       }
+    }
+    &.phone a:hover{
+      color: $color-fazer-main;
     }
     &.browse:hover {
       .close:before,
@@ -540,7 +553,7 @@ $color-fazer-main: rgb(247,145,0);
     }
   }
   #fp-nav ul li a span:hover {
-    background:$color-fazer-active;
+    background:$color-fazer-main;
   }
 }
 
@@ -561,6 +574,9 @@ $color-2t-main:   rgb(72,61,54);
 }
 
 #page-2t {
+  ::selection {
+    background-color:$color-2t-active;
+  }
   #nav .item {
     &:hover {
       color: $color-2t-active;
@@ -574,6 +590,9 @@ $color-2t-main:   rgb(72,61,54);
           fill: $color-2t-active;
         }
       }
+    }
+    &.phone a:hover{
+      color: $color-2t-active;
     }
     &.browse:hover {
       .close:before,
@@ -637,6 +656,10 @@ $color-flight-main:   rgb(9,78,147);
 }
 
 #page-flight {
+  ::selection {
+    background-color:$color-flight-active;
+    color: $color-white;
+  }
   #nav .item {
     &:hover {
       color: $color-flight-active;
@@ -650,6 +673,9 @@ $color-flight-main:   rgb(9,78,147);
           fill: $color-flight-active;
         }
       }
+    }
+    &.phone a:hover{
+      color: $color-flight-active;
     }
     &.browse:hover {
       .close:before,
@@ -712,6 +738,10 @@ $color-sokolniki-main:   rgb(77,179,72);
 }
 
 #page-sokolniki {
+  ::selection {
+    background-color:$color-sokolniki-active;
+    color: $color-white;
+  }
   #nav .item {
     &:hover {
       color: $color-sokolniki-active;
