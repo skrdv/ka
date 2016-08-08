@@ -179,6 +179,7 @@ a {
       }
     }
   }
+
   .section.services {
     .ui.card {
       box-shadow: none;
@@ -230,7 +231,7 @@ a {
           font-family: 'Lato Regular';
           font-size: 1.1em;
           line-height: 1.4em;
-          text-align: right;
+          text-align: left;
           visibility: hidden;
           color: $color-black;
         }
@@ -446,8 +447,8 @@ a {
       .description {
         font-family: 'Lato Regular';
         font-size: 1.12em;
-        text-align: justify;
-        max-width: 360px;
+        text-align: left;
+        max-width: 300px;
         p {
           line-height: 1.2em;
         }
