@@ -15,7 +15,7 @@
 
 		<?php // mobile meta (hooray!) ?>
 		<meta name="HandheldFriendly" content="True">
-		<meta name="MobileOptimized" content="320">
+		<meta name="MobileOptimized" content="360">
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 
 		<?php // icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) ?>

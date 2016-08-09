@@ -32,10 +32,42 @@
 					<?php wp_reset_postdata(); ?>
 
 				</section>
+
+				<!-- <section class="section test">
+
+					<div class="ui two column grid">
+						<div class="column">
+					    <div class="ui stackable doubling two column grid">
+					      <div class="column">
+					        <div class="ui segment">Content</div>
+					      </div>
+					      <div class="column">
+					        <div class="ui segment">Content</div>
+					      </div>
+					    </div>
+					  </div>
+					  <div class="column">
+					    <div class="ui stackable doubling three column grid">
+					      <div class="column">
+					        <div class="ui segment">Content</div>
+					      </div>
+					      <div class="column">
+					        <div class="ui segment">Content</div>
+					      </div>
+					      <div class="column">
+					        <div class="ui segment">Content</div>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+
+				</section> -->
+
+
 				<section class="section services">
 
-					<div class="ui container">
-						<div class="ui grid">
+					<!-- <div class="ui container"> -->
+						<div class="ui three column doubling stackable grid container">
 					  <div class="two wide column">
 
 							<div class="ui card pr">
@@ -114,7 +146,7 @@
 						</div>
 						</div>
 
-					</div>
+					<!-- </div> -->
 
 				</section>
 
@@ -144,8 +176,7 @@
 
 					<div class="slide contact" data-bs="/wp-content/uploads/contact_circle.jpg">
 
-						<div class="ui container">
-							<div class="ui grid">
+							<div class="ui doubling stackable grid container">
 						  	<div class="eight wide column">
 
 									<div class="ui card">
@@ -178,8 +209,6 @@
 						</div>
 					</div>
 
-				</div>
-
 				<div class="slide map" data-bs="/wp-content/uploads/contact_map.jpg">
 
 					<div class="wrap">
@@ -195,8 +224,8 @@
 
 				<div class="slide feedback" data-bs="/wp-content/uploads/contact_form.jpg">
 
-						<div class="ui container">
-							<div class="ui grid">
+
+							<div class="ui doubling stackable grid container">
 								<div class="six wide column">
 
 									<div class="ui card">
@@ -220,7 +249,7 @@
 
 								</div>
 							</div>
-						</div>
+
 
 					</div>
 
