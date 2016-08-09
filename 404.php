@@ -4,15 +4,13 @@
 
   <article id="error404">
 
-    <section class="section error404">
-
-      <header class="frame">
-        <div class="ui header">404
-          <div class="sub header"></div>
-        </a>
-      </header>
-
-    </section>
+      <div class="wrap">
+        <header class="frame">
+          <div class="ui header">ой:-( 404
+            <div class="sub header">страничка не найдена</div>
+          </a>
+        </header>
+      </div>
 
   </article>
 
