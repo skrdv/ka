@@ -146,7 +146,7 @@
 
 						<div class="ui container">
 							<div class="ui grid">
-						  	<div class="six wide column">
+						  	<div class="eight wide column">
 
 									<div class="ui card">
 	  								<div class="content">
@@ -163,12 +163,12 @@
 	  							</div>
 
 								</div>
-								<div class="ten wide column">
+								<div class="eight wide column">
 
 									<div class="ui card big">
 										<div class="content">
 											<div class="header">Контакты</div>
-											<div class="meta">поговорим от этом?</div>
+											<div class="meta">поговорим об этом?</div>
 										</div>
 									</div>
 
