@@ -14,7 +14,7 @@
 
 				<section class="section portfolio">
 
-					<?php $query = new WP_Query( array( 'category_name' => 'portfolio', 'orderby' => 'rand' ) ); ?>
+					<?php $query = new WP_Query( array( 'category_name' => 'portfolio') ); ?>
 					<?php while ( $query->have_posts() ) { ?>
 					<?php $query->the_post(); ?>
 
@@ -33,40 +33,9 @@
 
 				</section>
 
-				<!-- <section class="section test">
-
-					<div class="ui two column grid">
-						<div class="column">
-					    <div class="ui stackable doubling two column grid">
-					      <div class="column">
-					        <div class="ui segment">Content</div>
-					      </div>
-					      <div class="column">
-					        <div class="ui segment">Content</div>
-					      </div>
-					    </div>
-					  </div>
-					  <div class="column">
-					    <div class="ui stackable doubling three column grid">
-					      <div class="column">
-					        <div class="ui segment">Content</div>
-					      </div>
-					      <div class="column">
-					        <div class="ui segment">Content</div>
-					      </div>
-					      <div class="column">
-					        <div class="ui segment">Content</div>
-					      </div>
-					    </div>
-					  </div>
-					</div>
-
-				</section> -->
-
-
 				<section class="section services">
 
-					<!-- <div class="ui container"> -->
+
 						<div class="ui three column doubling stackable grid container">
 					  <div class="two wide column">
 
@@ -145,8 +114,6 @@
 
 						</div>
 						</div>
-
-					<!-- </div> -->
 
 				</section>
 

@@ -5,6 +5,19 @@ $color-white: rgb(255,255,255);
 $color-black: rgb(35,21,32);
 $color-pink: rgb(236,0,140);
 $color-grey: rgb(88,88,88);
+$color-flight: rgb(0,30,72);
+$color-flight-active: rgb(9,78,147);
+$color-flight-main:   rgb(9,78,147);
+$color-2t: rgb(125,211,243);
+$color-2t-active: rgb(125,211,243);
+$color-2t-main:   rgb(72,61,54);
+$color-sokolniki: rgb(32,79,38);
+$color-sokolniki-active: rgb(32,79,38);
+$color-sokolniki-main:   rgb(77,179,72);
+$color-fazer: rgb(247,145,0);
+$color-fazer-active: #cccccc;
+$color-fazer-main: rgb(247,145,0);
+
 
 a {
   color: $color-black;
@@ -71,76 +84,154 @@ a {
   .menu {
     visibility: hidden;
   }
+  .phone.right {
+    margin-left: auto !important;
+    margin-top: 5px;
+  }
+  .menu .item {
+    display: inline-block !important;
+    margin-top: 2px !important;
+    padding: 0 1em  !important;
+  }
 	.item {
     display: inline-block;
     padding-top: 0;
     padding-bottom: 0;
-    line-height: 20px;
-    height: 20px;
     margin-top: 5px;
-		color: #231f20;
+    height: 20px;
+    line-height: 20px;
     font-family: 'Lato Regular';
 		font-size: 1.44em;
 		text-transform: uppercase;
 		border-radius: 0;
     transition: 1s all;
-		&:hover{
-      background: none;
-      color: $color-pink;
-		}
-		&.phone {
-      padding-right: 0;
-      a {
-        transition: 1s all;
-      }
-      &:hover {
-        color: $color-black !important;
-      }
-		}
-		&.logo {
+		&:first-child {
 			display: block;
-			width: 50px !important;
-			height: 50px;
       padding: 0;
       margin: 0;
 			border: none;
-      svg path {
-        fill: $color-pink;
-        transition: 1s all;
+		}
+    &:last-child {
+      padding-right: 0;
+		}
+    &:hover{
+      background: none;
+      .line-1 {
+        -webkit-transform: translateY(-3px);
+        transform: translateY(-3px);
       }
-      &:hover {
-        svg path {
-          fill: $color-black;
-        }
+      .line-3 {
+        -webkit-transform: translateY(3px);
+        transform: translateY(3px);
       }
 		}
-    &.browse {
-      position: relative;
-      width: 100px;
+    .browse {
+      // position: relative;
+      // width: 100px;
       cursor: pointer;
-      .close {
-        position: absolute;
-        left: 40px;
-        width: 20px;
-        height: 20px;
-        visibility: hidden;
-        float: left;
+    }
+
+    color: $color-flight;
+    a {
+      color: $color-flight;
+      transition: 1s all;
+    }
+    i {
+      display: block;
+      position: relative;
+      width: 20px;
+      height: 2px;
+      margin-bottom: 4px;
+      background: #fff;
+      background-color: $color-flight;
+      transition: 1s all;
+    }
+    svg path {
+      fill: $color-flight;
+      transition: 1s all;
+    }
+    &.white {
+      color: $color-white !important;
+      svg path {
+        fill: $color-white !important;
       }
-      .close:before,
-      .close:after {
-        position: absolute;
-        top: 0px;
-        left: 10px;
-        content: ' ';
-        height: 22px;
-        width: 2px;
-        background-color: #231f20;
+      a {
+        color: $color-white !important;
       }
-      .close:before {
-        transform: rotate(45deg);
+      i {
+        background-color: $color-white;
       }
-      .close:after {
-        transform: rotate(-45deg);
+    }
+    &.pink {
+      color: $color-pink !important;
+      svg path {
+        fill: $color-pink !important;
+      }
+      a {
+        color: $color-pink !important;
+      }
+      i {
+        background-color: $color-pink;
+      }
+    }
+    &.black {
+      color: $color-black !important;
+      svg path {
+        fill: $color-black !important;
+      }
+      a {
+        color: $color-black !important;
+      }
+      i {
+        background-color: $color-black;
+      }
+    }
+    &.flight {
+      color: $color-flight !important;
+      svg path {
+        fill: $color-flight !important;
+      }
+      a {
+        color: $color-flight !important;
+      }
+      i {
+        background-color: $color-flight;
+      }
+    }
+    &.gallery-2t {
+      color: $color-2t !important;
+      svg path {
+        fill: $color-2t !important;
+      }
+      a {
+        color: $color-2t !important;
+      }
+      i {
+        background-color: $color-2t;
+      }
+    }
+    &.sokolniki {
+      color: $color-sokolniki !important;
+      svg path {
+        fill: $color-sokolniki !important;
+      }
+      a {
+        color: $color-sokolniki !important;
+      }
+      i {
+        background-color: $color-sokolniki;
+      }
+    }
+    &.fazer {
+      color: $color-fazer !important;
+      svg path {
+        fill: $color-fazer !important;
+      }
+      a {
+        color: $color-fazer !important;
+      }
+      i {
+        background-color: $color-fazer;
       }
     }
 	}
@@ -161,6 +252,7 @@ a {
         margin: 0 auto;
         border: 4px solid white;
         text-align: center;
+        transition: 1s all;
         .ui.header {
           display: block;
           margin: 0;
@@ -169,11 +261,13 @@ a {
           font-size: 5em;
           font-weight: normal;
           text-transform: lowercase;
+          transition: 1s all;
           .sub.header {
             font-family: 'Lato Light';
             font-size: 1.6rem;
             line-height: 1;
             text-transform: uppercase;
+            transition: 1s all;
           }
         }
       }
@@ -314,7 +408,7 @@ a {
       .frame {
         max-width: 800px;
         margin: 0 auto;
-        border: 4px solid $color-grey;
+        border: 4px solid $color-pink;
         text-align: center;
         .ui.header {
           display: block;
@@ -324,12 +418,12 @@ a {
           font-size: 5em;
           font-weight: normal;
           text-transform: lowercase;
-          color: $color-grey;
+          color: $color-pink;
           .sub.header {
             font-family: 'Lato Light';
             font-size: 1.6rem;
             line-height: 1;
-            color: $color-grey;
+            color: $color-pink;
             text-transform: capitalize;
           }
         }
@@ -501,8 +595,7 @@ a {
          Site Pages Styles
 *******************************/
 
-$color-fazer-active: #cccccc;
-$color-fazer-main: rgb(247,145,0);
+
 
 #home {
   #slide-fazer {
@@ -511,6 +604,13 @@ $color-fazer-main: rgb(247,145,0);
       .ui.header,
       .ui.header .sub.header {
         color: $color-white;
+      }
+      &:hover {
+        border-color: $color-fazer;
+        .ui.header,
+        .ui.header .sub.header {
+          color: $color-fazer;
+        }
       }
     }
   }
@@ -582,8 +682,8 @@ $color-fazer-main: rgb(247,145,0);
 }
 
 
-$color-2t-active: rgb(125,211,243);
-$color-2t-main:   rgb(72,61,54);
+
+
 
 #home {
   #slide-2t {
@@ -592,6 +692,13 @@ $color-2t-main:   rgb(72,61,54);
       .ui.header,
       .ui.header .sub.header {
         color: $color-2t-main;
+      }
+      &:hover {
+        border-color: $color-2t;
+        .ui.header,
+        .ui.header .sub.header {
+          color: $color-2t;
+        }
       }
     }
   }
@@ -662,8 +769,7 @@ $color-2t-main:   rgb(72,61,54);
 }
 
 
-$color-flight-active: rgb(9,78,147);
-$color-flight-main:   rgb(9,78,147);
+
 
 #home {
   #slide-flight {
@@ -672,6 +778,13 @@ $color-flight-main:   rgb(9,78,147);
       .ui.header,
       .ui.header .sub.header {
         color: $color-white;
+      }
+      &:hover {
+        border-color: $color-flight;
+        .ui.header,
+        .ui.header .sub.header {
+          color: $color-flight;
+        }
       }
     }
   }
@@ -743,16 +856,22 @@ $color-flight-main:   rgb(9,78,147);
 }
 
 
-$color-sokolniki-active: rgb(32,79,38);
-$color-sokolniki-main:   rgb(77,179,72);
+
 
 #home {
   #slide-sokolniki {
     .frame {
-      border-color: $color-sokolniki-active;
+      border-color: $color-white;
       .ui.header,
       .ui.header .sub.header {
-        color: $color-sokolniki-active;
+        color: $color-white;
+      }
+      &:hover {
+        border-color: $color-sokolniki;
+        .ui.header,
+        .ui.header .sub.header {
+          color: $color-sokolniki;
+        }
       }
     }
   }

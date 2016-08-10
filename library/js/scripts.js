@@ -194,11 +194,14 @@ jQuery(document).ready(function($) {
 				var base_title = 'Рекламное агенство Киры Аллейновой';
 
 				if (window.location.hash == '#services') {
-					document.title = base_title+' Услуги';
+					document.title = 'Услуги - '+base_title;
+					$('#nav .item').removeClass().addClass('item black');
 				} else if (window.location.hash == '#portfolio') {
-					document.title = base_title+' Портфолио';
+					document.title = 'Портфолио - '+base_title;
+					$('#nav .item').removeClass().addClass('item flight');
 				} else if (window.location.hash == '#contact') {
-					document.title = base_title+' Контакты';
+					document.title = 'Контакты - '+base_title;
+					$('#nav .item').removeClass().addClass('item white');
 				}
 
 				// console.log(document.title+'  '+window.location.hash);
@@ -208,19 +211,26 @@ jQuery(document).ready(function($) {
             var base_title = 'Рекламное агенство Киры Аллейновой';
 
 						if (window.location.hash == '#contact') {
-							document.title = base_title+' Контакты';
+							document.title = 'Контакты - '+base_title;
+							$('#nav .item').removeClass().addClass('item white');
 						} else if (window.location.hash == '#contact/1') {
-							document.title = base_title+' Карта';
+							document.title = 'Карта - '+base_title;
+							$('#nav .item').removeClass().addClass('item pink');
 						} else if (window.location.hash == '#contact/2') {
-							document.title = base_title+' Обратная связь';
+							document.title = 'Обратная связь - '+base_title;
+							$('#nav .item').removeClass().addClass('item black');
 						} else if (window.location.hash == '#portfolio') {
-							document.title = base_title+' Портфолио 0';
+							document.title = 'Портфолио Слет - '+base_title;
+							$('#nav .item').removeClass().addClass('item flight');
 						} else if (window.location.hash == '#portfolio/1') {
-							document.title = base_title+' Портфолио 1';
+							document.title = 'Портфолио Галерея 2Т - '+base_title;
+							$('#nav .item').removeClass().addClass('item gallery-2t');
 						} else if (window.location.hash == '#portfolio/2') {
-							document.title = base_title+' Портфолио 2';
+							document.title = 'Портфолио Сокольники - '+base_title;
+							$('#nav .item').removeClass().addClass('item sokilniki');
 						} else if (window.location.hash == '#portfolio/3') {
-							document.title = base_title+' Портфолио 3';
+							document.title = 'Портфолио Вкусноштуки - '+base_title;
+							$('#nav .item').removeClass().addClass('item fazer');
 						}
 
 						// console.log(document.title+'  '+window.location.hash);
@@ -283,9 +293,9 @@ jQuery(document).ready(function($) {
 	}
 
 	// Navigation
-	$('.item.browse').on('click', function() {
-		$(this).find('.close').transition('fade');
-		$(this).find('.text').transition('fade');
+	$('#nav .browse').on('click', function() {
+		// $(this).find('.close').transition('fade');
+		// $(this).find('.text').transition('fade');
 		$('.ui.menu').find('.menu').transition('fade');
 	});
 
