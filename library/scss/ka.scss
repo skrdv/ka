@@ -55,30 +55,8 @@ a {
 }
 
 
-.fp-controlArrow.fp-prev {
-  width: 36px;
-  height: 36px;
-  left: 0;
-  margin-top: -2px;
-  border: none;
-  background: url(../images/arrow_black.png) 0 0 no-repeat;
-}
 
-.fp-controlArrow.fp-next {
-  width: 36px;
-  height: 36px;
-  left: 0;
-  border: none;
-  background: url(../images/arrow_white.png) 0 0 no-repeat;
-}
-
-.fp-controlArrow.fp-prev.right,
-.fp-controlArrow.fp-next.right {
-  right: 0;
-  left: auto;
-}
-
-
+// Navigation
 #nav {
 	top: 50px;
   .menu {
@@ -86,7 +64,6 @@ a {
   }
   .phone.right {
     margin-left: auto !important;
-    // margin-top: 5px;
   }
   .menu .item {
     display: inline-block !important;
@@ -96,7 +73,6 @@ a {
     display: inline-block;
     padding-top: 0;
     padding-bottom: 0;
-    // margin-top: 5px;
     height: 20px;
     line-height: 20px;
     font-family: 'Lato Regular';
@@ -225,7 +201,7 @@ a {
       .path {
         fill: $color-flight;
       }
-      #inverse {
+      .inverse {
         fill: transparent;
       }
       a {
@@ -308,6 +284,86 @@ a {
 
 
 
+// Arrows
+.fp-controlArrow {
+  width: 24px !important;
+  height: 68px;
+  padding: 200px 0;
+  margin-top: -212px;
+  border: none;
+  opacity: 0.4;
+  transition: 1s all;
+  &:hover {
+    opacity: 1;
+  }
+}
+.fp-controlArrow.fp-prev {
+  left: 8px !important;
+  background: url(../svg/arw_left_flight.svg) center center no-repeat;
+}
+.fp-controlArrow.fp-next {
+  right: 8px !important;
+  background: url(../svg/arw_right_flight.svg) center center no-repeat;
+}
+
+#portfolio-flight {
+  .fp-controlArrow.fp-prev {
+    background: url(../svg/arw_left_flight.svg) center center no-repeat;
+  }
+  .fp-controlArrow.fp-next {
+    background: url(../svg/arw_right_flight.svg) center center no-repeat;
+  }
+}
+#portfolio-2t {
+  .fp-controlArrow.fp-prev {
+    background: url(../svg/arw_left_2t.svg) center center no-repeat;
+  }
+  .fp-controlArrow.fp-next {
+    background: url(../svg/arw_right_2t.svg) center center no-repeat;
+  }
+}
+#portfolio-sokolniki {
+  .fp-controlArrow.fp-prev {
+    background: url(../svg/arw_left_sokolniki.svg) center center no-repeat;
+  }
+  .fp-controlArrow.fp-next {
+    background: url(../svg/arw_right_sokolniki.svg) center center no-repeat;
+  }
+}
+#portfolio-fazer {
+  .fp-controlArrow.fp-prev {
+    background: url(../svg/arw_left_fazer.svg) center center no-repeat;
+  }
+  .fp-controlArrow.fp-next {
+    background: url(../svg/arw_right_fazer.svg) center center no-repeat;
+  }
+}
+#contact-circle {
+  .fp-controlArrow.fp-prev {
+    background: url(../svg/arw_left_white.svg) center center no-repeat;
+  }
+  .fp-controlArrow.fp-next {
+    background: url(../svg/arw_right_white.svg) center center no-repeat;
+  }
+}
+#contact-map {
+  .fp-controlArrow.fp-prev {
+    background: url(../svg/arw_left_pink.svg) center center no-repeat;
+  }
+  .fp-controlArrow.fp-next {
+    background: url(../svg/arw_right_pink.svg) center center no-repeat;
+  }
+}
+#contact-feedback {
+  .fp-controlArrow.fp-prev {
+    background: url(../svg/arw_left_black.svg) center center no-repeat;
+  }
+  .fp-controlArrow.fp-next {
+    background: url(../svg/arw_right_black.svg) center center no-repeat;
+  }
+}
+
+
 #home {
   .section.portfolio {
     .slide {
@@ -327,7 +383,7 @@ a {
           margin: 0;
           padding: 0em 1.2em 0.3em 1.2em;
           font-family: 'Lato Regular';
-          font-size: 5em;
+          font-size: 4.4em;
           font-weight: normal;
           text-transform: lowercase;
           transition: 1s all;
@@ -399,6 +455,10 @@ a {
           visibility: hidden;
           color: $color-black;
         }
+        // .meta.pr,
+        // .description.pr {
+        //   visibility: visible;
+        // }
       }
     }
   }
@@ -566,7 +626,7 @@ a {
           margin: 0;
           padding: 0em 1.2em 0.3em 1.2em;
           font-family: 'Lato Regular';
-          font-size: 5em;
+          font-size: 4.4em;
           font-weight: normal;
           text-transform: lowercase;
           .sub.header {
@@ -665,157 +725,6 @@ a {
 *******************************/
 
 
-
-#home {
-  #slide-fazer {
-    .frame {
-      border-color: $color-white;
-      .ui.header,
-      .ui.header .sub.header {
-        color: $color-white;
-      }
-      &:hover {
-        border-color: $color-fazer;
-        .ui.header,
-        .ui.header .sub.header {
-          color: $color-fazer;
-        }
-      }
-    }
-  }
-}
-
-#page-fazer {
-  ::selection {
-    background-color:$color-fazer-main;
-    color: $color-white;
-  }
-  #nav .item {
-    color: $color-fazer !important;
-    svg path {
-      fill: $color-fazer !important;
-    }
-    a {
-      color: $color-fazer !important;
-    }
-    i {
-      background-color: $color-fazer;
-    }
-  }
-  #head-fazer {
-    .frame {
-      border-color: $color-white;
-      .ui.header,
-      .ui.header .sub.header {
-        color: $color-white;
-      }
-    }
-  }
-  #info-fazer {
-    .info-bg {
-      background: $color-fazer-main;
-      opacity: 0.7;
-    }
-    .ui.card {
-      .header,
-      .meta,
-      .description {
-        color: $color-white;
-      }
-    }
-  }
-  #case-fazer-4 {
-    .ui.card {
-      .header,
-      .meta,
-      .description {
-        color: $color-black;
-      }
-    }
-  }
-  #fp-nav ul li a span:hover {
-    background:$color-fazer-main;
-  }
-}
-
-
-
-
-
-#home {
-  #slide-2t {
-    .frame {
-      border-color: $color-2t-main;
-      .ui.header,
-      .ui.header .sub.header {
-        color: $color-2t-main;
-      }
-      &:hover {
-        border-color: $color-2t;
-        .ui.header,
-        .ui.header .sub.header {
-          color: $color-2t;
-        }
-      }
-    }
-  }
-}
-
-#page-2t {
-  ::selection {
-    background-color:$color-2t-active;
-  }
-  #nav .item {
-    color: $color-2t !important;
-    svg path {
-      fill: $color-2t !important;
-    }
-    a {
-      color: $color-2t !important;
-    }
-    i {
-      background-color: $color-2t;
-    }
-  }
-  #head-2t {
-    .frame {
-      border-color: $color-2t-main;
-      .ui.header,
-      .ui.header .sub.header {
-        color: $color-2t-main;
-      }
-    }
-  }
-  #info-2t {
-    .info-bg {
-      background: $color-2t-main;
-      opacity: 0.8;
-    }
-    .ui.card {
-      .header,
-      .meta,
-      .description {
-        color: $color-white;
-      }
-    }
-  }
-  #case-2t-1 {
-    .ui.card {
-      .header,
-      .meta,
-      .description {
-        color: $color-black;
-      }
-    }
-  }
-  #fp-nav ul li a span:hover {
-    background:$color-2t-active;
-  }
-}
-
-
-
-
 #home {
   #slide-flight {
     .frame {
@@ -837,19 +746,27 @@ a {
 
 #page-flight {
   ::selection {
-    background-color:$color-flight-active;
+    background-color:$color-flight;
     color: $color-white;
   }
   #nav .item {
-    color: $color-flight !important;
-    svg path {
-      fill: $color-flight !important;
+    color: $color-flight;
+    .path {
+      fill: $color-flight;
     }
     a {
-      color: $color-flight !important;
+      color: $color-flight;
     }
     i {
       background-color: $color-flight;
+    }
+    &:hover {
+      .path {
+        fill: transparent;
+      }
+      .inverse {
+        fill: $color-flight;
+      }
     }
   }
   #head-flight {
@@ -891,6 +808,95 @@ a {
 
 
 
+
+
+
+
+#home {
+  #slide-2t {
+    .frame {
+      border-color: $color-2t-main;
+      .ui.header,
+      .ui.header .sub.header {
+        color: $color-2t-main;
+      }
+      &:hover {
+        border-color: $color-2t;
+        .ui.header,
+        .ui.header .sub.header {
+          color: $color-2t;
+        }
+      }
+    }
+  }
+}
+
+#page-2t {
+  ::selection {
+    background-color:$color-2t;
+  }
+  #nav .item {
+    color: $color-2t;
+    .path {
+      fill: $color-2t;
+    }
+    a {
+      color: $color-2t;
+    }
+    i {
+      background-color: $color-2t;
+    }
+    &:hover {
+      .path {
+        fill: transparent;
+      }
+      .inverse {
+        fill: $color-2t;
+      }
+    }
+  }
+  #head-2t {
+    .frame {
+      border-color: $color-2t-main;
+      .ui.header,
+      .ui.header .sub.header {
+        color: $color-2t-main;
+      }
+    }
+  }
+  #info-2t {
+    .info-bg {
+      background: $color-2t-main;
+      opacity: 0.8;
+    }
+    .ui.card {
+      .header,
+      .meta,
+      .description {
+        color: $color-white;
+      }
+    }
+  }
+  #case-2t-1 {
+    .ui.card {
+      .header,
+      .meta,
+      .description {
+        color: $color-black;
+      }
+    }
+  }
+  #fp-nav ul li a span:hover {
+    background:$color-2t-active;
+  }
+}
+
+
+
+
+
+
+
 #home {
   #slide-sokolniki {
     .frame {
@@ -912,19 +918,27 @@ a {
 
 #page-sokolniki {
   ::selection {
-    background-color:$color-sokolniki-active;
+    background-color:$color-sokolniki;
     color: $color-white;
   }
   #nav .item {
-    color: $color-sokolniki !important;
-    svg path {
-      fill: $color-sokolniki !important;
+    color: $color-sokolniki;
+    .path {
+      fill: $color-sokolniki;
     }
     a {
-      color: $color-sokolniki !important;
+      color: $color-sokolniki;
     }
     i {
       background-color: $color-sokolniki;
+    }
+    &:hover {
+      .path {
+        fill: transparent;
+      }
+      .inverse {
+        fill: $color-sokolniki;
+      }
     }
   }
   #head-sokolniki {
@@ -964,6 +978,88 @@ a {
 }
 
 
+
+
+
+#home {
+  #slide-fazer {
+    .frame {
+      border-color: $color-white;
+      .ui.header,
+      .ui.header .sub.header {
+        color: $color-white;
+      }
+      &:hover {
+        border-color: $color-fazer;
+        .ui.header,
+        .ui.header .sub.header {
+          color: $color-fazer;
+        }
+      }
+    }
+  }
+}
+
+#page-fazer {
+  ::selection {
+    background-color:$color-fazer-main;
+    color: $color-white;
+  }
+  #nav .item {
+    color: $color-fazer;
+    .path {
+      fill: $color-fazer;
+    }
+    a {
+      color: $color-fazer;
+    }
+    i {
+      background-color: $color-fazer;
+    }
+    &:hover {
+      .path {
+        fill: transparent;
+      }
+      .inverse {
+        fill: $color-fazer;
+      }
+    }
+  }
+  #head-fazer {
+    .frame {
+      border-color: $color-white;
+      .ui.header,
+      .ui.header .sub.header {
+        color: $color-white;
+      }
+    }
+  }
+  #info-fazer {
+    .info-bg {
+      background: $color-fazer-main;
+      opacity: 0.7;
+    }
+    .ui.card {
+      .header,
+      .meta,
+      .description {
+        color: $color-white;
+      }
+    }
+  }
+  #case-fazer-4 {
+    .ui.card {
+      .header,
+      .meta,
+      .description {
+        color: $color-black;
+      }
+    }
+  }
+  #fp-nav ul li a span:hover {
+    background:$color-fazer-main;
+  }
+}
 
 
 /*******************************

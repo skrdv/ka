@@ -196,15 +196,16 @@ jQuery(document).ready(function($) {
 				if (window.location.hash == '#services') {
 					document.title = 'Услуги - '+base_title;
 					$('#nav .item').removeClass().addClass('item black');
+
 				} else if (window.location.hash == '#portfolio') {
 					document.title = 'Портфолио - '+base_title;
 					$('#nav .item').removeClass().addClass('item flight');
+					$('.section.portfolio').attr('id', 'portfolio-flight');
 				} else if (window.location.hash == '#contact') {
 					document.title = 'Контакты - '+base_title;
 					$('#nav .item').removeClass().addClass('item white');
+					$('.section.contact').attr('id', 'contact-circle');
 				}
-
-				// console.log(document.title+'  '+window.location.hash);
 
 			},
 			afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
@@ -213,39 +214,39 @@ jQuery(document).ready(function($) {
 						if (window.location.hash == '#contact') {
 							document.title = 'Контакты - '+base_title;
 							$('#nav .item').removeClass().addClass('item white');
+							$('.section.contact').attr('id', 'contact-circle');
 						} else if (window.location.hash == '#contact/1') {
 							document.title = 'Карта - '+base_title;
 							$('#nav .item').removeClass().addClass('item pink');
+							$('.section.contact').attr('id', 'contact-map');
 						} else if (window.location.hash == '#contact/2') {
 							document.title = 'Обратная связь - '+base_title;
 							$('#nav .item').removeClass().addClass('item black');
+							$('.section.contact').attr('id', 'contact-feedback');
 						} else if (window.location.hash == '#portfolio') {
 							document.title = 'Портфолио Слет - '+base_title;
 							$('#nav .item').removeClass().addClass('item flight');
+							$('.section.portfolio').attr('id', 'portfolio-flight');
 						} else if (window.location.hash == '#portfolio/1') {
 							document.title = 'Портфолио Галерея 2Т - '+base_title;
 							$('#nav .item').removeClass().addClass('item gallery-2t');
+							$('.section.portfolio').attr('id', 'portfolio-2t');
 						} else if (window.location.hash == '#portfolio/2') {
 							document.title = 'Портфолио Сокольники - '+base_title;
 							$('#nav .item').removeClass().addClass('item sokolniki');
+							$('.section.portfolio').attr('id', 'portfolio-sokolniki');
 						} else if (window.location.hash == '#portfolio/3') {
 							document.title = 'Портфолио Вкусноштуки - '+base_title;
 							$('#nav .item').removeClass().addClass('item fazer');
+							$('.section.portfolio').attr('id', 'portfolio-fazer');
 						}
 
-						// console.log(document.title+'  '+window.location.hash);
         }
 
 		});
 
 		// Backstretch
 		homeBg();
-
-
-		// Slider Arrows
-		$('.fp-controlArrow').clone().addClass('right').appendTo('.section.portfolio');
-		// $('.fp-controlArrow').clone().addClass('right').appendTo('.section.team');
-		$('.fp-controlArrow').clone().addClass('right').appendTo('.section.contact');
 
 		// services
 		$('.ui.card.pr').on('hover', function() {
