@@ -86,18 +86,17 @@ a {
   }
   .phone.right {
     margin-left: auto !important;
-    margin-top: 5px;
+    // margin-top: 5px;
   }
   .menu .item {
     display: inline-block !important;
-    margin-top: 2px !important;
     padding: 0 1em  !important;
   }
 	.item {
     display: inline-block;
     padding-top: 0;
     padding-bottom: 0;
-    margin-top: 5px;
+    // margin-top: 5px;
     height: 20px;
     line-height: 20px;
     font-family: 'Lato Regular';
@@ -117,17 +116,16 @@ a {
     &:hover{
       background: none;
       .line-1 {
-        -webkit-transform: translateY(-3px);
-        transform: translateY(-3px);
+        -webkit-transform: translateY(-2px);
+        transform: translateY(-2px);
       }
       .line-3 {
-        -webkit-transform: translateY(3px);
-        transform: translateY(3px);
+        -webkit-transform: translateY(2px);
+        transform: translateY(2px);
       }
 		}
     .browse {
-      // position: relative;
-      // width: 100px;
+      margin-top: 4px;
       cursor: pointer;
     }
 
@@ -136,7 +134,7 @@ a {
       color: $color-flight;
       transition: 1s all;
     }
-    i {
+    .line {
       display: block;
       position: relative;
       width: 20px;
@@ -146,92 +144,163 @@ a {
       background-color: $color-flight;
       transition: 1s all;
     }
-    svg path {
+    .path {
       fill: $color-flight;
       transition: 1s all;
     }
+    .inverse {
+      fill: transparent;
+      transition: 1s all;
+    }
+    &:hover {
+      .path {
+        fill: transparent;
+      }
+      .inverse {
+        fill: $color-flight;
+      }
+    }
     &.white {
-      color: $color-white !important;
-      svg path {
-        fill: $color-white !important;
+      color: $color-white;
+      .path {
+        fill: $color-white;
       }
       a {
-        color: $color-white !important;
+        color: $color-white;
       }
-      i {
+      .line {
         background-color: $color-white;
+      }
+      &:hover {
+        .path {
+          fill: transparent;
+        }
+        .inverse {
+          fill: $color-white;
+        }
       }
     }
     &.pink {
-      color: $color-pink !important;
-      svg path {
-        fill: $color-pink !important;
+      color: $color-pink;
+      .path {
+        fill: $color-pink;
       }
       a {
-        color: $color-pink !important;
+        color: $color-pink;
       }
       i {
         background-color: $color-pink;
       }
+      &:hover {
+        .path {
+          fill: transparent;
+        }
+        .inverse {
+          fill: $color-pink;
+        }
+      }
     }
     &.black {
-      color: $color-black !important;
-      svg path {
-        fill: $color-black !important;
+      color: $color-black;
+      .path {
+        fill: $color-black;
       }
       a {
-        color: $color-black !important;
+        color: $color-black;
       }
       i {
         background-color: $color-black;
       }
+      &:hover {
+        .path {
+          fill: transparent;
+        }
+        .inverse {
+          fill: $color-black;
+        }
+      }
     }
     &.flight {
-      color: $color-flight !important;
-      svg path {
-        fill: $color-flight !important;
+      color: $color-flight;
+      .path {
+        fill: $color-flight;
+      }
+      #inverse {
+        fill: transparent;
       }
       a {
-        color: $color-flight !important;
+        color: $color-flight;
       }
       i {
         background-color: $color-flight;
       }
+      &:hover {
+        .path {
+          fill: transparent;
+        }
+        .inverse {
+          fill: $color-flight;
+        }
+      }
     }
     &.gallery-2t {
-      color: $color-2t !important;
-      svg path {
-        fill: $color-2t !important;
+      color: $color-2t;
+      .path {
+        fill: $color-2t;
       }
       a {
-        color: $color-2t !important;
+        color: $color-2t;
       }
       i {
         background-color: $color-2t;
       }
+      &:hover {
+        .path {
+          fill: transparent;
+        }
+        .inverse {
+          fill: $color-2t;
+        }
+      }
     }
     &.sokolniki {
-      color: $color-sokolniki !important;
-      svg path {
-        fill: $color-sokolniki !important;
+      color: $color-sokolniki;
+      .path {
+        fill: $color-sokolniki;
       }
       a {
-        color: $color-sokolniki !important;
+        color: $color-sokolniki;
       }
       i {
         background-color: $color-sokolniki;
       }
+      &:hover {
+        .path {
+          fill: transparent;
+        }
+        .inverse {
+          fill: $color-sokolniki;
+        }
+      }
     }
     &.fazer {
-      color: $color-fazer !important;
-      svg path {
-        fill: $color-fazer !important;
+      color: $color-fazer;
+      .path {
+        fill: $color-fazer;
       }
       a {
-        color: $color-fazer !important;
+        color: $color-fazer;
       }
       i {
         background-color: $color-fazer;
+      }
+      &:hover {
+        .path {
+          fill: transparent;
+        }
+        .inverse {
+          fill: $color-fazer;
+        }
       }
     }
 	}
@@ -250,7 +319,7 @@ a {
       .frame {
         max-width: 800px;
         margin: 0 auto;
-        border: 4px solid white;
+        border: 3px solid white;
         text-align: center;
         transition: 1s all;
         .ui.header {
@@ -408,7 +477,7 @@ a {
       .frame {
         max-width: 800px;
         margin: 0 auto;
-        border: 4px solid $color-pink;
+        border: 3px solid $color-pink;
         text-align: center;
         .ui.header {
           display: block;
@@ -490,7 +559,7 @@ a {
       .frame {
         max-width: 800px;
         margin: 0 auto;
-        border: 4px solid white;
+        border: 3px solid white;
         text-align: center;
         .ui.header {
           display: block;
@@ -569,7 +638,7 @@ a {
   .frame {
     max-width: 800px;
     margin: 0 auto;
-    border: 4px solid white;
+    border: 3px solid white;
     text-align: center;
     border-color: $color-black;
     .ui.header {
@@ -622,27 +691,15 @@ a {
     color: $color-white;
   }
   #nav .item {
-    &:hover {
-      color: $color-fazer-main;
+    color: $color-fazer !important;
+    svg path {
+      fill: $color-fazer !important;
     }
-    &.logo {
-      svg path {
-        fill: $color-black;
-      }
-      &:hover {
-        svg path {
-          fill: $color-fazer-main;
-        }
-      }
+    a {
+      color: $color-fazer !important;
     }
-    &.phone a:hover{
-      color: $color-fazer-main;
-    }
-    &.browse:hover {
-      .close:before,
-      .close:after {
-        background-color: $color-fazer-active;
-      }
+    i {
+      background-color: $color-fazer;
     }
   }
   #head-fazer {
@@ -709,27 +766,15 @@ a {
     background-color:$color-2t-active;
   }
   #nav .item {
-    &:hover {
-      color: $color-2t-active;
+    color: $color-2t !important;
+    svg path {
+      fill: $color-2t !important;
     }
-    &.logo {
-      svg path {
-        fill: $color-black;
-      }
-      &:hover {
-        svg path {
-          fill: $color-2t-active;
-        }
-      }
+    a {
+      color: $color-2t !important;
     }
-    &.phone a:hover{
-      color: $color-2t-active;
-    }
-    &.browse:hover {
-      .close:before,
-      .close:after {
-        background-color: $color-2t-active;
-      }
+    i {
+      background-color: $color-2t;
     }
   }
   #head-2t {
@@ -796,27 +841,15 @@ a {
     color: $color-white;
   }
   #nav .item {
-    &:hover {
-      color: $color-flight-active;
+    color: $color-flight !important;
+    svg path {
+      fill: $color-flight !important;
     }
-    &.logo {
-      svg path {
-        fill: $color-black;
-      }
-      &:hover {
-        svg path {
-          fill: $color-flight-active;
-        }
-      }
+    a {
+      color: $color-flight !important;
     }
-    &.phone a:hover{
-      color: $color-flight-active;
-    }
-    &.browse:hover {
-      .close:before,
-      .close:after {
-        background-color: $color-flight-active;
-      }
+    i {
+      background-color: $color-flight;
     }
   }
   #head-flight {
@@ -861,10 +894,10 @@ a {
 #home {
   #slide-sokolniki {
     .frame {
-      border-color: $color-white;
+      border-color: $color-sokolniki-active;
       .ui.header,
       .ui.header .sub.header {
-        color: $color-white;
+        color: $color-sokolniki-active;
       }
       &:hover {
         border-color: $color-sokolniki;
@@ -883,24 +916,15 @@ a {
     color: $color-white;
   }
   #nav .item {
-    &:hover {
-      color: $color-sokolniki-active;
+    color: $color-sokolniki !important;
+    svg path {
+      fill: $color-sokolniki !important;
     }
-    &.logo {
-      svg path {
-        fill: $color-black;
-      }
-      &:hover {
-        svg path {
-          fill: $color-sokolniki-active;
-        }
-      }
+    a {
+      color: $color-sokolniki !important;
     }
-    &.browse:hover {
-      .close:before,
-      .close:after {
-        background-color: $color-sokolniki-active;
-      }
+    i {
+      background-color: $color-sokolniki;
     }
   }
   #head-sokolniki {
@@ -962,7 +986,7 @@ a {
       // padding-left: 0.4em;
       // padding-right: 0.4em;
     }
-    .item.phone {
+    .phone {
       display: none;
     }
   }

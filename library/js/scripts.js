@@ -227,7 +227,7 @@ jQuery(document).ready(function($) {
 							$('#nav .item').removeClass().addClass('item gallery-2t');
 						} else if (window.location.hash == '#portfolio/2') {
 							document.title = 'Портфолио Сокольники - '+base_title;
-							$('#nav .item').removeClass().addClass('item sokilniki');
+							$('#nav .item').removeClass().addClass('item sokolniki');
 						} else if (window.location.hash == '#portfolio/3') {
 							document.title = 'Портфолио Вкусноштуки - '+base_title;
 							$('#nav .item').removeClass().addClass('item fazer');
