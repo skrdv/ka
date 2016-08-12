@@ -58,7 +58,7 @@ a {
 
 // Navigation
 #nav {
-	top: 50px;
+	top: 20px;
   .menu {
     visibility: hidden;
   }
@@ -800,15 +800,10 @@ a {
       }
     }
   }
-  #fp-nav ul li a span:hover {
-    background:$color-flight-active;
+  #fp-nav ul li a span {
+    background:$color-flight;
   }
 }
-
-
-
-
-
 
 
 
@@ -886,8 +881,8 @@ a {
       }
     }
   }
-  #fp-nav ul li a span:hover {
-    background:$color-2t-active;
+  #fp-nav ul li a span {
+    background:$color-2t;
   }
 }
 
@@ -972,8 +967,8 @@ a {
       }
     }
   }
-  #fp-nav ul li a span:hover {
-    background:$color-sokolniki-active;
+  #fp-nav ul li a span {
+    background:$color-sokolniki;
   }
 }
 
@@ -1056,8 +1051,8 @@ a {
       }
     }
   }
-  #fp-nav ul li a span:hover {
-    background:$color-fazer-main;
+  #fp-nav ul li a span {
+    background: $color-fazer;
   }
 }
 
