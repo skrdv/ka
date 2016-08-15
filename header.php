@@ -66,6 +66,11 @@
 	</head>
 	<?php if (isset($post->post_name)) { $slug = $post->post_name; } else { $slug = 'other'; } ?>
 	<body <?php body_class($slug); ?> id="page-<?php echo($slug); ?>">
+		<div id="preloader">
+			<div class="ui active dimmer">
+    		<div class="ui medium text loader">Загрузка</div>
+  		</div>
+		</div>
 
 		<header role="banner">
 

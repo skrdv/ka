@@ -155,11 +155,13 @@ function portfolioBg() {
 */
 jQuery(document).ready(function($) {
 
-  /*
-   * Let's fire off the gravatar function
-   * You can remove this if you don't need it
-  */
   loadGravatars();
+
+	$(window).load(function(){
+		$('#preloader').fadeOut('fast',function(){
+			$(this).remove();
+		});
+	});
 
 	// Home
 	if ($('body').hasClass('home')) {
