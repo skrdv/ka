@@ -168,7 +168,6 @@ jQuery(document).ready(function($) {
 
 		// FullPage
 		$('#home').fullpage({
-			verticalCentered: false,
 			anchors: ['portfolio', 'services', 'contact'],
 			menu: '#nav',
 			scrollingSpeed: 1000,
@@ -326,10 +325,6 @@ jQuery(document).ready(function($) {
 	if ($('body').hasClass('error404')) {
 		$('#error404').backstretch('http://ka.skrdv.com/wp-content/uploads/404-1600x900.jpg');
 	}
-
-
-
-
 
 
 }); /* end of as page load scripts */

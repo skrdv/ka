@@ -68,9 +68,10 @@
 	<body <?php body_class($slug); ?> id="page-<?php echo($slug); ?>">
 		<div id="preloader">
 			<div class="ui active dimmer">
-    		<div class="ui medium text loader">Загрузка</div>
+    		<div class="ui large loader"></div>
   		</div>
 		</div>
+		<div id="mobile">Поверните устройство горизонтально</div>
 
 		<header role="banner">
 
