@@ -197,7 +197,6 @@ jQuery(document).ready(function($) {
 				if (window.location.hash == '#services') {
 					document.title = 'Услуги - '+base_title;
 					$('#nav .item').removeClass().addClass('item black');
-
 				} else if (window.location.hash == '#portfolio') {
 					document.title = 'Портфолио - '+base_title;
 					$('#nav .item').removeClass().addClass('item flight');
@@ -265,6 +264,16 @@ jQuery(document).ready(function($) {
         }
 
 		});
+
+		$('.fp-controlArrow.fp-up').click(function(e){
+				e.preventDefault();
+				$.fn.fullpage.moveSectionUp();
+			});
+
+			$('.fp-controlArrow.fp-down').click(function(e){
+				e.preventDefault();
+				$.fn.fullpage.moveSectionDown();
+			});
 
 		// Backstretch
 		homeBg();

@@ -31,6 +31,8 @@
 					<?php } ?>
 					<?php wp_reset_postdata(); ?>
 
+					<div id="moveSectionDown" class="fp-controlArrow fp-down"></div>
+
 				</section>
 
 				<section class="section services">
@@ -114,6 +116,9 @@
 
 						</div>
 						</div>
+
+						<div id="moveSectionUp" class="fp-controlArrow fp-up"></div>
+						<div id="moveSectionDown" class="fp-controlArrow fp-down"></div>
 
 				</section>
 
@@ -220,7 +225,7 @@
 
 					</div>
 
-
+					<div id="moveSectionUp" class="fp-controlArrow fp-up"></div>
 
 				</section>
 
