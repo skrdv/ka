@@ -31,12 +31,11 @@
 					<?php } ?>
 					<?php wp_reset_postdata(); ?>
 
-					<div id="moveSectionDown" class="fp-controlArrow fp-down"></div>
+					<div class="fp-verticalArrow fp-down"></div>
 
 				</section>
 
 				<section class="section services">
-
 
 						<div class="ui three column doubling stackable grid container">
 					  <div class="two wide column">
@@ -117,8 +116,8 @@
 						</div>
 						</div>
 
-						<div id="moveSectionUp" class="fp-controlArrow fp-up"></div>
-						<div id="moveSectionDown" class="fp-controlArrow fp-down"></div>
+						<div class="fp-verticalArrow fp-up"></div>
+						<div class="fp-verticalArrow fp-down"></div>
 
 				</section>
 
@@ -193,7 +192,6 @@
 
 				</div>
 
-
 				<div class="slide feedback" data-bs="/wp-content/uploads/contact_form.jpg">
 
 
@@ -225,7 +223,7 @@
 
 					</div>
 
-					<div id="moveSectionUp" class="fp-controlArrow fp-up"></div>
+					<div class="fp-verticalArrow fp-up"></div>
 
 				</section>
 

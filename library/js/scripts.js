@@ -273,12 +273,12 @@ jQuery(document).ready(function($) {
 
 		});
 
-		$('.fp-controlArrow.fp-up').click(function(e){
+		$('.fp-verticalArrow.fp-up').click(function(e){
 				e.preventDefault();
 				$.fn.fullpage.moveSectionUp();
 			});
 
-			$('.fp-controlArrow.fp-down').click(function(e){
+			$('.fp-verticalArrow.fp-down').click(function(e){
 				e.preventDefault();
 				$.fn.fullpage.moveSectionDown();
 			});

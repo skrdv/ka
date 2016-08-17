@@ -338,24 +338,30 @@ a {
   right: 8px !important;
   background: url(../svg/arw_right_flight.svg) center center no-repeat;
 }
-.fp-controlArrow.fp-up,
-#moveSectionUp {
-  left: 50%;
-  top: 80px !important;
-  width: 68px !important;
-  height: 24px;
-  padding: 0;
-  background: url(../svg/arw_up.svg) center center no-repeat;
+
+.fp-verticalArrow {
+  position: absolute;
+    bottom: 44px;
+    left: 50%;
+    margin-left: -34px;
+    width: 68px;
+    height: 24px;
+    padding: 0;
+    cursor: pointer;
+    z-index: 4;
+    opacity: 0.4;
+    transition: 1s all;
+    &:hover {
+      opacity: 1;
+    }
 }
-.fp-controlArrow.fp-down,
-#moveSectionDown {
-  left: 50%;
-  top: auto;
-  bottom: 8px !important;
-  width: 68px !important;
-  height: 24px;
-  padding: 0;
-  background: url(../svg/arw_down.svg) center center no-repeat;
+.fp-verticalArrow.fp-up {
+  top: 20px;
+  bottom: auto;
+  background: url(../svg/arw_up_flight.svg) center center no-repeat;
+}
+.fp-verticalArrow.fp-down {
+  background: url(../svg/arw_down_flight.svg) center center no-repeat;
 }
 
 #portfolio-flight {
@@ -365,6 +371,12 @@ a {
   .fp-controlArrow.fp-next {
     background: url(../svg/arw_right_flight.svg) center center no-repeat;
   }
+  .fp-verticalArrow.fp-up {
+    background: url(../svg/arw_up_flight.svg) center center no-repeat;
+  }
+  .fp-verticalArrow.fp-down {
+    background: url(../svg/arw_down_flight.svg) center center no-repeat;
+  }
 }
 #portfolio-2t {
   .fp-controlArrow.fp-prev {
@@ -372,6 +384,12 @@ a {
   }
   .fp-controlArrow.fp-next {
     background: url(../svg/arw_right_2t.svg) center center no-repeat;
+  }
+  .fp-verticalArrow.fp-up {
+    background: url(../svg/arw_up_2t.svg) center center no-repeat;
+  }
+  .fp-verticalArrow.fp-down {
+    background: url(../svg/arw_down_2t.svg) center center no-repeat;
   }
 }
 #portfolio-sokolniki {
@@ -381,6 +399,12 @@ a {
   .fp-controlArrow.fp-next {
     background: url(../svg/arw_right_sokolniki.svg) center center no-repeat;
   }
+  .fp-verticalArrow.fp-up {
+    background: url(../svg/arw_up_sokolniki.svg) center center no-repeat;
+  }
+  .fp-verticalArrow.fp-down {
+    background: url(../svg/arw_down_sokolniki.svg) center center no-repeat;
+  }
 }
 #portfolio-fazer {
   .fp-controlArrow.fp-prev {
@@ -388,6 +412,12 @@ a {
   }
   .fp-controlArrow.fp-next {
     background: url(../svg/arw_right_fazer.svg) center center no-repeat;
+  }
+  .fp-verticalArrow.fp-up {
+    background: url(../svg/arw_up_fazer.svg) center center no-repeat;
+  }
+  .fp-verticalArrow.fp-down {
+    background: url(../svg/arw_down_fazer.svg) center center no-repeat;
   }
 }
 #portfolio-testogenon {
@@ -397,6 +427,12 @@ a {
   .fp-controlArrow.fp-next {
     background: url(../svg/arw_right_testogenon.svg) center center no-repeat;
   }
+  .fp-verticalArrow.fp-up {
+    background: url(../svg/arw_up_testogenon.svg) center center no-repeat;
+  }
+  .fp-verticalArrow.fp-down {
+    background: url(../svg/arw_down_testogenon.svg) center center no-repeat;
+  }
 }
 #contact-circle {
   .fp-controlArrow.fp-prev {
@@ -404,6 +440,12 @@ a {
   }
   .fp-controlArrow.fp-next {
     background: url(../svg/arw_right_white.svg) center center no-repeat;
+  }
+  .fp-verticalArrow.fp-up {
+    background: url(../svg/arw_up_white.svg) center center no-repeat;
+  }
+  .fp-verticalArrow.fp-down {
+    background: url(../svg/arw_down_white.svg) center center no-repeat;
   }
 }
 #contact-map {
@@ -413,6 +455,12 @@ a {
   .fp-controlArrow.fp-next {
     background: url(../svg/arw_right_pink.svg) center center no-repeat;
   }
+  .fp-verticalArrow.fp-up {
+    background: url(../svg/arw_up_pink.svg) center center no-repeat;
+  }
+  .fp-verticalArrow.fp-down {
+    background: url(../svg/arw_down_pink.svg) center center no-repeat;
+  }
 }
 #contact-feedback {
   .fp-controlArrow.fp-prev {
@@ -420,6 +468,20 @@ a {
   }
   .fp-controlArrow.fp-next {
     background: url(../svg/arw_right_black.svg) center center no-repeat;
+  }
+  .fp-verticalArrow.fp-up {
+    background: url(../svg/arw_up_black.svg) center center no-repeat;
+  }
+  .fp-verticalArrow.fp-down {
+    background: url(../svg/arw_down_black.svg) center center no-repeat;
+  }
+}
+.section.services {
+  .fp-verticalArrow.fp-up {
+    background: url(../svg/arw_up_black.svg) center center no-repeat;
+  }
+  .fp-verticalArrow.fp-down {
+    background: url(../svg/arw_down_black.svg) center center no-repeat;
   }
 }
 
