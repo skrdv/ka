@@ -112,7 +112,7 @@
 						<div class="menu">
 							<a class="item" href="/#portfolio">Работы</a>
 							<a class="item" href="/#services">Услуги</a>
-							<?php /* <a class="item" href="/#team">Мы</a> */ ?>
+							<a class="item" href="/#team">Мы</a>
 							<a class="item" href="/#contact">Контакты</a>
 						</div>
 						<div class="right phone">

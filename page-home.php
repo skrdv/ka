@@ -121,10 +121,9 @@
 
 				</section>
 
-				<?php /*
-				<section class="section team">
+				<section class="section team" data-bs="/wp-content/uploads/team_bw.jpg">
 
-					<div class="slide team-1">
+					<div class="wrap">
 						<header class="frame">
 							<h3 class="ui header">Мы
 								<div class="sub header">Знакомтесь</div>
@@ -132,16 +131,10 @@
 						</header>
 					</div>
 
-					<div class="slide team-2">
-						<header class="frame">
-							<h3 class="ui header">Мы
-								<div class="sub header">Знакомтесь</div>
-							</a>
-						</header>
-					</div>
+					<div class="fp-verticalArrow fp-up"></div>
+					<div class="fp-verticalArrow fp-down"></div>
 
 				</section>
-				*/ ?>
 
 				<section class="section contact">
 

@@ -172,7 +172,7 @@ jQuery(document).ready(function($) {
 
 		// FullPage
 		$('#home').fullpage({
-			anchors: ['portfolio', 'services', 'contact'],
+			anchors: ['portfolio', 'services', 'team', 'contact'],
 			menu: '#nav',
 			scrollingSpeed: 1000,
 
@@ -184,7 +184,7 @@ jQuery(document).ready(function($) {
 			//Design
 			controlArrows: true,
 			verticalCentered: true,
-			sectionsColor : ['#fff', '#fff', '#fff'],
+			sectionsColor : ['#fff', '#fff', '#fff', '#fff'],
 			paddingTop: '0',
 			paddingBottom: '0',
 			fixedElements: '#header, #footer',
@@ -201,6 +201,11 @@ jQuery(document).ready(function($) {
 				if (window.location.hash == '#services') {
 					document.title = 'Услуги - '+base_title;
 					$('#nav .item').removeClass().addClass('item black');
+					$('.section.services').attr('id', 'services');
+				} else if (window.location.hash == '#team') {
+					document.title = 'Команда - '+base_title;
+					$('#nav .item').removeClass().addClass('item white');
+					$('.section.team').attr('id', 'team');
 				} else if (window.location.hash == '#portfolio') {
 					document.title = 'Портфолио - '+base_title;
 					$('#nav .item').removeClass().addClass('item flight');
@@ -287,10 +292,10 @@ jQuery(document).ready(function($) {
 				$.fn.fullpage.moveSectionDown();
 			});
 
-		// Backstretch
+		// Portfolio
 		homeBg();
 
-		// services
+		// Services
 		$('.ui.card.pr').on('hover', function() {
 			$('.ui.card.big').find('.pr').transition('fade');
 		});
@@ -307,6 +312,9 @@ jQuery(document).ready(function($) {
 			$('.ui.card.big').find('.digital').transition('fade');
 		});
 
+		// Team
+		var team_bg = $('.section.team').data('bs');
+		$('.section.team').backstretch(team_bg);
 
 
 	}
