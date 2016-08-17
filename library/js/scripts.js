@@ -213,6 +213,10 @@ jQuery(document).ready(function($) {
 					document.title = 'Вкусноштуки Портфолио - '+base_title;
 					$('#nav .item').removeClass().addClass('item fazer');
 					$('.section.portfolio').attr('id', 'portfolio-fazer');
+				} else if (window.location.hash == '#portfolio/4') {
+					document.title = 'Тестогенон Портфолио - '+base_title;
+					$('#nav .item').removeClass().addClass('item testogenon');
+					$('.section.portfolio').attr('id', 'portfolio-testogenon');
 				} else if (window.location.hash == '#contact') {
 					document.title = 'Контакты - '+base_title;
 					$('#nav .item').removeClass().addClass('item white');
@@ -259,6 +263,10 @@ jQuery(document).ready(function($) {
 							document.title = 'Вкусноштуки Портфолио - '+base_title;
 							$('#nav .item').removeClass().addClass('item fazer');
 							$('.section.portfolio').attr('id', 'portfolio-fazer');
+						} else if (window.location.hash == '#portfolio/4') {
+							document.title = 'Тестогенон Портфолио - '+base_title;
+							$('#nav .item').removeClass().addClass('item testogenon');
+							$('.section.portfolio').attr('id', 'portfolio-testogenon');
 						}
 
         }

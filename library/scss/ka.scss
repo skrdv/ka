@@ -17,6 +17,7 @@ $color-sokolniki-main:   rgb(77,179,72);
 $color-fazer: rgb(247,145,0);
 $color-fazer-active: #cccccc;
 $color-fazer-main: rgb(247,145,0);
+$color-testogenon: rgb(125,125,125);
 
 
 a {
@@ -271,6 +272,26 @@ a {
         }
       }
     }
+    &.testogenon {
+      color: $color-testogenon;
+      .path {
+        fill: $color-testogenon;
+      }
+      a {
+        color: $color-testogenon;
+      }
+      i {
+        background-color: $color-testogenon;
+      }
+      &:hover {
+        .path {
+          fill: transparent;
+        }
+        .inverse {
+          fill: $color-testogenon;
+        }
+      }
+    }
     &.fazer {
       color: $color-fazer;
       .path {
@@ -367,6 +388,14 @@ a {
   }
   .fp-controlArrow.fp-next {
     background: url(../svg/arw_right_fazer.svg) center center no-repeat;
+  }
+}
+#portfolio-testogenon {
+  .fp-controlArrow.fp-prev {
+    background: url(../svg/arw_left_testogenon.svg) center center no-repeat;
+  }
+  .fp-controlArrow.fp-next {
+    background: url(../svg/arw_right_testogenon.svg) center center no-repeat;
   }
 }
 #contact-circle {
@@ -1086,6 +1115,90 @@ a {
     background: $color-fazer;
   }
 }
+
+
+
+#home {
+  #slide-testogenon {
+    .frame {
+      border-color: $color-white;
+      .ui.header,
+      .ui.header .sub.header {
+        color: $color-white;
+      }
+      &:hover {
+        border-color: $color-testogenon;
+        .ui.header,
+        .ui.header .sub.header {
+          color: $color-testogenon;
+        }
+      }
+    }
+  }
+}
+
+#page-testogenon {
+  ::selection {
+    background-color:$color-testogenon;
+    color: $color-white;
+  }
+  #nav .item {
+    color: $color-testogenon;
+    .path {
+      fill: $color-testogenon;
+    }
+    a {
+      color: $color-testogenon;
+    }
+    i {
+      background-color: $color-testogenon;
+    }
+    &:hover {
+      .path {
+        fill: transparent;
+      }
+      .inverse {
+        fill: $color-testogenon;
+      }
+    }
+  }
+  #head-testogenon {
+    .frame {
+      border-color: $color-white;
+      .ui.header,
+      .ui.header .sub.header {
+        color: $color-white;
+      }
+    }
+  }
+  #info-testogenon {
+    .info-bg {
+      background: $color-testogenon;
+      opacity: 0.7;
+    }
+    .ui.card {
+      .header,
+      .meta,
+      .description {
+        color: $color-white;
+      }
+    }
+  }
+  #case-fazer-4 {
+    .ui.card {
+      .header,
+      .meta,
+      .description {
+        color: $color-black;
+      }
+    }
+  }
+  #fp-nav ul li a span {
+    background: $color-testogenon;
+  }
+}
+
+
 
 
 /*******************************
