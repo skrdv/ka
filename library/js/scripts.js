@@ -144,6 +144,10 @@ function portfolioBg() {
 		} else if (width >= 1600) {
 			jQuery(this).backstretch(slide_bg);
 		}
+
+		var imgAlt = jQuery(this).data('alt');
+		jQuery(this).find('.backstretch img').attr('alt', imgAlt);
+
 	});
 
 }

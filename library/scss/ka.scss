@@ -324,7 +324,7 @@ a {
   padding: 200px 0;
   margin-top: -212px;
   border: none;
-  opacity: 0.4;
+  opacity: 0.6;
   transition: 1s all;
   &:hover {
     opacity: 1;
@@ -341,7 +341,7 @@ a {
 
 .fp-verticalArrow {
   position: absolute;
-    bottom: 44px;
+    bottom: 84px;
     left: 50%;
     margin-left: -34px;
     width: 68px;
@@ -349,14 +349,14 @@ a {
     padding: 0;
     cursor: pointer;
     z-index: 4;
-    opacity: 0.4;
+    opacity: 0.6;
     transition: 1s all;
     &:hover {
       opacity: 1;
     }
 }
 .fp-verticalArrow.fp-up {
-  top: 20px;
+  top: 60px;
   bottom: auto;
   background: url(../svg/arw_up_flight.svg) center center no-repeat;
 }
