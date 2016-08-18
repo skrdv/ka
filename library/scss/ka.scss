@@ -1412,11 +1412,17 @@ html.tablet.portrait {
       .ui.grid {
         margin-top: 60px !important;
       }
+      .ui.grid .two.wide.column:last-child {
+        display: none;
+      }
       .fp-tableCell {
         vertical-align: top !important;
       }
       .ui.card.big .meta {
         top: 50px;
+      }
+      .ui.card .description {
+        display: none;
       }
       .ui.card.big .description {
         top: 70px;
@@ -1477,7 +1483,9 @@ html.tablet.portrait {
 
   }
 
-
+  .fp-verticalArrow {
+    display: none;
+  }
 
   #home .section.portfolio .slide .frame .ui.header,
   #case .section.case.head .frame .ui.header {
@@ -1525,34 +1533,6 @@ html.tablet.portrait {
     opacity: 0.8;
   }
 
-
-
-  // header,
-  // footer,
-  // #fp-nav {
-  //   display: none !important;
-  // }
-  // html {
-  //   background: rgba(0, 0, 0, .96);
-  // }
-  // #mobile {
-  //   display: block;
-  //   width: 100%;
-  //   height: 100%;
-  //   background: rgba(0, 0, 0, .96) url(../images/logo_white.png) center center no-repeat;
-  //   color: white;
-  //   font-size: 1.6em;
-  //   line-height: 2em;
-  //   font-family: 'Lato Regular';
-  //   text-align: center;
-  //   padding-top: 40px;
-  //   min-height: 200px;
-  //   position: fixed;
-  //   left: 0;
-  //   top: 0;
-  // }
-
-
 }
 
 /* Tablet */
@@ -1568,6 +1548,10 @@ html.tablet.portrait {
     .item.phone {
       display: none;
     }
+  }
+
+  .fp-verticalArrow {
+    display: none;
   }
 
   #home .section.services .ui.card.big .meta {
