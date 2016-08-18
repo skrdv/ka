@@ -368,7 +368,8 @@ a {
   background: url(../svg/arw_down_flight.svg) center center no-repeat;
 }
 
-#portfolio-flight {
+#portfolio-flight,
+#page-flight {
   .fp-controlArrow.fp-prev {
     background: url(../svg/arw_left_flight.svg) center center no-repeat;
   }
@@ -382,7 +383,8 @@ a {
     background: url(../svg/arw_down_flight.svg) center center no-repeat;
   }
 }
-#portfolio-2t {
+#portfolio-2t,
+#page-2t {
   .fp-controlArrow.fp-prev {
     background: url(../svg/arw_left_2t.svg) center center no-repeat;
   }
@@ -396,7 +398,8 @@ a {
     background: url(../svg/arw_down_2t.svg) center center no-repeat;
   }
 }
-#portfolio-sokolniki {
+#portfolio-sokolniki,
+#page-sokolniki {
   .fp-controlArrow.fp-prev {
     background: url(../svg/arw_left_sokolniki.svg) center center no-repeat;
   }
@@ -410,7 +413,8 @@ a {
     background: url(../svg/arw_down_sokolniki.svg) center center no-repeat;
   }
 }
-#portfolio-fazer {
+#portfolio-fazer,
+#page-fazer {
   .fp-controlArrow.fp-prev {
     background: url(../svg/arw_left_fazer.svg) center center no-repeat;
   }
@@ -424,7 +428,8 @@ a {
     background: url(../svg/arw_down_fazer.svg) center center no-repeat;
   }
 }
-#portfolio-testogenon {
+#portfolio-testogenon,
+#page-testogenon {
   .fp-controlArrow.fp-prev {
     background: url(../svg/arw_left_testogenon.svg) center center no-repeat;
   }
@@ -872,6 +877,11 @@ a {
       }
     }
   }
+
+  .section:last-child .fp-verticalArrow.fp-down {
+    display: none;
+  }
+
 }
 
 

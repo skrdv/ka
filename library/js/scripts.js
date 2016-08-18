@@ -177,13 +177,9 @@ jQuery(document).ready(function($) {
 			anchors: ['portfolio', 'services', 'team', 'contact'],
 			menu: '#nav',
 			scrollingSpeed: 1000,
-
-			//Accessibility
 			keyboardScrolling: true,
 			animateAnchor: true,
 			recordHistory: true,
-
-			//Design
 			controlArrows: true,
 			verticalCentered: true,
 			sectionsColor : ['#fff', '#fff', '#fff', '#fff'],
@@ -192,8 +188,6 @@ jQuery(document).ready(function($) {
 			fixedElements: '#header, #footer',
 			responsiveWidth: 0,
 			responsiveHeight: 0,
-
-			//Custom selectors
 			sectionSelector: '.section',
 			slideSelector: '.slide',
 
@@ -284,15 +278,6 @@ jQuery(document).ready(function($) {
 
 		});
 
-		$('.fp-verticalArrow.fp-up').click(function(e){
-				e.preventDefault();
-				$.fn.fullpage.moveSectionUp();
-			});
-
-			$('.fp-verticalArrow.fp-down').click(function(e){
-				e.preventDefault();
-				$.fn.fullpage.moveSectionDown();
-			});
 
 		// Portfolio
 		homeBg();
@@ -321,13 +306,17 @@ jQuery(document).ready(function($) {
 
 	}
 
-	// Portfolio
+	// Case
 	if ($('body').hasClass('single')) {
+
+		var numSections = $('.section').length;
+		console.log(numSections);
 
 		// FullPage
 		$('#case').fullpage({
-			navigation: true,
-			navigationPosition: 'right'
+			// navigation: true,
+			// navigationPosition: 'right',
+			anchors:['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
 		});
 
 		$('.case-info .button.toogle').on('click', function() {
@@ -350,6 +339,17 @@ jQuery(document).ready(function($) {
 		// $(this).find('.close').transition('fade');
 		// $(this).find('.text').transition('fade');
 		$('.ui.menu').find('.menu').transition('fade');
+	});
+
+	// Vertacal Arrows
+	$('.fp-verticalArrow.fp-up').click(function(e){
+		e.preventDefault();
+		$.fn.fullpage.moveSectionUp();
+	});
+
+	$('.fp-verticalArrow.fp-down').click(function(e){
+		e.preventDefault();
+		$.fn.fullpage.moveSectionDown();
 	});
 
 	// 404 page

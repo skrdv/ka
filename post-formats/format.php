@@ -1,6 +1,5 @@
-<article role="article">
-
     <div id="case">
+
       <section id="head-<?php echo $post->post_name; ?>" class="section case head <?php echo $post->post_name; ?>" data-bs="<?php the_field('case_head'); ?>" data-alt="<?php the_title(); ?> <?php the_field('case_meta1'); ?>">
 
         <div class="wrap">
@@ -11,6 +10,8 @@
             </h1>
           </header>
         </div>
+
+        <div class="fp-verticalArrow fp-down"></div>
 
       </section>
 
@@ -29,6 +30,9 @@
           </div>
         </div>
         <button class="ui white basic button toogle hidden">Скрыть описание</button>
+
+        <div class="fp-verticalArrow fp-up"></div>
+        <div class="fp-verticalArrow fp-down"></div>
 
       </section>
 
@@ -52,13 +56,12 @@
             </div>
             <?php } ?>
 
+            <div class="fp-verticalArrow fp-up"></div>
+						<div class="fp-verticalArrow fp-down"></div>
+
           </section>
 
         <?php } ?>
       <?php } ?>
 
     </div>
-
-
-
-</article>
