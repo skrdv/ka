@@ -130,6 +130,8 @@ function portfolioBg() {
 
 	jQuery('.section').each(function(){
 		var slide_bg = jQuery(this).data('bs');
+		var img_alt = jQuery(this).data('alt');
+
 		var slide_bg_800 = slide_bg.replace('.jpg','-800x450.jpg');
 		var slide_bg_1280 = slide_bg.replace('.jpg','-1280x720.jpg');
 		var slide_bg_1600 = slide_bg.replace('.jpg','-1600x900.jpg');
@@ -145,8 +147,8 @@ function portfolioBg() {
 			jQuery(this).backstretch(slide_bg);
 		}
 
-		var imgAlt = jQuery(this).data('alt');
-		jQuery(this).find('.backstretch img').attr('alt', imgAlt);
+
+		jQuery(this).find('.backstretch img').attr('alt', img_alt);
 
 	});
 

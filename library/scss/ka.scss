@@ -44,13 +44,17 @@ a {
   display: none !important;
 }
 
-.section{
+.section,
+.slide {
   position: relative;
+  -moz-background-size: cover !important;
+  -webkit-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
 }
-.slide{
-  position: relative;
-}
+
 .footer {
+  display: none;
   min-height: 100px;
   background: $color-black;
 }
@@ -798,6 +802,7 @@ a {
 
 #case {
   .section.case {
+
     &.head {
       .wrap {
         display: flex;
@@ -844,7 +849,7 @@ a {
       .header {
         font-family: 'Lato Regular';
         font-weight: normal;
-        font-size: 4.8em;
+        font-size: 4.4em;
         line-height: 1;
         text-transform: lowercase;
         margin-top: 0;
@@ -957,6 +962,9 @@ a {
       }
     }
   }
+  #fp-nav ul li a span {
+    background:$color-flight;
+  }
   #head-flight {
     .frame {
       border-color: $color-white;
@@ -988,10 +996,11 @@ a {
       }
     }
   }
-  #fp-nav ul li a span {
-    background:$color-flight;
-  }
 }
+
+
+
+
 
 
 
