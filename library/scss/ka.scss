@@ -154,22 +154,22 @@ a {
       }
     }
     &.white {
-      color: $color-white;
+      color: $color-white !important;
       .path {
-        fill: $color-white;
+        fill: $color-white !important;
       }
       a {
-        color: $color-white;
+        color: $color-white !important;
       }
       .line {
-        background-color: $color-white;
+        background-color: $color-white !important;
       }
       &:hover {
         .path {
           fill: transparent;
         }
         .inverse {
-          fill: $color-white;
+          fill: $color-white !important;
         }
       }
     }
@@ -485,7 +485,7 @@ a {
     background: url(../svg/arw_down_black.svg) center center no-repeat;
   }
 }
-#services {
+#home-services {
   .fp-verticalArrow.fp-up {
     background: url(../svg/arw_up_black.svg) center center no-repeat;
   }
@@ -493,7 +493,7 @@ a {
     background: url(../svg/arw_down_black.svg) center center no-repeat;
   }
 }
-#team {
+#home-team {
   .fp-verticalArrow.fp-up {
     background: url(../svg/arw_up_white.svg) center center no-repeat;
   }
@@ -791,11 +791,14 @@ a {
           font-family: 'Lato Regular' !important;
           font-weight: normal;
         }
-        // .wpcf7-not-valid-tip {
-        //   position: absolute;
-        //   left: 16px;
-        //   top: 10px;
-        // }
+        .wpcf7-form label.error {
+          color: $color-pink !important;
+        }
+        .theme_1.wpcf7-form input.error,
+        .theme_1.wpcf7-form select.error,
+        .theme_1.wpcf7-form textarea.error {
+          border-bottom: 2px solid $color-pink !important;
+        }
       }
 
     }

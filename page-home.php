@@ -121,7 +121,7 @@
 
 				</section>
 
-				<section class="section team" data-bs="/wp-content/uploads/team_bw.jpg">
+				<section class="section team" data-bs="/wp-content/uploads/team_bwo.jpg">
 
 					<div class="wrap">
 						<header class="frame">

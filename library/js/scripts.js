@@ -182,10 +182,10 @@ jQuery(document).ready(function($) {
 			recordHistory: true,
 			controlArrows: true,
 			verticalCentered: true,
-			sectionsColor : ['#fff', '#fff', '#fff', '#fff'],
+			// sectionsColor : ['#fff', '#fff', '#fff', '#fff'],
 			paddingTop: '0',
 			paddingBottom: '0',
-			fixedElements: '#header, #footer',
+			// fixedElements: '#header, #footer',
 			responsiveWidth: 0,
 			responsiveHeight: 0,
 			sectionSelector: '.section',
@@ -197,11 +197,11 @@ jQuery(document).ready(function($) {
 				if (window.location.hash == '#services') {
 					document.title = 'Услуги - '+base_title;
 					$('#nav .item').removeClass().addClass('item black');
-					$('.section.services').attr('id', 'services');
+					$('.section.services').attr('id', 'home-services');
 				} else if (window.location.hash == '#team') {
 					document.title = 'Команда - '+base_title;
 					$('#nav .item').removeClass().addClass('item white');
-					$('.section.team').attr('id', 'team');
+					$('.section.team').attr('id', 'home-team');
 				} else if (window.location.hash == '#portfolio') {
 					document.title = 'Портфолио - '+base_title;
 					$('#nav .item').removeClass().addClass('item flight');
