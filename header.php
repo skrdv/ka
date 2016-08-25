@@ -3,22 +3,18 @@
 <html <?php language_attributes(); ?> class="no-js">
 <head>
 	<title><?php wp_title(''); ?></title>
-	<!-- Meta -->
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="HandheldFriendly" content="True">
 	<meta name="MobileOptimized" content="360">
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-	<!-- Icons -->
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
 	<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
 	<link rel="manifest" href="/manifest.json">
 	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ec008c">
 	<meta name="theme-color" content="#ec008c">
-	<!-- Head -->
 	<?php wp_head(); ?>
-	<!-- Counters -->
 	<script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -70,12 +66,12 @@
 	</head>
 	<?php if (isset($post->post_name)) { $slug = $post->post_name; } else { $slug = 'other'; } ?>
 	<body <?php body_class($slug); ?> id="page-<?php echo($slug); ?>">
+
 		<div id="preloader">
 			<div class="ui active dimmer">
     		<div class="ui large loader"></div>
   		</div>
 		</div>
-		<div id="mobile">Поверните устройство горизонтально</div>
 
 		<header role="banner">
 

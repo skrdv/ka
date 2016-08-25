@@ -31,15 +31,15 @@
 					<?php } ?>
 					<?php wp_reset_postdata(); ?>
 
-					<div class="fp-verticalArrow fp-down"></div>
+
 
 				</section>
 
 				<section class="section services">
 
-						<div class="ui three column doubling stackable grid container">
-					  <div class="two wide column">
+					<div class="ui three column doubling stackable grid container">
 
+						<div class="two wide column">
 							<div class="ui card pr">
   							<div class="content">
     							<div class="header">PR</div>
@@ -48,10 +48,9 @@
     							</div>
   							</div>
 							</div>
-
 						</div>
-						<div class="two wide column">
 
+						<div class="two wide column">
 							<div class="ui card brand">
   							<div class="content">
     							<div class="header">Branding</div>
@@ -60,10 +59,9 @@
     							</div>
   							</div>
 							</div>
-
 						</div>
-						<div class="two wide column">
 
+						<div class="two wide column">
 							<div class="ui card adv">
   							<div class="content">
     							<div class="header">Реклама</div>
@@ -72,10 +70,9 @@
     							</div>
   							</div>
 							</div>
-
 						</div>
-						<div class="two wide column">
 
+						<div class="two wide column">
 							<div class="ui card digital">
   							<div class="content">
     							<div class="header">Digital</div>
@@ -84,13 +81,11 @@
     							</div>
   							</div>
 							</div>
-
 						</div>
-						<div class="two wide column">
 
-						</div>
+						<div class="two wide column"></div>
+
 						<div class="six wide column">
-
 							<div class="ui card big">
   							<div class="content">
     							<div class="header">Услуги</div>
@@ -112,12 +107,8 @@
     							</div>
   							</div>
 							</div>
-
 						</div>
-						</div>
-
-						<div class="fp-verticalArrow fp-up"></div>
-						<div class="fp-verticalArrow fp-down"></div>
+					</div>
 
 				</section>
 
@@ -126,13 +117,10 @@
 					<div class="wrap">
 						<header class="frame">
 							<h3 class="ui header">Мы
-								<div class="sub header">Знакомтесь</div>
+								<div class="sub header">Знакомьтесь</div>
 							</a>
 						</header>
 					</div>
-
-					<div class="fp-verticalArrow fp-up"></div>
-					<div class="fp-verticalArrow fp-down"></div>
 
 				</section>
 
@@ -187,7 +175,6 @@
 
 				<div class="slide feedback" data-bs="/wp-content/uploads/contact_form.jpg">
 
-
 							<div class="ui doubling stackable grid container">
 								<div class="six wide column">
 
@@ -213,16 +200,50 @@
 								</div>
 							</div>
 
-
 					</div>
-
-					<div class="fp-verticalArrow fp-up"></div>
 
 				</section>
 
-			<?php the_content(); ?>
+			<?php //the_content(); ?>
 
 	</article>
+
+
+
+	<div class="fp-verticalArrow fp-up"></div>
+	<div class="fp-verticalArrow fp-down"></div>
+
+	<div class="ui help">
+		<div class="mouse">
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="49.64px" height="42.331px" viewBox="0 0 55 42.331" enable-background="new 0 0 49.64 42.331" xml:space="preserve" class="mousy">
+				<path class="wheelie" fill="#ffffff" d="M25.226,13.527c0-2.026,0-4.112,0-6.138c0-1.907-2.979-1.907-2.979,0c0,2.026,0,4.112,0,6.138C22.246,15.434,25.226,15.434,25.226,13.527L25.226,13.527z"></path>
+				<path fill="#ffffff" d="M23.975,32h-0.477c-5.125,0-9.296-4.171-9.296-9.296V9.296C14.202,4.171,18.373,0,23.498,0h0.477c5.125,0,9.295,4.171,9.295,9.296v13.408C33.271,27.829,29.101,32,23.975,32z M23.498,2.384c-3.814,0-6.912,3.099-6.912,6.912v13.408c0,3.813,3.099,6.912,6.912,6.912h0.477c3.814,0,6.913-3.099,6.913-6.912V9.296c0-3.814-3.1-6.912-6.913-6.912H23.498z"></path>
+			</svg>
+		</div>
+			<div class="keyboard">
+				<div class="keyboard-content">
+					<i class="keyboard-bg">
+						<svg xmlns="http://www.w3.org/2000/svg" width="65" height="44" viewBox="0 0 65 44">
+							<path class="keyboard-button keyboard-button-down" fill-rule="evenodd" clip-rule="evenodd" fill="#5F3FFF" d="M38.004,44H26.997C23.694,44,21,41.305,21,37.992V27.008 C21,23.694,23.694,21,26.997,21h11.007C41.314,21,44,23.694,44,27.008v10.984C44,41.305,41.314,44,38.004,44z M38.004,42 c2.201,0,3.998-1.796,3.998-4.008V27.008c0-2.213-1.797-4.008-3.998-4.008H26.997c-2.211,0-3.998,1.788-3.998,4v11 c0,2.212,1.787,4,3.998,4H38.004z M35.229,30l-2.797,6.566L29.635,30H35.229z"></path>
+							<path class="keyboard-button keyboard-button-left" fill-rule="evenodd" clip-rule="evenodd" fill="#5F3FFF" d="M0,38.004V26.997C0,23.694,2.695,21,6.008,21h10.985 C20.306,21,23,23.694,23,26.997v11.007C23,41.314,20.306,44,16.993,44H6.008C2.695,44,0,41.314,0,38.004z M2,38.004 c0,2.201,1.796,3.998,4.008,3.998h10.985c2.212,0,4.008-1.797,4.008-3.998V26.997c0-2.211-1.789-3.998-4-3.998H6 c-2.212,0-4,1.787-4,3.998V38.004z M14,35.229l-6.566-2.797L14,29.635V35.229z"></path>
+							<path class="keyboard-button keyboard-button-top" fill-rule="evenodd" clip-rule="evenodd" fill="#5F3FFF" d="M44,6.008v10.984C44,20.306,41.314,23,38.004,23H26.997 C23.694,23,21,20.306,21,16.992V6.008C21,2.695,23.694,0,26.997,0h11.007C41.314,0,44,2.695,44,6.008z M26.997,2 c-2.211,0-3.998,1.788-3.998,4v11c0,2.212,1.787,4,3.998,4h11.007c2.201,0,3.998-1.795,3.998-4.008V6.008 C42.002,3.796,40.205,2,38.004,2H26.997z M29.635,14l2.797-6.566L35.229,14H29.635z"></path>
+							<path class="keyboard-button keyboard-button-right" fill-rule="evenodd" clip-rule="evenodd" fill="#5F3FFF" d="M58.992,44H48.008C44.694,44,42,41.314,42,38.004V26.997 C42,23.694,44.694,21,48.008,21h10.984C62.305,21,65,23.694,65,26.997v11.007C65,41.314,62.305,44,58.992,44z M63,26.997 c0-2.211-1.788-3.998-4-3.998H48c-2.212,0-4,1.787-4,3.998v11.007c0,2.201,1.795,3.998,4.008,3.998h10.984 c2.212,0,4.008-1.797,4.008-3.998V26.997z M51,29.635l6.566,2.797L51,35.229V29.635z"></path>
+						</svg>
+					</i>
+					<i class="keyboard-overlay">
+						<svg xmlns="http://www.w3.org/2000/svg" width="65" height="44" viewBox="0 0 65 44">
+							<path class="keyboard-button keyboard-button-down" fill-rule="evenodd" clip-rule="evenodd" fill="#5F3FFF" d="M38.004,44H26.997C23.694,44,21,41.305,21,37.992V27.008 C21,23.694,23.694,21,26.997,21h11.007C41.314,21,44,23.694,44,27.008v10.984C44,41.305,41.314,44,38.004,44z M38.004,42 c2.201,0,3.998-1.796,3.998-4.008V27.008c0-2.213-1.797-4.008-3.998-4.008H26.997c-2.211,0-3.998,1.788-3.998,4v11 c0,2.212,1.787,4,3.998,4H38.004z M35.229,30l-2.797,6.566L29.635,30H35.229z"></path>
+							<path class="keyboard-button keyboard-button-left" fill-rule="evenodd" clip-rule="evenodd" fill="#5F3FFF" d="M0,38.004V26.997C0,23.694,2.695,21,6.008,21h10.985 C20.306,21,23,23.694,23,26.997v11.007C23,41.314,20.306,44,16.993,44H6.008C2.695,44,0,41.314,0,38.004z M2,38.004 c0,2.201,1.796,3.998,4.008,3.998h10.985c2.212,0,4.008-1.797,4.008-3.998V26.997c0-2.211-1.789-3.998-4-3.998H6 c-2.212,0-4,1.787-4,3.998V38.004z M14,35.229l-6.566-2.797L14,29.635V35.229z"></path>
+							<path class="keyboard-button keyboard-button-top" fill-rule="evenodd" clip-rule="evenodd" fill="#5F3FFF" d="M44,6.008v10.984C44,20.306,41.314,23,38.004,23H26.997 C23.694,23,21,20.306,21,16.992V6.008C21,2.695,23.694,0,26.997,0h11.007C41.314,0,44,2.695,44,6.008z M26.997,2 c-2.211,0-3.998,1.788-3.998,4v11c0,2.212,1.787,4,3.998,4h11.007c2.201,0,3.998-1.795,3.998-4.008V6.008 C42.002,3.796,40.205,2,38.004,2H26.997z M29.635,14l2.797-6.566L35.229,14H29.635z"></path>
+							<path class="keyboard-button keyboard-button-right" fill-rule="evenodd" clip-rule="evenodd" fill="#5F3FFF" d="M58.992,44H48.008C44.694,44,42,41.314,42,38.004V26.997 C42,23.694,44.694,21,48.008,21h10.984C62.305,21,65,23.694,65,26.997v11.007C65,41.314,62.305,44,58.992,44z M63,26.997 c0-2.211-1.788-3.998-4-3.998H48c-2.212,0-4,1.787-4,3.998v11.007c0,2.201,1.795,3.998,4.008,3.998h10.984 c2.212,0,4.008-1.797,4.008-3.998V26.997z M51,29.635l6.566,2.797L51,35.229V29.635z"></path>
+						</svg>
+					</i>
+				</div>
+			</div>
+	</div>
+
+
+
 
 	<?php endwhile; else : ?>
 
