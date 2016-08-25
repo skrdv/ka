@@ -48,6 +48,83 @@ button:focus {
   display: none !important;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon/icomoon.eot');
+	src:url('../fonts/icomoon/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon/icomoon.woff') format('woff'),
+		url('../fonts/icomoon/icomoon.ttf') format('truetype'),
+		url('../fonts/icomoon/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.btn {
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	padding: 25px 80px;
+	display: inline-block;
+	margin: 15px 30px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+/* Pseudo elements for icons */
+.btn:before {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	position: relative;
+	-webkit-font-smoothing: antialiased;
+}
+
+.icon-arrow-right:before {
+	content: "\e00d";
+}
+
+
+
+
+
+
+
+
+
 .section,
 .slide {
   position: relative;
@@ -411,24 +488,108 @@ button:focus {
 
 
 
-// Arrows
-.pulseArrow {
+
+
+
+@mixin common {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 5px;
+}
+
+$shadow: 0 0 20px rgba(0,0,0,.3) inset;
+$bg: #121212;
+
+.gradient {
+  position: relative;
+  margin: 0 auto;
+  border-radius: 5px;
+  background: linear-gradient(crimson, orangered, gold);
+  box-shadow: 0 0 20px rgba(0,0,0,.6), $shadow;
+  &:before,
+  &:after {
+    content: '';
+    @include common;
+    box-shadow: $shadow;
+    animation: opacity 12s infinite;
+    opacity: 0;
+    }
+  &:before {
+    background: linear-gradient(120deg,
+      yellow, yellowgreen, steelblue);
+    animation-delay: 4s;
+  }
+  &:after {
+    background: linear-gradient(240deg,
+      skyblue, violet, purple);
+    animation-delay: 8s;
+  }
+}
+
+@keyframes opacity {
+  30% {
+    opacity: .6;
+  }
+  60% {
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.pulse {
   animation-name: pulse;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: ease-in-out;
   animation-fill-mode: both;
   animation-duration: 3s;
-  animation-delay: 10s;
+  animation-delay: 6s;
   transform: translateY(0%);
 }
 @keyframes pulse {
-  0%{-webkit-transform:translateY(0%);transform:translateY(0%);}
-  10%{-webkit-transform:translateY(20%);transform:translateY(20%);}
-  20%{-webkit-transform:translateY(0%);transform:translateY(0%);}
-  80%{-webkit-transform:translateY(0%);transform:translateY(0%);}
-  90%{-webkit-transform:translateY(20%);transform:translateY(20%);}
-  100%{-webkit-transform:translateY(0%);transform:translateY(0%);}
+  0%{
+    -webkit-transform:translateY(0%);
+    transform:translateY(0%);
+    }
+  10%{
+    -webkit-transform:translateY(10%);
+    transform:translateY(10%);
+  }
+  20%{
+    -webkit-transform:translateY(0%);
+    transform:translateY(0%);
+  }
+  80%{
+    -webkit-transform:translateY(0%);
+    transform:translateY(0%);
+  }
+  90%{
+    -webkit-transform:translateY(10%);
+    transform:translateY(10%);
+  }
+  100%{
+    -webkit-transform:translateY(0%);
+    transform:translateY(0%);
+  }
 }
 
 
@@ -436,7 +597,7 @@ button:focus {
 
 
 
-
+// Navigation Arrows
 .fp-controlArrow {
   width: 20px !important;
   height: 60px;
@@ -450,7 +611,7 @@ button:focus {
     background: url(../svg/arrow_left.svg) center center no-repeat;
     &:hover {
       left: -5px;
-      transform: scale(1.5);
+      transform: scale(1.4);
     }
   }
   &.fp-next {
@@ -458,7 +619,7 @@ button:focus {
     background: url(../svg/arrow_right.svg) center center no-repeat;
     &:hover {
       right: -5px;
-      transform: scale(1.5);
+      transform: scale(1.4);
     }
   }
 }
@@ -480,7 +641,7 @@ button:focus {
     background: url(../svg/arrow_up.svg) center center no-repeat;
     &:hover {
       top: -5px;
-      transform: scale(1.5);
+      transform: scale(1.4);
     }
   }
   &.fp-down {
@@ -488,7 +649,7 @@ button:focus {
     background: url(../svg/arrow_down.svg) center center no-repeat;
     &:hover {
       bottom: -5px;
-      transform: scale(1.5);
+      transform: scale(1.4);
     }
   }
 }
@@ -632,24 +793,175 @@ button:focus {
 }
 
 
+
+
+
+      //Hover btn-4 effect
+      .btn-4:hover {
+        color: $color-white;
+        background: $color-flight;
+        .ui.header,
+        .sub.header {
+          color: $color-white;
+        }
+      }
+
+      .btn-4:before {
+        position: absolute;
+        height: 100%;
+        font-size: 200%;
+        line-height: 6;
+        color: $color-white;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+      }
+
+      .btn-4:before {
+	      left: 130%;
+	      top: 0;
+      }
+
+      .btn-4:hover:before {
+	      left: 90%;
+      }      
+
+//Hover btn-5 effect
+.btn-5 {
+	color: #fff;
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.btn-5 a,
+.btn-5 span {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	-webkit-transition: all 0.3s;
+	-webkit-backface-visibility: hidden;
+	-moz-transition: all 0.3s;
+	-moz-backface-visibility: hidden;
+	transition: all 0.3s;
+	backface-visibility: hidden;
+}
+
+.btn-5 span {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	    line-height: 6;
+    font-size: 200%;
+    font-weight: 400;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn-5:hover {
+  background: $color-flight;
+}
+
+.btn-5:hover a {
+	-webkit-transform: translateY(-300%);
+	-moz-transform: translateY(-300%);
+	-ms-transform: translateY(-300%);
+	transform: translateY(-300%);
+}
+
+.btn-5 span {
+	left: 0;
+	top: 150%;
+}
+
+.btn-5:hover span {
+	top: 0;
+}
+
+
+
+
+
+/* Ujarak */
+.button--ujarak {
+	-webkit-transition: border-color 0.4s, color 0.4s;
+	transition: border-color 0.4s, color 0.4s;
+}
+.button--ujarak::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: $color-flight;
+	z-index: -1;
+	opacity: 0;
+	-webkit-transform: scale3d(0.7, 1, 1);
+	transform: scale3d(0.7, 1, 1);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+	transition: transform 0.4s, opacity 0.4s;
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.button--ujarak.button--round-s::before {
+	border-radius: 2px;
+}
+.button--ujarak.button--inverted::before {
+	background: #7986CB;
+}
+.button--ujarak,
+.button--ujarak::before {
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.button--ujarak:hover {
+	color: #fff;
+	border-color: #37474f;
+}
+.button--ujarak.button--inverted:hover {
+	color: #37474F;
+	border-color: #fff;
+}
+.button--ujarak:hover::before {
+	opacity: 1;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+
+
+
+
+
+
+
+
+
 #home {
   .section.portfolio {
     .slide {
+    
       .wrap {
         display: flex;
         flex-direction: column;
         justify-content: center;
       }
+      
       .frame {
         max-width: 800px;
         margin: 0 auto;
         border: 3px solid white;
         text-align: center;
         transition: 1s all;
+        overflow: hidden;
         .ui.header {
           display: block;
           margin: 0;
           padding: 0em 1.2em 0.3em 1.2em;
+          color: $color-white;
           font-family: 'Lato Regular';
           font-size: 4.4em;
           font-weight: normal;
@@ -661,9 +973,16 @@ button:focus {
             line-height: 1;
             text-transform: uppercase;
             transition: 1s all;
+            color: $color-white;
           }
         }
       }
+      
+      span {
+        display: none;
+      }
+      
+      
     }
   }
 
@@ -1059,7 +1378,7 @@ button:focus {
          Site Pages Styles
 *******************************/
 
-
+/*
 #home {
   #slide-flight {
     .frame {
@@ -1078,6 +1397,7 @@ button:focus {
     }
   }
 }
+*/
 
 #page-flight {
   ::selection {

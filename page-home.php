@@ -24,6 +24,7 @@
 								<a class="ui header" href="<?php echo get_the_permalink() ?>" rel="bookmark"><?php the_title(); ?>
 			            <div class="sub header"><?php the_field('case_meta1'); ?></div>
 			          </a>
+                <span class="more">Подробнее...</span>
 							</header>
 						</div>
 					</div>
@@ -210,15 +211,16 @@
 
 
 
-	<div class="fp-verticalArrow fp-up pulseArrow"></div>
-	<div class="fp-verticalArrow fp-down pulseArrow"></div>
+	<div class="fp-verticalArrow fp-up"></div>
+	<div class="fp-verticalArrow fp-down"></div>
 
 	<div class="ui help">
 		<div class="mouse">
-			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="49.64px" height="42.331px" viewBox="0 0 55 42.331" enable-background="new 0 0 49.64 42.331" xml:space="preserve" class="mousy">
-				<path class="wheelie" fill="#ffffff" d="M25.226,13.527c0-2.026,0-4.112,0-6.138c0-1.907-2.979-1.907-2.979,0c0,2.026,0,4.112,0,6.138C22.246,15.434,25.226,15.434,25.226,13.527L25.226,13.527z"></path>
-				<path fill="#ffffff" d="M23.975,32h-0.477c-5.125,0-9.296-4.171-9.296-9.296V9.296C14.202,4.171,18.373,0,23.498,0h0.477c5.125,0,9.295,4.171,9.295,9.296v13.408C33.271,27.829,29.101,32,23.975,32z M23.498,2.384c-3.814,0-6.912,3.099-6.912,6.912v13.408c0,3.813,3.099,6.912,6.912,6.912h0.477c3.814,0,6.913-3.099,6.913-6.912V9.296c0-3.814-3.1-6.912-6.913-6.912H23.498z"></path>
-			</svg>
+    <?php //include( 'library/svg/mouse.svg' ); ?>
+			<svg xmlns="http://www.w3.org/2000/svg" width="80px" height="80px" viewBox="0 0 64 64">
+    <path d="M32,16c-4.971,0-9,4.029-9,9v14c0,4.971,4.029,9,9,9c4.971,0,9-4.029,9-9V25C41,20.029,36.971,16,32,16z M39,39c0,3.866-3.134,7-7,7s-7-3.134-7-7V25c0-3.866,3.134-7,7-7s7,3.134,7,7V39z M32,21c-0.552,0-1,0.448-1,1v5c0,0.553,0.448,1,1,1c0.553,0,1-0.447,1-1v-5C33,21.448,32.553,21,32,21z" />
+</svg>
+
 		</div>
 			<div class="keyboard">
 				<div class="keyboard-content">
