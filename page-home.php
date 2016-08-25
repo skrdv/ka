@@ -210,8 +210,8 @@
 
 
 
-	<div class="fp-verticalArrow fp-up"></div>
-	<div class="fp-verticalArrow fp-down"></div>
+	<div class="fp-verticalArrow fp-up pulseArrow"></div>
+	<div class="fp-verticalArrow fp-down pulseArrow"></div>
 
 	<div class="ui help">
 		<div class="mouse">
