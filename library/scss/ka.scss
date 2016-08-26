@@ -27,6 +27,10 @@ a {
   }
 }
 
+button:focus {
+  outline: none;
+}
+
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: $color-grey;
 }
@@ -78,49 +82,31 @@ a {
 	top: 20px;
   .menu {
     visibility: hidden;
-  }
-  .phone.right {
-    margin-left: auto !important;
-  }
-  .menu .item {
-    display: inline-block !important;
-    padding: 0 1em  !important;
+    margin-top: 4px;
   }
 	.item {
     display: inline-block;
     padding-top: 0;
     padding-bottom: 0;
     height: 20px;
-    line-height: 20px;
-    font-family: 'Lato Regular';
-		font-size: 1.44em;
+    font-family: 'Lato Regular', sans-serif;
+		font-size: 1.4em;
+    font-weight: 600;
 		text-transform: uppercase;
+    letter-spacing: 1px;
 		border-radius: 0;
-    transition: 1s all;
+    transition: 1s all ease-out;
 		&:first-child {
-			display: block;
-      padding: 0;
-      margin: 0;
-			border: none;
+      padding-left: 0;
+			// border: none;
 		}
     &:last-child {
       padding-right: 0;
 		}
     &:hover{
-      background: none;
-      .line-1 {
-        -webkit-transform: translateY(-2px);
-        transform: translateY(-2px);
-      }
-      .line-3 {
-        -webkit-transform: translateY(2px);
-        transform: translateY(2px);
-      }
+      // background: none;
 		}
-    .browse {
-      margin-top: 4px;
-      cursor: pointer;
-    }
+
 
     color: $color-flight;
     a {
@@ -137,25 +123,25 @@ a {
       background-color: $color-flight;
       transition: 1s all;
     }
-    .path {
+    .path path {
       fill: $color-flight;
       transition: 1s all;
     }
-    .inverse {
+    .inverse path {
       fill: transparent;
       transition: 1s all;
     }
     &:hover {
-      .path {
+      .path path {
         fill: transparent;
       }
-      .inverse {
+      .inverse path {
         fill: $color-flight;
       }
     }
     &.white {
       color: $color-white !important;
-      .path {
+      .path path {
         fill: $color-white !important;
       }
       a {
@@ -165,17 +151,17 @@ a {
         background-color: $color-white !important;
       }
       &:hover {
-        .path {
+        .path path {
           fill: transparent;
         }
-        .inverse {
+        .inverse path {
           fill: $color-white !important;
         }
       }
     }
     &.pink {
       color: $color-pink;
-      .path {
+      .path path {
         fill: $color-pink;
       }
       a {
@@ -185,17 +171,17 @@ a {
         background-color: $color-pink;
       }
       &:hover {
-        .path {
+        .path path {
           fill: transparent;
         }
-        .inverse {
+        .inverse path {
           fill: $color-pink;
         }
       }
     }
     &.black {
       color: $color-black;
-      .path {
+      .path path {
         fill: $color-black;
       }
       a {
@@ -205,20 +191,20 @@ a {
         background-color: $color-black;
       }
       &:hover {
-        .path {
+        .path path {
           fill: transparent;
         }
-        .inverse {
+        .inverse path {
           fill: $color-black;
         }
       }
     }
     &.flight {
       color: $color-flight;
-      .path {
+      .path path {
         fill: $color-flight;
       }
-      .inverse {
+      .inverse path {
         fill: transparent;
       }
       a {
@@ -228,17 +214,17 @@ a {
         background-color: $color-flight;
       }
       &:hover {
-        .path {
+        .path path {
           fill: transparent;
         }
-        .inverse {
+        .inverse path {
           fill: $color-flight;
         }
       }
     }
     &.gallery-2t {
       color: $color-2t;
-      .path {
+      .path path {
         fill: $color-2t;
       }
       a {
@@ -248,17 +234,17 @@ a {
         background-color: $color-2t;
       }
       &:hover {
-        .path {
+        .path path {
           fill: transparent;
         }
-        .inverse {
+        .inverse path {
           fill: $color-2t;
         }
       }
     }
     &.sokolniki {
       color: $color-sokolniki;
-      .path {
+      .path path {
         fill: $color-sokolniki;
       }
       a {
@@ -268,17 +254,17 @@ a {
         background-color: $color-sokolniki;
       }
       &:hover {
-        .path {
+        .path path {
           fill: transparent;
         }
-        .inverse {
+        .inverse path {
           fill: $color-sokolniki;
         }
       }
     }
     &.testogenon {
       color: $color-testogenon;
-      .path {
+      .path path {
         fill: $color-testogenon;
       }
       a {
@@ -288,17 +274,17 @@ a {
         background-color: $color-testogenon;
       }
       &:hover {
-        .path {
+        .path path {
           fill: transparent;
         }
-        .inverse {
+        .inverse path {
           fill: $color-testogenon;
         }
       }
     }
     &.fazer {
       color: $color-fazer;
-      .path {
+      .path path {
         fill: $color-fazer;
       }
       a {
@@ -308,10 +294,10 @@ a {
         background-color: $color-fazer;
       }
       &:hover {
-        .path {
+        .path path {
           fill: transparent;
         }
-        .inverse {
+        .inverse path {
           fill: $color-fazer;
         }
       }
@@ -321,7 +307,134 @@ a {
 
 
 
+
+
+
+
+
+
+
+
+
+.browse {
+    display: block;
+    background: transparent;
+    border: none;
+}
+
+.browse-inner {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.browse-inner,
+.browse-inner:before,
+.browse-inner:after {
+    width: 26px;
+    height: 3px;
+    background-color: $color-flight;
+    -webkit-transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    -moz-transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.browse-inner:before,
+.browse-inner:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+.browse-inner:before {
+    top: -0.4em;
+}
+.browse-inner:after {
+    top: 0.4em;
+}
+.browse:hover .browse-inner:before {
+    width: 80%;
+}
+.browse:hover .browse-inner:after {
+    width: 40%;
+}
+.browse-active .browse-inner {
+    background: transparent !important;
+}
+.browse-active .browse-inner:before {
+    width: 100% !important;
+    -webkit-transform: rotate3d(0, 0, 1, 45deg);
+    -moz-transform: rotate3d(0, 0, 1, 45deg);
+    -ms-transform: rotate3d(0, 0, 1, 45deg);
+    -o-transform: rotate3d(0, 0, 1, 45deg);
+    transform: rotate3d(0, 0, 1, 45deg);
+}
+.browse-active .browse-inner:after {
+    width: 100% !important;
+    -webkit-transform: rotate3d(0, 0, 1, -45deg);
+    -moz-transform: rotate3d(0, 0, 1, -45deg);
+    -ms-transform: rotate3d(0, 0, 1, -45deg);
+    -o-transform: rotate3d(0, 0, 1, -45deg);
+    transform: rotate3d(0, 0, 1, -45deg);
+}
+.browse-active .browse-inner:before,
+.browse-active .browse-inner:after {
+    top: 0;
+}
+.browse .text {
+  text-transform: uppercase;
+  transition: all 1s;
+  opacity: 1;
+  vertical-align: middle;
+}
+.browse-active .text,
+.browse:hover .text {
+  opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Arrows
+.pulseArrow {
+  animation-name: pulse;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-duration: 3s;
+  animation-delay: 5s;
+  transform: translateY(0%);
+}
+@keyframes pulse {
+  0%{-webkit-transform:translateY(0%);transform:translateY(0%);}
+  10%{-webkit-transform:translateY(30%);transform:translateY(30%);}
+  20%{-webkit-transform:translateY(0%);transform:translateY(0%);}
+  80%{-webkit-transform:translateY(0%);transform:translateY(0%);}
+  90%{-webkit-transform:translateY(30%);transform:translateY(30%);}
+  100%{-webkit-transform:translateY(0%);transform:translateY(0%);}
+}
+
+
+
+
+
+
+
 .fp-controlArrow {
   width: 24px !important;
   height: 68px;
@@ -329,18 +442,19 @@ a {
   margin-top: -212px;
   border: none;
   opacity: 0.6;
-  transition: 1s all;
+  // transition: 1s all;
+  transition: all .3s ease-out;
   &:hover {
     opacity: 1;
   }
 }
 .fp-controlArrow.fp-prev {
   left: 10px !important;
-  background: url(../svg/arw_left_flight.svg) center center no-repeat;
+  background: url(../svg/arw_left_white.svg) center center no-repeat;
 }
 .fp-controlArrow.fp-next {
   right: 10px !important;
-  background: url(../svg/arw_right_flight.svg) center center no-repeat;
+  background: url(../svg/arw_right_white.svg) center center no-repeat;
 }
 
 .fp-verticalArrow {
@@ -354,7 +468,7 @@ a {
     cursor: pointer;
     z-index: 4;
     opacity: 0.6;
-    transition: 1s all;
+    transition: all 0.2s ease-in-out;
     &:hover {
       opacity: 1;
     }
@@ -366,6 +480,9 @@ a {
 }
 .fp-verticalArrow.fp-down {
   background: url(../svg/arw_down_flight.svg) center center no-repeat;
+  &:hover {
+    transform: scale(1.2);
+  }
 }
 
 #portfolio-flight,
@@ -957,7 +1074,7 @@ a {
   }
   #nav .item {
     color: $color-flight;
-    .path {
+    .path path {
       fill: $color-flight;
     }
     a {
@@ -967,10 +1084,10 @@ a {
       background-color: $color-flight;
     }
     &:hover {
-      .path {
+      .path path {
         fill: transparent;
       }
-      .inverse {
+      .inverse path {
         fill: $color-flight;
       }
     }
@@ -1036,7 +1153,7 @@ a {
   }
   #nav .item {
     color: $color-2t;
-    .path {
+    .path path {
       fill: $color-2t;
     }
     a {
@@ -1046,10 +1163,10 @@ a {
       background-color: $color-2t;
     }
     &:hover {
-      .path {
+      .path path {
         fill: transparent;
       }
-      .inverse {
+      .inverse path {
         fill: $color-2t;
       }
     }
@@ -1116,7 +1233,7 @@ a {
   }
   #nav .item {
     color: $color-sokolniki;
-    .path {
+    .path path {
       fill: $color-sokolniki;
     }
     a {
@@ -1126,10 +1243,10 @@ a {
       background-color: $color-sokolniki;
     }
     &:hover {
-      .path {
+      .path path {
         fill: transparent;
       }
-      .inverse {
+      .inverse path {
         fill: $color-sokolniki;
       }
     }
@@ -1196,7 +1313,7 @@ a {
   }
   #nav .item {
     color: $color-fazer;
-    .path {
+    .path path {
       fill: $color-fazer;
     }
     a {
@@ -1206,10 +1323,10 @@ a {
       background-color: $color-fazer;
     }
     &:hover {
-      .path {
+      .path path {
         fill: transparent;
       }
-      .inverse {
+      .inverse path {
         fill: $color-fazer;
       }
     }
@@ -1276,7 +1393,7 @@ a {
   }
   #nav .item {
     color: $color-testogenon;
-    .path {
+    .path path {
       fill: $color-testogenon;
     }
     a {
@@ -1286,10 +1403,10 @@ a {
       background-color: $color-testogenon;
     }
     &:hover {
-      .path {
+      .path path {
         fill: transparent;
       }
-      .inverse {
+      .inverse path {
         fill: $color-testogenon;
       }
     }
@@ -1329,6 +1446,11 @@ a {
     background: $color-testogenon;
   }
 }
+
+
+
+
+
 
 
 
