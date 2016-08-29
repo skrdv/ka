@@ -65,7 +65,7 @@
 
 	</head>
 	<?php if (isset($post->post_name)) { $slug = $post->post_name; } else { $slug = 'other'; } ?>
-	<body <?php body_class($slug); ?> id="page-<?php echo($slug); ?>">
+	<body <?php body_class($slug); ?> id="page" >
 
 		<div id="preloader">
 			<div class="ui active dimmer">

@@ -11,8 +11,6 @@
       </header>
     </div>
 
-    <div class="fp-verticalArrow fp-down"></div>
-
   </section>
 
   <section id="info-<?php echo $post->post_name; ?>" class="section case info <?php echo $post->post_name; ?>" data-bs="<?php the_field('case_info'); ?>" data-alt="<?php the_title(); ?> <?php the_field('case_meta1'); ?>">
@@ -30,9 +28,6 @@
       </div>
     </div>
     <button class="ui white basic button toogle hidden">Скрыть описание</button>
-
-    <div class="fp-verticalArrow fp-up"></div>
-    <div class="fp-verticalArrow fp-down"></div>
 
   </section>
 
@@ -56,12 +51,16 @@
         </div>
         <?php } ?>
 
-        <div class="fp-verticalArrow fp-up"></div>
-        <div class="fp-verticalArrow fp-down"></div>
-
       </section>
 
     <?php } ?>
   <?php } ?>
 
 </article>
+
+<div class="fp-verticalArrow fp-up">
+  <?php include( '../library/svg/arrow_up.svg' ); ?>
+</div>
+<div class="fp-verticalArrow fp-down">
+  <?php include( '../library/svg/arrow_down.svg' ); ?>
+</div>
