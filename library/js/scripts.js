@@ -305,11 +305,17 @@ jQuery(document).ready(function($) {
 	}
 
 	// Navigation
+	// $('#nav .browse').on('click', function() {
+	// 	// $(this).find('.close').transition('fade');
+	// 	// $(this).find('.text').transition('fade');
+	// 	$('.ui.menu').find('.menu').transition('fade');
+	// });
+
 	$('#nav .browse').on('click', function() {
-		// $(this).find('.close').transition('fade');
-		// $(this).find('.text').transition('fade');
-		$('.ui.menu').find('.menu').transition('fade');
+  	$(this).toggleClass('browse-active');
+		$('#nav .menu').transition('fade');
 	});
+
 
 	// Vertacal Arrows
 	$('.fp-verticalArrow.fp-up').click(function(e){

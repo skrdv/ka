@@ -53,14 +53,6 @@ button:focus {
 
 
 
-
-
-
-
-
-
-
-
 @font-face {
 	font-family: 'icomoon';
 	src:url('../fonts/icomoon/icomoon.eot');
@@ -117,11 +109,6 @@ button:focus {
 .icon-arrow-right:before {
 	content: "\e00d";
 }
-
-
-
-
-
 
 
 
@@ -197,6 +184,7 @@ button:focus {
     color: $color-white;
   }
 }
+
 
 
 
@@ -283,6 +271,7 @@ button:focus {
 }
 
 
+
 @mixin common {
   position: absolute;
   top: 0;
@@ -331,6 +320,7 @@ $bg: #121212;
 }
 
 
+
 .pulse {
   animation-name: pulse;
   animation-iteration-count: infinite;
@@ -367,6 +357,11 @@ $bg: #121212;
     transform:translateY(0%);
   }
 }
+
+
+
+
+
 
 
 
@@ -533,14 +528,6 @@ $bg: #121212;
 	-webkit-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
 }
-
-
-
-
-
-
-
-
 
 
 #home {
@@ -852,7 +839,6 @@ $bg: #121212;
 }
 
 
-
 #case {
   .section.case {
 
@@ -931,7 +917,6 @@ $bg: #121212;
   }
 
 }
-
 
 
 #error404 {
@@ -1644,15 +1629,6 @@ $bg: #121212;
 
 
 
-
-
-
-
-
-
-
-
-
 // Keyboard Help
 .ui.help {
   position: absolute;
@@ -1728,14 +1704,6 @@ $bg: #121212;
     display: none;
   }
 }
-
-
-
-
-
-
-
-
 
 
 
