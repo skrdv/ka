@@ -77,12 +77,12 @@
 
 				<nav id="nav" class="ui fixed menu" role="navigation">
 					<div class="ui container">
-						<a class="item" href="<?php echo get_site_url(); ?>">
+						<a class="logo" href="<?php echo get_site_url(); ?>">
 							<?php include( 'library/svg/logo_80.svg' ); ?>
 						</a>
 						<div class="item">
 							<button class="browse">
-                <div class="browse-inner"></div>
+                <span class="browse-inner"></span>
                 <span class="text">Меню</span>
             	</button>
 						</div>

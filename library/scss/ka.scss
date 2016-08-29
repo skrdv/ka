@@ -5,6 +5,7 @@ $color-white: rgb(255,255,255);
 $color-black: rgb(35,21,32);
 $color-pink: rgb(236,0,140);
 $color-grey: rgb(88,88,88);
+$color-zu: rgb(125,211,243);
 $color-flight: rgb(0,30,72);
 $color-flight-active: rgb(9,78,147);
 $color-flight-main:   rgb(9,78,147);
@@ -217,180 +218,9 @@ button:focus {
         fill: $color-flight;
       }
     }
-    &.white {
-      color: $color-white !important;
-      .path path {
-        fill: $color-white !important;
-      }
-      a {
-        color: $color-white !important;
-      }
-      .line {
-        background-color: $color-white !important;
-      }
-      &:hover {
-        .path path {
-          fill: transparent;
-        }
-        .inverse path {
-          fill: $color-white !important;
-        }
-      }
-    }
-    &.pink {
-      color: $color-pink;
-      .path path {
-        fill: $color-pink;
-      }
-      a {
-        color: $color-pink;
-      }
-      i {
-        background-color: $color-pink;
-      }
-      &:hover {
-        .path path {
-          fill: transparent;
-        }
-        .inverse path {
-          fill: $color-pink;
-        }
-      }
-    }
-    &.black {
-      color: $color-black;
-      .path path {
-        fill: $color-black;
-      }
-      a {
-        color: $color-black;
-      }
-      i {
-        background-color: $color-black;
-      }
-      &:hover {
-        .path path {
-          fill: transparent;
-        }
-        .inverse path {
-          fill: $color-black;
-        }
-      }
-    }
-    &.flight {
-      color: $color-flight;
-      .path path {
-        fill: $color-flight;
-      }
-      .inverse path {
-        fill: transparent;
-      }
-      a {
-        color: $color-flight;
-      }
-      i {
-        background-color: $color-flight;
-      }
-      &:hover {
-        .path path {
-          fill: transparent;
-        }
-        .inverse path {
-          fill: $color-flight;
-        }
-      }
-    }
-    &.gallery-2t {
-      color: $color-2t;
-      .path path {
-        fill: $color-2t;
-      }
-      a {
-        color: $color-2t;
-      }
-      i {
-        background-color: $color-2t;
-      }
-      &:hover {
-        .path path {
-          fill: transparent;
-        }
-        .inverse path {
-          fill: $color-2t;
-        }
-      }
-    }
-    &.sokolniki {
-      color: $color-sokolniki;
-      .path path {
-        fill: $color-sokolniki;
-      }
-      a {
-        color: $color-sokolniki;
-      }
-      i {
-        background-color: $color-sokolniki;
-      }
-      &:hover {
-        .path path {
-          fill: transparent;
-        }
-        .inverse path {
-          fill: $color-sokolniki;
-        }
-      }
-    }
-    &.testogenon {
-      color: $color-testogenon;
-      .path path {
-        fill: $color-testogenon;
-      }
-      a {
-        color: $color-testogenon;
-      }
-      i {
-        background-color: $color-testogenon;
-      }
-      &:hover {
-        .path path {
-          fill: transparent;
-        }
-        .inverse path {
-          fill: $color-testogenon;
-        }
-      }
-    }
-    &.fazer {
-      color: $color-fazer;
-      .path path {
-        fill: $color-fazer;
-      }
-      a {
-        color: $color-fazer;
-      }
-      i {
-        background-color: $color-fazer;
-      }
-      &:hover {
-        .path path {
-          fill: transparent;
-        }
-        .inverse path {
-          fill: $color-fazer;
-        }
-      }
-    }
-	}
+
+  }
 }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -477,20 +307,6 @@ button:focus {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @mixin common {
   position: absolute;
   top: 0;
@@ -537,22 +353,6 @@ $bg: #121212;
     opacity: 0;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .pulse {
@@ -602,13 +402,12 @@ $bg: #121212;
   width: 20px !important;
   height: 60px;
   margin-top: -90px;
-  padding: 60px 30px; 
+  padding: 60px 30px;
   border: none;
   z-index: 104;
   transition: all 0.3s ease-in-out;
   &.fp-prev {
     left: 0px;
-    background: url(../svg/arrow_left.svg) center center no-repeat;
     &:hover {
       left: -5px;
       transform: scale(1.4);
@@ -616,7 +415,6 @@ $bg: #121212;
   }
   &.fp-next {
     right: 0px;
-    background: url(../svg/arrow_right.svg) center center no-repeat;
     &:hover {
       right: -5px;
       transform: scale(1.4);
@@ -638,7 +436,6 @@ $bg: #121212;
   transition: all 0.3s ease-in-out;
   &.fp-up {
     top: 0px;
-    background: url(../svg/arrow_up.svg) center center no-repeat;
     &:hover {
       top: -5px;
       transform: scale(1.4);
@@ -646,7 +443,6 @@ $bg: #121212;
   }
   &.fp-down {
     bottom: 0px;
-    background: url(../svg/arrow_down.svg) center center no-repeat;
     &:hover {
       bottom: -5px;
       transform: scale(1.4);
@@ -657,174 +453,174 @@ $bg: #121212;
 
 
 
-
-#portfolio-flight,
-#page-flight {
-  .fp-controlArrow.fp-prev {
-    background: url(../svg/arrow_left.svg) center center no-repeat;
-  }
-  .fp-controlArrow.fp-next {
-    background: url(../svg/arw_right_flight.svg) center center no-repeat;
-  }
-  .fp-verticalArrow.fp-up {
-    background: url(../svg/arw_up_flight.svg) center center no-repeat;
-  }
-  .fp-verticalArrow.fp-down {
-    background: url(../svg/arw_down_flight.svg) center center no-repeat;
-  }
-}
-#portfolio-2t,
-#page-2t {
-  .fp-controlArrow.fp-prev {
-    background: url(../svg/arw_left_2t.svg) center center no-repeat;
-  }
-  .fp-controlArrow.fp-next {
-    background: url(../svg/arw_right_2t.svg) center center no-repeat;
-  }
-  .fp-verticalArrow.fp-up {
-    background: url(../svg/arw_up_2t.svg) center center no-repeat;
-  }
-  .fp-verticalArrow.fp-down {
-    background: url(../svg/arw_down_2t.svg) center center no-repeat;
-  }
-}
-#portfolio-sokolniki,
-#page-sokolniki {
-  .fp-controlArrow.fp-prev {
-    background: url(../svg/arw_left_sokolniki.svg) center center no-repeat;
-  }
-  .fp-controlArrow.fp-next {
-    background: url(../svg/arw_right_sokolniki.svg) center center no-repeat;
-  }
-  .fp-verticalArrow.fp-up {
-    background: url(../svg/arw_up_sokolniki.svg) center center no-repeat;
-  }
-  .fp-verticalArrow.fp-down {
-    background: url(../svg/arw_down_sokolniki.svg) center center no-repeat;
-  }
-}
-#portfolio-fazer,
-#page-fazer {
-  .fp-controlArrow.fp-prev {
-    background: url(../svg/arw_left_fazer.svg) center center no-repeat;
-  }
-  .fp-controlArrow.fp-next {
-    background: url(../svg/arw_right_fazer.svg) center center no-repeat;
-  }
-  .fp-verticalArrow.fp-up {
-    background: url(../svg/arw_up_fazer.svg) center center no-repeat;
-  }
-  .fp-verticalArrow.fp-down {
-    background: url(../svg/arw_down_fazer.svg) center center no-repeat;
-  }
-}
-#portfolio-testogenon,
-#page-testogenon {
-  .fp-controlArrow.fp-prev {
-    background: url(../svg/arw_left_testogenon.svg) center center no-repeat;
-  }
-  .fp-controlArrow.fp-next {
-    background: url(../svg/arw_right_testogenon.svg) center center no-repeat;
-  }
-  .fp-verticalArrow.fp-up {
-    background: url(../svg/arw_up_testogenon.svg) center center no-repeat;
-  }
-  .fp-verticalArrow.fp-down {
-    background: url(../svg/arw_down_testogenon.svg) center center no-repeat;
-  }
-}
-#contact-circle {
-  .fp-controlArrow.fp-prev {
-    background: url(../svg/arw_left_white.svg) center center no-repeat;
-  }
-  .fp-controlArrow.fp-next {
-    background: url(../svg/arw_right_white.svg) center center no-repeat;
-  }
-  .fp-verticalArrow.fp-up {
-    background: url(../svg/arw_up_white.svg) center center no-repeat;
-  }
-  .fp-verticalArrow.fp-down {
-    background: url(../svg/arw_down_white.svg) center center no-repeat;
-  }
-}
-#contact-map {
-  .fp-controlArrow.fp-prev {
-    background: url(../svg/arw_left_pink.svg) center center no-repeat;
-  }
-  .fp-controlArrow.fp-next {
-    background: url(../svg/arw_right_pink.svg) center center no-repeat;
-  }
-  .fp-verticalArrow.fp-up {
-    background: url(../svg/arw_up_pink.svg) center center no-repeat;
-  }
-  .fp-verticalArrow.fp-down {
-    background: url(../svg/arw_down_pink.svg) center center no-repeat;
-  }
-}
-#contact-feedback {
-  .fp-controlArrow.fp-prev {
-    background: url(../svg/arw_left_black.svg) center center no-repeat;
-  }
-  .fp-controlArrow.fp-next {
-    background: url(../svg/arw_right_black.svg) center center no-repeat;
-  }
-  .fp-verticalArrow.fp-up {
-    background: url(../svg/arw_up_black.svg) center center no-repeat;
-  }
-  .fp-verticalArrow.fp-down {
-    background: url(../svg/arw_down_black.svg) center center no-repeat;
-  }
-}
-#home-services {
-  .fp-verticalArrow.fp-up {
-    background: url(../svg/arw_up_black.svg) center center no-repeat;
-  }
-  .fp-verticalArrow.fp-down {
-    background: url(../svg/arw_down_black.svg) center center no-repeat;
-  }
-}
-#home-team {
-  .fp-verticalArrow.fp-up {
-    background: url(../svg/arw_up_white.svg) center center no-repeat;
-  }
-  .fp-verticalArrow.fp-down {
-    background: url(../svg/arw_down_white.svg) center center no-repeat;
-  }
-}
-
-
-
-
-
-      //Hover btn-4 effect
-      .btn-4:hover {
-        color: $color-white;
-        background: $color-flight;
-        .ui.header,
-        .sub.header {
-          color: $color-white;
-        }
-      }
-
-      .btn-4:before {
-        position: absolute;
-        height: 100%;
-        font-size: 200%;
-        line-height: 6;
-        color: $color-white;
-        -webkit-transition: all 0.3s;
-        -moz-transition: all 0.3s;
-        transition: all 0.3s;
-      }
-
-      .btn-4:before {
-	      left: 130%;
-	      top: 0;
-      }
-
-      .btn-4:hover:before {
-	      left: 90%;
-      }      
+//
+// #portfolio-flight,
+// #page-flight {
+//   .fp-controlArrow.fp-prev {
+//     background: url(../svg/arrow_left.svg) center center no-repeat;
+//   }
+//   .fp-controlArrow.fp-next {
+//     background: url(../svg/arw_right_flight.svg) center center no-repeat;
+//   }
+//   .fp-verticalArrow.fp-up {
+//     background: url(../svg/arw_up_flight.svg) center center no-repeat;
+//   }
+//   .fp-verticalArrow.fp-down {
+//     background: url(../svg/arw_down_flight.svg) center center no-repeat;
+//   }
+// }
+// #portfolio-2t,
+// #page-2t {
+//   .fp-controlArrow.fp-prev {
+//     background: url(../svg/arw_left_2t.svg) center center no-repeat;
+//   }
+//   .fp-controlArrow.fp-next {
+//     background: url(../svg/arw_right_2t.svg) center center no-repeat;
+//   }
+//   .fp-verticalArrow.fp-up {
+//     background: url(../svg/arw_up_2t.svg) center center no-repeat;
+//   }
+//   .fp-verticalArrow.fp-down {
+//     background: url(../svg/arw_down_2t.svg) center center no-repeat;
+//   }
+// }
+// #portfolio-sokolniki,
+// #page-sokolniki {
+//   .fp-controlArrow.fp-prev {
+//     background: url(../svg/arw_left_sokolniki.svg) center center no-repeat;
+//   }
+//   .fp-controlArrow.fp-next {
+//     background: url(../svg/arw_right_sokolniki.svg) center center no-repeat;
+//   }
+//   .fp-verticalArrow.fp-up {
+//     background: url(../svg/arw_up_sokolniki.svg) center center no-repeat;
+//   }
+//   .fp-verticalArrow.fp-down {
+//     background: url(../svg/arw_down_sokolniki.svg) center center no-repeat;
+//   }
+// }
+// #portfolio-fazer,
+// #page-fazer {
+//   .fp-controlArrow.fp-prev {
+//     background: url(../svg/arw_left_fazer.svg) center center no-repeat;
+//   }
+//   .fp-controlArrow.fp-next {
+//     background: url(../svg/arw_right_fazer.svg) center center no-repeat;
+//   }
+//   .fp-verticalArrow.fp-up {
+//     background: url(../svg/arw_up_fazer.svg) center center no-repeat;
+//   }
+//   .fp-verticalArrow.fp-down {
+//     background: url(../svg/arw_down_fazer.svg) center center no-repeat;
+//   }
+// }
+// #portfolio-testogenon,
+// #page-testogenon {
+//   .fp-controlArrow.fp-prev {
+//     background: url(../svg/arw_left_testogenon.svg) center center no-repeat;
+//   }
+//   .fp-controlArrow.fp-next {
+//     background: url(../svg/arw_right_testogenon.svg) center center no-repeat;
+//   }
+//   .fp-verticalArrow.fp-up {
+//     background: url(../svg/arw_up_testogenon.svg) center center no-repeat;
+//   }
+//   .fp-verticalArrow.fp-down {
+//     background: url(../svg/arw_down_testogenon.svg) center center no-repeat;
+//   }
+// }
+// #contact-circle {
+//   .fp-controlArrow.fp-prev {
+//     background: url(../svg/arw_left_white.svg) center center no-repeat;
+//   }
+//   .fp-controlArrow.fp-next {
+//     background: url(../svg/arw_right_white.svg) center center no-repeat;
+//   }
+//   .fp-verticalArrow.fp-up {
+//     background: url(../svg/arw_up_white.svg) center center no-repeat;
+//   }
+//   .fp-verticalArrow.fp-down {
+//     background: url(../svg/arw_down_white.svg) center center no-repeat;
+//   }
+// }
+// #contact-map {
+//   .fp-controlArrow.fp-prev {
+//     background: url(../svg/arw_left_pink.svg) center center no-repeat;
+//   }
+//   .fp-controlArrow.fp-next {
+//     background: url(../svg/arw_right_pink.svg) center center no-repeat;
+//   }
+//   .fp-verticalArrow.fp-up {
+//     background: url(../svg/arw_up_pink.svg) center center no-repeat;
+//   }
+//   .fp-verticalArrow.fp-down {
+//     background: url(../svg/arw_down_pink.svg) center center no-repeat;
+//   }
+// }
+// #contact-feedback {
+//   .fp-controlArrow.fp-prev {
+//     background: url(../svg/arw_left_black.svg) center center no-repeat;
+//   }
+//   .fp-controlArrow.fp-next {
+//     background: url(../svg/arw_right_black.svg) center center no-repeat;
+//   }
+//   .fp-verticalArrow.fp-up {
+//     background: url(../svg/arw_up_black.svg) center center no-repeat;
+//   }
+//   .fp-verticalArrow.fp-down {
+//     background: url(../svg/arw_down_black.svg) center center no-repeat;
+//   }
+// }
+// #home-services {
+//   .fp-verticalArrow.fp-up {
+//     background: url(../svg/arw_up_black.svg) center center no-repeat;
+//   }
+//   .fp-verticalArrow.fp-down {
+//     background: url(../svg/arw_down_black.svg) center center no-repeat;
+//   }
+// }
+// #home-team {
+//   .fp-verticalArrow.fp-up {
+//     background: url(../svg/arw_up_white.svg) center center no-repeat;
+//   }
+//   .fp-verticalArrow.fp-down {
+//     background: url(../svg/arw_down_white.svg) center center no-repeat;
+//   }
+// }
+//
+//
+//
+//
+//
+//       //Hover btn-4 effect
+//       .btn-4:hover {
+//         color: $color-white;
+//         background: $color-flight;
+//         .ui.header,
+//         .sub.header {
+//           color: $color-white;
+//         }
+//       }
+//
+//       .btn-4:before {
+//         position: absolute;
+//         height: 100%;
+//         font-size: 200%;
+//         line-height: 6;
+//         color: $color-white;
+//         -webkit-transition: all 0.3s;
+//         -moz-transition: all 0.3s;
+//         transition: all 0.3s;
+//       }
+//
+//       .btn-4:before {
+// 	      left: 130%;
+// 	      top: 0;
+//       }
+//
+//       .btn-4:hover:before {
+// 	      left: 90%;
+//       }
 
 //Hover btn-5 effect
 .btn-5 {
@@ -943,13 +739,13 @@ $bg: #121212;
 #home {
   .section.portfolio {
     .slide {
-    
+
       .wrap {
         display: flex;
         flex-direction: column;
         justify-content: center;
       }
-      
+
       .frame {
         max-width: 800px;
         margin: 0 auto;
@@ -977,12 +773,12 @@ $bg: #121212;
           }
         }
       }
-      
+
       span {
         display: none;
       }
-      
-      
+
+
     }
   }
 
@@ -1375,10 +1171,47 @@ $bg: #121212;
 
 
 /*******************************
-         Site Pages Styles
+    Section Colors
 *******************************/
 
-/*
+#page-home {
+
+  //ZU
+  &.fp-viewing-portfolio-0 {
+    .menu .logo {
+      .path path {
+        fill: $color-zu;
+      }
+      .inverse path {
+        fill: transparent;
+      }
+      &:hover {
+        .path path {
+          fill: transparent;
+        }
+        .inverse path {
+          fill: $color-zu;
+        }
+      }
+    }
+    .menu .item {
+      color: $color-zu;
+      .browse-inner,
+      .browse-inner:before,
+      .browse-inner:after {
+        background-color: $color-zu;
+      }
+    }
+    .fp-controlArrow path,
+    .fp-verticalArrow path {
+      fill: $color-zu;
+    }
+
+  }
+
+}
+
+
 #home {
   #slide-flight {
     .frame {
@@ -1397,7 +1230,6 @@ $bg: #121212;
     }
   }
 }
-*/
 
 #page-flight {
   ::selection {

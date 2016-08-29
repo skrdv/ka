@@ -161,6 +161,10 @@ function portfolioBg() {
 */
 jQuery(document).ready(function($) {
 
+
+
+
+
   loadGravatars();
 
 	$(window).load(function(){
@@ -278,6 +282,10 @@ jQuery(document).ready(function($) {
 
 		});
 
+
+		//SVG Arrows
+		$('.fp-controlArrow.fp-next').html('<svg width="20" height="60" xmlns="http://www.w3.org/2000/svg"><path class="arrow-right" fill="rgb(35,21,32)" stroke="black" stroke-width="0" d="m19.973758,29.958522l-18.425238,-29.304412l-1.494917,0.938956l17.847211,28.384871l-17.874572,28.428114l1.49315,0.93984l18.426116,-29.304412l-0.052067,-0.032652l0.080306,-0.0503l0.00001,-0.000005z" clip-rule="evenodd" fill-rule="evenodd"  /></svg>');
+		$('.fp-controlArrow.fp-prev').html('<svg width="20" height="60" xmlns="http://www.w3.org/2000/svg"><path class="arrow-left" fill="rgb(35,21,32)" transform="rotate(180 10,30) " stroke="black" stroke-width="0" d="m19.973758,29.958522l-18.425238,-29.304412l-1.494917,0.938956l17.847211,28.384871l-17.874572,28.428114l1.49315,0.93984l18.426116,-29.304412l-0.052067,-0.032652l0.080306,-0.0503l0.00001,-0.000005z" clip-rule="evenodd" fill-rule="evenodd" /></svg>');
 
 		// Portfolio
 		homeBg();
