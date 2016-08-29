@@ -194,53 +194,11 @@ jQuery(document).ready(function($) {
 			slideSelector: '.slide',
 
 			afterLoad: function(index, nextIndex, direction){
-				var base_title = 'Рекламное агенство Киры Аллейновой';
-
-				if (window.location.hash == '#services') {
-					document.title = 'Услуги - '+base_title;
-				} else if (window.location.hash == '#team') {
-					document.title = 'Команда - '+base_title;
-				} else if (window.location.hash == '#portfolio') {
-					document.title = 'Портфолио - '+base_title;
-				} else if (window.location.hash == '#portfolio/1') {
-					document.title = 'Галерея 2Т Портфолио - '+base_title;
-				} else if (window.location.hash == '#portfolio/2') {
-					document.title = 'Сокольники Портфолио - '+base_title;
-				} else if (window.location.hash == '#portfolio/3') {
-					document.title = 'Вкусноштуки Портфолио - '+base_title;
-				} else if (window.location.hash == '#portfolio/4') {
-					document.title = 'Тестогенон Портфолио - '+base_title;
-				} else if (window.location.hash == '#contact') {
-					document.title = 'Контакты - '+base_title;
-				} else if (window.location.hash == '#contact/1') {
-					document.title = 'Карта - '+base_title;
-				} else if (window.location.hash == '#contact/2') {
-					document.title = 'Обратная связь - '+base_title;
-				}
 
 			},
 			afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
-            var base_title = 'Рекламное агенство Киры Аллейновой';
 
-						if (window.location.hash == '#contact') {
-							document.title = 'Контакты - '+base_title;
-						} else if (window.location.hash == '#contact/1') {
-							document.title = 'Карта - '+base_title;
-						} else if (window.location.hash == '#contact/2') {
-							document.title = 'Обратная связь - '+base_title;
-						} else if (window.location.hash == '#portfolio') {
-							document.title = 'Слет Портфолио - '+base_title;
-						} else if (window.location.hash == '#portfolio/1') {
-							document.title = 'Галерея 2Т Портфолио - '+base_title;
-						} else if (window.location.hash == '#portfolio/2') {
-							document.title = 'Сокольники Портфолио - '+base_title;
-						} else if (window.location.hash == '#portfolio/3') {
-							document.title = 'Вкусноштуки Портфолио - '+base_title;
-						} else if (window.location.hash == '#portfolio/4') {
-							document.title = 'Тестогенон Портфолио - '+base_title;
-						}
-
-        }
+      }
 
 		});
 
@@ -314,6 +272,7 @@ jQuery(document).ready(function($) {
 	$('#nav .browse').on('click', function() {
   	$(this).toggleClass('browse-active');
 		$('#nav .menu').transition('fade');
+		$('.fp-verticalArrow.fp-up').transition('fade');
 	});
 
 

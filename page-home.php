@@ -21,18 +21,16 @@
 					<div class="slide <?php echo $post->post_name ?>" id="slide-<?php echo $post->post_name ?>" data-bs="<?php the_field('case_head'); ?>">
 						<div class="wrap">
 							<header class="frame">
-								<a class="ui header" href="<?php echo get_the_permalink() ?>" rel="bookmark"><?php the_title(); ?>
+								<div class="ui header"><?php the_title(); ?>
 			            <div class="sub header"><?php the_field('case_meta1'); ?></div>
-			          </a>
-                <span class="more">Подробнее...</span>
+			          </div>
+                <a class="more" href="<?php echo get_the_permalink() ?>" rel="bookmark">Подробнее...</a>
 							</header>
 						</div>
 					</div>
 
 					<?php } ?>
 					<?php wp_reset_postdata(); ?>
-
-
 
 				</section>
 

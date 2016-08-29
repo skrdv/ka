@@ -53,63 +53,28 @@ button:focus {
 
 
 
-@font-face {
-	font-family: 'icomoon';
-	src:url('../fonts/icomoon/icomoon.eot');
-	src:url('../fonts/icomoon/icomoon.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/icomoon/icomoon.woff') format('woff'),
-		url('../fonts/icomoon/icomoon.ttf') format('truetype'),
-		url('../fonts/icomoon/icomoon.svg#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-.btn {
-	border: none;
-	font-family: inherit;
-	font-size: inherit;
-	color: inherit;
-	background: none;
-	cursor: pointer;
-	padding: 25px 80px;
-	display: inline-block;
-	margin: 15px 30px;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-weight: 700;
-	outline: none;
-	position: relative;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
-}
-
-.btn:after {
-	content: '';
-	position: absolute;
-	z-index: -1;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
-}
-
-/* Pseudo elements for icons */
-.btn:before {
-	font-family: 'icomoon';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	position: relative;
-	-webkit-font-smoothing: antialiased;
-}
-
-.icon-arrow-right:before {
-	content: "\e00d";
-}
-
+//
+// .btn:after {
+// 	content: '';
+// 	position: absolute;
+// 	z-index: -1;
+// 	-webkit-transition: all 0.3s;
+// 	-moz-transition: all 0.3s;
+// 	transition: all 0.3s;
+// }
+//
+// /* Pseudo elements for icons */
+// .btn:before {
+// 	speak: none;
+// 	font-style: normal;
+// 	font-weight: normal;
+// 	font-variant: normal;
+// 	text-transform: none;
+// 	line-height: 1;
+// 	position: relative;
+// 	-webkit-font-smoothing: antialiased;
+// }
+//
 
 
 
@@ -151,14 +116,13 @@ button:focus {
     margin-top: 4px;
   }
   .logo {
-    transition: all 0.3s ease-in-out;
     .path path {
       fill: $color-flight;
-      transition: all 0.3s ease-in-out;
+      transition: all 0.5s ease-in-out;
     }
     .inverse path {
       fill: transparent;
-      transition: all 0.3s ease-in-out;
+      transition: all 0.5s ease-in-out;
     }
     &:hover {
       .path path {
@@ -180,95 +144,90 @@ button:focus {
 		text-transform: uppercase;
     letter-spacing: 1px;
 		border-radius: 0;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
     color: $color-white;
+    background: none !important;
+  }
+  .browse {
+      display: block;
+      background: transparent;
+      border: none;
+  }
+  .browse-inner {
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+  }
+  .browse-inner,
+  .browse-inner:before,
+  .browse-inner:after {
+      width: 24px;
+      height: 3px;
+      background-color: $color-flight;
+      transition: all 0.5s ease-in-out;
+  }
+  .browse-inner:before,
+  .browse-inner:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      -webkit-transform-origin: 50% 50%;
+      -moz-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+      -o-transform-origin: 50% 50%;
+      transform-origin: 50% 50%;
+  }
+  .browse-inner:before {
+      top: -0.4em;
+  }
+  .browse-inner:after {
+      top: 0.4em;
+  }
+  .browse:hover .browse-inner:before {
+      width: 80%;
+  }
+  .browse:hover .browse-inner:after {
+      width: 40%;
+  }
+  .browse-active .browse-inner {
+      background: transparent !important;
+  }
+  .browse-active .browse-inner:before {
+      width: 100% !important;
+      -webkit-transform: rotate3d(0, 0, 1, 45deg);
+      -moz-transform: rotate3d(0, 0, 1, 45deg);
+      -ms-transform: rotate3d(0, 0, 1, 45deg);
+      -o-transform: rotate3d(0, 0, 1, 45deg);
+      transform: rotate3d(0, 0, 1, 45deg);
+  }
+  .browse-active .browse-inner:after {
+      width: 100% !important;
+      -webkit-transform: rotate3d(0, 0, 1, -45deg);
+      -moz-transform: rotate3d(0, 0, 1, -45deg);
+      -ms-transform: rotate3d(0, 0, 1, -45deg);
+      -o-transform: rotate3d(0, 0, 1, -45deg);
+      transform: rotate3d(0, 0, 1, -45deg);
+  }
+  .browse-active .browse-inner:before,
+  .browse-active .browse-inner:after {
+      top: 0;
+  }
+  .browse .text {
+    text-transform: uppercase;
+    transition: all 0.5s ease-in-out;
+    opacity: 1;
+    vertical-align: middle;
+    padding-left: 3px
+  }
+  .browse-active .text,
+  .browse:hover .text {
+    opacity: 0;
   }
 }
 
 
 
 
-.browse {
-    display: block;
-    background: transparent;
-    border: none;
-}
-
-.browse-inner {
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.browse-inner,
-.browse-inner:before,
-.browse-inner:after {
-    width: 24px;
-    height: 3px;
-    background-color: $color-flight;
-    // -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-    // -moz-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-    // transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-
-.browse-inner:before,
-.browse-inner:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    -webkit-transform-origin: 50% 50%;
-    -moz-transform-origin: 50% 50%;
-    -ms-transform-origin: 50% 50%;
-    -o-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
-}
-
-.browse-inner:before {
-    top: -0.4em;
-}
-.browse-inner:after {
-    top: 0.4em;
-}
-.browse:hover .browse-inner:before {
-    width: 80%;
-}
-.browse:hover .browse-inner:after {
-    width: 40%;
-}
-.browse-active .browse-inner {
-    background: transparent !important;
-}
-.browse-active .browse-inner:before {
-    width: 100% !important;
-    -webkit-transform: rotate3d(0, 0, 1, 45deg);
-    -moz-transform: rotate3d(0, 0, 1, 45deg);
-    -ms-transform: rotate3d(0, 0, 1, 45deg);
-    -o-transform: rotate3d(0, 0, 1, 45deg);
-    transform: rotate3d(0, 0, 1, 45deg);
-}
-.browse-active .browse-inner:after {
-    width: 100% !important;
-    -webkit-transform: rotate3d(0, 0, 1, -45deg);
-    -moz-transform: rotate3d(0, 0, 1, -45deg);
-    -ms-transform: rotate3d(0, 0, 1, -45deg);
-    -o-transform: rotate3d(0, 0, 1, -45deg);
-    transform: rotate3d(0, 0, 1, -45deg);
-}
-.browse-active .browse-inner:before,
-.browse-active .browse-inner:after {
-    top: 0;
-}
-.browse .text {
-  text-transform: uppercase;
-  transition: all 0.3s ease-in-out;
-  opacity: 1;
-  vertical-align: middle;
-  padding-left: 3px
-}
-.browse-active .text,
-.browse:hover .text {
-  opacity: 0;
-}
 
 
 
@@ -280,7 +239,6 @@ button:focus {
   left: 0;
   border-radius: 5px;
 }
-
 $shadow: 0 0 20px rgba(0,0,0,.3) inset;
 $bg: #121212;
 
@@ -309,7 +267,6 @@ $bg: #121212;
     animation-delay: 8s;
   }
 }
-
 @keyframes opacity {
   30% {
     opacity: .6;
@@ -318,8 +275,6 @@ $bg: #121212;
     opacity: 0;
   }
 }
-
-
 
 .pulse {
   animation-name: pulse;
@@ -361,13 +316,6 @@ $bg: #121212;
 
 
 
-
-
-
-
-
-
-
 // Navigation Arrows
 .fp-controlArrow {
   width: 20px !important;
@@ -376,14 +324,16 @@ $bg: #121212;
   padding: 0 20px;
   border: none;
   z-index: 104;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  path {
+    transition: all 0.5s ease-in-out;
+  }
   &.fp-prev {
     left: 20px;
     svg {
       float: right;
     }
     &:hover {
-      // left: 15px;
       transform: scale(1.4);
     }
   }
@@ -393,7 +343,6 @@ $bg: #121212;
       float: left;
     }
     &:hover {
-      // right: 15px;
       transform: scale(1.4);
     }
   }
@@ -408,7 +357,10 @@ $bg: #121212;
   padding: 0;
   cursor: pointer;
   z-index: 104;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  path {
+    transition: all 0.5s ease-in-out;
+  }
   &.fp-up {
     top: 20px;
     &:hover {
@@ -427,138 +379,41 @@ $bg: #121212;
 
 
 
-//Hover btn-5 effect
-.btn-5 {
-	color: #fff;
-	overflow: hidden;
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
-	backface-visibility: hidden;
-}
-
-.btn-5 a,
-.btn-5 span {
-	display: inline-block;
-	width: 100%;
-	height: 100%;
-	-webkit-transition: all 0.3s;
-	-webkit-backface-visibility: hidden;
-	-moz-transition: all 0.3s;
-	-moz-backface-visibility: hidden;
-	transition: all 0.3s;
-	backface-visibility: hidden;
-}
-
-.btn-5 span {
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	    line-height: 6;
-    font-size: 200%;
-    font-weight: 400;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
-}
-
-.btn-5:hover {
-  background: $color-flight;
-}
-
-.btn-5:hover a {
-	-webkit-transform: translateY(-300%);
-	-moz-transform: translateY(-300%);
-	-ms-transform: translateY(-300%);
-	transform: translateY(-300%);
-}
-
-.btn-5 span {
-	left: 0;
-	top: 150%;
-}
-
-.btn-5:hover span {
-	top: 0;
-}
-
-
-/* Ujarak */
-.button--ujarak {
-	-webkit-transition: border-color 0.4s, color 0.4s;
-	transition: border-color 0.4s, color 0.4s;
-}
-.button--ujarak::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: $color-flight;
-	z-index: -1;
-	opacity: 0;
-	-webkit-transform: scale3d(0.7, 1, 1);
-	transform: scale3d(0.7, 1, 1);
-	-webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
-	transition: transform 0.4s, opacity 0.4s;
-	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-}
-.button--ujarak.button--round-s::before {
-	border-radius: 2px;
-}
-.button--ujarak.button--inverted::before {
-	background: #7986CB;
-}
-.button--ujarak,
-.button--ujarak::before {
-	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-}
-.button--ujarak:hover {
-	color: #fff;
-	border-color: #37474f;
-}
-.button--ujarak.button--inverted:hover {
-	color: #37474F;
-	border-color: #fff;
-}
-.button--ujarak:hover::before {
-	opacity: 1;
-	-webkit-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
-}
-
-
 #home {
   .section.portfolio {
-    .slide {
-
-      .wrap {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-
+    .wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       .frame {
+        position: relative;
         max-width: 800px;
         margin: 0 auto;
         border: 3px solid white;
         text-align: center;
-        transition: 1s all;
         overflow: hidden;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;;
+      	-webkit-backface-visibility: hidden;
+      	-moz-backface-visibility: hidden;
+      	backface-visibility: hidden;
         .ui.header {
-          display: block;
+          display: inline-block;
+        	width: 100%;
+        	height: 100%;
           margin: 0;
           padding: 0em 1.2em 0.3em 1.2em;
           color: $color-white;
-          font-family: 'Lato Regular';
+          font-family: 'Lato Regular', sans-serif;
           font-size: 4.4em;
           font-weight: normal;
           text-transform: lowercase;
-          transition: 1s all;
+          transition: all 0.5s ease-in-out;
+        	-webkit-backface-visibility: hidden;
+        	-moz-backface-visibility: hidden;
+        	backface-visibility: hidden;
           .sub.header {
-            font-family: 'Lato Light';
+            font-family: 'Lato Light', sans-serif;
             font-size: 1.6rem;
             line-height: 1;
             text-transform: uppercase;
@@ -566,13 +421,40 @@ $bg: #121212;
             color: $color-white;
           }
         }
+        .more {
+          position: absolute;
+          left: 0;
+        	top: 150%;
+          display: inline-block;
+        	height: 100%;
+        	width: 100%;
+          opacity: 0;
+          font-family: 'Lato Light', sans-serif;
+        	line-height: 4;
+          font-size: 200%;
+          font-weight: 400;
+          text-transform: lowercase;
+          color: $color-white;
+          transition: all 0.5s ease-in-out;
+        	-webkit-backface-visibility: hidden;
+        	-moz-backface-visibility: hidden;
+        	backface-visibility: hidden;
+        }
+        &:hover {
+          background: $color-black;
+          .ui.header {
+          	-webkit-transform: translateY(-200%);
+          	-moz-transform: translateY(-200%);
+          	-ms-transform: translateY(-200%);
+          	transform: translateY(-200%);
+          }
+          .more {
+           top: 0;
+           opacity: 1 !important;
+         }
+        }
+
       }
-
-      span {
-        display: none;
-      }
-
-
     }
   }
 
@@ -964,13 +846,21 @@ $bg: #121212;
 
   // Portfolio ZU
   &.fp-viewing-portfolio-0 {
-    .menu .logo .path path,
-    .menu .logo:hover .inverse path {
-      fill: $color-zu;
-    }
-    .menu .logo .inverse path,
-    .menu .logo:hover .path path {
-      fill: transparent;
+    .menu .logo {
+      .path path {
+        fill: $color-zu;
+      }
+      .inverse path {
+        fill: transparent;
+      }
+      &:hover {
+        .path path {
+          fill: transparent;
+        }
+        .inverse path {
+          fill: $color-zu;
+        }
+      }
     }
     .menu .item {
       color: $color-zu;
@@ -982,8 +872,12 @@ $bg: #121212;
     }
     .frame {
       border-color: $color-zu !important;
-      .header {
+      .header,
+      .more {
         color: $color-zu !important;
+      }
+      &:hover {
+        background: rgba($color-white, .5) !important;
       }
     }
     .fp-controlArrow path,
@@ -997,31 +891,57 @@ $bg: #121212;
 
   // Portfolio Flight
   &.fp-viewing-portfolio-1 {
-    .menu .logo .path path,
-    .menu .logo:hover .inverse path {
-      fill: $color-flight;
-    }
-    .menu .logo .inverse path,
-    .menu .logo:hover .path path {
-      fill: transparent;
+    .menu .logo {
+      .path path {
+        fill: $color-white;
+      }
+      .inverse path {
+        fill: transparent;
+      }
+      &:hover {
+        .path path {
+          fill: transparent;
+        }
+        .inverse path {
+          fill: $color-flight;
+        }
+      }
     }
     .menu .item {
-      color: $color-flight;
+      color: $color-white;
       .browse-inner,
       .browse-inner:before,
       .browse-inner:after {
-        background-color: $color-flight;
+        background-color: $color-white;
+      }
+      &:hover {
+        color: $color-flight;
+        .browse-inner,
+        .browse-inner:before,
+        .browse-inner:after {
+          background-color: $color-flight;
+        }
       }
     }
     .frame {
-      border-color: $color-flight !important;
-      .header {
-        color: $color-flight !important;
+      border-color: $color-white !important;
+      .header,
+      .more {
+        color: $color-white !important;
+      }
+      &:hover {
+        border-color: $color-flight !important;
+        background: rgba($color-flight, .5) !important;
       }
     }
-    .fp-controlArrow path,
-    .fp-verticalArrow path {
-      fill: $color-flight;
+    .fp-controlArrow,
+    .fp-verticalArrow {
+      path {
+        fill: $color-white;
+      }
+      &:hover path {
+        fill: $color-flight;
+      }
     }
     .fp-verticalArrow.fp-up {
       display: none;
@@ -1030,31 +950,57 @@ $bg: #121212;
 
   // Portfolio 2T
   &.fp-viewing-portfolio-2 {
-    .menu .logo .path path,
-    .menu .logo:hover .inverse path {
-      fill: $color-2t;
-    }
-    .menu .logo .inverse path,
-    .menu .logo:hover .path path {
-      fill: transparent;
+    .menu .logo {
+      .path path {
+        fill: $color-white;
+      }
+      .inverse path {
+        fill: transparent;
+      }
+      &:hover {
+        .path path {
+          fill: transparent;
+        }
+        .inverse path {
+          fill: $color-2t;
+        }
+      }
     }
     .menu .item {
-      color: $color-2t;
+      color: $color-white;
       .browse-inner,
       .browse-inner:before,
       .browse-inner:after {
-        background-color: $color-2t;
+        background-color: $color-white;
+      }
+      &:hover {
+        color: $color-2t;
+        .browse-inner,
+        .browse-inner:before,
+        .browse-inner:after {
+          background-color: $color-2t;
+        }
       }
     }
     .frame {
-      border-color: $color-2t !important;
-      .header {
-        color: $color-2t !important;
+      border-color: $color-white !important;
+      .header,
+      .more {
+        color: $color-white !important;
+      }
+      &:hover {
+        border-color: $color-2t !important;
+        background: rgba($color-2t, .5) !important;
       }
     }
-    .fp-controlArrow path,
-    .fp-verticalArrow path {
-      fill: $color-2t;
+    .fp-controlArrow,
+    .fp-verticalArrow {
+      path {
+        fill: $color-white;
+      }
+      &:hover path {
+        fill: $color-2t;
+      }
     }
     .fp-verticalArrow.fp-up {
       display: none;
@@ -1063,20 +1009,36 @@ $bg: #121212;
 
   // Portfolio Sokolniki
   &.fp-viewing-portfolio-3 {
-    .menu .logo .path path,
-    .menu .logo:hover .inverse path {
-      fill: $color-sokolniki;
-    }
-    .menu .logo .inverse path,
-    .menu .logo:hover .path path {
-      fill: transparent;
+    .menu .logo {
+      .path path {
+        fill: $color-white;
+      }
+      .inverse path {
+        fill: transparent;
+      }
+      &:hover {
+        .path path {
+          fill: transparent;
+        }
+        .inverse path {
+          fill: $color-sokolniki;
+        }
+      }
     }
     .menu .item {
-      color: $color-sokolniki;
+      color: $color-white;
       .browse-inner,
       .browse-inner:before,
       .browse-inner:after {
-        background-color: $color-sokolniki;
+        background-color: $color-white;
+      }
+      &:hover {
+        color: $color-sokolniki;
+        .browse-inner,
+        .browse-inner:before,
+        .browse-inner:after {
+          background-color: $color-sokolniki;
+        }
       }
     }
     .frame {
@@ -1084,10 +1046,22 @@ $bg: #121212;
       .header {
         color: $color-sokolniki !important;
       }
+      .more {
+        color: $color-white !important;
+      }
+      &:hover {
+        border-color: $color-sokolniki !important;
+        background: rgba($color-sokolniki, .5) !important;
+      }
     }
-    .fp-controlArrow path,
-    .fp-verticalArrow path {
-      fill: $color-sokolniki;
+    .fp-controlArrow,
+    .fp-verticalArrow {
+      path {
+        fill: $color-white;
+      }
+      &:hover path {
+        fill: $color-sokolniki;
+      }
     }
     .fp-verticalArrow.fp-up {
       display: none;
@@ -1096,31 +1070,57 @@ $bg: #121212;
 
   // Portfolio Fazer
   &.fp-viewing-portfolio-4 {
-    .menu .logo .path path,
-    .menu .logo:hover .inverse path {
-      fill: $color-fazer;
-    }
-    .menu .logo .inverse path,
-    .menu .logo:hover .path path {
-      fill: transparent;
+    .menu .logo {
+      .path path {
+        fill: $color-white;
+      }
+      .inverse path {
+        fill: transparent;
+      }
+      &:hover {
+        .path path {
+          fill: transparent;
+        }
+        .inverse path {
+          fill: $color-fazer;
+        }
+      }
     }
     .menu .item {
-      color: $color-fazer;
+      color: $color-white;
       .browse-inner,
       .browse-inner:before,
       .browse-inner:after {
-        background-color: $color-fazer;
+        background-color: $color-white;
+      }
+      &:hover {
+        color: $color-fazer;
+        .browse-inner,
+        .browse-inner:before,
+        .browse-inner:after {
+          background-color: $color-fazer;
+        }
       }
     }
     .frame {
-      border-color: $color-fazer !important;
-      .header {
-        color: $color-fazer !important;
+      border-color: $color-white !important;
+      .header,
+      .more {
+        color: $color-white !important;
+      }
+      &:hover {
+        border-color: $color-fazer !important;
+        background: rgba($color-fazer, .5) !important;
       }
     }
-    .fp-controlArrow path,
-    .fp-verticalArrow path {
-      fill: $color-fazer;
+    .fp-controlArrow,
+    .fp-verticalArrow {
+      path {
+        fill: $color-white;
+      }
+      &:hover path {
+        fill: $color-fazer;
+      }
     }
     .fp-verticalArrow.fp-up {
       display: none;
@@ -1129,31 +1129,57 @@ $bg: #121212;
 
   // Portfolio Testogenon
   &.fp-viewing-portfolio-5 {
-    .menu .logo .path path,
-    .menu .logo:hover .inverse path {
-      fill: $color-testogenon;
-    }
-    .menu .logo .inverse path,
-    .menu .logo:hover .path path {
-      fill: transparent;
+    .menu .logo {
+      .path path {
+        fill: $color-white;
+      }
+      .inverse path {
+        fill: transparent;
+      }
+      &:hover {
+        .path path {
+          fill: transparent;
+        }
+        .inverse path {
+          fill: $color-testogenon;
+        }
+      }
     }
     .menu .item {
-      color: $color-testogenon;
+      color: $color-white;
       .browse-inner,
       .browse-inner:before,
       .browse-inner:after {
-        background-color: $color-testogenon;
+        background-color: $color-white;
+      }
+      &:hover {
+        color: $color-testogenon;
+        .browse-inner,
+        .browse-inner:before,
+        .browse-inner:after {
+          background-color: $color-testogenon;
+        }
       }
     }
     .frame {
-      border-color: $color-testogenon !important;
-      .header {
-        color: $color-testogenon !important;
+      border-color: $color-white !important;
+      .header,
+      .more {
+        color: $color-white !important;
+      }
+      &:hover {
+        border-color: $color-testogenon !important;
+        background: rgba($color-testogenon, .5) !important;
       }
     }
-    .fp-controlArrow path,
-    .fp-verticalArrow path {
-      fill: $color-testogenon;
+    .fp-controlArrow,
+    .fp-verticalArrow {
+      path {
+        fill: $color-white;
+      }
+      &:hover path {
+        fill: $color-testogenon;
+      }
     }
     .fp-verticalArrow.fp-up {
       display: none;
