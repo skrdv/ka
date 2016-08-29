@@ -163,6 +163,25 @@ button:focus {
     visibility: hidden;
     margin-top: 4px;
   }
+  .logo {
+    transition: all 0.3s ease-in-out;
+    .path path {
+      fill: $color-flight;
+      transition: all 0.3s ease-in-out;
+    }
+    .inverse path {
+      fill: transparent;
+      transition: all 0.3s ease-in-out;
+    }
+    &:hover {
+      .path path {
+        fill: transparent;
+      }
+      .inverse path {
+        fill: $color-flight;
+      }
+    }
+  }
 	.item {
     display: inline-block;
     padding-top: 0;
@@ -174,51 +193,8 @@ button:focus {
 		text-transform: uppercase;
     letter-spacing: 1px;
 		border-radius: 0;
-    transition: 1s all ease-out;
-		&:first-child {
-      padding-left: 0;
-			// border: none;
-		}
-    &:last-child {
-      padding-right: 0;
-		}
-    &:hover{
-      // background: none;
-		}
-
-
-    color: $color-flight;
-    a {
-      color: $color-flight;
-      transition: 1s all;
-    }
-    .line {
-      display: block;
-      position: relative;
-      width: 20px;
-      height: 2px;
-      margin-bottom: 4px;
-      background: #fff;
-      background-color: $color-flight;
-      transition: 1s all;
-    }
-    .path path {
-      fill: $color-flight;
-      transition: 1s all;
-    }
-    .inverse path {
-      fill: transparent;
-      transition: 1s all;
-    }
-    &:hover {
-      .path path {
-        fill: transparent;
-      }
-      .inverse path {
-        fill: $color-flight;
-      }
-    }
-
+    transition: all 0.3s ease-in-out;
+    color: $color-white;
   }
 }
 
@@ -242,9 +218,9 @@ button:focus {
     width: 24px;
     height: 3px;
     background-color: $color-flight;
-    -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-    -moz-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    // -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    // -moz-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    // transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .browse-inner:before,
@@ -296,7 +272,7 @@ button:focus {
 }
 .browse .text {
   text-transform: uppercase;
-  transition: all 0.6s ease-in-out;
+  transition: all 0.3s ease-in-out;
   opacity: 1;
   vertical-align: middle;
   padding-left: 3px
@@ -401,226 +377,60 @@ $bg: #121212;
 .fp-controlArrow {
   width: 20px !important;
   height: 60px;
-  margin-top: -90px;
-  padding: 60px 30px;
+  margin-top: -30px;
+  padding: 0 20px;
   border: none;
   z-index: 104;
   transition: all 0.3s ease-in-out;
   &.fp-prev {
-    left: 0px;
+    left: 20px;
+    svg {
+      float: right;
+    }
     &:hover {
-      left: -5px;
+      // left: 15px;
       transform: scale(1.4);
     }
   }
   &.fp-next {
-    right: 0px;
+    right: 20px;
+    svg {
+      float: left;
+    }
     &:hover {
-      right: -5px;
+      // right: 15px;
       transform: scale(1.4);
     }
   }
 }
-
-
 
 .fp-verticalArrow {
   position: fixed;
   left: 50%;
-  margin-left: -90px;
+  margin-left: -30px;
   width: 60px;
   height: 20px;
-  padding: 30px 60px;
+  padding: 0;
   cursor: pointer;
   z-index: 104;
   transition: all 0.3s ease-in-out;
   &.fp-up {
-    top: 0px;
+    top: 20px;
     &:hover {
-      top: -5px;
+      top: 15px;
       transform: scale(1.4);
     }
   }
   &.fp-down {
-    bottom: 0px;
+    bottom: 20px;
     &:hover {
-      bottom: -5px;
+      bottom: 15px;
       transform: scale(1.4);
     }
   }
 }
 
 
-
-
-//
-// #portfolio-flight,
-// #page-flight {
-//   .fp-controlArrow.fp-prev {
-//     background: url(../svg/arrow_left.svg) center center no-repeat;
-//   }
-//   .fp-controlArrow.fp-next {
-//     background: url(../svg/arw_right_flight.svg) center center no-repeat;
-//   }
-//   .fp-verticalArrow.fp-up {
-//     background: url(../svg/arw_up_flight.svg) center center no-repeat;
-//   }
-//   .fp-verticalArrow.fp-down {
-//     background: url(../svg/arw_down_flight.svg) center center no-repeat;
-//   }
-// }
-// #portfolio-2t,
-// #page-2t {
-//   .fp-controlArrow.fp-prev {
-//     background: url(../svg/arw_left_2t.svg) center center no-repeat;
-//   }
-//   .fp-controlArrow.fp-next {
-//     background: url(../svg/arw_right_2t.svg) center center no-repeat;
-//   }
-//   .fp-verticalArrow.fp-up {
-//     background: url(../svg/arw_up_2t.svg) center center no-repeat;
-//   }
-//   .fp-verticalArrow.fp-down {
-//     background: url(../svg/arw_down_2t.svg) center center no-repeat;
-//   }
-// }
-// #portfolio-sokolniki,
-// #page-sokolniki {
-//   .fp-controlArrow.fp-prev {
-//     background: url(../svg/arw_left_sokolniki.svg) center center no-repeat;
-//   }
-//   .fp-controlArrow.fp-next {
-//     background: url(../svg/arw_right_sokolniki.svg) center center no-repeat;
-//   }
-//   .fp-verticalArrow.fp-up {
-//     background: url(../svg/arw_up_sokolniki.svg) center center no-repeat;
-//   }
-//   .fp-verticalArrow.fp-down {
-//     background: url(../svg/arw_down_sokolniki.svg) center center no-repeat;
-//   }
-// }
-// #portfolio-fazer,
-// #page-fazer {
-//   .fp-controlArrow.fp-prev {
-//     background: url(../svg/arw_left_fazer.svg) center center no-repeat;
-//   }
-//   .fp-controlArrow.fp-next {
-//     background: url(../svg/arw_right_fazer.svg) center center no-repeat;
-//   }
-//   .fp-verticalArrow.fp-up {
-//     background: url(../svg/arw_up_fazer.svg) center center no-repeat;
-//   }
-//   .fp-verticalArrow.fp-down {
-//     background: url(../svg/arw_down_fazer.svg) center center no-repeat;
-//   }
-// }
-// #portfolio-testogenon,
-// #page-testogenon {
-//   .fp-controlArrow.fp-prev {
-//     background: url(../svg/arw_left_testogenon.svg) center center no-repeat;
-//   }
-//   .fp-controlArrow.fp-next {
-//     background: url(../svg/arw_right_testogenon.svg) center center no-repeat;
-//   }
-//   .fp-verticalArrow.fp-up {
-//     background: url(../svg/arw_up_testogenon.svg) center center no-repeat;
-//   }
-//   .fp-verticalArrow.fp-down {
-//     background: url(../svg/arw_down_testogenon.svg) center center no-repeat;
-//   }
-// }
-// #contact-circle {
-//   .fp-controlArrow.fp-prev {
-//     background: url(../svg/arw_left_white.svg) center center no-repeat;
-//   }
-//   .fp-controlArrow.fp-next {
-//     background: url(../svg/arw_right_white.svg) center center no-repeat;
-//   }
-//   .fp-verticalArrow.fp-up {
-//     background: url(../svg/arw_up_white.svg) center center no-repeat;
-//   }
-//   .fp-verticalArrow.fp-down {
-//     background: url(../svg/arw_down_white.svg) center center no-repeat;
-//   }
-// }
-// #contact-map {
-//   .fp-controlArrow.fp-prev {
-//     background: url(../svg/arw_left_pink.svg) center center no-repeat;
-//   }
-//   .fp-controlArrow.fp-next {
-//     background: url(../svg/arw_right_pink.svg) center center no-repeat;
-//   }
-//   .fp-verticalArrow.fp-up {
-//     background: url(../svg/arw_up_pink.svg) center center no-repeat;
-//   }
-//   .fp-verticalArrow.fp-down {
-//     background: url(../svg/arw_down_pink.svg) center center no-repeat;
-//   }
-// }
-// #contact-feedback {
-//   .fp-controlArrow.fp-prev {
-//     background: url(../svg/arw_left_black.svg) center center no-repeat;
-//   }
-//   .fp-controlArrow.fp-next {
-//     background: url(../svg/arw_right_black.svg) center center no-repeat;
-//   }
-//   .fp-verticalArrow.fp-up {
-//     background: url(../svg/arw_up_black.svg) center center no-repeat;
-//   }
-//   .fp-verticalArrow.fp-down {
-//     background: url(../svg/arw_down_black.svg) center center no-repeat;
-//   }
-// }
-// #home-services {
-//   .fp-verticalArrow.fp-up {
-//     background: url(../svg/arw_up_black.svg) center center no-repeat;
-//   }
-//   .fp-verticalArrow.fp-down {
-//     background: url(../svg/arw_down_black.svg) center center no-repeat;
-//   }
-// }
-// #home-team {
-//   .fp-verticalArrow.fp-up {
-//     background: url(../svg/arw_up_white.svg) center center no-repeat;
-//   }
-//   .fp-verticalArrow.fp-down {
-//     background: url(../svg/arw_down_white.svg) center center no-repeat;
-//   }
-// }
-//
-//
-//
-//
-//
-//       //Hover btn-4 effect
-//       .btn-4:hover {
-//         color: $color-white;
-//         background: $color-flight;
-//         .ui.header,
-//         .sub.header {
-//           color: $color-white;
-//         }
-//       }
-//
-//       .btn-4:before {
-//         position: absolute;
-//         height: 100%;
-//         font-size: 200%;
-//         line-height: 6;
-//         color: $color-white;
-//         -webkit-transition: all 0.3s;
-//         -moz-transition: all 0.3s;
-//         transition: all 0.3s;
-//       }
-//
-//       .btn-4:before {
-// 	      left: 130%;
-// 	      top: 0;
-//       }
-//
-//       .btn-4:hover:before {
-// 	      left: 90%;
-//       }
 
 //Hover btn-5 effect
 .btn-5 {
@@ -675,9 +485,6 @@ $bg: #121212;
 .btn-5:hover span {
 	top: 0;
 }
-
-
-
 
 
 /* Ujarak */
@@ -782,7 +589,6 @@ $bg: #121212;
     }
   }
 
-
   // Services
   .section.services {
     .ui.card {
@@ -848,8 +654,6 @@ $bg: #121212;
     }
   }
 
-
-
   // Team
   .section.team {
     .wrap {
@@ -882,9 +686,6 @@ $bg: #121212;
       }
     }
   }
-
-
-
 
   // Contact
   .section.contact {
@@ -1176,23 +977,15 @@ $bg: #121212;
 
 #page-home {
 
-  //ZU
+  // Portfolio ZU
   &.fp-viewing-portfolio-0 {
-    .menu .logo {
-      .path path {
-        fill: $color-zu;
-      }
-      .inverse path {
-        fill: transparent;
-      }
-      &:hover {
-        .path path {
-          fill: transparent;
-        }
-        .inverse path {
-          fill: $color-zu;
-        }
-      }
+    .menu .logo .path path,
+    .menu .logo:hover .inverse path {
+      fill: $color-zu;
+    }
+    .menu .logo .inverse path,
+    .menu .logo:hover .path path {
+      fill: transparent;
     }
     .menu .item {
       color: $color-zu;
@@ -1202,34 +995,348 @@ $bg: #121212;
         background-color: $color-zu;
       }
     }
+    .frame {
+      border-color: $color-zu !important;
+      .header {
+        color: $color-zu !important;
+      }
+    }
     .fp-controlArrow path,
     .fp-verticalArrow path {
       fill: $color-zu;
     }
-
-  }
-
-}
-
-
-#home {
-  #slide-flight {
-    .frame {
-      border-color: $color-white;
-      .ui.header,
-      .ui.header .sub.header {
-        color: $color-white;
-      }
-      &:hover {
-        border-color: $color-flight;
-        .ui.header,
-        .ui.header .sub.header {
-          color: $color-flight;
-        }
-      }
+    .fp-verticalArrow.fp-up {
+      display: none;
     }
   }
+
+  // Portfolio Flight
+  &.fp-viewing-portfolio-1 {
+    .menu .logo .path path,
+    .menu .logo:hover .inverse path {
+      fill: $color-flight;
+    }
+    .menu .logo .inverse path,
+    .menu .logo:hover .path path {
+      fill: transparent;
+    }
+    .menu .item {
+      color: $color-flight;
+      .browse-inner,
+      .browse-inner:before,
+      .browse-inner:after {
+        background-color: $color-flight;
+      }
+    }
+    .frame {
+      border-color: $color-flight !important;
+      .header {
+        color: $color-flight !important;
+      }
+    }
+    .fp-controlArrow path,
+    .fp-verticalArrow path {
+      fill: $color-flight;
+    }
+    .fp-verticalArrow.fp-up {
+      display: none;
+    }
+  }
+
+  // Portfolio 2T
+  &.fp-viewing-portfolio-2 {
+    .menu .logo .path path,
+    .menu .logo:hover .inverse path {
+      fill: $color-2t;
+    }
+    .menu .logo .inverse path,
+    .menu .logo:hover .path path {
+      fill: transparent;
+    }
+    .menu .item {
+      color: $color-2t;
+      .browse-inner,
+      .browse-inner:before,
+      .browse-inner:after {
+        background-color: $color-2t;
+      }
+    }
+    .frame {
+      border-color: $color-2t !important;
+      .header {
+        color: $color-2t !important;
+      }
+    }
+    .fp-controlArrow path,
+    .fp-verticalArrow path {
+      fill: $color-2t;
+    }
+    .fp-verticalArrow.fp-up {
+      display: none;
+    }
+  }
+
+  // Portfolio Sokolniki
+  &.fp-viewing-portfolio-3 {
+    .menu .logo .path path,
+    .menu .logo:hover .inverse path {
+      fill: $color-sokolniki;
+    }
+    .menu .logo .inverse path,
+    .menu .logo:hover .path path {
+      fill: transparent;
+    }
+    .menu .item {
+      color: $color-sokolniki;
+      .browse-inner,
+      .browse-inner:before,
+      .browse-inner:after {
+        background-color: $color-sokolniki;
+      }
+    }
+    .frame {
+      border-color: $color-sokolniki !important;
+      .header {
+        color: $color-sokolniki !important;
+      }
+    }
+    .fp-controlArrow path,
+    .fp-verticalArrow path {
+      fill: $color-sokolniki;
+    }
+    .fp-verticalArrow.fp-up {
+      display: none;
+    }
+  }
+
+  // Portfolio Fazer
+  &.fp-viewing-portfolio-4 {
+    .menu .logo .path path,
+    .menu .logo:hover .inverse path {
+      fill: $color-fazer;
+    }
+    .menu .logo .inverse path,
+    .menu .logo:hover .path path {
+      fill: transparent;
+    }
+    .menu .item {
+      color: $color-fazer;
+      .browse-inner,
+      .browse-inner:before,
+      .browse-inner:after {
+        background-color: $color-fazer;
+      }
+    }
+    .frame {
+      border-color: $color-fazer !important;
+      .header {
+        color: $color-fazer !important;
+      }
+    }
+    .fp-controlArrow path,
+    .fp-verticalArrow path {
+      fill: $color-fazer;
+    }
+    .fp-verticalArrow.fp-up {
+      display: none;
+    }
+  }
+
+  // Portfolio Testogenon
+  &.fp-viewing-portfolio-5 {
+    .menu .logo .path path,
+    .menu .logo:hover .inverse path {
+      fill: $color-testogenon;
+    }
+    .menu .logo .inverse path,
+    .menu .logo:hover .path path {
+      fill: transparent;
+    }
+    .menu .item {
+      color: $color-testogenon;
+      .browse-inner,
+      .browse-inner:before,
+      .browse-inner:after {
+        background-color: $color-testogenon;
+      }
+    }
+    .frame {
+      border-color: $color-testogenon !important;
+      .header {
+        color: $color-testogenon !important;
+      }
+    }
+    .fp-controlArrow path,
+    .fp-verticalArrow path {
+      fill: $color-testogenon;
+    }
+    .fp-verticalArrow.fp-up {
+      display: none;
+    }
+  }
+
+  // Services
+  &.fp-viewing-services {
+    .menu .logo .path path,
+    .menu .logo:hover .inverse path {
+      fill: $color-black;
+    }
+    .menu .logo .inverse path,
+    .menu .logo:hover .path path {
+      fill: transparent;
+    }
+    .menu .item {
+      color: $color-black;
+      .browse-inner,
+      .browse-inner:before,
+      .browse-inner:after {
+        background-color: $color-black;
+      }
+    }
+    .frame {
+      border-color: $color-black !important;
+      .header {
+        color: $color-black !important;
+      }
+    }
+    .fp-controlArrow path,
+    .fp-verticalArrow path {
+      fill: $color-black;
+    }
+  }
+
+  // Team
+  &.fp-viewing-team {
+    .menu .logo .path path,
+    .menu .logo:hover .inverse path {
+      fill: $color-white;
+    }
+    .menu .logo .inverse path,
+    .menu .logo:hover .path path {
+      fill: transparent;
+    }
+    .menu .item {
+      color: $color-white;
+      .browse-inner,
+      .browse-inner:before,
+      .browse-inner:after {
+        background-color: $color-white;
+      }
+    }
+    .frame {
+      border-color: $color-white !important;
+      .header {
+        color: $color-white !important;
+      }
+    }
+    .fp-controlArrow path,
+    .fp-verticalArrow path {
+      fill: $color-white;
+    }
+  }
+
+  // Contact
+  &.fp-viewing-contact-0 {
+    .menu .logo .path path,
+    .menu .logo:hover .inverse path {
+      fill: $color-white;
+    }
+    .menu .logo .inverse path,
+    .menu .logo:hover .path path {
+      fill: transparent;
+    }
+    .menu .item {
+      color: $color-white;
+      .browse-inner,
+      .browse-inner:before,
+      .browse-inner:after {
+        background-color: $color-white;
+      }
+    }
+    .frame {
+      border-color: $color-white !important;
+      .header {
+        color: $color-white !important;
+      }
+    }
+    .fp-controlArrow path,
+    .fp-verticalArrow path {
+      fill: $color-white;
+    }
+    .fp-verticalArrow.fp-down {
+      display: none;
+    }
+  }
+
+  // Map
+  &.fp-viewing-contact-1 {
+    .menu .logo .path path,
+    .menu .logo:hover .inverse path {
+      fill: $color-pink;
+    }
+    .menu .logo .inverse path,
+    .menu .logo:hover .path path {
+      fill: transparent;
+    }
+    .menu .item {
+      color: $color-pink;
+      .browse-inner,
+      .browse-inner:before,
+      .browse-inner:after {
+        background-color: $color-pink;
+      }
+    }
+    .frame {
+      border-color: $color-pink !important;
+      .header {
+        color: $color-pink !important;
+      }
+    }
+    .fp-controlArrow path,
+    .fp-verticalArrow path {
+      fill: $color-pink;
+    }
+    .fp-verticalArrow.fp-down {
+      display: none;
+    }
+  }
+
+  // Feedback
+  &.fp-viewing-contact-2 {
+    .menu .logo .path path,
+    .menu .logo:hover .inverse path {
+      fill: $color-black;
+    }
+    .menu .logo .inverse path,
+    .menu .logo:hover .path path {
+      fill: transparent;
+    }
+    .menu .item {
+      color: $color-black;
+      .browse-inner,
+      .browse-inner:before,
+      .browse-inner:after {
+        background-color: $color-black;
+      }
+    }
+    .frame {
+      border-color: $color-black !important;
+      .header {
+        color: $color-black !important;
+      }
+    }
+    .fp-controlArrow path,
+    .fp-verticalArrow path {
+      fill: $color-black;
+    }
+    .fp-verticalArrow.fp-down {
+      display: none;
+    }
+  }
+
 }
+
+
 
 #page-flight {
   ::selection {
@@ -1287,25 +1394,6 @@ $bg: #121212;
       .meta,
       .description {
         color: $color-black;
-      }
-    }
-  }
-}
-
-#home {
-  #slide-2t {
-    .frame {
-      border-color: $color-2t-main;
-      .ui.header,
-      .ui.header .sub.header {
-        color: $color-2t-main;
-      }
-      &:hover {
-        border-color: $color-2t;
-        .ui.header,
-        .ui.header .sub.header {
-          color: $color-2t;
-        }
       }
     }
   }
@@ -1371,25 +1459,6 @@ $bg: #121212;
   }
 }
 
-#home {
-  #slide-sokolniki {
-    .frame {
-      border-color: $color-sokolniki-active;
-      .ui.header,
-      .ui.header .sub.header {
-        color: $color-sokolniki-active;
-      }
-      &:hover {
-        border-color: $color-sokolniki;
-        .ui.header,
-        .ui.header .sub.header {
-          color: $color-sokolniki;
-        }
-      }
-    }
-  }
-}
-
 #page-sokolniki {
   ::selection {
     background-color:$color-sokolniki;
@@ -1451,25 +1520,6 @@ $bg: #121212;
   }
 }
 
-#home {
-  #slide-fazer {
-    .frame {
-      border-color: $color-white;
-      .ui.header,
-      .ui.header .sub.header {
-        color: $color-white;
-      }
-      &:hover {
-        border-color: $color-fazer;
-        .ui.header,
-        .ui.header .sub.header {
-          color: $color-fazer;
-        }
-      }
-    }
-  }
-}
-
 #page-fazer {
   ::selection {
     background-color:$color-fazer-main;
@@ -1528,25 +1578,6 @@ $bg: #121212;
   }
   #fp-nav ul li a span {
     background: $color-fazer;
-  }
-}
-
-#home {
-  #slide-testogenon {
-    .frame {
-      border-color: $color-white;
-      .ui.header,
-      .ui.header .sub.header {
-        color: $color-white;
-      }
-      &:hover {
-        border-color: $color-testogenon;
-        .ui.header,
-        .ui.header .sub.header {
-          color: $color-testogenon;
-        }
-      }
-    }
   }
 }
 

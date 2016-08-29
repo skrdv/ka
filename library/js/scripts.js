@@ -186,10 +186,8 @@ jQuery(document).ready(function($) {
 			recordHistory: true,
 			controlArrows: true,
 			verticalCentered: true,
-			// sectionsColor : ['#fff', '#fff', '#fff', '#fff'],
 			paddingTop: '0',
 			paddingBottom: '0',
-			// fixedElements: '#header, #footer',
 			responsiveWidth: 0,
 			responsiveHeight: 0,
 			sectionSelector: '.section',
@@ -200,44 +198,24 @@ jQuery(document).ready(function($) {
 
 				if (window.location.hash == '#services') {
 					document.title = 'Услуги - '+base_title;
-					$('#nav .item').removeClass().addClass('item black');
-					$('.section.services').attr('id', 'home-services');
 				} else if (window.location.hash == '#team') {
 					document.title = 'Команда - '+base_title;
-					$('#nav .item').removeClass().addClass('item white');
-					$('.section.team').attr('id', 'home-team');
 				} else if (window.location.hash == '#portfolio') {
 					document.title = 'Портфолио - '+base_title;
-					$('#nav .item').removeClass().addClass('item flight');
-					$('.section.portfolio').attr('id', 'portfolio-flight');
 				} else if (window.location.hash == '#portfolio/1') {
 					document.title = 'Галерея 2Т Портфолио - '+base_title;
-					$('#nav .item').removeClass().addClass('item gallery-2t');
-					$('.section.portfolio').attr('id', 'portfolio-2t');
 				} else if (window.location.hash == '#portfolio/2') {
 					document.title = 'Сокольники Портфолио - '+base_title;
-					$('#nav .item').removeClass().addClass('item sokolniki');
-					$('.section.portfolio').attr('id', 'portfolio-sokolniki');
 				} else if (window.location.hash == '#portfolio/3') {
 					document.title = 'Вкусноштуки Портфолио - '+base_title;
-					$('#nav .item').removeClass().addClass('item fazer');
-					$('.section.portfolio').attr('id', 'portfolio-fazer');
 				} else if (window.location.hash == '#portfolio/4') {
 					document.title = 'Тестогенон Портфолио - '+base_title;
-					$('#nav .item').removeClass().addClass('item testogenon');
-					$('.section.portfolio').attr('id', 'portfolio-testogenon');
 				} else if (window.location.hash == '#contact') {
 					document.title = 'Контакты - '+base_title;
-					$('#nav .item').removeClass().addClass('item white');
-					$('.section.contact').attr('id', 'contact-circle');
 				} else if (window.location.hash == '#contact/1') {
 					document.title = 'Карта - '+base_title;
-					$('#nav .item').removeClass().addClass('item pink');
-					$('.section.contact').attr('id', 'contact-map');
 				} else if (window.location.hash == '#contact/2') {
 					document.title = 'Обратная связь - '+base_title;
-					$('#nav .item').removeClass().addClass('item black');
-					$('.section.contact').attr('id', 'contact-feedback');
 				}
 
 			},
@@ -246,36 +224,20 @@ jQuery(document).ready(function($) {
 
 						if (window.location.hash == '#contact') {
 							document.title = 'Контакты - '+base_title;
-							$('#nav .item').removeClass().addClass('item white');
-							$('.section.contact').attr('id', 'contact-circle');
 						} else if (window.location.hash == '#contact/1') {
 							document.title = 'Карта - '+base_title;
-							$('#nav .item').removeClass().addClass('item pink');
-							$('.section.contact').attr('id', 'contact-map');
 						} else if (window.location.hash == '#contact/2') {
 							document.title = 'Обратная связь - '+base_title;
-							$('#nav .item').removeClass().addClass('item black');
-							$('.section.contact').attr('id', 'contact-feedback');
 						} else if (window.location.hash == '#portfolio') {
 							document.title = 'Слет Портфолио - '+base_title;
-							$('#nav .item').removeClass().addClass('item flight');
-							$('.section.portfolio').attr('id', 'portfolio-flight');
 						} else if (window.location.hash == '#portfolio/1') {
 							document.title = 'Галерея 2Т Портфолио - '+base_title;
-							$('#nav .item').removeClass().addClass('item gallery-2t');
-							$('.section.portfolio').attr('id', 'portfolio-2t');
 						} else if (window.location.hash == '#portfolio/2') {
 							document.title = 'Сокольники Портфолио - '+base_title;
-							$('#nav .item').removeClass().addClass('item sokolniki');
-							$('.section.portfolio').attr('id', 'portfolio-sokolniki');
 						} else if (window.location.hash == '#portfolio/3') {
 							document.title = 'Вкусноштуки Портфолио - '+base_title;
-							$('#nav .item').removeClass().addClass('item fazer');
-							$('.section.portfolio').attr('id', 'portfolio-fazer');
 						} else if (window.location.hash == '#portfolio/4') {
 							document.title = 'Тестогенон Портфолио - '+base_title;
-							$('#nav .item').removeClass().addClass('item testogenon');
-							$('.section.portfolio').attr('id', 'portfolio-testogenon');
 						}
 
         }
