@@ -102,7 +102,7 @@ function loadGravatars() {
     jQuery(this).attr('src',jQuery(this).attr('data-gravatar'));
   });
 	}
-} // end function
+}
 
 function homeBg() {
 
@@ -156,14 +156,7 @@ function portfolioBg() {
 
 
 
-/*
- * Put all your regular jQuery in here.
-*/
 jQuery(document).ready(function($) {
-
-
-
-
 
   loadGravatars();
 
@@ -176,7 +169,6 @@ jQuery(document).ready(function($) {
 	// Home
 	if ($('body').hasClass('home')) {
 
-		// FullPage
 		$('#home').fullpage({
 			anchors: ['portfolio', 'services', 'team', 'contact'],
 			menu: '#nav',
@@ -186,19 +178,17 @@ jQuery(document).ready(function($) {
 			recordHistory: true,
 			controlArrows: true,
 			verticalCentered: true,
+			loopBottom: false,
+      loopTop: false,
+      loopHorizontal: true,
+      continuousVertical: false,
+      continuousHorizontal: false,
 			paddingTop: '0',
 			paddingBottom: '0',
 			responsiveWidth: 0,
 			responsiveHeight: 0,
 			sectionSelector: '.section',
 			slideSelector: '.slide',
-
-			afterLoad: function(index, nextIndex, direction){
-
-			},
-			afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
-
-      }
 
 		});
 
@@ -237,13 +227,7 @@ jQuery(document).ready(function($) {
 	// Case
 	if ($('body').hasClass('single')) {
 
-		// var numSections = $('.section').length;
-		// console.log(numSections);
-
-		// FullPage
 		$('#case').fullpage({
-			// navigation: true,
-			// navigationPosition: 'right',
 			anchors:['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
 		});
 
@@ -254,21 +238,13 @@ jQuery(document).ready(function($) {
 			} else {
 				$(this).text('Скрыть описание').removeClass('black').addClass('white');
 			}
-
 		});
 
 		portfolioBg();
 
-
 	}
 
 	// Navigation
-	// $('#nav .browse').on('click', function() {
-	// 	// $(this).find('.close').transition('fade');
-	// 	// $(this).find('.text').transition('fade');
-	// 	$('.ui.menu').find('.menu').transition('fade');
-	// });
-
 	$('#nav .browse').on('click', function() {
   	$(this).toggleClass('browse-active');
 		$('#nav .menu').transition('fade');
@@ -293,28 +269,19 @@ jQuery(document).ready(function($) {
 	}
 
 
-}); /* end of as page load scripts */
+});
 
 jQuery(window).resize(function($) {
 
-	// console.log('resize');
+	viewport = updateViewportDimensions();
+	// console.log(viewport);
 
-	// Home
 	if (jQuery('body').hasClass('home')) {
-
 		homeBg();
-
 	}
 
-	// Portfolio
 	if (jQuery('body').hasClass('single')) {
-
 		portfolioBg();
-
 	}
-
-});
-
-jQuery(window).scroll(function(){
 
 });

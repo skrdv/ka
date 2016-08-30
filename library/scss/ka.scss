@@ -6,9 +6,8 @@ $color-black: rgb(35,21,32);
 $color-pink: rgb(236,0,140);
 $color-grey: rgb(88,88,88);
 $color-zu: rgb(125,211,243);
-$color-flight: rgb(0,30,72);
-$color-flight-active: rgb(9,78,147);
-$color-flight-main:   rgb(9,78,147);
+$color-flight: rgb(0,51,130);
+// $color-flight: rgb(9,78,147);
 $color-2t: rgb(125,211,243);
 $color-2t-active: rgb(125,211,243);
 $color-2t-main:   rgb(72,61,54);
@@ -45,11 +44,20 @@ button:focus {
   color: $color-grey;
 }
 
-.hidden {
-  display: none !important;
+
+@mixin box-shadow($color) {
+  -webkit-box-shadow: 0px 0px 10px $color;
+  -moz-box-shadow: 0px 0px 10px $color;
+  box-shadow: 0px 0px 10px $color;
+}
+@mixin text-shadow($color) {
+  text-shadow: 0px 0px 10px $color;
 }
 
 
+.hidden {
+  display: none !important;
+}
 
 .section,
 .slide {
@@ -270,6 +278,7 @@ button:focus {
       flex-direction: column;
       justify-content: center;
       .frame {
+        @include box-shadow(rgba($color-black, .5));
         position: relative;
         max-width: 800px;
         margin: 0 auto;
@@ -277,11 +286,12 @@ button:focus {
         text-align: center;
         overflow: hidden;
         cursor: pointer;
-        transition: all 0.5s ease-in-out;;
+        transition: all 0.5s ease-in-out;
       	-webkit-backface-visibility: hidden;
       	-moz-backface-visibility: hidden;
       	backface-visibility: hidden;
         .ui.header {
+          @include text-shadow(rgba($color-black, .5));
           display: inline-block;
         	width: 100%;
         	height: 100%;
@@ -306,6 +316,7 @@ button:focus {
           }
         }
         .more {
+          @include text-shadow(rgba($color-black, .5));
           position: absolute;
           left: 0;
         	top: 150%;
@@ -655,6 +666,7 @@ button:focus {
       background: none;
       border-radius: 0;
       box-shadow: none;
+      transition: all 0.5s ease-in-out;
       .content {
         padding: 0;
       }
@@ -933,15 +945,15 @@ $bg: #121212;
       }
     }
     .frame {
-      border-color: $color-zu !important;
+      border-color: $color-white !important;
       .header {
-        color: $color-zu !important;
+        color: $color-white !important;
       }
       .more {
         color: $color-white !important;
       }
       &:hover {
-        border-color: $color-zu !important;
+        border-color: $color-white !important;
         background: rgba($color-zu, .5) !important;
       }
     }
@@ -1002,7 +1014,7 @@ $bg: #121212;
         color: $color-white !important;
       }
       &:hover {
-        border-color: $color-flight !important;
+        border-color: $color-white !important;
         background: rgba($color-flight, .5) !important;
       }
     }
@@ -1063,7 +1075,7 @@ $bg: #121212;
         color: $color-white !important;
       }
       &:hover {
-        border-color: $color-2t !important;
+        border-color: $color-white !important;
         background: rgba($color-2t, .5) !important;
       }
     }
@@ -1118,7 +1130,7 @@ $bg: #121212;
       }
     }
     .frame {
-      border-color: $color-sokolniki !important;
+      border-color: $color-white !important;
       .header {
         color: $color-sokolniki !important;
       }
@@ -1126,7 +1138,7 @@ $bg: #121212;
         color: $color-white !important;
       }
       &:hover {
-        border-color: $color-sokolniki !important;
+        border-color: $color-white !important;
         background: rgba($color-sokolniki, .5) !important;
       }
     }
@@ -1187,7 +1199,7 @@ $bg: #121212;
         color: $color-white !important;
       }
       &:hover {
-        border-color: $color-fazer !important;
+        border-color: $color-white !important;
         background: rgba($color-fazer, .5) !important;
       }
     }
@@ -1248,7 +1260,7 @@ $bg: #121212;
         color: $color-white !important;
       }
       &:hover {
-        border-color: $color-testogenon !important;
+        border-color: $color-white !important;
         background: rgba($color-testogenon, .5) !important;
       }
     }
@@ -1650,6 +1662,7 @@ $bg: #121212;
       stroke: $color-flight;
     }
   }
+
   &.fp-viewing-0 {
     .fp-verticalArrow.fp-up {
       display: none !important;
@@ -1749,7 +1762,7 @@ $bg: #121212;
       }
     }
     .info-bg {
-      background: rgba($color-flight, .5);
+      background: rgba($color-flight, .7);
     }
     .ui.card {
       opacity: 1;
@@ -1765,6 +1778,7 @@ $bg: #121212;
       display: none !important;
     }
     .ui.card {
+      opacity: 1 !important;
       .header,
       .meta,
       .description {
