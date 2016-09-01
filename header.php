@@ -92,11 +92,7 @@
 							<a class="item" href="/#team">Мы</a>
 							<a class="item" href="/#contact">Контакты</a>
 						</div>
-						<div class="right phone hidden">
-							<div class="item">
-								<a href="tel:+78124020029">+7 (812) 402-00-29</a>
-							</div>
-						</div>
+						<a class="item right phone" href="tel:+78124020029" >+7 (812) 402-00-29</a>
 					</div>
 				</nav>
 

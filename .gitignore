@@ -1,60 +1,74 @@
-# folders and files to be ignored by git
-
+# Packages #
 ############
-## Bones
-############
+*.7z
+*.dmg
+*.gz
+*.bz2
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.tgz
+*.map
 
-Bones.esproj/
-
-############
-## IDEs
-############
-
-*.pydevproject
-.project
-.metadata
-*.swp
-*~.nib
-local.properties
-.classpath
-.settings/
-.loadpath
-.externalToolBuilders/
-*.launch
-.cproject
-.buildpath
-nbproject/
-
-############
-## OSes
-############
-
-[Tt]humbs.db
-[Dd]esktop.ini
-*.DS_store
-.DS_store?
-
-############
-## Misc
-############
-
-bin/
-tmp/
-*.tmp
-*.bak
+# Logs and databases #
+######################
 *.log
-*.[Cc]ache
-*.cpr
-*.orig
-*.php.in
-.idea/
-temp/
+*.sql
+
+# OS generated files #
+######################
+**.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
 ._*
-.Trashes
 
-.svn
+# Vim generated files #
+######################
+*.un~
 
+# SASS #
+##########
+**/.sass-cache
+**/.sass-cache/*
+**/.map
+
+# Composer #
+##########
+vendors/composer/
+!assets/js/vendor/
+wpcs/
+composer.lock
+
+# Bower #
+##########
+assets/bower_components/*
+
+# Codekit #
+##########
+/codekit-config.json
 *.codekit
-*.scssc
+**.codekit-cache/*
 
+# NPM #
+##########
+node_modules
+
+# Compiled Files and Build Dirs #
+##########
+/README.html
+/build/
+
+# PhpStrom Project Files #
+.idea/
+library/vendors/composer
+assets/img/.DS_Store
+assets/sass/HTML
+assets/sass/Rails
+HTML
+Rails
+
+# Atom Files #
 .remote-sync.json

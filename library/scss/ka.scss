@@ -7,7 +7,6 @@ $color-pink: rgb(236,0,140);
 $color-grey: rgb(88,88,88);
 $color-zu: rgb(42,72,59);
 $color-flight: rgb(0,51,130);
-// $color-flight: rgb(9,78,147);
 $color-2t: rgb(125,211,243);
 $color-2tb:   rgb(72,61,54);
 $color-sokolniki: rgb(32,79,38);
@@ -2164,7 +2163,7 @@ $bg: #121212;
     }
 
   }
-  &.fp-viewing-11 {
+  &.fp-viewing-10 {
     .fp-verticalArrow.fp-down {
       display: none !important;
     }
@@ -2628,22 +2627,22 @@ $bg: #121212;
   }
 
   #page-fazer .section.case .info-bg {
-    background: $color-fazer-main;
+    background: $color-fazer;
     opacity: 0.8;
   }
 
   #page-2t .section.case .info-bg {
-    background: $color-2t-main;
+    background: $color-2t;
     opacity: 0.8;
   }
 
   #page-flight .section.case .info-bg {
-    background: $color-flight-main;
+    background: $color-flight;
     opacity: 0.8;
   }
 
   #page-sokolniki .section.case .info-bg {
-    background: $color-sokolniki-main;
+    background: $color-sokolniki;
     opacity: 0.8;
   }
 
@@ -2703,22 +2702,22 @@ $bg: #121212;
   }
 
   #page-fazer .section.case .info-bg {
-    background: $color-fazer-main;
+    background: $color-fazer;
     opacity: 0.8;
   }
 
   #page-2t .section.case .info-bg {
-    background: $color-2t-main;
+    background: $color-2t;
     opacity: 0.8;
   }
 
   #page-flight .section.case .info-bg {
-    background: $color-flight-main;
+    background: $color-flight;
     opacity: 0.8;
   }
 
   #page-sokolniki .section.case .info-bg {
-    background: $color-sokolniki-main;
+    background: $color-sokolniki;
     opacity: 0.8;
   }
 
