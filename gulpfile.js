@@ -173,10 +173,16 @@ gulp.task( 'browser-sync', function() {
     .pipe( sourcemaps.init() )
     .pipe( sass( {
       errLogToConsole: true,
+      noCache: true,
       outputStyle: 'compact',
       //outputStyle: 'compressed',
       // outputStyle: 'nested',
       // outputStyle: 'expanded',
+      includePaths: [
+        './bower_components/bourbon/app/assets/stylesheets',
+        './bower_components/neat/app/assets/stylesheets',
+        './bower_components/bitters/app/assets/stylesheets',
+      ],
       precision: 10
     } ) )
     .on('error', console.error.bind(console))

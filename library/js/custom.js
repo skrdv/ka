@@ -169,7 +169,7 @@ jQuery(document).ready(function($) {
 	// Home
 	if ($('body').hasClass('home')) {
 
-		jQuery('#home').fullpage({
+		$('#home').fullpage({
 			anchors: ['portfolio', 'services', 'team', 'contact'],
 			menu: '#nav',
 			scrollingSpeed: 1000,
