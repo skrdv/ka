@@ -84,6 +84,9 @@ button:focus {
 // Navigation
 #nav {
 	top: 20px;
+  background: none;
+  box-shadow: none;
+  border: none;
   .menu {
     visibility: hidden;
     margin-top: 4px;
@@ -149,7 +152,6 @@ button:focus {
       -webkit-transform-origin: 50% 50%;
       -moz-transform-origin: 50% 50%;
       -ms-transform-origin: 50% 50%;
-      -o-transform-origin: 50% 50%;
       transform-origin: 50% 50%;
   }
   .browse-inner:before {
@@ -172,7 +174,6 @@ button:focus {
       -webkit-transform: rotate3d(0, 0, 1, 45deg);
       -moz-transform: rotate3d(0, 0, 1, 45deg);
       -ms-transform: rotate3d(0, 0, 1, 45deg);
-      -o-transform: rotate3d(0, 0, 1, 45deg);
       transform: rotate3d(0, 0, 1, 45deg);
   }
   .browse-active .browse-inner:after {
@@ -180,7 +181,6 @@ button:focus {
       -webkit-transform: rotate3d(0, 0, 1, -45deg);
       -moz-transform: rotate3d(0, 0, 1, -45deg);
       -ms-transform: rotate3d(0, 0, 1, -45deg);
-      -o-transform: rotate3d(0, 0, 1, -45deg);
       transform: rotate3d(0, 0, 1, -45deg);
   }
   .browse-active .browse-inner:before,

@@ -8,12 +8,7 @@
 	<meta name="HandheldFriendly" content="True">
 	<meta name="MobileOptimized" content="360">
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-	<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-	<link rel="manifest" href="/manifest.json">
-	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ec008c">
-	<meta name="theme-color" content="#ec008c">
+	<link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
 	<?php wp_head(); ?>
 	<script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -78,7 +73,7 @@
 				<nav id="nav" class="ui fixed menu" role="navigation">
 					<div class="ui container">
 						<a class="logo" href="<?php echo get_site_url(); ?>">
-							<?php include( 'library/svg/logo_80.svg' ); ?>
+							<?php include( 'library/svg/logo.svg' ); ?>
 						</a>
 						<div class="item">
 							<button class="browse">
