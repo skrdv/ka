@@ -1,5 +1,5 @@
 /******************************************************************
-Site Name: ka
+Site Name: KA
 Author: skrdv
 
 Stylesheet: Main Stylesheet
@@ -13,11 +13,11 @@ http://thesassway.com/advanced/modular-css-naming-conventions
 VENDOR
 *********************/
 
-@import "../../bower_components/bourbon/app/assets/stylesheets/bourbon";
-@import "../../bower_components/neat/app/assets/stylesheets/neat";
-@import "../../bower_components/bitters/app/assets/stylesheets/bitters";
-@import "../../bower_components/semantic/semantic";
-
+// @import "../../bower_components/bourbon/app/assets/stylesheets/bourbon";
+// @import "../../bower_components/neat/app/assets/stylesheets/neat";
+// @import "../../bower_components/bitters/core/base";
+@import "../../bower_components/semantic-ui-sass/app/assets/stylesheets/semantic-ui";
+@import "../../bower_components/fullpage.js/jquery.fullPage.scss";
 
 /*********************
 CUSTOM

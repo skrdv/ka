@@ -1,167 +1,169 @@
 
-var gulp = require('gulp');
-var plugins = require('gulp-load-plugins')();
+// General
+var gulp        = require('gulp');
+var bower       = require('gulp-bower');
+var notify      = require('gulp-notify');
+var rename       = require('gulp-rename');
+var browserSync = require('browser-sync');
+var reload      = browserSync.reload;
+
+// Styles
+var sass         = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
+var sourcemaps = require('gulp-sourcemaps');
+var uglifycss = require('gulp-uglifycss');
+var filter       = require('gulp-filter');
+
+// scripts
+var jshint = require('gulp-jshint');
+var stylish = require('jshint-stylish');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+var karma = require('gulp-karma');
+
 
 var config = {
-      scss: {
-        src: './library/scss/style.scss',
-        out: './library/css/'
-      },
-      js: {
-        custom: './library/js/custom/*.js',
-        vendor: './bower_components/jquery/jquery.js',
-                './bower_components/fullpage/jquery.fullPage.js',
-                './bower_components/jquery-backstretch/jquery.backstretch.js',
-           out: './library/js/'
-      },
-      img
+  project:  'ka',
+  url:      'ka.skrdv.com',
+  bower:    './bower_components',
+  styles: {
+    files:  './library/scss/style.scss',
+    custom:  './library/scss/ka.scss',
+    build:    './library/css'
+  },
+  scripts: {
+    files:  ['./bower_components/jquery/jquery.js',
+             './bower_components/jquery-backstretch/jquery.backstretch.js'],
+    custom: ['./bower_components/fullpage.js/dist/jquery.fullpage.js',
+            './library/js/custom/*.js'],
+    build:  './library/js'
+  },
+  img: {
+    raw:    './library/img/raw/**/*.{png,jpg,gif}',
+    build:  './library/img'
+  },
+  svg: {
+    raw:    './library/svg/raw/**/*.{svg}',
+    build:  './library/svg'
+  },
+  watch: {
+    scss:   './library/scss/**/*.scss',
+    js:     './library/js/custom/*.js',
+    php:    './**/*.php'
+  }
 };
 
-
-
-
-var scssSRC                = './library/scss/style.scss'; // Path to main .scss file.
-var scssDST        = './'; // Path to place the compiled CSS file.
-
-
-var jsVendorSRC             = './library/js/vendors/**/*.js'; // Path to JS vendor folder.
-var jsVendorDestination     = './library/js/'; // Path to place the compiled JS vendors file.
-var jsVendorFile            = 'vendors'; // Compiled JS vendors file name.
-
-
-
-var jsCustomSRC             = './library/js/custom/*.js'; // Path to JS custom scripts folder.
-var jsCustomDestination     = './library/js/'; // Path to place the compiled JS custom scripts file.
-var jsCustomFile            = 'custom'; // Compiled JS custom file name.
-
-
-
-var imagesSRC               = './library/img/raw/**/*.{png,jpg,gif,svg}'; // Source folder of images which should be optimized.
-var imagesDestination       = './library/img/'; // Destination folder of optimized images. Must be different from the imagesSRC folder.
-
-
-var styleWatchFiles         = './library/scss/**/*.scss'; // Path to all *.scss files inside css folder and inside them.
-var vendorJSWatchFiles      = './library/js/vendors/*.js'; // Path to all vendor JS files.
-var customJSWatchFiles      = './library/js/custom/*.js'; // Path to all custom JS files.
-var projectPHPWatchFiles    = './**/*.php'; // Path to all PHP files.
-
-
-
-const AUTOPREFIXER_BROWSERS = [
-    'last 2 version',
-    '> 1%',
-    'ie >= 9',
-    'ie_mob >= 10',
-    'ff >= 30',
-    'chrome >= 34',
-    'safari >= 7',
-    'opera >= 23',
-    'ios >= 7',
-    'android >= 4',
-    'bb >= 10'
-  ];
-
-// STOP Editing Project Variables.
-
-
-
-
-
-
-gulp.task( 'browser-sync', function() {
-  browserSync.init( {
-
-    // For more options
-    // @link http://www.browsersync.io/docs/options/
-
-    // Project URL.
-    proxy: projectURL,
-
-    // `true` Automatically open the browser with BrowserSync live server.
-    // `false` Stop the browser from automatically opening.
-    open: true,
-
-    // Inject CSS changes.
-    // Commnet it to reload browser for every CSS change.
-    injectChanges: true,
-
-    // Use a specific port (instead of the one auto-detected by Browsersync).
-    // port: 7000,
-
-  } );
+gulp.task('bower', function() {
+  return bower()
+    .pipe(gulp.dest(config.bower))
 });
 
+gulp.task('icons', function() {
+  return gulp.src(config.bower + '/fontawesome/fonts/**.*')
+    .pipe(gulp.dest('./library/fonts'));
+});
 
- gulp.task('styles', function () {
-    gulp.src( styleSRC )
-    .pipe( sourcemaps.init() )
-    .pipe( sass( {
+gulp.task('browser-sync', function() {
+  var files = [
+    '**/*.php',
+    '**/*.{png,jpg,gif}'
+  ];
+  browserSync.init(files, {
+    server: {
+      baseDir: "./"
+    },
+    proxy: config.url,
+    open: true,
+    notify: true,
+    injectChanges: true,
+  });
+});
+
+gulp.task('cssVendor', function () {
+  return gulp.src(config.styles.files)
+    .pipe(concat('vendors.js'))
+    .pipe(sourcemaps.init())
+    .pipe(sass({
       errLogToConsole: true,
-      noCache: true,
-      outputStyle: 'compact',
-      //outputStyle: 'compressed',
-      // outputStyle: 'nested',
-      // outputStyle: 'expanded',
+      outputStyle: 'nested',
       precision: 10
-    } ) )
+    }))
     .on('error', console.error.bind(console))
-    .pipe( sourcemaps.write( { includeContent: false } ) )
-    .pipe( sourcemaps.init( { loadMaps: true } ) )
-    .pipe( autoprefixer( AUTOPREFIXER_BROWSERS ) )
-
-    .pipe( sourcemaps.write ( styleDestination ) )
-    .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
-    .pipe( gulp.dest( styleDestination ) )
-
-    .pipe( filter( '**/*.css' ) ) // Filtering stream to only css files
-    .pipe( mmq( { log: true } ) ) // Merge Media Queries only for .min.css version.
-
-    .pipe( browserSync.stream() ) // Reloads style.css if that is enqueued.
-
-    .pipe( rename( { suffix: '.min' } ) )
-    .pipe( minifycss( {
-      maxLineLen: 10
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
     }))
-    .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
-    .pipe( gulp.dest( styleDestination ) )
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(config.styles.build))
+    .pipe(filter('**/*.css'))
+    .pipe(reload({stream:true}))
+    .pipe(rename({suffix:'.min'}))
+    .pipe(uglifycss({
+      uglyComments: true
+    }))
+    .pipe(gulp.dest(config.styles.build))
+    .pipe(reload({stream:true}))
+    .pipe(notify({message: 'TASK: "cssVendor" Completed!', onLast: true }))
+});
 
-    .pipe( filter( '**/*.css' ) ) // Filtering stream to only css files
-    .pipe( browserSync.stream() )// Reloads style.min.css if that is enqueued.
-    .pipe( notify( { message: 'TASK: "styles" Completed! 💯', onLast: true } ) )
- });
+gulp.task('cssCustom', function () {
+  return gulp.src(config.styles.custom)
+    .pipe(sourcemaps.init())
+    .pipe(sass({
+      errLogToConsole: true,
+      outputStyle: 'nested',
+      precision: 10
+    }))
+    .on('error', console.error.bind(console))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(config.styles.build))
+    .pipe(filter('**/*.css'))
+    .pipe(reload({stream:true}))
+    .pipe(rename({suffix:'.min'}))
+    .pipe(uglifycss({
+      uglyComments: true
+    }))
+    .pipe(gulp.dest(config.styles.build))
+    .pipe(reload({stream:true}))
+    .pipe(notify({message: 'TASK: "cssCustom" Completed!', onLast: true }))
+});
 
-
-
- gulp.task( 'vendorsJs', function() {
-  gulp.src( jsVendorSRC )
-    .pipe( concat( jsVendorFile + '.js' ) )
-    .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
-    .pipe( gulp.dest( jsVendorDestination ) )
-    .pipe( rename( {
-      basename: jsVendorFile,
+gulp.task( 'jsVendor', function() {
+  return gulp.src(config.scripts.files)
+    .pipe(concat('vendors.js'))
+    .pipe(gulp.dest(config.scripts.build))
+    .pipe(rename({
       suffix: '.min'
     }))
-    .pipe( uglify() )
-    .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
-    .pipe( gulp.dest( jsVendorDestination ) )
-    .pipe( notify( { message: 'TASK: "vendorsJs" Completed! 💯', onLast: true } ) );
- });
+    .pipe(uglify())
+    .pipe(gulp.dest(config.scripts.build))
+    .pipe(notify({message: 'TASK: "jsVendor" completed!', onLast: true }));
+});
 
-
- gulp.task( 'customJS', function() {
-    gulp.src( jsCustomSRC )
-    .pipe( concat( jsCustomFile + '.js' ) )
-    .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
-    .pipe( gulp.dest( jsCustomDestination ) )
-    .pipe( rename( {
-      basename: jsCustomFile,
+gulp.task( 'jsCustom', function() {
+    gulp.src(config.scripts.custom)
+    .pipe(concat('scripts.js'))
+    .pipe(gulp.dest(config.scripts.build))
+    .pipe(rename({
       suffix: '.min'
     }))
-    .pipe( uglify() )
-    .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
-    .pipe( gulp.dest( jsCustomDestination ) )
-    .pipe( notify( { message: 'TASK: "customJs" Completed! 💯', onLast: true } ) );
+    .pipe(uglify())
+    .pipe(gulp.dest(config.scripts.build))
+    .pipe( notify({ message: 'TASK: "jsCustom" completed!', onLast: true }));
  });
+
+ gulp.task('jsTest', function() {
+ 	return gulp.src([paths.test.input].concat([paths.test.spec]))
+ 		.pipe(karma({ configFile: paths.test.karma }))
+ 		.on('error', function(err) { throw err; });
+ });
+
+
+
 
 
  gulp.task( 'images', function() {

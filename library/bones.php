@@ -1,37 +1,10 @@
 <?php
-/* Welcome to Bones :)
-This is the core Bones file where most of the
-main functions & features reside. If you have
-any custom functions, it's best to put them
-in the functions.php file.
-
-Developed by: Eddie Machado
-URL: http://themble.com/bones/
-
-  - head cleanup (remove rsd, uri links, junk css, ect)
-  - enqueueing scripts & styles
-  - theme support functions
-  - custom menu output & fallbacks
-  - related post function
-  - page-navi function
-  - removing <p> from around images
-  - customizing the post excerpt
-
-*/
-
-/*********************
-WP_HEAD GOODNESS
-The default wordpress head is
-a mess. Let's clean it up by
-removing all the junk we don't
-need.
-*********************/
 
 function bones_head_cleanup() {
 	// category feeds
-	// remove_action( 'wp_head', 'feed_links_extra', 3 );
+	remove_action( 'wp_head', 'feed_links_extra', 3 );
 	// post and comment feeds
-	// remove_action( 'wp_head', 'feed_links', 2 );
+	remove_action( 'wp_head', 'feed_links', 2 );
 	// EditURI link
 	remove_action( 'wp_head', 'rsd_link' );
 	// windows live writer
@@ -61,9 +34,7 @@ function bones_head_cleanup() {
 	remove_action('wp_head', 'wp_shortlink_wp_head');
 	remove_action('wp_head', 'adjacent_posts_rel_link_wp_head');
 
-
-
-} /* end bones head cleanup */
+}
 
 // A better title
 // http://www.deluxeblogtips.com/2012/03/better-title-meta-tag.html
@@ -131,10 +102,9 @@ function bones_gallery_style($css) {
 SCRIPTS & ENQUEUEING
 *********************/
 
-// loading modernizr and jquery, and reply script
 function bones_scripts_and_styles() {
 
-  global $wp_styles; // call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
+  global $wp_styles;
 
   if (!is_admin()) {
 
@@ -183,15 +153,19 @@ function bones_scripts_and_styles() {
 
 		// wp_dequeue_style('contact-form-7-css');
 
-		wp_register_style( 'style-css', get_stylesheet_directory_uri() . '/style.css', array(), '', 'all' );
-		// wp_register_script( 'fullpage-js', get_stylesheet_directory_uri() . '/library/js/vendors/fullpage/jquery.fullpage.js', array( 'jquery' ), '', true );
-		wp_register_script( 'vendors-js', get_stylesheet_directory_uri() . '/library/js/vendors.js', array( 'jquery' ), '', true );
+		wp_register_style( 'style-css', get_stylesheet_directory_uri() . '/library/css/style.min.css', array(), '', 'all' );
+		wp_register_style( 'custom-css', get_stylesheet_directory_uri() . '/library/css/ka.min.css', array(), '', 'all' );
+
+		wp_register_script( 'vendors-js', get_stylesheet_directory_uri() . '/library/js/vendors.min.js', array( 'jquery' ), '', true );
+		wp_register_script( 'fullpage-js', get_stylesheet_directory_uri() . '/library/js/jquery.fullpage.js', array( 'jquery' ), '', true );
 		wp_register_script( 'custom-js', get_stylesheet_directory_uri() . '/library/js/custom.min.js', array( 'jquery' ), '', true );
 
-		// wp_enqueue_script( 'fullpage-js' );
-		wp_enqueue_script( 'vendors-js' );
-		wp_enqueue_script( 'custom-js' );
 		wp_enqueue_style('style-css');
+		wp_enqueue_style('custom-css');
+
+		wp_enqueue_script( 'vendors-js' );
+		wp_enqueue_script( 'fullpage-js' );
+		wp_enqueue_script( 'custom-js' );
 
 	}
 }
