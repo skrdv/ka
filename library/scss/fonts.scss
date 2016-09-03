@@ -3,37 +3,41 @@
         Typography
 *******************************/
 
-@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=cyrillic';
+@include font-face('Lato Light', '/assets/fonts/lato-light-webfont');
+@include font-face('Lato Regular', '/assets/fonts/lato-regular-webfont');
+@include font-face('Lato Medium Italic', '/assets/fonts/lato-mediumitalic-webfont');
 
-@font-face {
-    font-family: 'Lato Regular';
-    src: url('../../library/fonts/lato-regular-webfont.eot');
-    src: url('../../library/fonts/lato-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../../library/fonts/lato-regular-webfont.woff2') format('woff2'),
-         url('../../library/fonts/lato-regular-webfont.woff') format('woff'),
-         url('../../library/fonts/lato-regular-webfont.svg#latoregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+//@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=cyrillic';
 
-@font-face {
-    font-family: 'Lato Medium Italic';
-    src: url('../../library/fonts/lato-mediumitalic-webfont.eot');
-    src: url('../../library/fonts/lato-mediumitalic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../../library/fonts/lato-mediumitalic-webfont.woff2') format('woff2'),
-         url('../../library/fonts/lato-mediumitalic-webfont.woff') format('woff'),
-         url('../../library/fonts/lato-mediumitalic-webfont.svg#latomedium_italic') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Lato Light';
-    src: url('../../library/fonts/lato-light-webfont.eot');
-    src: url('../../library/fonts/lato-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../../library/fonts/lato-light-webfont.woff2') format('woff2'),
-         url('../../library/fonts/lato-light-webfont.woff') format('woff'),
-         url('../../library/fonts/lato-light-webfont.svg#latolight') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+// @font-face {
+//     font-family: 'Lato Regular';
+//     src: url('/assets/fonts/lato-regular-webfont.eot');
+//     src: url('/assets/fonts/lato-regular-webfont.eot?#iefix') format('embedded-opentype'),
+//          url('/assets/fonts/lato-regular-webfont.woff2') format('woff2'),
+//          url('/assets/fonts/lato-regular-webfont.woff') format('woff'),
+//          url('/assets/fonts/lato-regular-webfont.svg#latoregular') format('svg');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+//
+// @font-face {
+//     font-family: 'Lato Medium Italic';
+//     src: url('/assets/fonts/lato-mediumitalic-webfont.eot');
+//     src: url('/assets/fonts/lato-mediumitalic-webfont.eot?#iefix') format('embedded-opentype'),
+//          url('/assets/fonts/lato-mediumitalic-webfont.woff2') format('woff2'),
+//          url('/assets/fonts/lato-mediumitalic-webfont.woff') format('woff'),
+//          url('/assets/fonts/lato-mediumitalic-webfont.svg#latomedium_italic') format('svg');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+//
+// @font-face {
+//     font-family: 'Lato Light';
+//     src: url('/assets/fonts/lato-light-webfont.eot');
+//     src: url('/assets/fonts/lato-light-webfont.eot?#iefix') format('embedded-opentype'),
+//          url('/assets/fonts/lato-light-webfont.woff2') format('woff2'),
+//          url('/assets/fonts/lato-light-webfont.woff') format('woff'),
+//          url('/assets/fonts/lato-light-webfont.svg#latolight') format('svg');
+//     font-weight: normal;
+//     font-style: normal;
+// }

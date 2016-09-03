@@ -175,7 +175,7 @@
 				<div class="slide feedback" data-bs="/wp-content/uploads/contact_form.jpg">
 
 							<div class="ui doubling stackable grid container">
-								<div class="six wide column">
+								<div class="eight wide column">
 
 									<div class="ui card">
 										<div class="content">
@@ -187,7 +187,7 @@
 									</div>
 
 								</div>
-								<div class="ten wide column">
+								<div class="eight wide column">
 
 									<div class="ui card big">
 										<div class="content">

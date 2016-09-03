@@ -202,19 +202,19 @@ jQuery(document).ready(function($) {
 
 		// Services
 		$('.ui.card.pr').on('hover', function() {
-			$('.ui.card.big').find('.pr').transition('fade');
+			// $('.ui.card.big').find('.pr').transition('fade');
 		});
 
 		$('.ui.card.brand').on('hover', function() {
-			$('.ui.card.big').find('.brand').transition('fade');
+			// $('.ui.card.big').find('.brand').transition('fade');
 		});
 
 		$('.ui.card.adv').on('hover', function() {
-			$('.ui.card.big').find('.adv').transition('fade');
+			// $('.ui.card.big').find('.adv').transition('fade');
 		});
 
 		$('.ui.card.digital').on('hover', function() {
-			$('.ui.card.big').find('.digital').transition('fade');
+			// $('.ui.card.big').find('.digital').transition('fade');
 		});
 
 		// Team
@@ -246,8 +246,8 @@ jQuery(document).ready(function($) {
 
 	// Navigation
 	$('#nav .browse').on('click', function() {
-  	$(this).toggleClass('browse-active');
-		$('#nav .menu').transition('fade');
+  	$(this).toggleClass('action');
+		$('#nav .menu').toggleClass('action');
 		$('.fp-verticalArrow.fp-up').toggleClass('hidden');
 	});
 

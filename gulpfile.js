@@ -5,6 +5,10 @@ var bower       = require('gulp-bower');
 var notify      = require('gulp-notify');
 var rename       = require('gulp-rename');
 
+
+// Load plugins
+//var $ = require('gulp-load-plugins')();
+
 // Styles
 var sass         = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
@@ -32,9 +36,12 @@ var config = {
     files:  ['./bower_components/jquery/jquery.js',
             './bower_components/fullpage.js/dist/jquery.fullpage.js',
             './bower_components/jquery-backstretch/jquery.backstretch.js',
-            './bower_components/semantic-ui-sass/app/assets/javascripts/semantic-ui.js',
             './library/js/custom.js'],
     build:  '../../../assets/js'
+  },
+  fonts: {
+    files:  '[./library/fonts/**]',
+    build:  '../../../assets/fonts'
   },
   img: {
     files:    './library/img/raw/**/*.{png,jpg,gif}',
@@ -71,7 +78,7 @@ gulp.task('styles', function () {
       uglyComments: true
     }))
     .pipe(gulp.dest(config.styles.build))
-    .pipe(notify({message: 'TASK: "styles" completed!', onLast: true }))
+    .pipe(notify({message: 'task: "styles" completed!', onLast: true }))
 });
 
 gulp.task( 'scripts', function() {
@@ -83,7 +90,28 @@ gulp.task( 'scripts', function() {
     }))
     .pipe(uglify())
     .pipe(gulp.dest(config.scripts.build))
-    .pipe(notify({message: 'TASK: "scripts" completed!', onLast: true }));
+    .pipe(notify({message: 'task: "scripts" completed!', onLast: true }));
+});
+
+// Fonts
+gulp.task('fonts', function() {
+   gulp.src('./library/fonts/**/*.{ttf,woff,woff2,eot,svg}')
+   .pipe(gulp.dest('./fonts'))
+   .pipe(notify({message: 'task: "fonts" completed!', onLast: true }));
+});
+
+// Images
+gulp.task('images', function () {
+    return gulp.src([
+    		'app/images/**/*',
+    		'app/lib/images/*'])
+        .pipe($.cache($.imagemin({
+            optimizationLevel: 3,
+            progressive: true,
+            interlaced: true
+        })))
+        .pipe(gulp.dest('dist/images'))
+        .pipe($.size());
 });
 
  gulp.task( 'images', function() {
@@ -95,13 +123,10 @@ gulp.task( 'scripts', function() {
           svgoPlugins: [{removeViewBox: false}]
         } ) )
     .pipe(gulp.dest( imagesDestination ))
-    .pipe( notify( { message: 'TASK: "images" Completed! 💯', onLast: true } ) );
+    .pipe( notify( { message: 'task: "images" Completed! 💯', onLast: true } ) );
  });
 
- gulp.task('icons', function() {
-   return gulp.src(config.bower + '/fontawesome/fonts/**.*')
-     .pipe(gulp.dest('./library/fonts'));
- });
+
 
 
  gulp.task( 'translate', function () {
@@ -116,9 +141,16 @@ gulp.task( 'scripts', function() {
              team          : team
          } ))
         .pipe(gulp.dest(translatePath))
-        .pipe( notify( { message: 'TASK: "translate" Completed! 💯', onLast: true } ) )
+        .pipe( notify( { message: 'task: "translate" Completed! 💯', onLast: true } ) )
 
  });
+
+ // Clean
+ gulp.task('clean', function () {
+    //  return gulp.src(['dist/styles', 'dist/scripts', 'dist/images'], { read: false }).pipe($.clean());
+ });
+
+gulp.task('build', ['styles', 'scripts']);
 
  gulp.task( 'default', ['styles', 'vendorsJs', 'customJS', 'images', 'browser-sync'], function () {
   gulp.watch( projectPHPWatchFiles, reload ); // Reload on PHP file changes.
