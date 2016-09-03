@@ -1,27 +1,25 @@
 
 // General
-var gulp        = require('gulp');
-var bower       = require('gulp-bower');
-var notify      = require('gulp-notify');
-var rename       = require('gulp-rename');
-
+var gulp = require('gulp');
+var bower = require('gulp-bower');
+var notify = require('gulp-notify');
+var rename = require('gulp-rename');
 
 // Load plugins
 //var $ = require('gulp-load-plugins')();
 
 // Styles
-var sass         = require('gulp-sass');
+var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var uglifycss = require('gulp-uglifycss');
-var filter       = require('gulp-filter');
+var filter = require('gulp-filter');
 
 // Scripts
 var jshint = require('gulp-jshint');
 var stylish = require('jshint-stylish');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
-var karma = require('gulp-karma');
 
 
 var config = {

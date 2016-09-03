@@ -36,9 +36,9 @@
 
 				<section class="section services">
 
-					<div class="ui three column doubling stackable grid container">
+					<div class="container">
 
-						<div class="two wide column">
+						<div class="two column">
 							<div class="ui card pr">
   							<div class="content">
     							<div class="header">PR</div>
@@ -49,7 +49,7 @@
 							</div>
 						</div>
 
-						<div class="two wide column">
+						<div class="two column">
 							<div class="ui card brand">
   							<div class="content">
     							<div class="header">Branding</div>
@@ -60,7 +60,7 @@
 							</div>
 						</div>
 
-						<div class="two wide column">
+						<div class="two column">
 							<div class="ui card adv">
   							<div class="content">
     							<div class="header">Реклама</div>
@@ -71,7 +71,7 @@
 							</div>
 						</div>
 
-						<div class="two wide column">
+						<div class="two column">
 							<div class="ui card digital">
   							<div class="content">
     							<div class="header">Digital</div>
@@ -82,9 +82,7 @@
 							</div>
 						</div>
 
-						<div class="two wide column"></div>
-
-						<div class="six wide column">
+						<div class="four column">
 							<div class="ui card big">
   							<div class="content">
     							<div class="header">Услуги</div>
@@ -127,8 +125,8 @@
 
 					<div class="slide contact" data-bs="/wp-content/uploads/contact_circle.jpg">
 
-							<div class="ui doubling stackable grid container">
-						  	<div class="eight wide column">
+							<div class="container">
+						  	<div class="six column">
 
 									<div class="ui card">
 	  								<div class="content">
@@ -145,7 +143,7 @@
 	  							</div>
 
 								</div>
-								<div class="eight wide column">
+								<div class="six column">
 
 									<div class="ui card big">
 										<div class="content">
@@ -166,7 +164,7 @@
 						<header class="frame">
 							<div class="ui header">Мы здесь
 								<div class="sub header">Каменноостровский пр. 12 А 3-Н</div>
-							</a>
+							</div>
 						</header>
 					</div>
 
@@ -174,8 +172,8 @@
 
 				<div class="slide feedback" data-bs="/wp-content/uploads/contact_form.jpg">
 
-							<div class="ui doubling stackable grid container">
-								<div class="eight wide column">
+							<div class="container">
+								<div class="six column">
 
 									<div class="ui card">
 										<div class="content">
@@ -187,7 +185,7 @@
 									</div>
 
 								</div>
-								<div class="eight wide column">
+								<div class="six column">
 
 									<div class="ui card big">
 										<div class="content">

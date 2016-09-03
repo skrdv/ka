@@ -1,51 +1,26 @@
-/******************************************************************
-Site Name:
-Author:
+// Fonts
+@include font-face('Lato Light', '/assets/fonts/lato-light-webfont');
+@include font-face('Lato Regular', '/assets/fonts/lato-regular-webfont');
+@include font-face('Lato Medium Italic', '/assets/fonts/lato-mediumitalic-webfont');
 
-Stylesheet: Variables
+// Typography
+$regular: "Lato Regular", sans-serif;
+$light: "Lato Light", sans-serif;
+$italic: "Lato Medium Italic", sans-serif;
 
-Here is where we declare all our variables like colors, fonts,
-base values, and defaults. We want to make sure this file ONLY
-contains variables that way our files don't get all messy.
-No one likes a mess.
+$base-font-family: $regular;
 
-******************************************************************/
+// Colors
+$color-white: rgb(255,255,255);
+$color-black: rgb(35,21,32);
+$color-pink: rgb(236,0,140);
+$color-grey: rgb(88,88,88);
 
-/*********************
-COLORS
-Need help w/ choosing your colors? Try this site out:
-http://0to255.com/
-*********************/
-
-$alert-yellow:      #ebe16f;
-$alert-red:         #fbe3e4;
-$alert-green:       #e6efc2;
-$alert-blue:        #d5edf8;
-
-$black:             #323944;
-$white:             #fff;
-
-$light-gray:        #f8f9fa;
-$gray:              #eaedf2;
-$text-color:        #5c6b80;
-$meta-gray:         #9fa6b4;
-
-$tan:               #eceee5;
-
-$green:             #7dd667;
-
-$bones-pink:        #f01d4f;
-$blue:              #2980b9;
-
-$link-color:        $bones-pink;
-$link-hover:        darken($link-color, 9%);
-
-$border-color:      #ccc;
-$disabled-gray:     #cfcfcf;
-
-
-/*
-Here's a great tutorial on how to
-use color variables properly:
-http://sachagreif.com/sass-color-variables/
-*/
+$color-zu: rgb(42,72,59);
+$color-flight: rgb(0,51,130);
+$color-2t: rgb(125,211,243);
+$color-2tb:   rgb(72,61,54);
+$color-sokolniki: rgb(32,79,38);
+$color-sokolnikib:   rgb(77,179,72);
+$color-fazer: rgb(247,145,0);
+$color-testogenon: rgb(175,179,165);

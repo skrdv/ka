@@ -1,18 +1,20 @@
-/*******************************
-         Site Overrides
-*******************************/
-$color-white: rgb(255,255,255);
-$color-black: rgb(35,21,32);
-$color-pink: rgb(236,0,140);
-$color-grey: rgb(88,88,88);
-$color-zu: rgb(42,72,59);
-$color-flight: rgb(0,51,130);
-$color-2t: rgb(125,211,243);
-$color-2tb:   rgb(72,61,54);
-$color-sokolniki: rgb(32,79,38);
-$color-sokolnikib:   rgb(77,179,72);
-$color-fazer: rgb(247,145,0);
-$color-testogenon: rgb(175,179,165);
+
+// @include font-face('Lato Light', '/assets/fonts/lato-light-webfont');
+// @include font-face('Lato Regular', '/assets/fonts/lato-regular-webfont');
+// @include font-face('Lato Medium Italic', '/assets/fonts/lato-mediumitalic-webfont');
+//
+// $color-white: rgb(255,255,255);
+// $color-black: rgb(35,21,32);
+// $color-pink: rgb(236,0,140);
+// $color-grey: rgb(88,88,88);
+// $color-zu: rgb(42,72,59);
+// $color-flight: rgb(0,51,130);
+// $color-2t: rgb(125,211,243);
+// $color-2tb:   rgb(72,61,54);
+// $color-sokolniki: rgb(32,79,38);
+// $color-sokolnikib:   rgb(77,179,72);
+// $color-fazer: rgb(247,145,0);
+// $color-testogenon: rgb(175,179,165);
 
 *, *:before, *:after {
     box-sizing: inherit;
@@ -50,6 +52,9 @@ button:focus {
 }
 
 
+
+
+
 // Mixins
 @mixin box-shadow($color) {
   box-shadow: 0px 0px 10px $color;
@@ -58,91 +63,53 @@ button:focus {
   text-shadow: 0px 0px 10px $color;
 }
 
-@mixin common {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border-radius: 5px;
-}
-$shadow: 0 0 20px rgba(0,0,0,.3) inset;
-$bg: #121212;
-
-.gradient {
-  position: relative;
-  margin: 0 auto;
-  border-radius: 5px;
-  background: linear-gradient(crimson, orangered, gold);
-  box-shadow: 0 0 20px rgba(0,0,0,.6), $shadow;
-  &:before,
-  &:after {
-    content: '';
-    @include common;
-    box-shadow: $shadow;
-    animation: opacity 12s infinite;
-    opacity: 0;
-    }
-  &:before {
-    background: linear-gradient(120deg,
-      yellow, yellowgreen, steelblue);
-    animation-delay: 4s;
-  }
-  &:after {
-    background: linear-gradient(240deg,
-      skyblue, violet, purple);
-    animation-delay: 8s;
-  }
-}
-@keyframes opacity {
-  30% {
-    opacity: .6;
-  }
-  60% {
-    opacity: 0;
-  }
-}
-
-.pulse {
-  animation-name: pulse;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: both;
-  animation-duration: 3s;
-  animation-delay: 6s;
-  transform: translateY(0%);
-}
-@keyframes pulse {
-  0%{
-    -webkit-transform:translateY(0%);
-    transform:translateY(0%);
-    }
-  10%{
-    -webkit-transform:translateY(10%);
-    transform:translateY(10%);
-  }
-  20%{
-    -webkit-transform:translateY(0%);
-    transform:translateY(0%);
-  }
-  80%{
-    -webkit-transform:translateY(0%);
-    transform:translateY(0%);
-  }
-  90%{
-    -webkit-transform:translateY(10%);
-    transform:translateY(10%);
-  }
-  100%{
-    -webkit-transform:translateY(0%);
-    transform:translateY(0%);
-  }
+@mixin font($font, $weight, $size, $height) {
+  font: $weight $size $font;
+  line-height: $height;
 }
 
 
+// Grid
+.container {
+  @include outer-container;
+  @include display(flex);
+  @include align-items(inherit);
+  @include flex-direction(inherit);
+  .two.column {
+    @include span-columns(2);
+  }
+  .four.column {
+    @include span-columns(4);
+  }
+  .six.column {
+    @include span-columns(6);
+  }
+}
+
+// .ui.grid {
+//   @include display(flex);
+//   @include flex-direction(row);
+//   @include align-items(stretch);
+//   @include flex-wrap(wrap);
+//   .column {
+//       position: relative;
+//       display: inline-block;
+//       vertical-align: top;
+//   }
+//   .two.wide.column {
+//       width: 12.5% !important;
+//   }
+//   .six.wide.column {
+//       width: 37.5% !important;
+//   }
+//   .eight.wide.column {
+//       width: 50% !important;
+//   }
+// }
 
 
+
+// Layout
 .hidden {
   display: none !important;
 }
@@ -153,46 +120,11 @@ $bg: #121212;
   overflow: hidden;
 }
 
+
+
 .footer {
   display: none;
-  min-height: 100px;
-  background: $color-black;
 }
-
-
-
-
-// Base Grid
-body {
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden;
-    min-width: 320px;
-    background: #FFFFFF;
-    font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    line-height: 1.4285em;
-    color: rgba(0, 0, 0, 0.87);
-    font-smoothing: antialiased;
-}
-
-
-// Container
-.ui.menu > .container {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: inherit;
-    align-items: inherit;
-    -ms-flex-direction: inherit;
-    flex-direction: inherit;
-}
-
-.ui.container {
-    display: block;
-    max-width: 100% !important;
-}
-
-
 
 
 // Frame
@@ -242,27 +174,6 @@ body {
   }
 }
 
-// Grid
-.ui.grid {
-  @include display(flex);
-  @include flex-direction(row);
-  @include align-items(stretch);
-  @include flex-wrap(wrap);
-  .column {
-      position: relative;
-      display: inline-block;
-      vertical-align: top;
-  }
-  .two.wide.column {
-      width: 12.5% !important;
-  }
-  .six.wide.column {
-      width: 37.5% !important;
-  }
-  .eight.wide.column {
-      width: 50% !important;
-  }
-}
 
 // Card
 .ui.card {
@@ -320,165 +231,7 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-// Layout
-
-#preloader {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 999;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background: $color-black;
-  .ui.text.loader {
-    font-family: 'Lato Regular';
-  }
-}
-
-
-// Navigation
-#nav {
-  position: fixed;
-  top: 20px;
-  left: 0px;
-  right: auto;
-  bottom: auto;
-  z-index: 101;
-  margin: 0em;
-  width: 100%;
-  .menu {
-    margin-top: 4px;
-    visibility: hidden;
-    .item {
-      opacity: 0;
-    }
-    &.action {
-      visibility: visible;
-      .item {
-        opacity: 1;
-      }
-    }
-  }
-  .logo {
-    .path path {
-      fill: $color-flight;
-      @include transition(all 0.5s ease-in-out);
-    }
-    .inverse path {
-      fill: transparent;
-      @include transition(all 0.5s ease-in-out);
-    }
-    &:hover {
-      .path path {
-        fill: transparent;
-      }
-      .inverse path {
-        fill: $color-flight;
-      }
-    }
-  }
-	.item {
-    position: relative;
-    padding: 0.92857143em 1.14285714em;
-    vertical-align: middle;
-    text-decoration: none;
-    display: inline-block;
-    padding-top: 0;
-    padding-bottom: 0;
-    height: 20px;
-    font-family: 'Lato Regular', sans-serif;
-		font-size: 1.4em;
-    font-weight: 600;
-    line-height: 1;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: $color-white;
-    @include transition(all 0.5s ease-in-out);
-    &.right {
-      margin-left: auto !important;
-      padding-right: 0;
-    }
-  }
-  .browse {
-      display: block;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-  }
-  .browse-inner {
-      position: relative;
-      display: inline-block;
-      vertical-align: middle;
-  }
-  .browse-inner,
-  .browse-inner:before,
-  .browse-inner:after {
-      width: 24px;
-      height: 3px;
-      background-color: $color-flight;
-      @include transition(all 0.5s ease-in-out);
-  }
-  .browse-inner:before,
-  .browse-inner:after {
-      content: '';
-      position: absolute;
-      left: 0;
-      @include transform-origin(50% 50%);
-  }
-  .browse-inner:before {
-      top: -0.4em;
-  }
-  .browse-inner:after {
-      top: 0.4em;
-  }
-  .browse:hover .browse-inner:before {
-      width: 80%;
-  }
-  .browse:hover .browse-inner:after {
-      width: 40%;
-  }
-  .browse.action .browse-inner {
-      background: transparent !important;
-  }
-  .browse.action .browse-inner:before {
-      width: 100% !important;
-      @include transform(rotate3d(0, 0, 1, 45deg));
-  }
-  .browse.action .browse-inner:after {
-      width: 100% !important;
-      @include transform(rotate3d(0, 0, 1, -45deg));
-  }
-  .browse.action .browse-inner:before,
-  .browse.action .browse-inner:after {
-      top: 0;
-  }
-  .browse .text {
-    text-transform: uppercase;
-    vertical-align: middle;
-    padding-left: 3px;
-    opacity: 1;
-    @include transition(all 0.5s ease-in-out);
-  }
-  .browse.action .text,
-  .browse:hover .text {
-    opacity: 0;
-  }
-}
-
-
-
-// Navigation Arrows
+// Arrows
 .fp-controlArrow {
   width: 20px !important;
   height: 60px;
@@ -540,6 +293,129 @@ body {
 }
 
 
+// Layout
+#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: $color-black;
+  .ui.text.loader {
+    font-family: 'Lato Regular';
+  }
+}
+
+
+// header
+#header {
+  width: 100%;
+  z-index: 101;
+  @include position(fixed, 1.4em auto auto 0em);
+}
+
+#nav {
+  @include outer-container;
+  @include display(flex);
+  @include align-items(inherit);
+  @include flex-direction(inherit);
+  .menu {
+    display: none;
+    visibility: hidden;
+    @include transition(all 0.5s ease-in-out);
+    .item {opacity: 0;}
+    &.action {
+      display: block;
+      visibility: visible;
+      .item {opacity: 1;}
+    }
+  }
+  .logo {
+    path {@include transition(all 0.5s ease-in-out);}
+    .path path {fill: $color-flight;}
+    .inverse path {fill: transparent;}
+    &:hover {
+      .path path {fill: transparent;}
+      .inverse path {fill: $color-flight;}
+    }
+  }
+	.item {
+    padding: 0em 1.14285714em;
+    letter-spacing: 1px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    @include font($regular, bold, 1.4em, 1);
+    @include transition(all 0.5s ease-in-out);
+    &.right {
+      margin-left: auto !important;
+      padding-right: 0;
+    }
+  }
+  .browse {
+    display: block;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    .text {
+      text-transform: uppercase;
+      vertical-align: middle;
+      padding-left: 5px;
+      opacity: 1;
+      @include transition(all 0.5s ease-in-out);
+    }
+    &:hover {
+      .browse-inner {
+        &:before {width: 80%;}
+        &:after {width: 40%;}
+      }
+    }
+  }
+  .browse-inner {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      @include transform-origin(50% 50%);
+    }
+    &:before {top: -0.4em;}
+    &:after {top: 0.4em;}
+  }
+  .browse-inner,
+  .browse-inner:before,
+  .browse-inner:after {
+      width: 24px;
+      height: 3px;
+      background-color: $color-flight;
+      @include transition(all 0.5s ease-in-out);
+  }
+  .browse.action {
+    .browse-inner {
+        background: transparent !important;
+        &:before,
+        &:after {
+          top: 0;
+          width: 100% !important;
+        }
+        &:before {@include transform(rotate3d(0, 0, 1, 45deg));}
+        &:after {@include transform(rotate3d(0, 0, 1, -45deg));}
+    }
+  }
+  .browse.action .text,
+  .browse:hover .text {
+    opacity: 0;
+  }
+}
+
+
+
+
 
 #home {
   .section.portfolio {
@@ -579,7 +455,7 @@ body {
 
   // Services
   .section.services {
-    .ui.card.big {
+    .card.big {
       .meta,
       .description {
         visibility: hidden;
@@ -709,9 +585,6 @@ body {
 #case {
   .section.case {
 
-    &.head {
-
-    }
     &.info {
       .button {
         display: none !important;
@@ -2675,12 +2548,5 @@ body {
 
 /* Large Monitor */
 @media only screen and (min-width: 1200px) {
-  .ui.container {
-      width: 1127px;
-      margin-left: auto !important;
-      margin-right: auto !important;
-  }
-  .ui.grid.container {
-      width: calc( 1127px + 2rem) !important;
-  }
+
 }
