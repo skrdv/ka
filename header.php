@@ -11,9 +11,21 @@
 	<?php wp_head(); ?>
 </head>
 
-<?php if (isset($post->post_name)) { $slug = $post->post_name; } else { $slug = 'other'; } ?>
+<?php
+if(is_single()):
+	$pre = 'case';
+	$slug = $post->post_name;
+elseif(is_home()):
+	$pre = 'home';
+	$slug = '';
+else:
+	$pre = '';
+	$slug = '';
+endif;
+?>
+
 <body <?php body_class($slug); ?> >
-	<div id="preloader">
+	<div class="preloader">
 		<div class="ui active dimmer">
 			<div class="ui large loader"></div>
 		</div>

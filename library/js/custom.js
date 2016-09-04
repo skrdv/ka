@@ -117,7 +117,7 @@ jQuery(document).ready(function($) {
   loadGravatars();
 
 	$(window).load(function(){
-		$('#preloader').fadeOut('fast',function(){
+		$('.preloader').fadeOut('fast',function(){
 			$(this).remove();
 		});
 	});
@@ -125,7 +125,7 @@ jQuery(document).ready(function($) {
 	// Home
 	if ($('body').hasClass('home')) {
 
-		$('#home').fullpage({
+		$('main article').fullpage({
 			anchors: ['portfolio', 'services', 'team', 'contact'],
 			menu: '#nav',
 			scrollingSpeed: 1000,
@@ -217,6 +217,22 @@ jQuery(document).ready(function($) {
 	$('.fp-verticalArrow.fp-down').click(function(e){
 		e.preventDefault();
 		$.fn.fullpage.moveSectionDown();
+	});
+
+	// Case Info
+	$('.button.show').click(function(){
+		$(this).addClass('hidden').closest('.info').addClass('action');
+		setTimeout(1, function(){
+			$('.section.info.action').find('.button.hide').removeClass('hidden');
+		});
+
+	});
+
+	$('.button.hide').click(function(){
+		$(this).addClass('hidden').closest('.info').removeClass('action');
+		setTimeout(1, function(){
+			$('.section.info.action').find('.button.show').removeClass('hidden');
+		});
 	});
 
 	// 404 page

@@ -137,15 +137,26 @@ $color-testogenon: rgb(175,179,165);
       color: $color-main;
     }
     &.link:hover {
+      cursor: pointer;
       border-color: $color-main;
       background: rgba($color-active, .5);
     }
   }
+
   .card {
     color: $color-main;
     p, a {
       color: $color-main;
     }
+  }
+  .card.case {
+    color: $color-black;
+    p, a {
+      color: $color-black;
+    }
+  }
+  .back {
+    background: rgba($color-active, .5);
   }
   .fp-controlArrow,
   .fp-verticalArrow {
@@ -162,11 +173,12 @@ $color-testogenon: rgb(175,179,165);
 
 
 
+
 // Header
 .header {
   width: 100%;
   z-index: 101;
-  @include position(fixed, 1.4em auto auto 0em);
+  @include position(fixed, 1.4em auto auto 0);
 }
 
 
@@ -183,6 +195,7 @@ $color-testogenon: rgb(175,179,165);
     padding: 0 1em;
     font-size: 1.5em;
     font-weight: bold;
+    letter-spacing: 1px;
     text-transform: uppercase;
     @include transition(all 0.5s ease-in-out);
   }
@@ -283,7 +296,6 @@ $color-testogenon: rgb(175,179,165);
     @include backface-visibility(hidden);
     .title,
     .sub {
-
       @include backface-visibility(hidden);
       .sub.title {
         @include text-shadow(rgba($color-black, .5));
@@ -307,12 +319,15 @@ $color-testogenon: rgb(175,179,165);
 
   }
 
+  .slide.start .frame {
+    display: none;
+  }
+
 }
 
 
 
 // Frame
-.fp-tableCell {text-align: center;}
 .frame {
   display: inline-block;
   position: relative;
@@ -428,6 +443,7 @@ $color-testogenon: rgb(175,179,165);
   position: relative;
   @include display(flex);
   @include flex-direction(column);
+  @include transition(all 0.5s ease-in-out);
   .content {
     @include flex-grow(1);
     margin: 0;
@@ -453,7 +469,7 @@ $color-testogenon: rgb(175,179,165);
     }
     .description {
       padding-top: 1em;
-      padding-left: 20%;
+      padding-left: 10%;
       text-align: left;
       @include font-lato(1.2em, 1, normal, none);
     }
@@ -481,7 +497,7 @@ $color-testogenon: rgb(175,179,165);
       }
       .description {
         text-align: left;
-        @include font-lato(1.2em, 1, normal, none);
+        @include font-lato(1em, 1, normal, none);
       }
     }
   }
@@ -506,6 +522,77 @@ $color-testogenon: rgb(175,179,165);
   &.feedback {
     .content {
       height: 400px;
+    }
+  }
+ // Case Info
+  &.info,
+  &.case {
+    .title {
+      text-align: left;
+      @include font-lato(4em, 1.5, normal, lowercase);
+    }
+    .meta {
+      text-align: left;
+      @include font-lato-light(1.5em, 1, normal, uppercase);
+    }
+    .description {
+      text-align: left;
+      padding-top: 1em;
+      padding-right: 30%;
+      @include font-lato(1em, 1, normal, none);
+    }
+  }
+}
+
+
+
+// Case
+.section.case {
+
+  &.info {
+    .back {
+      width: 50%;
+      height: 100%;
+      @include position(fixed, 0 auto auto 0);
+      @include transition(all 0.5s ease-in-out);
+    }
+    .back,
+    .card {
+      opacity: 0;
+      left: -100%;
+    }
+    &.action {
+      .back,
+      .card  {
+        opacity: 1;
+        left: 0;
+      }
+    }
+    .button {
+      outline: none;
+      &:hover,
+      &:focus {
+        background-color: transparent;
+      }
+      &.show {
+        @include position(absolute, auto auto 20% 20%);
+        border: 1px solid $color-white;
+        text-transform: none;
+      }
+      &.hide {
+        width: 100%;
+        height: 100%;
+        cursor: none;
+      }
+    }
+
+  }
+
+  .card.case {
+    .titloe,
+    .meta,
+    .description {
+      color: $color-black;
     }
   }
 
@@ -544,7 +631,6 @@ $color-testogenon: rgb(175,179,165);
     }
   }
 }
-
 .fp-verticalArrow {
   position: fixed;
   left: 50%;
@@ -572,32 +658,24 @@ $color-testogenon: rgb(175,179,165);
       @include transform(scale(1.2));
     }
   }
-}
-
-
-// Layout
-#preloader {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 999;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background: $color-black;
-  .ui.text.loader {
-
+  &.fp-top {
+    display: none;
+    bottom: 40px;
+    font-weight: bold;
+    text-align: center;
+    &:hover {
+      bottom: 50px;
+      @include transform(scale(1.2));
+    }
   }
 }
 
 
 
-
-
+// Misc
 .hidden {
   display: none !important;
 }
-
 .section,
 .slide {
   position: relative;
@@ -616,69 +694,25 @@ $color-testogenon: rgb(175,179,165);
 
   }
 
-
-
-
-
-#case {
-  .section.case {
-
-    &.info {
-      .button {
-        display: none !important;
-        position: relative;
-      }
-    }
-    .info-bg {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 50%;
-      height: 100%;
-      @include transition(all 0.5s ease-in-out);
-    }
-    .ui.card {
-      position: relative;
-      opacity: 0;
-      width: 50%;
-      background: none;
-      border-radius: 0;
-      box-shadow: none;
-      @include transition(all 0.5s ease-in-out);
-      .content {
-        padding: 0;
-      }
-      .header {
-
-        font-weight: normal;
-        font-size: 4.4em;
-        line-height: 1;
-        text-transform: lowercase;
-        margin-top: 0;
-        margin-bottom: 0.2em;
-        @include transition(all 0.5s ease-in-out);
-      }
-      .meta {
-        font-family: 'Lato Light';
-        font-size: 1.4em;
-        text-transform: uppercase;
-        margin-bottom: 2em;
-        @include transition(all 0.5s ease-in-out);
-      }
-      .description {
-
-        font-size: 1.12em;
-        text-align: left;
-        max-width: 300px;
-        @include transition(all 0.5s ease-in-out);
-        p {
-          line-height: 1.2em;
-        }
-      }
-    }
-
+  // Loader
+  .preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: $color-black;
   }
+.fp-tableCell {
+  text-align: center;
 }
+
+
+
+
+
 
 
 #error404 {
@@ -853,316 +887,39 @@ body.home {
 
 }
 
-body.zu {
-  @include section-color($color-zu);
-  &.fp-viewing-0 {
-    .fp-verticalArrow.fp-up {
-      display: none !important;
-    }
-    .nav .logo {
-      .out path {
-        fill: $color-white;
-      }
-      .in path {
-        fill: transparent;
-      }
-      &:hover {
-        .out path {
-          fill: transparent;
-        }
-        .in path {
-          fill: $color-zu;
-        }
-      }
-    }
-    .browse {
-      color: $color-white;
-      .browse-inner,
-      .browse-inner:before,
-      .browse-inner:after {
-        background-color: $color-white;
-      }
-      &:hover {
-        color: $color-zu;
-        .browse-inner,
-        .browse-inner:before,
-        .browse-inner:after {
-          background-color: $color-zu;
-        }
-      }
-    }
-    .fp-controlArrow,
-    .fp-verticalArrow {
-      path {
-        fill: $color-white;
-        stroke: $color-white;
-      }
-      &:hover path {
-        fill: $color-zu;
-        stroke: $color-zu;
-      }
-    }
+body.start {
+  @include section-color($color-black, $color-black);
+}
 
-  }
-  &.fp-viewing-1 {
-    .nav .logo {
-      .out path {
-        fill: $color-white;
-      }
-      .in path {
-        fill: transparent;
-      }
-      &:hover {
-        .out path {
-          fill: transparent;
-        }
-        .in path {
-          fill: $color-zu;
-        }
-      }
-    }
-    .browse {
-      color: $color-white;
-      .browse-inner,
-      .browse-inner:before,
-      .browse-inner:after {
-        background-color: $color-white;
-      }
-      &:hover {
-        color: $color-zu;
-        .browse-inner,
-        .browse-inner:before,
-        .browse-inner:after {
-          background-color: $color-zu;
-        }
-      }
-    }
-    .fp-controlArrow,
-    .fp-verticalArrow {
-      path {
-        fill: $color-white;
-        stroke: $color-white;
-      }
-      &:hover path {
-        fill: $color-zu;
-        stroke: $color-zu;
-      }
-    }
-    .info-bg {
-      background: rgba($color-zu, .5);
-    }
-    .ui.card {
-      opacity: 1;
-      .header,
-      .meta,
-      .description {
-        color: $color-white;
-      }
-    }
-  }
+
+body.zu {
+  @include section-color($color-zu, $color-white);
   &.fp-viewing-8 {
     .fp-verticalArrow.fp-down {
       display: none !important;
     }
+    .fp-verticalArrow.fp-top {
+      display: block;
+      color: $color-white;
+      &:hover {
+        color: $color-zu;
+      }
+    }
   }
-
 }
 
 
 body.flight {
-  ::selection {
-    background-color:$color-flight;
-    color: $color-white;
-  }
-  .nav .logo {
-    .out path {
-      fill: $color-flight;
-    }
-    .in path {
-      fill: transparent;
-    }
-    &:hover {
-      .out path {
-        fill: transparent;
-      }
-      .in path {
-        fill: $color-flight;
-      }
-    }
-  }
-  .browse {
-    color: $color-flight;
-    .browse-inner,
-    .browse-inner:before,
-    .browse-inner:after {
-      background-color: $color-flight;
-    }
-    &:hover {
-      color: $color-flight;
-      .browse-inner,
-      .browse-inner:before,
-      .browse-inner:after {
-        background-color: $color-flight;
-      }
-    }
-  }
-  .fp-controlArrow,
-  .fp-verticalArrow {
-    path {
-      fill: $color-flight;
-      stroke: $color-flight;
-    }
-    &:hover path {
-      fill: $color-flight;
-      stroke: $color-flight;
-    }
-  }
-  .frame {
-    border-color: $color-white !important;
-    .header {
-      color: $color-white !important;
-    }
-  }
-  .ui.card {
-    opacity: 1;
-    .header,
-    .meta,
-    .description {
-      color: $color-white;
-    }
-  }
-  &.fp-viewing-0 {
-    .fp-verticalArrow.fp-up {
-      display: none !important;
-    }
-    .nav .logo {
-      .out path {
-        fill: $color-white;
-      }
-      .in path {
-        fill: transparent;
-      }
-      &:hover {
-        .out path {
-          fill: transparent;
-        }
-        .in path {
-          fill: $color-flight;
-        }
-      }
-    }
-    .browse {
-      color: $color-white;
-      .browse-inner,
-      .browse-inner:before,
-      .browse-inner:after {
-        background-color: $color-white;
-      }
-      &:hover {
-        color: $color-flight;
-        .browse-inner,
-        .browse-inner:before,
-        .browse-inner:after {
-          background-color: $color-flight;
-        }
-      }
-    }
-    .fp-controlArrow,
-    .fp-verticalArrow {
-      path {
-        fill: $color-white;
-        stroke: $color-white;
-      }
-      &:hover path {
-        fill: $color-flight;
-        stroke: $color-flight;
-      }
-    }
-  }
-  &.fp-viewing-1 {
-    .nav .logo {
-      .out path {
-        fill: $color-white;
-      }
-      .in path {
-        fill: transparent;
-      }
-      &:hover {
-        .out path {
-          fill: transparent;
-        }
-        .in path {
-          fill: $color-flight;
-        }
-      }
-    }
-    .browse {
-      color: $color-white;
-      .browse-inner,
-      .browse-inner:before,
-      .browse-inner:after {
-        background-color: $color-white;
-      }
-      &:hover {
-        color: $color-flight;
-        .browse-inner,
-        .browse-inner:before,
-        .browse-inner:after {
-          background-color: $color-flight;
-        }
-      }
-    }
-    .fp-controlArrow,
-    .fp-verticalArrow {
-      path {
-        fill: $color-white;
-        stroke: $color-white;
-      }
-      &:hover path {
-        fill: $color-flight;
-        stroke: $color-flight;
-      }
-    }
-    .case.info {
-      .info-bg {
-        background: rgba($color-flight, .7);
-      }
-      .ui.card {
-        opacity: 1;
-        .header,
-        .meta,
-        .description {
-          color: $color-white;
-        }
-      }
-    }
-
-  }
-  &.fp-viewing-2 {
-    .case.case-2 {
-      .info-bg {
-        background: none;
-      }
-      .ui.card {
-        opacity: 1;
-        .header,
-        .meta,
-        .description {
-          color: $color-black;
-        }
-      }
-    }
-  }
+  @include section-color($color-flight, $color-white);
   &.fp-viewing-6 {
     .fp-verticalArrow.fp-down {
       display: none !important;
     }
-    .ui.card {
-      opacity: 1;
-      .header,
-      .meta,
-      .description {
-        color: $color-black;
+    .fp-verticalArrow.fp-top {
+      display: block;
+      color: $color-white;
+      &:hover {
+        color: $color-flight;
       }
     }
   }
