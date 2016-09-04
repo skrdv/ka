@@ -13,30 +13,26 @@
 
 <?php if (isset($post->post_name)) { $slug = $post->post_name; } else { $slug = 'other'; } ?>
 <body <?php body_class($slug); ?> id="page" >
-
 	<div id="preloader">
 		<div class="ui active dimmer">
 			<div class="ui large loader"></div>
 		</div>
 	</div>
-
-	<header id="header" role="banner">
-		<nav id="nav" class="menu" role="navigation">
+	<header class="header" role="banner">
+		<nav class="nav container" role="navigation">
 			<a class="logo" href="<?php echo get_site_url(); ?>">
 				<?php include( 'library/svg/logo.svg' ); ?>
 			</a>
-			<div class="item">
-				<button class="browse">
-					<span class="browse-inner"></span>
-					<span class="text">Меню</span>
-				</button>
-			</div>
+			<button class="browse">
+				<span class="browse-inner"></span>
+				<span class="text">Меню</span>
+			</button>
 			<div class="menu">
 				<a class="item" href="/#portfolio">Работы</a>
 				<a class="item" href="/#services">Услуги</a>
 				<a class="item" href="/#team">Мы</a>
 				<a class="item" href="/#contact">Контакты</a>
 			</div>
-			<a class="item right" href="tel:+78124020029" >+7 (812) 402-00-29</a>
+			<a class="phone" href="tel:+78124020029" >+7 (812) 402-00-29</a>
 		</nav>
 	</header>

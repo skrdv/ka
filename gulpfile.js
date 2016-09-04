@@ -27,7 +27,7 @@ var config = {
   url:      'ka.skrdv.com',
   bower:    './bower_components',
   styles: {
-    files:  './library/scss/style.scss',
+    files:  './library/scss/main.scss',
     build:  '../../../assets/css'
   },
   scripts: {
@@ -58,6 +58,7 @@ var config = {
 
 gulp.task('styles', function () {
   return gulp.src(config.styles.files)
+    .pipe(rename({basename: 'style'}))
     .pipe(sourcemaps.init())
     .pipe(sass({
       errLogToConsole: true,

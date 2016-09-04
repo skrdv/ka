@@ -31,7 +31,8 @@
     "jshint": "^2.9.3",
     "jshint-stylish": "^2.2.1",
     "karma": "^1.2.0",
-    "node-neat": "^1.7.2"
+    "node-neat": "^1.7.2",
+    "normalize.css": "^4.2.0"
   },
   "dependencies": {
     "bourbon-neat": "^1.8.0"

@@ -1,0 +1,12 @@
+
+$font-stack-system: "Lato", sans-serif;
+
+@import "normalize";
+@import "bourbon/bourbon";
+@import "core/base";
+@import "neat/neat";
+
+@import "jquery.fullPage.scss";
+
+@import "grid_settings";
+@import 'layout';

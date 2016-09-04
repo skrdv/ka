@@ -1,0 +1,629 @@
+commit 6e5e9c6b3ce609837db11afaa1d9287b25aeec1c
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Sat Sep 3 13:39:11 2016 +0300
+
+    added bitters and neat grid
+
+commit cf7549abcce77da8dce440ba519bfaf12a7c34b7
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Sat Sep 3 03:42:46 2016 +0300
+
+    removed semantic-ui, include bourbon
+
+commit dad55a1b2d162beacb6e637d22d1753bb3c3963c
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Fri Sep 2 23:00:30 2016 +0300
+
+    comlete cleaning files, gulp first step
+
+commit 77b9396ff6bdd421e0badafe8013b9deec5101d5
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Fri Sep 2 17:50:49 2016 +0300
+
+    gulp config in progress
+
+commit 701528bdea49425ac630123cd793747f77e8a750
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Thu Sep 1 18:16:13 2016 +0300
+
+    fulpfile.js in proess
+
+commit 43e9a9f11f27f30f4dde43ef913a8b9f1e11337b
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Thu Sep 1 16:21:46 2016 +0300
+
+    reorgonized vendor libraries structure
+
+commit 64a982b3c2a4a7a6c5a29a85dc30d242ef9d8d53
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Thu Sep 1 15:32:18 2016 +0300
+
+    included gulp and changed file structure
+
+commit f3b1aa7dd5570e9b373bdf99bab9b4ed601bc81f
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Tue Aug 30 12:53:35 2016 +0300
+
+    corrected cases colors
+
+commit 5877780dc95755f08609cbbfd18e76c4d0010776
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Tue Aug 30 09:22:30 2016 +0300
+
+    small design fixes
+
+commit dcfc8367bf4a0106aac1b865f95d6d31ae9f38ab
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Tue Aug 30 01:59:38 2016 +0300
+
+    added custom color to each case
+
+commit 5a7b1bac266cbd484425e6de9562e1c793a5df4f
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Tue Aug 30 00:21:44 2016 +0300
+
+    added case colors to home portfolio
+
+commit 341ceaf4b2d67cf4632705f292e4fdd175e5b100
+Merge: f6dc75d 3f4c939
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Mon Aug 29 22:27:46 2016 +0300
+
+    Merge remote-tracking branch 'origin/master'
+    
+    # Conflicts:
+    #	library/scss/ka.scss
+
+commit f6dc75d3feb9b53d362c4f54936cdebfa0858290
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Mon Aug 29 22:14:52 2016 +0300
+
+    added colors to home nav elements
+
+commit 151fecae9822e5e266f3a26bf5b69f07c484349f
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Mon Aug 29 20:47:03 2016 +0300
+
+    restructured all navigation elements
+
+commit 3f4c939d31951e60d29260f29ddc3c41a0c7d1eb
+Merge: f8e34a6 d89852d
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Fri Aug 26 12:11:07 2016 +0300
+
+    merged home and work steps
+
+commit f8e34a6e88a55cde9c71e8e50954ad7341b8fc49
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Fri Aug 26 11:32:41 2016 +0300
+
+    updated navigation and logo
+
+commit d89852d8a2bac2d532e02d6f4e22eaad50385872
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Fri Aug 26 02:11:39 2016 +0300
+
+    added hover effects for cases frame tile
+
+commit 21fcea70f456c7cf1f257ab2f3dc3457dac8586c
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Thu Aug 25 22:16:31 2016 +0300
+
+    designed and animated navigation arrows
+
+commit 9cf78ffb9e32fd2f8d0859ae07b8c0833e84ccfe
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Thu Aug 25 19:53:11 2016 +0300
+
+    updated navigation and logo
+
+commit 358329d374ccc730e70b9a15dac77070a1b03a42
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Thu Aug 25 14:33:23 2016 +0300
+
+    added keyboard and mouse for hint
+
+commit c451cc457736346854bca2c31f4175c00b3f48db
+Merge: 9f39ee5 6284b01
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Tue Aug 23 14:30:49 2016 +0300
+
+    Merge branch 'master' of https://github.com/skrdv/ka
+
+commit 9f39ee5b5bebfc2a35088bffaca89da5839fe743
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Tue Aug 23 14:30:03 2016 +0300
+
+    some changes
+
+commit 6284b01fa79d98a9126bd2757b049781045718da
+Author: Dmitriy Skudarnov <skrdv@gmx.com>
+Date:   Tue Aug 23 14:29:20 2016 +0300
+
+    Delete .remote-sync.json
+
+commit 1d4ddd558a75ffe0f66768722b2ddc1e9050163b
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Fri Aug 19 14:52:32 2016 +0300
+
+    clear template of unused code
+
+commit fabdde865cc71a5cd9b405ed949ba2973129d6c3
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Fri Aug 19 13:11:52 2016 +0300
+
+    added new right favicons
+
+commit 491a0e2ad845d75b7dfe47351c654578305b07d2
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Thu Aug 18 14:52:03 2016 +0300
+
+    fixed mobile view of services section
+
+commit 750ebd5af89d16b65fed3dae7d7cfa9f4f739f04
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Thu Aug 18 14:16:16 2016 +0300
+
+    added section navigation and vertical arrows to cases
+
+commit 7f333b9a4704b38eb5ec531aee6d6da4d7d9699b
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Thu Aug 18 13:41:53 2016 +0300
+
+    fixed some styles of elements
+
+commit b0cd7d04cfe40678c546f26ece356a8daeb314c0
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Wed Aug 17 15:35:17 2016 +0300
+
+    added team  section with colors
+
+commit 21965a70a9b656a7668ca5b1ce6e8d5de63ad3fc
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Wed Aug 17 13:25:18 2016 +0300
+
+    added alt tag to backstratch images
+
+commit eba877b05effea415fe6c39f303addd5cede2d25
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Wed Aug 17 12:22:04 2016 +0300
+
+    added color and funcs to vertical arrows
+
+commit 9620252b33dd0ece7a59d46a088bbcec0e808ea4
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Wed Aug 17 11:50:47 2016 +0300
+
+    added new case colors for elements
+
+commit 5e5c62caa6f6a01b0e84968d6a1958e109a370e1
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Tue Aug 16 18:22:00 2016 +0300
+
+    added vertical navigation arrows
+
+commit 55f559b486b5c1304e7782e3bb2c69c227ba2bd7
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Mon Aug 15 16:50:15 2016 +0300
+
+    added device rotation, but hide message
+
+commit 999100a7d34a53a78c2c397498e2e31c215b44ec
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Mon Aug 15 13:17:28 2016 +0300
+
+    added preloader to pages
+
+commit 6aeb89bf5210e4c321d5405071b951b575abd247
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Fri Aug 12 15:06:28 2016 +0300
+
+    some design fixes
+
+commit 3c47eee32e2f68e7ce0c0509176ee12b39c9f0c3
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Thu Aug 11 16:23:10 2016 +0300
+
+    fixing small bugs
+
+commit 5c7b027f9173af1a57627236f078b10c4a378b63
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Thu Aug 11 16:15:56 2016 +0300
+
+    added svg slider arrows whith colors
+
+commit e07f8246337075fff6222a762edda0d9252ac8cb
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Thu Aug 11 14:34:55 2016 +0300
+
+    added inverse color to logo:hover
+
+commit 991931ff2c33b5980079fecf6e46d88302e1b48e
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Wed Aug 10 17:15:05 2016 +0300
+
+    added custom colors to each case
+
+commit 806131dab30882fec24d279b5ccff42727ba6068
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Tue Aug 9 15:48:15 2016 +0300
+
+    fixed mobile view style
+
+commit c861c166252352bec6943244004c1c43e2dcc4d8
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Tue Aug 9 13:12:19 2016 +0300
+
+    fixed tablet and block mobile view
+
+commit 9cdc849311aae9177dcfec0d53ba4a16d416f8df
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Tue Aug 9 11:25:55 2016 +0300
+
+    fixed 404 page style
+
+commit b82ac1038c4f9acddc6130111803b1b55179cc1f
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Tue Aug 9 11:08:05 2016 +0300
+
+    added metrika fb goal
+
+commit 914222acc22cad44ee012f4b6fa39b579d109c39
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Mon Aug 8 17:41:52 2016 +0300
+
+    some style changes
+
+commit 6af568529a181792754f3f7a2b855d850c24deb1
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Mon Aug 8 17:33:38 2016 +0300
+
+    added facebook pixel code
+
+commit 6a5c159231027ebd81cec1b0dac4a4cfb0241ec3
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Mon Aug 8 16:31:10 2016 +0300
+
+    added dynamic titles to home page sections
+
+commit 8a31a0b2325d145dd275c7e6cadb94e2359108cb
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Mon Aug 8 14:02:38 2016 +0300
+
+    added feedback form to contact section
+
+commit c002a108931aee64b6254fec029814049373bd0e
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Mon Aug 8 13:07:41 2016 +0300
+
+    added new slides to contact section
+
+commit ec51c0d95f27d5d54b7fcc78fd1ca80964c69b5b
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Mon Aug 8 10:54:56 2016 +0300
+
+    added facebook to contact section
+
+commit b8e8364875fd99cb19e50bb6fb917750864524d3
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Fri Aug 5 18:04:40 2016 +0300
+
+    added mobile view styles
+
+commit 608f1f8e6d4880c5048e4de26ab9837132b47a76
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Fri Aug 5 17:01:49 2016 +0300
+
+    added logo colors to each cases
+
+commit ac7ccab5bb963c1f429cd1168a11f30198f94982
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Fri Aug 5 16:45:36 2016 +0300
+
+    new layout, typography and color for cases
+
+commit ec88f81815dd53abe7638b715e27712682b8a47b
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Thu Aug 4 13:40:34 2016 +0300
+
+    fixed big background sizes
+
+commit a0f682a65c7244154f2635df78fdc8f06890ea9d
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Wed Aug 3 18:15:26 2016 +0300
+
+    added 404 page template
+
+commit 3d2eaba713216ddc6d3eddd7503ab54332b7fc9b
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Wed Aug 3 17:58:02 2016 +0300
+
+    added random orderby to home cases slider
+
+commit 07ec7eea7641f8a9647432721729ed0d6945ef67
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Wed Aug 3 17:46:10 2016 +0300
+
+    added icon images
+
+commit 1ebd34a34dcf67f600479b28ee1cb32400b1f71c
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Wed Aug 3 16:37:24 2016 +0300
+
+    fixed header navigation styles
+
+commit 1148c066c6919f8607c7cd0c35fbd668dbc3fde0
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Wed Aug 3 16:08:26 2016 +0300
+
+    cleaned head, optimized scripts and styles
+
+commit af97190a7fb357246130b3cb486b03b75c56994f
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Wed Aug 3 13:56:35 2016 +0300
+
+    added diffent bg sizes top cases
+
+commit 78611b6e19bee300192fb0592b8a4c7a326163e1
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Wed Aug 3 13:42:06 2016 +0300
+
+    added new bg image sizes to diferent displays
+
+commit 5f20fb4111fff025584736f2d5a6ce0ad93384be
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Wed Aug 3 10:23:44 2016 +0300
+
+    fixed services text and added metrika counter
+
+commit 3b9bad44d2de069e6343b8af9dd4c98d3b6294e1
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Tue Aug 2 17:37:56 2016 +0300
+
+    fixed services section texts
+
+commit fee527dfeccf1de91e5186859d39a0985c7ca1b5
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Tue Aug 2 14:23:31 2016 +0300
+
+    stylized cases color and typo
+
+commit 4dfd7efc79986c93da399ca5e91d06d0026035f9
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Tue Aug 2 12:37:58 2016 +0300
+
+    stylized services and contact section
+
+commit 3b2598bd523a8b4d9103ab97a9fe2bcb4c464631
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Tue Aug 2 12:24:54 2016 +0300
+
+    fixing portfolio slider height
+
+commit 48defd8e9b56be087b12833a80aec75da48adcb6
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Tue Aug 2 12:14:21 2016 +0300
+
+    limited mobile version display
+
+commit ea65c8e072ebdd18ee656b6e0e18168105166fbc
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Tue Aug 2 11:17:00 2016 +0300
+
+    removed team section
+
+commit 167a62c2ff9b7daf5f4d673950f3e5e84b7380bf
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Tue Aug 2 11:13:57 2016 +0300
+
+    added textes for portfolio  cases
+
+commit 3e4033e29386618fbf574cd8ac0f0624a22d869c
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Mon Aug 1 16:05:40 2016 +0300
+
+    added device orientation condition
+
+commit c46b92732ac6ef19df5bcc82f83e9560da8dac79
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Mon Aug 1 13:40:08 2016 +0300
+
+    added content in contact section
+
+commit dae710e20d9e09c6a3e5c87ef3890520f2ca9433
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Mon Aug 1 11:26:24 2016 +0300
+
+    updated contact section layout
+
+commit 4f1cb502c8801576bb4d10a246be380a38b53d52
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Mon Aug 1 11:09:44 2016 +0300
+
+    added block to mobile version
+
+commit c3c7c9319412a1728e48ff19224c5119891d1a51
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Fri Jul 29 18:02:44 2016 +0300
+
+    some design fixes
+
+commit 4bf0054d93e28c95d28cc14929f650c6bf223a26
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Fri Jul 29 16:39:12 2016 +0300
+
+    improved services section and added fonts
+
+commit 5626b1191225d0003dea0b90852ff41a2e63240d
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Fri Jul 29 15:01:42 2016 +0300
+
+    dublicated arrows on home sliders
+
+commit 7a6d238a75978c088e115d8015e955f9f7ecfdc2
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Fri Jul 29 14:19:09 2016 +0300
+
+    improved team section
+
+commit 0f8de7d3959dca1208bfd7c306b78c5a4b6c3592
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Fri Jul 29 13:40:36 2016 +0300
+
+    added backstretch to home slider
+
+commit 578e4091930d5ee832e4790b0c5447d03bee76f7
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Fri Jul 29 12:47:47 2016 +0300
+
+    added backstretch to portfolio posts
+
+commit ea752a41d569e4b3d7d55bc136d004de79c11d26
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Fri Jul 29 12:11:23 2016 +0300
+
+    modified home slider
+
+commit a1f6aefc1919c3f7e0f3c031c414bac0dae5608d
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Thu Jul 28 18:04:21 2016 +0300
+
+    updated services section layout
+
+commit 075a38303458e69ef31a9446bc68ad604e3fdec6
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Thu Jul 28 16:57:16 2016 +0300
+
+    improved header navigation
+
+commit 886a75db1bc3b86bcd7c3c2d9902f1e430ad7ca8
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Thu Jul 28 14:23:38 2016 +0300
+
+    added case-info desc toggler
+
+commit 75cde86a81b6c607169c74d55afad2f71facc639
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Thu Jul 28 13:50:32 2016 +0300
+
+    added styles to title and info section
+
+commit 2e2e609d10cc01159170091be43d0470224b4fa6
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Thu Jul 28 11:50:58 2016 +0300
+
+    added color identifier to cases (posts)
+
+commit faf9dc41979219addf1a969fe7eba468ef8d908b
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Thu Jul 28 10:19:37 2016 +0300
+
+    renamed post custom fields
+
+commit 7b2e7133d1ad74da77a05ebf0ee74388182e8578
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Wed Jul 27 18:16:01 2016 +0300
+
+    included wp_query posts in home slider
+
+commit cba20406aec44b78db9307eb66967bf4d1d26a8a
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Wed Jul 27 16:12:24 2016 +0300
+
+    added vertical nav and colors to posts
+
+commit 39faa3f97b6406cd3fc5ebf33adad7305b2c9cb0
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Wed Jul 27 14:25:19 2016 +0300
+
+    improved post template
+
+commit 5aa8a29043df463c1de98e967ec2cea9087071cf
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Wed Jul 27 13:32:03 2016 +0300
+
+    deleted excess files
+
+commit efe2eaf7646b38425b6b946434cd08ad39e0d224
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Wed Jul 27 12:41:41 2016 +0300
+
+    relocate semantic-ui stylesheets
+
+commit aa018d69c5815f1c519470a52d6dffa8b0d831d1
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Wed Jul 27 12:01:05 2016 +0300
+
+    relocate vendors libraries
+
+commit d14a07e02dacac6f6e8972907cf7f35a4b313f47
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Mon Jul 25 17:37:16 2016 +0300
+
+    added semantic-ui scss
+
+commit 3b6eb72307f4a8262a68d65751ebe91c5e128d8c
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Mon Jul 25 11:56:11 2016 +0300
+
+    upadted favicons
+
+commit 23edfd92c50ea3aa50f9d1061bbcc17579a6de38
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Fri Jul 22 17:42:53 2016 +0300
+
+    added styles in header nav
+
+commit 92e7aa53024c0f1e77a9ecd96a8d684f79d7a17a
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Fri Jul 22 17:19:17 2016 +0300
+
+    added semantic-ui navigation
+
+commit 448d57db1186ea0a9898d2ef831b812ba857d690
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Fri Jul 22 11:41:28 2016 +0300
+
+    added custom fields in post template
+
+commit 74f0eb5c1c2cea6407d517d0c7b7cc0ee81e466a
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Thu Jul 21 15:40:59 2016 +0300
+
+    improved acf in home slider
+
+commit 2d90cefdd9446c68730c77154cbfc93c420d04bd
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Thu Jul 21 14:36:51 2016 +0300
+
+    added fullPage.js
+
+commit 9b88d476175c791228f3115da55b2bd200d07431
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Thu Jul 21 14:29:29 2016 +0300
+
+    added main navigation
+
+commit 0dcb1a36c2f94bee09290639f1e67d068077ed30
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Thu Jul 21 13:57:33 2016 +0300
+
+    added custom fields in home slider
+
+commit b3c6b8f11af651a01a56c121c3f0f11da152c379
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Thu Jul 21 12:26:45 2016 +0300
+
+    added home page template
+
+commit fa414895a33d836e33b9acd3445491d7ace7cf22
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Thu Jul 14 17:52:19 2016 +0300
+
+    added fullPage.js to home
+
+commit d0b6c7d37fa4282d893a8ada6c92c749f613c9a0
+Author: Dmitriy Skudarnov <skrdvx@gmail.com>
+Date:   Thu Jul 14 16:31:20 2016 +0300
+
+    begin
