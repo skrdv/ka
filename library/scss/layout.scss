@@ -58,6 +58,101 @@ $color-testogenon: rgb(175,179,165);
   text-shadow: 0px 0px 10px $color;
 }
 
+@mixin font-lato($size: false, $lh: false, $weight: false,  $lowercase: false) {
+    font-family: 'Lato', sans-serif;
+    @if $size { font-size: $size; }
+    @if $lh { line-height: $lh; }
+    @if $weight { font-weight: $weight; }
+    @if $lowercase { text-transform: $lowercase; }
+}
+
+@mixin font-lato-light($size: false, $lh: false, $weight: false,  $lowercase: false) {
+    font-family: 'Lato Light', sans-serif;
+    @if $size { font-size: $size; }
+    @if $lh { line-height: $lh; }
+    @if $weight { font-weight: $weight; }
+    @if $lowercase { text-transform: $lowercase; }
+}
+
+@mixin font-lato-italic($size: false, $lh: false, $weight: false,  $lowercase: false) {
+    font-family: 'Lato Medium Italic', sans-serif;
+    @if $size { font-size: $size; }
+    @if $lh { line-height: $lh; }
+    @if $weight { font-weight: $weight; }
+    @if $lowercase { text-transform: $lowercase; }
+}
+
+@mixin section-color($color-set: false, $color-bg: false) {
+  @include selection {
+    color:  $color-bg;
+    background-color: $color-set;
+  }
+  .nav {
+    .logo {
+     .out path {
+       fill: $color-bg;
+     }
+     .in path {
+       fill: transparent;
+     }
+     &:hover {
+       .out path {
+         fill: transparent;
+       }
+       .in path {
+         fill: $color-set;
+       }
+     }
+   }
+   .browse {
+     color: $color-bg;
+     .browse-inner,
+     .browse-inner:before,
+     .browse-inner:after {
+       background-color: $color-bg;
+     }
+     &:hover,
+     &.action {
+       color: $color-set;
+       .browse-inner,
+       .browse-inner:before,
+       .browse-inner:after {
+         background-color: $color-set;
+       }
+     }
+   }
+   .item {
+     color: $color-bg;
+     &:hover {
+       color: $color-set;
+     }
+   }
+  }
+  .frame {
+    border-color: $color-bg;
+    .title,
+    .sub,
+    .more {
+      color: $color-bg;
+    }
+    &.link:hover {
+      border-color: $color-bg;
+      background: rgba($color-set, .5);
+    }
+  }
+  .fp-controlArrow,
+  .fp-verticalArrow {
+    path {
+      fill: $color-bg;
+      stroke: $color-bg;
+    }
+    &:hover path {
+      fill: $color-set;
+      stroke: $color-set;
+    }
+  }
+}
+
 
 
 // Header
@@ -170,68 +265,76 @@ $color-testogenon: rgb(175,179,165);
 
 
 
+// Portfolio
+.section.portfolio {
 
-
-
-
-
-.hidden {
-  display: none !important;
-}
-
-.section,
-.slide {
-  position: relative;
-  overflow: hidden;
-}
-
-
-
-// Frame
-.wrap {
-  @include display(flex);
-  @include flex-direction(column);
-  @include justify-content(center);
-  @include align-items(center);
   .frame {
-    position: relative;
     overflow: hidden;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 3em 1em;
-    border: 3px solid white;
-    text-align: center;
-    @include box-shadow(rgba($color-black, .3));
-    .ui.header {
-      display: block;
-      margin: 0;
-      font-size: 4.4em;
-      font-weight: normal;
-      text-transform: lowercase;
-      line-height: 1.2857em;
-      .sub.header {
-        font-family: 'Lato Light';
-        font-size: 1.6rem;
-        line-height: 1;
-        text-transform: uppercase;
+    @include backface-visibility(hidden);
+    .title,
+    .sub {
+
+      @include backface-visibility(hidden);
+      .sub.title {
+        @include text-shadow(rgba($color-black, .5));
       }
     }
     .more {
-      position: absolute;
-      left: 0;
-      top: 150%;
-      display: inline-block;
-      height: 100%;
-      width: 100%;
-      opacity: 0;
-      font-family: 'Lato Light', sans-serif;
-      line-height: 4;
-      font-size: 200%;
-      font-weight: 400;
-      text-transform: lowercase;
+      @include text-shadow(rgba($color-black, .5));
+      @include backface-visibility(hidden);
     }
+    &:hover {
+      background: $color-black;
+      .title,
+      .sub {
+        @include transform(translateY(-200%));
+      }
+      .more {
+       top: 0;
+       opacity: 1 !important;
+     }
+    }
+
+  }
+
+}
+
+
+// Frame
+.fp-tableCell {text-align: center;}
+.frame {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  max-width: 60%;
+  padding: 0 3em 1em;
+  border: 3px solid white;
+  text-align: center;
+  @include box-shadow(rgba($color-black, .3));
+  @include transition(all 0.5s ease-in-out);
+  .title {
+    display: block;
+    margin: 0;
+    @include font-lato(4em, 1.2, normal, lowercase);
+    @include text-shadow(rgba($color-black, .5));
+    @include transition(all 0.5s ease-in-out);
+  }
+  .sub {
+    @include font-lato-light(1.5rem, 1.5, normal, uppercase);
+    @include text-shadow(rgba($color-black, .5));
+    @include transition(all 0.5s ease-in-out);
+  }
+  .more {
+    display: inline-block;
+    width: 100%;
+    opacity: 0;
+    @include position(absolute, 150% auto auto 0);
+    @include font-lato-light(2rem, 4em, normal, lowercase);
+    @include transition(all 0.5s ease-in-out);
   }
 }
+
+
 
 
 // Card
@@ -371,43 +474,20 @@ $color-testogenon: rgb(175,179,165);
 
 
 
+.hidden {
+  display: none !important;
+}
+
+.section,
+.slide {
+  position: relative;
+  overflow: hidden;
+}
 
 
-#home {
-  .section.portfolio {
-    .wrap {
-      .frame {
-        overflow: hidden;
-        cursor: pointer;
-        @include transition(all 0.5s ease-in-out);
-        @include backface-visibility(hidden);
-        .ui.header {
-          @include text-shadow(rgba($color-black, .5));
-          @include transition(all 0.5s ease-in-out);
-          @include backface-visibility(hidden);
-          .sub.header {
-            @include text-shadow(rgba($color-black, .5));
-          }
-        }
-        .more {
-          @include text-shadow(rgba($color-black, .5));
-          @include transition(all 0.5s ease-in-out);
-          @include backface-visibility(hidden);
-        }
-        &:hover {
-          background: $color-black;
-          .ui.header {
-            @include transform(translateY(-200%));
-          }
-          .more {
-           top: 0;
-           opacity: 1 !important;
-         }
-        }
 
-      }
-    }
-  }
+
+
 
   // Services
   .section.services {
@@ -535,7 +615,7 @@ $color-testogenon: rgb(175,179,165);
     }
 
   }
-}
+
 
 
 #case {
@@ -684,604 +764,86 @@ $color-testogenon: rgb(175,179,165);
     Section Colors
 *******************************/
 
-#page.home {
+
+body.home {
 
   // Portfolio ZU
   &.fp-viewing-portfolio-0 {
-
-    .nav .logo {
-      .out path {
-        fill: $color-white;
-      }
-      .in path {
-        fill: transparent;
-      }
-      &:hover {
-        .out path {
-          fill: transparent;
-        }
-        .in path {
-          fill: $color-zu;
-        }
-      }
-    }
-
-    .browse {
-      color: $color-white;
-      .browse-inner,
-      .browse-inner:before,
-      .browse-inner:after {
-        background-color: $color-white;
-      }
-      &:hover {
-        color: $color-zu;
-        .browse-inner,
-        .browse-inner:before,
-        .browse-inner:after {
-          background-color: $color-zu;
-        }
-      }
-    }
-
-    .frame {
-      background: rgba($color-zu, .2);
-      border-color: $color-white !important;
-      .header {
-        color: $color-white !important;
-      }
-      .more {
-        color: $color-white !important;
-      }
-      &:hover {
-        border-color: $color-white !important;
-        background: rgba($color-zu, .5) !important;
-      }
-    }
-    .fp-controlArrow,
-    .fp-verticalArrow {
-      path {
-        fill: $color-white;
-        stroke: $color-white;
-      }
-      &:hover path {
-        fill: $color-zu;
-        stroke: $color-zu;
-      }
-    }
+    @include section-color($color-zu, $color-white);
     .fp-verticalArrow.fp-up {
-      display: none !important;
+      display: none;
     }
   }
 
   // Portfolio Flight
   &.fp-viewing-portfolio-1 {
-    .nav .logo {
-      .out path {
-        fill: $color-white;
-      }
-      .in path {
-        fill: transparent;
-      }
-      &:hover {
-        .out path {
-          fill: transparent;
-        }
-        .in path {
-          fill: $color-flight;
-        }
-      }
-    }
-    .browse {
-      color: $color-white;
-      .browse-inner,
-      .browse-inner:before,
-      .browse-inner:after {
-        background-color: $color-white;
-      }
-      &:hover {
-        color: $color-flight;
-        .browse-inner,
-        .browse-inner:before,
-        .browse-inner:after {
-          background-color: $color-flight;
-        }
-      }
-    }
-    .frame {
-      border-color: $color-white !important;
-      .header,
-      .more {
-        color: $color-white !important;
-      }
-      &:hover {
-        border-color: $color-white !important;
-        background: rgba($color-flight, .5) !important;
-      }
-    }
-    .fp-controlArrow,
-    .fp-verticalArrow {
-      path {
-        fill: $color-white;
-        stroke: $color-white;
-      }
-      &:hover path {
-        fill: $color-flight;
-        stroke: $color-flight;
-      }
-    }
+    @include section-color($color-flight, $color-white);
     .fp-verticalArrow.fp-up {
-      display: none !important;
+      display: none;
     }
   }
 
   // Portfolio 2T
   &.fp-viewing-portfolio-2 {
-    .nav .logo {
-      .out path {
-        fill: $color-white;
-      }
-      .in path {
-        fill: transparent;
-      }
-      &:hover {
-        .out path {
-          fill: transparent;
-        }
-        .in path {
-          fill: $color-2t;
-        }
-      }
-    }
-    .browse {
-      color: $color-white;
-      .browse-inner,
-      .browse-inner:before,
-      .browse-inner:after {
-        background-color: $color-white;
-      }
-      &:hover {
-        color: $color-2t;
-        .browse-inner,
-        .browse-inner:before,
-        .browse-inner:after {
-          background-color: $color-2t;
-        }
-      }
-    }
-    .frame {
-      border-color: $color-white !important;
-      .header,
-      .more {
-        color: $color-white !important;
-      }
-      &:hover {
-        border-color: $color-white !important;
-        background: rgba($color-2t, .5) !important;
-      }
-    }
-    .fp-controlArrow,
-    .fp-verticalArrow {
-      path {
-        fill: $color-white;
-        stroke: $color-white;
-      }
-      &:hover path {
-        fill: $color-2t;
-        stroke: $color-2t;
-      }
-    }
+    @include section-color($color-2t, $color-white);
     .fp-verticalArrow.fp-up {
-      display: none !important;
+      display: none;
     }
   }
 
   // Portfolio Sokolniki
   &.fp-viewing-portfolio-3 {
-    .nav .logo {
-      .out path {
-        fill: $color-white;
-      }
-      .in path {
-        fill: transparent;
-      }
-      &:hover {
-        .out path {
-          fill: transparent;
-        }
-        .in path {
-          fill: $color-sokolniki;
-        }
-      }
-    }
-    .browse {
-      color: $color-white;
-      .browse-inner,
-      .browse-inner:before,
-      .browse-inner:after {
-        background-color: $color-white;
-      }
-      &:hover {
-        color: $color-sokolniki;
-        .browse-inner,
-        .browse-inner:before,
-        .browse-inner:after {
-          background-color: $color-sokolniki;
-        }
-      }
-    }
-    .frame {
-      border-color: $color-white !important;
-      .header {
-        color: $color-sokolniki !important;
-      }
-      .more {
-        color: $color-white !important;
-      }
-      &:hover {
-        border-color: $color-white !important;
-        background: rgba($color-sokolniki, .5) !important;
-      }
-    }
-    .fp-controlArrow,
-    .fp-verticalArrow {
-      path {
-        fill: $color-white;
-        stroke: $color-white;
-      }
-      &:hover path {
-        fill: $color-sokolniki;
-        stroke: $color-sokolniki;
-      }
-    }
+    @include section-color($color-sokolniki, $color-white);
     .fp-verticalArrow.fp-up {
-      display: none !important;
+      display: none;
     }
   }
 
   // Portfolio Fazer
   &.fp-viewing-portfolio-4 {
-    .nav .logo {
-      .out path {
-        fill: $color-white;
-      }
-      .in path {
-        fill: transparent;
-      }
-      &:hover {
-        .out path {
-          fill: transparent;
-        }
-        .in path {
-          fill: $color-fazer;
-        }
-      }
-    }
-    .browse {
-      color: $color-white;
-      .browse-inner,
-      .browse-inner:before,
-      .browse-inner:after {
-        background-color: $color-white;
-      }
-      &:hover {
-        color: $color-fazer;
-        .browse-inner,
-        .browse-inner:before,
-        .browse-inner:after {
-          background-color: $color-fazer;
-        }
-      }
-    }
-    .frame {
-      border-color: $color-white !important;
-      .header,
-      .more {
-        color: $color-white !important;
-      }
-      &:hover {
-        border-color: $color-white !important;
-        background: rgba($color-fazer, .5) !important;
-      }
-    }
-    .fp-controlArrow,
-    .fp-verticalArrow {
-      path {
-        fill: $color-white;
-        stroke: $color-white;
-      }
-      &:hover path {
-        fill: $color-fazer;
-        stroke: $color-fazer;
-      }
-    }
+    @include section-color($color-fazer, $color-white);
     .fp-verticalArrow.fp-up {
-      display: none !important;
+      display: none;
     }
   }
 
   // Portfolio Testogenon
   &.fp-viewing-portfolio-5 {
-    .nav .logo {
-      .out path {
-        fill: $color-white;
-      }
-      .in path {
-        fill: transparent;
-      }
-      &:hover {
-        .out path {
-          fill: transparent;
-        }
-        .in path {
-          fill: $color-testogenon;
-        }
-      }
-    }
-    .browse {
-      color: $color-white;
-      .browse-inner,
-      .browse-inner:before,
-      .browse-inner:after {
-        background-color: $color-white;
-      }
-      &:hover {
-        color: $color-testogenon;
-        .browse-inner,
-        .browse-inner:before,
-        .browse-inner:after {
-          background-color: $color-testogenon;
-        }
-      }
-    }
-    .frame {
-      border-color: $color-white !important;
-      .header,
-      .more {
-        color: $color-white !important;
-      }
-      &:hover {
-        border-color: $color-white !important;
-        background: rgba($color-testogenon, .5) !important;
-      }
-    }
-    .fp-controlArrow,
-    .fp-verticalArrow {
-      path {
-        fill: $color-white;
-        stroke: $color-white;
-      }
-      &:hover path {
-        fill: $color-testogenon;
-        stroke: $color-testogenon;
-      }
-    }
+    @include section-color($color-testogenon, $color-white);
     .fp-verticalArrow.fp-up {
-      display: none !important;
+      display: none;
     }
   }
 
   // Services
   &.fp-viewing-services {
-    .nav .logo .out path,
-    .menu .logo:hover .in path {
-      fill: $color-black;
-    }
-    .nav .logo .in path,
-    .menu .logo:hover .out path {
-      fill: transparent;
-    }
-    .browse {
-      color: $color-black;
-      .browse-inner,
-      .browse-inner:before,
-      .browse-inner:after {
-        background-color: $color-black;
-      }
-    }
-    .frame {
-      border-color: $color-black !important;
-      .header {
-        color: $color-black !important;
-      }
-    }
-    .fp-controlArrow path,
-    .fp-verticalArrow path {
-      fill: $color-black;
-      stroke: $color-black;
-    }
+    @include section-color($color-black, $color-black);
   }
 
   // Team
   &.fp-viewing-team {
-    .nav .logo .out path,
-    .menu .logo:hover .in path {
-      fill: $color-white;
-    }
-    .nav .logo .in path,
-    .menu .logo:hover .out path {
-      fill: transparent;
-    }
-    .browse {
-      color: $color-white;
-      .browse-inner,
-      .browse-inner:before,
-      .browse-inner:after {
-        background-color: $color-white;
-      }
-    }
-    .frame {
-      border-color: $color-white !important;
-      .header {
-        color: $color-white !important;
-      }
-    }
-    .fp-controlArrow path,
-    .fp-verticalArrow path {
-      fill: $color-white;
-      stroke: $color-white;
-    }
+    @include section-color($color-white, $color-white);
   }
 
   // Contact
   &.fp-viewing-contact-0 {
-    .nav .logo .out path,
-    .menu .logo:hover .in path {
-      fill: $color-white;
-    }
-    .nav .logo .in path,
-    .menu .logo:hover .out path {
-      fill: transparent;
-    }
-    .browse {
-      color: $color-white;
-      .browse-inner,
-      .browse-inner:before,
-      .browse-inner:after {
-        background-color: $color-white;
-      }
-    }
-    .frame {
-      border-color: $color-white !important;
-      .header {
-        color: $color-white !important;
-      }
-    }
-    .fp-controlArrow path,
-    .fp-verticalArrow path {
-      fill: $color-white;
-      stroke: $color-white;
-    }
-    .fp-verticalArrow.fp-down {
-      display: none !important;
-    }
+    @include section-color($color-white, $color-white);
   }
 
   // Map
   &.fp-viewing-contact-1 {
-    .nav .logo .out path,
-    .menu .logo:hover .in path {
-      fill: $color-pink;
-    }
-    .nav .logo .in path,
-    .menu .logo:hover .out path {
-      fill: transparent;
-    }
-    .browse {
-      color: $color-pink;
-      .browse-inner,
-      .browse-inner:before,
-      .browse-inner:after {
-        background-color: $color-pink;
-      }
-    }
-    .frame {
-      border-color: $color-pink !important;
-      .header {
-        color: $color-pink !important;
-      }
-    }
-    .fp-controlArrow path,
-    .fp-verticalArrow path {
-      fill: $color-pink;
-      stroke: $color-pink;
-    }
-    .fp-verticalArrow.fp-down {
-      display: none !important;
-    }
+    @include section-color($color-pink, $color-pink);
   }
 
   // Feedback
   &.fp-viewing-contact-2 {
-    .nav .logo .out path,
-    .menu .logo:hover .in path {
-      fill: $color-black;
-    }
-    .nav .logo .in path,
-    .menu .logo:hover .out path {
-      fill: transparent;
-    }
-    .browse {
-      color: $color-black;
-      .browse-inner,
-      .browse-inner:before,
-      .browse-inner:after {
-        background-color: $color-black;
-      }
-    }
-    .frame {
-      border-color: $color-black !important;
-      .header {
-        color: $color-black !important;
-      }
-    }
-    .fp-controlArrow path,
-    .fp-verticalArrow path {
-      fill: $color-black;
-      stroke: $color-black;
-    }
-    .fp-verticalArrow.fp-down {
-      display: none !important;
-    }
+    @include section-color($color-black, $color-black);
   }
 
 }
 
-
-#page.zu {
-  ::selection {
-    background-color:$color-zu;
-    color: $color-white;
-  }
-  .nav .logo {
-    .out path {
-      fill: $color-zu;
-    }
-    .in path {
-      fill: transparent;
-    }
-    &:hover {
-      .out path {
-        fill: transparent;
-      }
-      .in path {
-        fill: $color-zu;
-      }
-    }
-  }
-  .browse {
-    color: $color-zu;
-    .browse-inner,
-    .browse-inner:before,
-    .browse-inner:after {
-      background-color: $color-zu;
-    }
-    &:hover {
-      color: $color-zu;
-      .browse-inner,
-      .browse-inner:before,
-      .browse-inner:after {
-        background-color: $color-zu;
-      }
-    }
-  }
-  .fp-controlArrow,
-  .fp-verticalArrow {
-    path {
-      fill: $color-zu;
-      stroke: $color-zu;
-    }
-    &:hover path {
-      fill: $color-zu;
-      stroke: $color-zu;
-    }
-  }
-  .frame {
-    background: rgba($color-zu, .2);
-    border-color: $color-white !important;
-    .header {
-      color: $color-white !important;
-    }
-  }
+body.zu {
+  @include section-color($color-zu);
   &.fp-viewing-0 {
     .fp-verticalArrow.fp-up {
       display: none !important;
@@ -1396,7 +958,7 @@ $color-testogenon: rgb(175,179,165);
 }
 
 
-#page.flight {
+body.flight {
   ::selection {
     background-color:$color-flight;
     color: $color-white;
@@ -1597,7 +1159,7 @@ $color-testogenon: rgb(175,179,165);
 }
 
 
-#page.gallery-2t {
+body.gallery-2t {
   ::selection {
     background-color:$color-2t;
     color: $color-white;
@@ -1778,7 +1340,7 @@ $color-testogenon: rgb(175,179,165);
 }
 
 
-#page.sokolniki {
+body.sokolniki {
   ::selection {
     background-color:$color-sokolniki;
     color: $color-white;
@@ -1992,7 +1554,7 @@ $color-testogenon: rgb(175,179,165);
 }
 
 
-#page.fazer {
+body.fazer {
   ::selection {
     background-color:$color-fazer;
     color: $color-white;
@@ -2094,7 +1656,7 @@ $color-testogenon: rgb(175,179,165);
 }
 
 
-#page.testogenon {
+body.testogenon {
   ::selection {
     background-color:$color-testogenon;
     color: $color-white;
@@ -2403,22 +1965,22 @@ $color-testogenon: rgb(175,179,165);
     text-align: center;
   }
 
-  #page-fazer .section.case .info-bg {
+  body-fazer .section.case .info-bg {
     background: $color-fazer;
     opacity: 0.8;
   }
 
-  #page-2t .section.case .info-bg {
+  body-2t .section.case .info-bg {
     background: $color-2t;
     opacity: 0.8;
   }
 
-  #page-flight .section.case .info-bg {
+  body-flight .section.case .info-bg {
     background: $color-flight;
     opacity: 0.8;
   }
 
-  #page-sokolniki .section.case .info-bg {
+  body-sokolniki .section.case .info-bg {
     background: $color-sokolniki;
     opacity: 0.8;
   }
@@ -2478,34 +2040,24 @@ $color-testogenon: rgb(175,179,165);
     text-align: center;
   }
 
-  #page-fazer .section.case .info-bg {
+  body-fazer .section.case .info-bg {
     background: $color-fazer;
     opacity: 0.8;
   }
 
-  #page-2t .section.case .info-bg {
+  body-2t .section.case .info-bg {
     background: $color-2t;
     opacity: 0.8;
   }
 
-  #page-flight .section.case .info-bg {
+  body-flight .section.case .info-bg {
     background: $color-flight;
     opacity: 0.8;
   }
 
-  #page-sokolniki .section.case .info-bg {
+  body-sokolniki .section.case .info-bg {
     background: $color-sokolniki;
     opacity: 0.8;
   }
-
-}
-
-/* Small Monitor */
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-
-}
-
-/* Large Monitor */
-@media only screen and (min-width: 1200px) {
 
 }

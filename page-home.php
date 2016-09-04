@@ -19,13 +19,13 @@
 					<?php $query->the_post(); ?>
 
 					<div class="slide <?php echo $post->post_name ?>" id="slide-<?php echo $post->post_name ?>" data-bs="<?php the_field('case_head'); ?>">
-						<div class="wrap">
-							<header class="frame">
-								<div class="ui header"><?php the_title(); ?>
-			            <div class="sub header"><?php the_field('case_meta1'); ?></div>
-			          </div>
-                <a class="more" href="<?php echo get_the_permalink() ?>" rel="bookmark">Подробнее...</a>
-							</header>
+						<div class="frame link">
+							<div class="title">
+								<span><?php the_title(); ?></span>
+								<div class="sub"><?php the_field('case_meta1'); ?></div>
+							</div>
+
+							<a class="more" href="<?php echo get_the_permalink() ?>" rel="bookmark">Подробнее...</a>
 						</div>
 					</div>
 
@@ -41,7 +41,7 @@
 						<div class="two column">
 							<div class="ui card pr">
   							<div class="content">
-    							<div class="header">PR</div>
+    							<div class="title">PR</div>
     							<div class="description">
       							<p>О вас будут говорить так, как вы хотите.</p>
     							</div>
@@ -52,7 +52,7 @@
 						<div class="two column">
 							<div class="ui card brand">
   							<div class="content">
-    							<div class="header">Branding</div>
+    							<div class="title">Branding</div>
     							<div class="description">
       							<p>Вы будете похожи на себя, а другие захотят быть похожими на вас.</p>
     							</div>
@@ -63,7 +63,7 @@
 						<div class="two column">
 							<div class="ui card adv">
   							<div class="content">
-    							<div class="header">Реклама</div>
+    							<div class="title">Реклама</div>
     							<div class="description">
       							<p>Вы хотите рассказать о своем продукте – мы знаем, как сделать, чтобы вас слушали.</p>
     							</div>
@@ -74,7 +74,7 @@
 						<div class="two column">
 							<div class="ui card digital">
   							<div class="content">
-    							<div class="header">Digital</div>
+    							<div class="title">Digital</div>
     							<div class="description">
       							<p>Сайты, социальные сети, поисковое продвижение, контент маркетинг, вот это вот всё.</p>
     							</div>
@@ -85,7 +85,7 @@
 						<div class="four column">
 							<div class="ui card big">
   							<div class="content">
-    							<div class="header">Услуги</div>
+    							<div class="title">Услуги</div>
 									<div class="meta pr">PR</div>
     							<div class="description pr">
       							<p>Создаем и реализуем информационные поводы, инициируем публикации, организуем выступления, готовим интервью etc. В выборе инструментов опираемся на PR стратегию. У вас нет стратегии? Мы  разработаем!</p>
@@ -112,11 +112,11 @@
 				<section class="section team" data-bs="/wp-content/uploads/team_bwo.jpg">
 
 					<div class="wrap">
-						<header class="frame">
-							<h3 class="ui header">Мы
-								<div class="sub header">Знакомьтесь</div>
+						<div class="frame">
+							<h3 class="ui title">Мы
+								<div class="sub title">Знакомьтесь</div>
 							</a>
-						</header>
+						</div>
 					</div>
 
 				</section>
@@ -130,7 +130,7 @@
 
 									<div class="ui card">
 	  								<div class="content">
-	    								<div class="header">
+	    								<div class="title">
 												<a href="tel:+78124020029">+7 (812) 402-00-29</a>
 											</div>
 	    								<div class="description">
@@ -147,7 +147,7 @@
 
 									<div class="ui card big">
 										<div class="content">
-											<div class="header">Контакты</div>
+											<div class="title">Контакты</div>
 											<div class="meta">поговорим об этом?</div>
 										</div>
 									</div>
@@ -161,11 +161,11 @@
 				<div class="slide map" data-bs="/wp-content/uploads/contact_map.jpg">
 
 					<div class="wrap">
-						<header class="frame">
-							<div class="ui header">Мы здесь
-								<div class="sub header">Каменноостровский пр. 12 А 3-Н</div>
+						<div class="frame">
+							<div class="ui title">Мы здесь
+								<div class="sub title">Каменноостровский пр. 12 А 3-Н</div>
 							</div>
-						</header>
+						</div>
 					</div>
 
 				</div>
@@ -177,7 +177,7 @@
 
 									<div class="ui card">
 										<div class="content">
-											<div class="header"></div>
+											<div class="title"></div>
 											<div class="description">
 												<?php echo do_shortcode( '[contact-form-7 id="1744" title="Обратная связь"]' ); ?>
 											</div>
@@ -189,7 +189,7 @@
 
 									<div class="ui card big">
 										<div class="content">
-											<div class="header">Обратная связь</div>
+											<div class="title">Обратная связь</div>
 											<div class="meta">оставить заявку и задать вопросы</div>
 										</div>
 									</div>
@@ -249,9 +249,9 @@
 	<?php endwhile; else : ?>
 
 			<article id="post-not-found" class="hentry cf">
-					<header class="article-header">
+					<div class="article-title">
 						<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
-				</header>
+				</div>
 					<section class="entry-content">
 						<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
 				</section>
