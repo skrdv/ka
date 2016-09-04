@@ -39,18 +39,17 @@
 					<div class="container">
 
 						<div class="two column">
-							<div class="ui card pr">
-  							<div class="content">
+							<div class="card service pr">
+								<div class="content">
     							<div class="title">PR</div>
     							<div class="description">
       							<p>О вас будут говорить так, как вы хотите.</p>
     							</div>
-  							</div>
+								</div>
 							</div>
 						</div>
-
 						<div class="two column">
-							<div class="ui card brand">
+							<div class="card service brand">
   							<div class="content">
     							<div class="title">Branding</div>
     							<div class="description">
@@ -59,9 +58,8 @@
   							</div>
 							</div>
 						</div>
-
 						<div class="two column">
-							<div class="ui card adv">
+							<div class="card service adv">
   							<div class="content">
     							<div class="title">Реклама</div>
     							<div class="description">
@@ -70,9 +68,8 @@
   							</div>
 							</div>
 						</div>
-
 						<div class="two column">
-							<div class="ui card digital">
+							<div class="card service digital">
   							<div class="content">
     							<div class="title">Digital</div>
     							<div class="description">
@@ -81,27 +78,34 @@
   							</div>
 							</div>
 						</div>
-
 						<div class="four column">
-							<div class="ui card big">
+							<div class="card service big">
   							<div class="content">
     							<div class="title">Услуги</div>
-									<div class="meta pr">PR</div>
-    							<div class="description pr">
-      							<p>Создаем и реализуем информационные поводы, инициируем публикации, организуем выступления, готовим интервью etc. В выборе инструментов опираемся на PR стратегию. У вас нет стратегии? Мы  разработаем!</p>
-    							</div>
-									<div class="meta brand">Branding</div>
-    							<div class="description brand">
-      							<p>Создаем бренды с нуля, проводим ребрендинг, пишем бренд-платформы, придумываем вербальную айдентику, логотипы, фирменные стили, чек-листы для текстов. Опираемся на пожелания заказчика, специфику продукта и предпочтения целевой аудитории.</p>
-    							</div>
-									<div class="meta adv">Реклама</div>
-    							<div class="description adv">
-      							<p>Разработаем вам новую Big idea или будем действовать в рамках готовой. Создадим рекламный креатив, заточенный под вашу целевую аудиторию. Подберем носители, подготовим медиа-план, снимем, смонтируем, сверстаем, напечатаем – и запустим вашу рекламу в пространство и время! Работаем с традиционными носителями, придумываем эмбиент. Никогда не воруем креатив!</p>
-    							</div>
-									<div class="meta digital">Digital</div>
-    							<div class="description digital">
-      							<p>Создадим группу и наполним ее органикой, изгоним ботов, придумаем интересный контент и произведем его, настроим контекст и таргет, поддержим комментарийную программу, разработаем механики активации и реализуем, определим KPI и достигнем результата.</p>
-    							</div>
+									<div class="item pr">
+										<div class="meta">PR</div>
+	    							<div class="description">
+	      							<p>Создаем и реализуем информационные поводы, инициируем публикации, организуем выступления, готовим интервью etc. В выборе инструментов опираемся на PR стратегию. У вас нет стратегии? Мы  разработаем!</p>
+	    							</div>
+									</div>
+									<div class="item branding">
+										<div class="meta">Branding</div>
+	    							<div class="description">
+	      							<p>Создаем бренды с нуля, проводим ребрендинг, пишем бренд-платформы, придумываем вербальную айдентику, логотипы, фирменные стили, чек-листы для текстов. Опираемся на пожелания заказчика, специфику продукта и предпочтения целевой аудитории.</p>
+	    							</div>
+									</div>
+									<div class="item advertice">
+										<div class="meta">Реклама</div>
+	    							<div class="description">
+	      							<p>Разработаем вам новую Big idea или будем действовать в рамках готовой. Создадим рекламный креатив, заточенный под вашу целевую аудиторию. Подберем носители, подготовим медиа-план, снимем, смонтируем, сверстаем, напечатаем – и запустим вашу рекламу в пространство и время! Работаем с традиционными носителями, придумываем эмбиент. Никогда не воруем креатив!</p>
+	    							</div>
+									</div>
+									<div class="item digital">
+										<div class="meta">Digital</div>
+	    							<div class="description">
+	      							<p>Создадим группу и наполним ее органикой, изгоним ботов, придумаем интересный контент и произведем его, настроим контекст и таргет, поддержим комментарийную программу, разработаем механики активации и реализуем, определим KPI и достигнем результата.</p>
+	    							</div>
+									</div>
   							</div>
 							</div>
 						</div>
@@ -124,15 +128,12 @@
 				<section class="section contact">
 
 					<div class="slide contact" data-bs="/wp-content/uploads/contact_circle.jpg">
-
 							<div class="container">
-						  	<div class="six column">
 
-									<div class="ui card">
+						  	<div class="six column">
+									<div class="card contact">
 	  								<div class="content">
-	    								<div class="title">
-												<a href="tel:+78124020029">+7 (812) 402-00-29</a>
-											</div>
+	    								<a class="title" href="tel:+78124020029">+7 (812) 402-00-29</a>
 	    								<div class="description">
 												<p>Санкт-Петербург</p>
 												<p>Каменноостровский пр. 12 А 3-Н</p>
@@ -141,20 +142,18 @@
 	    								</div>
 										</div>
 	  							</div>
-
 								</div>
-								<div class="six column">
 
-									<div class="ui card big">
+								<div class="six column">
+									<div class="card contact big">
 										<div class="content">
 											<div class="title">Контакты</div>
 											<div class="meta">поговорим об этом?</div>
 										</div>
 									</div>
-
 								</div>
-
 							</div>
+
 						</div>
 					</div>
 
@@ -169,37 +168,26 @@
 					</div>
 
 				</div>
-
 				<div class="slide feedback" data-bs="/wp-content/uploads/contact_form.jpg">
+					<div class="container">
 
-							<div class="container">
-								<div class="six column">
+						<div class="six column">
+							<?php echo do_shortcode( '[contact-form-7 id="1744" title="Обратная связь"]' ); ?>
+						</div>
 
-									<div class="ui card">
-										<div class="content">
-											<div class="title"></div>
-											<div class="description">
-												<?php echo do_shortcode( '[contact-form-7 id="1744" title="Обратная связь"]' ); ?>
-											</div>
-										</div>
-									</div>
-
-								</div>
-								<div class="six column">
-
-									<div class="ui card big">
-										<div class="content">
-											<div class="title">Обратная связь</div>
-											<div class="meta">оставить заявку и задать вопросы</div>
-										</div>
-									</div>
-
+						<div class="six column">
+							<div class="ui card feedback big">
+								<div class="content">
+									<div class="title">Обратная связь</div>
+									<div class="meta">оставить заявку и задать вопросы</div>
 								</div>
 							</div>
+						</div>
 
 					</div>
+				</div>
 
-				</section>
+			</section>
 
 			<?php //the_content(); ?>
 

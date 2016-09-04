@@ -82,15 +82,15 @@ $color-testogenon: rgb(175,179,165);
     @if $lowercase { text-transform: $lowercase; }
 }
 
-@mixin section-color($color-set: false, $color-bg: false) {
+@mixin section-color($color-active: false, $color-main: false) {
   @include selection {
-    color:  $color-bg;
-    background-color: $color-set;
+    color:  $color-main;
+    background-color: $color-active;
   }
   .nav {
     .logo {
      .out path {
-       fill: $color-bg;
+       fill: $color-main;
      }
      .in path {
        fill: transparent;
@@ -100,55 +100,62 @@ $color-testogenon: rgb(175,179,165);
          fill: transparent;
        }
        .in path {
-         fill: $color-set;
+         fill: $color-active;
        }
      }
    }
    .browse {
-     color: $color-bg;
+     color: $color-main;
      .browse-inner,
      .browse-inner:before,
      .browse-inner:after {
-       background-color: $color-bg;
+       background-color: $color-main;
      }
      &:hover,
      &.action {
-       color: $color-set;
+       color: $color-active;
        .browse-inner,
        .browse-inner:before,
        .browse-inner:after {
-         background-color: $color-set;
+         background-color: $color-active;
        }
      }
    }
-   .item {
-     color: $color-bg;
+   .item,
+   .phone {
+     color: $color-main;
      &:hover {
-       color: $color-set;
+       color: $color-active;
      }
    }
   }
   .frame {
-    border-color: $color-bg;
+    border-color: $color-main;
     .title,
     .sub,
     .more {
-      color: $color-bg;
+      color: $color-main;
     }
     &.link:hover {
-      border-color: $color-bg;
-      background: rgba($color-set, .5);
+      border-color: $color-main;
+      background: rgba($color-active, .5);
+    }
+  }
+  .card {
+    color: $color-main;
+    p, a {
+      color: $color-main;
     }
   }
   .fp-controlArrow,
   .fp-verticalArrow {
     path {
-      fill: $color-bg;
-      stroke: $color-bg;
+      fill: $color-main;
+      stroke: $color-main;
     }
     &:hover path {
-      fill: $color-set;
-      stroke: $color-set;
+      fill: $color-active;
+      stroke: $color-active;
     }
   }
 }
@@ -182,6 +189,7 @@ $color-testogenon: rgb(175,179,165);
   .phone {
     height: 1.5em;
     margin-left: auto;
+    padding-right: 0;
   }
   .menu {
     display: none;
@@ -189,6 +197,8 @@ $color-testogenon: rgb(175,179,165);
     @include transition(all 0.5s ease-in-out);
     .item {
       opacity: 0;
+      line-height: 1;
+      vertical-align: middle;
     }
     &.action {
       display: block;
@@ -206,7 +216,7 @@ $color-testogenon: rgb(175,179,165);
     .text {
       padding-left: 5px;
       font-size: 1.5em;
-      line-height: 1.5em;
+      line-height: 1;
       font-weight: bold;
       text-transform: uppercase;
       vertical-align: middle;
@@ -300,6 +310,7 @@ $color-testogenon: rgb(175,179,165);
 }
 
 
+
 // Frame
 .fp-tableCell {text-align: center;}
 .frame {
@@ -336,9 +347,84 @@ $color-testogenon: rgb(175,179,165);
 
 
 
+// Services
+.section.services {
+  .container {
+    align-items: center;
+    .card {
+      &.big {
+        .item {
+          display: none;
+          &.pr {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+// Contact
+.section.contact {
+
+  .slide.contact {
+
+  }
+
+  .slide.feedback {
+    .ui.card {
+      &.big {
+        .header,
+        .meta {
+          color: $color-black;
+        }
+      }
+    }
+    .ui.form {
+      span,
+      input,
+      textarea,
+      .wpcf7-mail-sent-ok {
+
+        font-weight: normal;
+        border-radius: 0;
+        transition: 1s all;
+      }
+      input:focus,
+      textarea:focus {
+        border-color: $color-pink;
+      }
+      .wpcf7-form-control-wrap {
+        position: initial;
+      }
+      .field {
+        position: relative;
+      }
+      .wpcf7-not-valid-tip,
+      .wpcf7-response-output {
+        font-family: 'Lato Regular' !important;
+        font-weight: normal;
+      }
+      .wpcf7-form label.error {
+        color: $color-pink !important;
+      }
+      .theme_1.wpcf7-form input.error,
+      .theme_1.wpcf7-form select.error,
+      .theme_1.wpcf7-form textarea.error {
+        border-bottom: 2px solid $color-pink !important;
+      }
+    }
+
+  }
+
+}
+
+
 
 // Card
-.ui.card {
+.card {
   position: relative;
   @include display(flex);
   @include flex-direction(column);
@@ -346,49 +432,83 @@ $color-testogenon: rgb(175,179,165);
     @include flex-grow(1);
     margin: 0;
     padding: 0;
-    .header {
-
-      font-size: 1.4em;
-      font-weight: bold;
-      line-height: 1.2857em;
-      text-transform: lowercase;
+  }
+  .title {
+    text-align: left;
+    @include font-lato(2em, 1, normal, lowercase);
+  }
+  .description {
+    text-align: left;
+    @include font-lato(1.2em, 1, normal, none);
+  }
+  // Big Right Card
+  &.big {
+    .title {
+      text-align: right;
+      @include font-lato(4em, 1.5, normal, lowercase);
+    }
+    .meta {
+      text-align: right;
+      @include font-lato-light(1.5em, 1, normal, uppercase);
     }
     .description {
-      font-family: 'Lato Medium Italic';
-      font-size: .88em;
-      p {
-        line-height: 1;
+      padding-top: 1em;
+      padding-left: 20%;
+      text-align: left;
+      @include font-lato(1.2em, 1, normal, none);
+    }
+  }
+  // Services
+  &.service {
+    .content {
+      height: 200px;
+    }
+    .title {
+      text-align: left;
+      @include font-lato(1.5em, 1.5, bold, lowercase);
+    }
+    .description {
+      text-align: left;
+      @include font-lato-italic(1em, 1, normal, none);
+    }
+    &.big {
+      .content {
+        height: 300px;
+      }
+      .title {
+        text-align: right;
+        @include font-lato(4em, 1, normal, lowercase);
+      }
+      .description {
+        text-align: left;
+        @include font-lato(1.2em, 1, normal, none);
       }
     }
   }
-  &.big {
-    .header {
-      font-size: 4em;
-      text-align: right;
+  // Contact
+  &.contact {
+    .title {
+      display: block;
+      margin-bottom: 1em;
     }
-    .meta {
-      position: absolute;
-      right: 0;
-      top: 60px;
-      font-family: 'Lato Light';
-      font-size: 1.6em;
-      font-weight: normal;
-      text-transform: uppercase;
-      text-align: right;
-      visibility: hidden;
+    .fb {
+      display: block;
+      margin-top: 2em;
+      font-weight: bold;
     }
-    .description {
-      position: absolute;
-      right: 0;
-      top: 100px;
-      max-width: 300px;
-
-      font-size: 1.1em;
-      line-height: 1.4em;
-      text-align: left;
-      visibility: hidden;
+    &.big {
+      .title {
+        margin: 0;
+      }
     }
   }
+  // Feedback
+  &.feedback {
+    .content {
+      height: 400px;
+    }
+  }
+
 }
 
 
@@ -489,132 +609,14 @@ $color-testogenon: rgb(175,179,165);
 
 
 
-  // Services
-  .section.services {
-    .card.big {
-      .meta,
-      .description {
-        visibility: hidden;
-      }
-    }
-  }
+
 
   // Team
   .section.team {
 
   }
 
-  // Contact
-  .section.contact {
 
-    .slide.contact {
-      .ui.card {
-        .header {
-          font-size: 2em;
-          font-weight: normal;
-          a {
-            color: $color-white;
-          }
-        }
-        .description {
-
-          font-size: 1.2em;
-          margin-top: 2em;
-          p, a {
-            margin-bottom: 0;
-            color: $color-white;
-          }
-          .fb {
-            display: block;
-            margin-top: 2em;
-            font-weight: bold;
-          }
-        }
-        &.big {
-          width: 100%;
-          position: relative;
-          .header {
-            font-size: 4em;
-            color: $color-white;
-          }
-          .meta {
-            font-family: 'Lato Light';
-            font-size: 1.2em;
-            text-transform: uppercase;
-            text-align: right;
-            color: $color-white;
-            color: white;
-            position: relative;
-            visibility: visible;
-            top: 0;
-          }
-          .description {
-            position: absolute;
-            right: 0;
-            top: 100px;
-            color: #231f20;
-
-            font-size: 1.1em;
-            line-height: 1.4em;
-            text-align: right;
-            visibility: hidden;
-            color: $color-black;
-          }
-        }
-      }
-    }
-
-    .slide.map {
-
-    }
-
-    .slide.feedback {
-      .ui.card {
-        &.big {
-          .header,
-          .meta {
-            color: $color-black;
-          }
-        }
-      }
-      .ui.form {
-        span,
-        input,
-        textarea,
-        .wpcf7-mail-sent-ok {
-
-          font-weight: normal;
-          border-radius: 0;
-          transition: 1s all;
-        }
-        input:focus,
-        textarea:focus {
-          border-color: $color-pink;
-        }
-        .wpcf7-form-control-wrap {
-          position: initial;
-        }
-        .field {
-          position: relative;
-        }
-        .wpcf7-not-valid-tip,
-        .wpcf7-response-output {
-          font-family: 'Lato Regular' !important;
-          font-weight: normal;
-        }
-        .wpcf7-form label.error {
-          color: $color-pink !important;
-        }
-        .theme_1.wpcf7-form input.error,
-        .theme_1.wpcf7-form select.error,
-        .theme_1.wpcf7-form textarea.error {
-          border-bottom: 2px solid $color-pink !important;
-        }
-      }
-
-    }
-
-  }
 
 
 
@@ -817,7 +819,7 @@ body.home {
 
   // Services
   &.fp-viewing-services {
-    @include section-color($color-black, $color-black);
+    @include section-color($color-pink, $color-black);
   }
 
   // Team
@@ -828,16 +830,25 @@ body.home {
   // Contact
   &.fp-viewing-contact-0 {
     @include section-color($color-white, $color-white);
+    .fp-verticalArrow.fp-down {
+      display: none;
+    }
   }
 
   // Map
   &.fp-viewing-contact-1 {
     @include section-color($color-pink, $color-pink);
+    .fp-verticalArrow.fp-down {
+      display: none;
+    }
   }
 
   // Feedback
   &.fp-viewing-contact-2 {
     @include section-color($color-black, $color-black);
+    .fp-verticalArrow.fp-down {
+      display: none;
+    }
   }
 
 }

@@ -3,6 +3,7 @@ $medium-screen: 600px;
 $large-screen: 900px;
 
 // Typography
+$font-stack-system: "Lato", sans-serif;
 $base-font-family: $font-stack-system;
 $heading-font-family: $base-font-family;
 
@@ -10,7 +11,7 @@ $heading-font-family: $base-font-family;
 $base-font-size: 1em;
 
 // Line height
-$base-line-height: 1.5;
+$base-line-height: 1;
 $heading-line-height: 1.2;
 
 // Other Sizes
