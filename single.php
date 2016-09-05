@@ -42,7 +42,9 @@
 		  <?php for ($i=1; $i < 11; $i++) { ?>
 		    <?php if( get_field('case_'.$i) ) { ?>
 
-		      <section class="section case <?php echo $post->post_name; ?> case-<?php echo $i; ?>" data-bs="<?php the_field('case_'.$i); ?>" data-alt="<?php the_field('alt_'.$i); ?>">
+		      <section class="section case slide"
+					data-bs="<?php the_field('case_'.$i); ?>"
+					data-alt="<?php the_field('alt_'.$i); ?>">
 
 		        <?php if( get_field('text_'.$i) ) { ?>
 						<div class="container">

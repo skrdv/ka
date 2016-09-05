@@ -127,7 +127,7 @@ jQuery(document).ready(function($) {
 
 		$('main article').fullpage({
 			anchors: ['portfolio', 'services', 'team', 'contact'],
-			menu: '#nav',
+			menu: '.nav',
 			scrollingSpeed: 1000,
 			keyboardScrolling: true,
 			animateAnchor: true,
@@ -217,6 +217,11 @@ jQuery(document).ready(function($) {
 	$('.fp-verticalArrow.fp-down').click(function(e){
 		e.preventDefault();
 		$.fn.fullpage.moveSectionDown();
+	});
+
+	$('.fp-verticalArrow.fp-top').click(function(e){
+		e.preventDefault();
+		$.fn.fullpage.moveTo(0);
 	});
 
 	// Case Info

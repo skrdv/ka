@@ -82,7 +82,7 @@ $color-testogenon: rgb(175,179,165);
     @if $lowercase { text-transform: $lowercase; }
 }
 
-@mixin section-color($color-active: false, $color-main: false) {
+@mixin home-color($color-active: false, $color-main: false) {
   @include selection {
     color:  $color-main;
     background-color: $color-active;
@@ -142,33 +142,211 @@ $color-testogenon: rgb(175,179,165);
       background: rgba($color-active, .5);
     }
   }
-
   .card {
     color: $color-main;
     p, a {
       color: $color-main;
     }
   }
-  .card.case {
-    color: $color-black;
-    p, a {
-      color: $color-black;
-    }
-  }
-  .back {
-    background: rgba($color-active, .5);
-  }
   .fp-controlArrow,
   .fp-verticalArrow {
+    color: $color-main;
     path {
       fill: $color-main;
       stroke: $color-main;
     }
-    &:hover path {
-      fill: $color-active;
-      stroke: $color-active;
+    &:hover {
+      color: $color-active;
+      path {
+        fill: $color-active;
+        stroke: $color-active;
+      }
     }
   }
+}
+
+@mixin case-color($color-active: false, $color-main: false) {
+  @include selection {
+    color:  $color-main;
+    background-color: $color-active;
+  }
+  .card {
+    color: $color-main;
+    p, a {
+      color: $color-main;
+    }
+  }
+  &.fp-viewing-0,
+  &.fp-viewing-1 {
+    .nav {
+      .logo {
+       .out path {
+         fill: $color-main;
+       }
+       .in path {
+         fill: transparent;
+       }
+       &:hover {
+         .out path {
+           fill: transparent;
+         }
+         .in path {
+           fill: $color-active;
+         }
+       }
+     }
+     .browse {
+       color: $color-main;
+       .browse-inner,
+       .browse-inner:before,
+       .browse-inner:after {
+         background-color: $color-main;
+       }
+       &:hover,
+       &.action {
+         color: $color-active;
+         .browse-inner,
+         .browse-inner:before,
+         .browse-inner:after {
+           background-color: $color-active;
+         }
+       }
+     }
+     .item,
+     .phone {
+       color: $color-main;
+       &:hover {
+         color: $color-active;
+       }
+     }
+    }
+    .frame {
+      border-color: $color-main;
+      .title,
+      .sub,
+      .more {
+        color: $color-main;
+      }
+    }
+    .card {
+      color: $color-main;
+      p, a {
+        color: $color-main;
+      }
+    }
+    .back {
+      background: rgba($color-active, .5);
+    }
+    .button.show {
+      color: $color-main;
+      border: 1px solid $color-active;
+      background-color: rgba($color-active, .5);
+      &:hover {
+        color: $color-active;
+        border: 1px solid $color-active;
+        background-color: rgba($color-active, 0);
+      }
+    }
+    .fp-controlArrow,
+    .fp-verticalArrow {
+      color: $color-main;
+      path {
+        fill: $color-main;
+        stroke: $color-main;
+      }
+      &:hover {
+        color: $color-active;
+        path {
+          fill: $color-active;
+          stroke: $color-active;
+        }
+      }
+    }
+
+  }
+
+  &.fp-viewing-2,
+  &.fp-viewing-3,
+  &.fp-viewing-4,
+  &.fp-viewing-5,
+  &.fp-viewing-6,
+  &.fp-viewing-7,
+  &.fp-viewing-8,
+  &.fp-viewing-9,
+  &.fp-viewing-10,
+  &.fp-viewing-11 {
+    .nav {
+      .logo {
+       .out path {
+         fill: $color-active;
+       }
+       .in path {
+         fill: transparent;
+       }
+       &:hover {
+         .out path {
+           fill: transparent;
+         }
+         .in path {
+           fill: $color-active;
+         }
+       }
+     }
+     .browse {
+       color: $color-active;
+       .browse-inner,
+       .browse-inner:before,
+       .browse-inner:after {
+         background-color: $color-active;
+       }
+       &:hover,
+       &.action {
+         color: $color-active;
+         .browse-inner,
+         .browse-inner:before,
+         .browse-inner:after {
+           background-color: $color-active;
+         }
+       }
+     }
+     .item,
+     .phone {
+       color: $color-active;
+       &:hover {
+         color: $color-active;
+       }
+     }
+    }
+    .fp-controlArrow,
+    .fp-verticalArrow {
+      color: $color-active;
+      path {
+        fill: $color-active;
+        stroke: $color-active;
+      }
+      &:hover {
+        color: $color-active;
+        path {
+          fill: $color-active;
+          stroke: $color-active;
+        }
+      }
+    }
+    .card {
+      color: $color-black;
+      p, a {
+        color: $color-black;
+      }
+    }
+    .card.info {
+      color: $color-main;
+      p, a {
+        color: $color-main;
+      }
+    }
+
+  }
+
 }
 
 
@@ -485,7 +663,7 @@ $color-testogenon: rgb(175,179,165);
     }
     .description {
       text-align: left;
-      @include font-lato-italic(1em, 1, normal, none);
+      @include font-lato-italic(0.8em, 1, normal, none);
     }
     &.big {
       .content {
@@ -553,7 +731,7 @@ $color-testogenon: rgb(175,179,165);
     .back {
       width: 50%;
       height: 100%;
-      @include position(fixed, 0 auto auto 0);
+      @include position(absolute, 0 auto auto 0);
       @include transition(all 0.5s ease-in-out);
     }
     .back,
@@ -569,6 +747,7 @@ $color-testogenon: rgb(175,179,165);
       }
     }
     .button {
+      @include transition(all 0.5s ease-in-out);
       outline: none;
       &:hover,
       &:focus {
@@ -588,13 +767,6 @@ $color-testogenon: rgb(175,179,165);
 
   }
 
-  .card.case {
-    .titloe,
-    .meta,
-    .description {
-      color: $color-black;
-    }
-  }
 
 }
 
@@ -660,6 +832,7 @@ $color-testogenon: rgb(175,179,165);
   }
   &.fp-top {
     display: none;
+    opacity: 0;
     bottom: 40px;
     font-weight: bold;
     text-align: center;
@@ -708,10 +881,6 @@ $color-testogenon: rgb(175,179,165);
 .fp-tableCell {
   text-align: center;
 }
-
-
-
-
 
 
 
@@ -799,53 +968,69 @@ $color-testogenon: rgb(175,179,165);
 /*******************************
     Section Colors
 *******************************/
-
-
 body.home {
 
-  // Portfolio ZU
+  // Start
   &.fp-viewing-portfolio-0 {
-    @include section-color($color-zu, $color-white);
+    @include home-color($color-white, $color-white);
+    .fp-verticalArrow.fp-up {
+      display: none;
+    }
+  }
+
+  // Portfolio ZU
+  &.fp-viewing-portfolio-1 {
+    @include home-color($color-zu, $color-white);
     .fp-verticalArrow.fp-up {
       display: none;
     }
   }
 
   // Portfolio Flight
-  &.fp-viewing-portfolio-1 {
-    @include section-color($color-flight, $color-white);
+  &.fp-viewing-portfolio-2 {
+    @include home-color($color-flight, $color-white);
     .fp-verticalArrow.fp-up {
       display: none;
     }
   }
 
   // Portfolio 2T
-  &.fp-viewing-portfolio-2 {
-    @include section-color($color-2t, $color-white);
+  &.fp-viewing-portfolio-3 {
+    @include home-color($color-2t, $color-white);
     .fp-verticalArrow.fp-up {
       display: none;
     }
   }
 
   // Portfolio Sokolniki
-  &.fp-viewing-portfolio-3 {
-    @include section-color($color-sokolniki, $color-white);
+  &.fp-viewing-portfolio-4 {
+    @include home-color($color-sokolniki, $color-white);
     .fp-verticalArrow.fp-up {
       display: none;
+    }
+    .frame {
+      border-color: $color-sokolniki;
+      .title,
+      .sub {
+        color: $color-sokolniki;
+      }
+      .more {
+        color: $color-white;
+      }
     }
   }
 
   // Portfolio Fazer
-  &.fp-viewing-portfolio-4 {
-    @include section-color($color-fazer, $color-white);
+  &.fp-viewing-portfolio-5 {
+    @include home-color($color-fazer, $color-white);
     .fp-verticalArrow.fp-up {
       display: none;
     }
   }
 
   // Portfolio Testogenon
-  &.fp-viewing-portfolio-5 {
-    @include section-color($color-testogenon, $color-white);
+  &.fp-viewing-portfolio-6 {
+    @include home-color($color-testogenon, $color-white);
     .fp-verticalArrow.fp-up {
       display: none;
     }
@@ -853,17 +1038,17 @@ body.home {
 
   // Services
   &.fp-viewing-services {
-    @include section-color($color-pink, $color-black);
+    @include home-color($color-pink, $color-black);
   }
 
   // Team
   &.fp-viewing-team {
-    @include section-color($color-white, $color-white);
+    @include home-color($color-white, $color-white);
   }
 
   // Contact
   &.fp-viewing-contact-0 {
-    @include section-color($color-white, $color-white);
+    @include home-color($color-white, $color-white);
     .fp-verticalArrow.fp-down {
       display: none;
     }
@@ -871,7 +1056,7 @@ body.home {
 
   // Map
   &.fp-viewing-contact-1 {
-    @include section-color($color-pink, $color-pink);
+    @include home-color($color-pink, $color-pink);
     .fp-verticalArrow.fp-down {
       display: none;
     }
@@ -879,7 +1064,7 @@ body.home {
 
   // Feedback
   &.fp-viewing-contact-2 {
-    @include section-color($color-black, $color-black);
+    @include home-color($color-black, $color-black);
     .fp-verticalArrow.fp-down {
       display: none;
     }
@@ -887,40 +1072,40 @@ body.home {
 
 }
 
-body.start {
-  @include section-color($color-black, $color-black);
-}
-
 
 body.zu {
-  @include section-color($color-zu, $color-white);
+  @include case-color($color-zu, $color-white);
+  &.fp-viewing-0 {
+    .fp-verticalArrow.fp-up {
+      display: none;
+    }
+  }
   &.fp-viewing-8 {
     .fp-verticalArrow.fp-down {
       display: none !important;
     }
     .fp-verticalArrow.fp-top {
       display: block;
-      color: $color-white;
-      &:hover {
-        color: $color-zu;
-      }
+      opacity: 1;
     }
   }
 }
 
 
 body.flight {
-  @include section-color($color-flight, $color-white);
+  @include case-color($color-flight, $color-white);
+  &.fp-viewing-0 {
+    .fp-verticalArrow.fp-up {
+      display: none;
+    }
+  }
   &.fp-viewing-6 {
     .fp-verticalArrow.fp-down {
       display: none !important;
     }
     .fp-verticalArrow.fp-top {
+      opacity: 1;
       display: block;
-      color: $color-white;
-      &:hover {
-        color: $color-flight;
-      }
     }
   }
 
@@ -928,478 +1113,117 @@ body.flight {
 
 
 body.gallery-2t {
-  ::selection {
-    background-color:$color-2t;
-    color: $color-white;
-  }
-  .nav .logo {
-    .out path {
-      fill: $color-2t;
-    }
-    .in path {
-      fill: transparent;
-    }
-    &:hover {
-      .out path {
-        fill: transparent;
-      }
-      .in path {
-        fill: $color-2t;
-      }
-    }
-  }
-  .browse {
-    color: $color-2t;
-    .browse-inner,
-    .browse-inner:before,
-    .browse-inner:after {
-      background-color: $color-2t;
-    }
-    &:hover {
-      color: $color-2t;
-      .browse-inner,
-      .browse-inner:before,
-      .browse-inner:after {
-        background-color: $color-2t;
-      }
-    }
-  }
-  .fp-controlArrow,
-  .fp-verticalArrow {
-    path {
-      fill: $color-2t;
-      stroke: $color-2t;
-    }
-    &:hover path {
-      fill: $color-2t;
-      stroke: $color-2t;
-    }
-  }
-  .frame {
-    border-color: $color-white !important;
-    .header {
-      color: $color-white !important;
-    }
-  }
+  @include case-color($color-2t, $color-white);
   &.fp-viewing-0 {
     .fp-verticalArrow.fp-up {
-      display: none !important;
-    }
-    .nav .logo {
-      .out path {
-        fill: $color-white;
-      }
-      .in path {
-        fill: transparent;
-      }
-      &:hover {
-        .out path {
-          fill: transparent;
-        }
-        .in path {
-          fill: $color-2t;
-        }
-      }
-    }
-    .browse {
-      color: $color-white;
-      .browse-inner,
-      .browse-inner:before,
-      .browse-inner:after {
-        background-color: $color-white;
-      }
-      &:hover {
-        color: $color-2t;
-        .browse-inner,
-        .browse-inner:before,
-        .browse-inner:after {
-          background-color: $color-2t;
-        }
-      }
-    }
-    .fp-controlArrow,
-    .fp-verticalArrow {
-      path {
-        fill: $color-white;
-        stroke: $color-white;
-      }
-      &:hover path {
-        fill: $color-2t;
-        stroke: $color-2t;
-      }
-    }
-
-  }
-  &.fp-viewing-1 {
-    .nav .logo {
-      .out path {
-        fill: $color-white;
-      }
-      .in path {
-        fill: transparent;
-      }
-      &:hover {
-        .out path {
-          fill: transparent;
-        }
-        .in path {
-          fill: $color-2t;
-        }
-      }
-    }
-    .browse {
-      color: $color-white;
-      .browse-inner,
-      .browse-inner:before,
-      .browse-inner:after {
-        background-color: $color-white;
-      }
-      &:hover {
-        color: $color-2t;
-        .browse-inner,
-        .browse-inner:before,
-        .browse-inner:after {
-          background-color: $color-2t;
-        }
-      }
-    }
-    .fp-controlArrow,
-    .fp-verticalArrow {
-      path {
-        fill: $color-white;
-        stroke: $color-white;
-      }
-      &:hover path {
-        fill: $color-2t;
-        stroke: $color-2t;
-      }
-    }
-    .case.info {
-      .info-bg {
-        background: rgba($color-2tb, .8);
-      }
-      .ui.card {
-        opacity: 1;
-        .header,
-        .meta,
-        .description {
-          color: $color-white;
-        }
-      }
+      display: none;
     }
   }
-  &.fp-viewing-3 {
-    .case.case-2 {
-      .ui.card {
-        opacity: 1;
-        .header,
-        .meta,
-        .description {
-          color: $color-black;
-        }
-      }
-    }
-  }
-  &.fp-viewing-8 {
+  &.fp-viewing-6 {
     .fp-verticalArrow.fp-down {
       display: none !important;
     }
+    .fp-verticalArrow.fp-top {
+      opacity: 1;
+      display: block;
+    }
   }
+
+
 }
 
 
 body.sokolniki {
-  ::selection {
-    background-color:$color-sokolniki;
-    color: $color-white;
-  }
-  .nav .logo {
-    .out path {
-      fill: $color-sokolniki;
-    }
-    .in path {
-      fill: transparent;
-    }
-    &:hover {
-      .out path {
-        fill: transparent;
-      }
-      .in path {
-        fill: $color-sokolniki;
-      }
-    }
-  }
-  .browse {
-    color: $color-sokolniki;
-    .browse-inner,
-    .browse-inner:before,
-    .browse-inner:after {
-      background-color: $color-sokolniki;
-    }
-    &:hover {
-      color: $color-sokolniki;
-      .browse-inner,
-      .browse-inner:before,
-      .browse-inner:after {
-        background-color: $color-sokolniki;
-      }
-    }
-  }
-  .fp-controlArrow,
-  .fp-verticalArrow {
-    path {
-      fill: $color-sokolniki;
-      stroke: $color-sokolniki;
-    }
-    &:hover path {
-      fill: $color-sokolniki;
-      stroke: $color-sokolniki;
-    }
-  }
-  .frame {
-    border-color: $color-sokolniki !important;
-    .header {
-      color: $color-sokolniki !important;
-    }
-  }
+  @include case-color($color-sokolniki, $color-white);
   &.fp-viewing-0 {
     .fp-verticalArrow.fp-up {
-      display: none !important;
+      display: none;
     }
-    .nav .logo {
-      .out path {
-        fill: $color-white;
-      }
-      .in path {
-        fill: transparent;
-      }
-      &:hover {
-        .out path {
-          fill: transparent;
-        }
-        .in path {
-          fill: $color-sokolniki;
-        }
-      }
-    }
-    .browse {
-      color: $color-white;
-      .browse-inner,
-      .browse-inner:before,
-      .browse-inner:after {
-        background-color: $color-white;
-      }
-      &:hover {
+    .frame {
+      border-color: $color-sokolniki;
+      .title,
+      .sub,
+      .more {
         color: $color-sokolniki;
-        .browse-inner,
-        .browse-inner:before,
-        .browse-inner:after {
-          background-color: $color-sokolniki;
-        }
       }
     }
-    .fp-controlArrow,
-    .fp-verticalArrow {
-      path {
-        fill: $color-white;
-        stroke: $color-white;
-      }
-      &:hover path {
-        fill: $color-sokolniki;
-        stroke: $color-sokolniki;
-      }
-    }
-
   }
-  &.fp-viewing-1 {
-    .nav .logo {
-      .out path {
-        fill: $color-white;
-      }
-      .in path {
-        fill: transparent;
-      }
-      &:hover {
-        .out path {
-          fill: transparent;
-        }
-        .in path {
-          fill: $color-sokolniki;
-        }
-      }
-    }
-    .browse {
-      color: $color-white;
-      .browse-inner,
-      .browse-inner:before,
-      .browse-inner:after {
-        background-color: $color-white;
-      }
-      &:hover {
-        color: $color-sokolniki;
-        .browse-inner,
-        .browse-inner:before,
-        .browse-inner:after {
-          background-color: $color-sokolniki;
-        }
-      }
-    }
-    .fp-controlArrow,
-    .fp-verticalArrow {
-      path {
-        fill: $color-white;
-        stroke: $color-white;
-      }
-      &:hover path {
-        fill: $color-sokolniki;
-        stroke: $color-sokolniki;
-      }
-    }
-    .case.info {
-      .info-bg {
-        background: rgba($color-sokolnikib, .6);
-      }
-      .ui.card {
-        opacity: 1;
-        .header,
-        .meta,
-        .description {
-          color: $color-white;
-        }
-      }
-    }
-
-  }
-  &.fp-viewing-10 {
+  &.fp-viewing-11 {
     .fp-verticalArrow.fp-down {
       display: none !important;
     }
-    .nav .logo {
-      .out path {
-        fill: $color-white;
-      }
-      .in path {
-        fill: transparent;
-      }
-      &:hover {
-        .out path {
-          fill: transparent;
-        }
-        .in path {
-          fill: $color-sokolniki;
-        }
-      }
-    }
-    .browse {
-      color: $color-white;
-      .browse-inner,
-      .browse-inner:before,
-      .browse-inner:after {
-        background-color: $color-white;
-      }
-      &:hover {
-        color: $color-sokolniki;
-        .browse-inner,
-        .browse-inner:before,
-        .browse-inner:after {
-          background-color: $color-sokolniki;
-        }
-      }
-    }
-    .fp-controlArrow,
-    .fp-verticalArrow {
-      path {
-        fill: $color-white;
-        stroke: $color-white;
-      }
-      &:hover path {
-        fill: $color-sokolniki;
-        stroke: $color-sokolniki;
-      }
+    .fp-verticalArrow.fp-top {
+      opacity: 1;
+      display: block;
     }
   }
+
 
 }
 
 
 body.fazer {
-  ::selection {
-    background-color:$color-fazer;
-    color: $color-white;
-  }
-  .nav .logo {
-    .out path {
-      fill: $color-fazer;
-    }
-    .in path {
-      fill: transparent;
-    }
-    &:hover {
-      .out path {
-        fill: transparent;
-      }
-      .in path {
-        fill: $color-fazer;
-      }
-    }
-  }
-  .browse {
-    color: $color-fazer;
-    .browse-inner,
-    .browse-inner:before,
-    .browse-inner:after {
-      background-color: $color-fazer;
-    }
-    &:hover {
-      color: $color-fazer;
-      .browse-inner,
-      .browse-inner:before,
-      .browse-inner:after {
-        background-color: $color-fazer;
-      }
-    }
-  }
-  .frame {
-    border-color: $color-white !important;
-    .header {
-      color: $color-white !important;
-    }
-  }
-  .ui.card {
-    .header,
-    .meta,
-    .description {
-      color: $color-white;
-    }
-  }
-  .fp-controlArrow,
-  .fp-verticalArrow {
-    path {
-      fill: $color-fazer;
-      stroke: $color-fazer;
-    }
-    &:hover path {
-      fill: $color-fazer;
-      stroke: $color-fazer;
-    }
-  }
+  @include case-color($color-fazer, $color-white);
   &.fp-viewing-0 {
     .fp-verticalArrow.fp-up {
-      display: none !important;
+      display: none;
     }
-
   }
   &.fp-viewing-1 {
-    .case.info {
-      .info-bg {
-        background: rgba($color-fazer, .6);
+    .nav {
+      .logo {
+       .out path {
+         fill: $color-fazer;
+       }
+       .in path {
+         fill: transparent;
+       }
+       &:hover {
+         .out path {
+           fill: transparent;
+         }
+         .in path {
+           fill: $color-fazer;
+         }
+       }
+     }
+     .browse {
+       color: $color-fazer;
+       .browse-inner,
+       .browse-inner:before,
+       .browse-inner:after {
+         background-color: $color-fazer;
+       }
+       &:hover,
+       &.action {
+         color: $color-fazer;
+         .browse-inner,
+         .browse-inner:before,
+         .browse-inner:after {
+           background-color: $color-fazer;
+         }
+       }
+     }
+     .item,
+     .phone {
+       color: $color-fazer;
+       &:hover {
+         color: $color-fazer;
+       }
+     }
+    }
+    .fp-controlArrow,
+    .fp-verticalArrow {
+      color: $color-fazer;
+      path {
+        fill: $color-fazer;
+        stroke: $color-fazer;
       }
-      .ui.card {
-        opacity: 1;
-        .header,
-        .meta,
-        .description {
-          color: $color-white;
+      &:hover {
+        color: $color-fazer;
+        path {
+          fill: $color-fazer;
+          stroke: $color-fazer;
         }
       }
     }
@@ -1408,186 +1232,33 @@ body.fazer {
     .fp-verticalArrow.fp-down {
       display: none !important;
     }
-    .case.case-4 {
-      .ui.card {
-        opacity: 1;
-        .header,
-        .meta,
-        .description {
-          color: $color-black;
-        }
-      }
+    .fp-verticalArrow.fp-top {
+      opacity: 1;
+      display: block;
     }
-
   }
+
 
 }
 
 
 body.testogenon {
-  ::selection {
-    background-color:$color-testogenon;
-    color: $color-white;
-  }
-  .nav .logo {
-    .out path {
-      fill: $color-testogenon;
-    }
-    .in path {
-      fill: transparent;
-    }
-    &:hover {
-      .out path {
-        fill: transparent;
-      }
-      .in path {
-        fill: $color-testogenon;
-      }
-    }
-  }
-  .browse {
-    color: $color-testogenon;
-    .browse-inner,
-    .browse-inner:before,
-    .browse-inner:after {
-      background-color: $color-testogenon;
-    }
-    &:hover {
-      color: $color-testogenon;
-      .browse-inner,
-      .browse-inner:before,
-      .browse-inner:after {
-        background-color: $color-testogenon;
-      }
-    }
-  }
-  .fp-controlArrow,
-  .fp-verticalArrow {
-    path {
-      fill: $color-testogenon;
-      stroke: $color-testogenon;
-    }
-    &:hover path {
-      fill: $color-testogenon;
-      stroke: $color-testogenon;
-    }
-  }
+  @include case-color($color-testogenon, $color-white);
   &.fp-viewing-0 {
     .fp-verticalArrow.fp-up {
-      display: none !important;
-    }
-    .nav .logo {
-      .out path {
-        fill: $color-white;
-      }
-      .in path {
-        fill: transparent;
-      }
-      &:hover {
-        .out path {
-          fill: transparent;
-        }
-        .in path {
-          fill: $color-testogenon;
-        }
-      }
-    }
-    .browse {
-      color: $color-white;
-      .browse-inner,
-      .browse-inner:before,
-      .browse-inner:after {
-        background-color: $color-white;
-      }
-      &:hover {
-        color: $color-testogenon;
-        .browse-inner,
-        .browse-inner:before,
-        .browse-inner:after {
-          background-color: $color-testogenon;
-        }
-      }
-    }
-    .fp-controlArrow,
-    .fp-verticalArrow {
-      path {
-        fill: $color-white;
-        stroke: $color-white;
-      }
-      &:hover path {
-        fill: $color-testogenon;
-        stroke: $color-testogenon;
-      }
-    }
-    .frame {
-      border-color: $color-white !important;
-      .header {
-        color: $color-white !important;
-      }
-    }
-  }
-  &.fp-viewing-1 {
-    .nav .logo {
-      .out path {
-        fill: $color-white;
-      }
-      .in path {
-        fill: transparent;
-      }
-      &:hover {
-        .out path {
-          fill: transparent;
-        }
-        .in path {
-          fill: $color-testogenon;
-        }
-      }
-    }
-    .browse {
-      color: $color-white;
-      .browse-inner,
-      .browse-inner:before,
-      .browse-inner:after {
-        background-color: $color-white;
-      }
-      &:hover {
-        color: $color-testogenon;
-        .browse-inner,
-        .browse-inner:before,
-        .browse-inner:after {
-          background-color: $color-testogenon;
-        }
-      }
-    }
-    .fp-controlArrow,
-    .fp-verticalArrow {
-      path {
-        fill: $color-white;
-        stroke: $color-white;
-      }
-      &:hover path {
-        fill: $color-testogenon;
-        stroke: $color-testogenon;
-      }
-    }
-    .info-bg {
-      background: rgba($color-testogenon, .5);
-    }
-    .ui.card {
-      opacity: 1;
-      .header,
-      .meta,
-      .description {
-        color: $color-white;
-      }
+      display: none;
     }
   }
   &.fp-viewing-4 {
     .fp-verticalArrow.fp-down {
       display: none !important;
     }
-
+    .fp-verticalArrow.fp-top {
+      opacity: 1;
+      display: block;
+    }
   }
+
 
 }
 
