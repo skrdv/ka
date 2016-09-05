@@ -26,17 +26,42 @@ $color-testogenon: rgb(175,179,165);
 // Grid
 .container {
   @include outer-container;
-  @include display(flex);
-  @include align-items(inherit);
-  @include flex-direction(inherit);
+  $mobile: new-breakpoint(max-width $mobile-width 4);
+  $tablet: new-breakpoint(min-width $mobile-width max-width $tablet-width 8);
+  @include media($mobile) {
+    padding: 0 20px;
+  }
+  @include media($tablet) {
+    padding: 0 20px;
+  }
   .two.column {
     @include span-columns(2);
+    @include media($mobile) {
+      @include span-columns(4);
+      margin: 0;
+    }
+    @include media($tablet) {
+      @include span-columns(4);
+      margin: 0;
+    }
   }
   .four.column {
     @include span-columns(4);
+    @include media($mobile) {
+      @include span-columns(4);
+    }
+    @include media($tablet) {
+      @include span-columns(8);
+    }
   }
   .six.column {
     @include span-columns(6);
+    @include media($mobile) {
+      @include span-columns(4);
+    }
+    @include media($tablet) {
+      @include span-columns(8);
+    }
   }
   .full.column {
     @include span-columns(12);
@@ -363,6 +388,9 @@ $color-testogenon: rgb(175,179,165);
 
 // Navigation
 .nav {
+  @include display(flex);
+  @include align-items(inherit);
+  @include flex-direction(inherit);
   .logo {
     path {
       @include transition(all 0.5s ease-in-out);
@@ -381,6 +409,9 @@ $color-testogenon: rgb(175,179,165);
     height: 1.5em;
     margin-left: auto;
     padding-right: 0;
+    @include media($mobile) {
+      display: none;
+    }
   }
   .menu {
     display: none;
@@ -412,6 +443,9 @@ $color-testogenon: rgb(175,179,165);
       text-transform: uppercase;
       vertical-align: middle;
       @include transition(all 0.5s ease-in-out);
+      @include media($mobile) {
+        display: none;
+      }
     }
     //hover
     &:hover {
@@ -543,7 +577,12 @@ $color-testogenon: rgb(175,179,165);
 // Services
 .section.services {
   .container {
-    align-items: center;
+    @include media($mobile) {
+      padding: 100px 20px !important;
+    }
+    @include media($tablet) {
+      padding: 100px 20px !important;
+    }
     .card {
       &.big {
         .item {
@@ -639,7 +678,7 @@ $color-testogenon: rgb(175,179,165);
   &.big {
     .title {
       text-align: right;
-      @include font-lato(4em, 1.5, normal, lowercase);
+      @include font-lato(4em, 1, normal, lowercase);
     }
     .meta {
       text-align: right;
@@ -655,7 +694,16 @@ $color-testogenon: rgb(175,179,165);
   // Services
   &.service {
     .content {
-      height: 200px;
+      min-height: 200px;
+      padding: 100px 0;
+      @include media($tablet) {
+        min-height: 0;
+        padding: 0 0;
+      }
+      @include media($mobile) {
+        min-height: 0;
+        padding: 0 0;
+      }
     }
     .title {
       text-align: left;
@@ -1259,244 +1307,5 @@ body.testogenon {
     }
   }
 
-
-}
-
-
-
-
-/*******************************
-         Site Breakpoints
-*******************************/
-
-/* Mobile */
-@media only screen and (max-width: 767px) {
-
-  #nav {
-    left: 10px;
-    top: 10px;
-    .item {
-      // padding-left: 0.4em;
-      // padding-right: 0.4em;
-    }
-    .phone {
-      display: none;
-    }
-  }
-
-  #home {
-    .section.portfolio {
-      .wrap {
-        padding: 40px;
-      }
-      .slide {
-        .frame .ui.header {
-          font-size: 2.8em;
-          line-height: 1em;
-          word-break: break-word;
-        }
-      }
-
-    }
-
-    .section.services {
-      .ui.grid {
-        margin-top: 60px !important;
-      }
-      .ui.grid .two.wide.column:last-child {
-        display: none;
-      }
-      .fp-tableCell {
-        vertical-align: top !important;
-      }
-      .ui.card.big .meta {
-        top: 50px;
-      }
-      .ui.card .description {
-        display: none;
-      }
-      .ui.card.big .description {
-        top: 70px;
-      }
-    }
-
-    .section.contact {
-
-      .slide.contact {
-        .ui.card {
-          .content,
-          .header,
-          .meta {
-            text-align: center !important;
-          }
-        }
-      }
-      .slide.map {
-        .wrap {
-          padding: 40px;
-        }
-        .frame .ui.header {
-          padding-left: 0;
-          padding-right: 0;
-          font-size: 4em;
-        }
-      }
-      .slide.feedback {
-        padding-top: 20px;
-        padding-left: 30px;
-        padding-right: 30px;
-        .ui.card.big .header {
-          font-size: 2em;
-          text-align: center;
-        }
-        .ui.card.big .meta {
-          text-align: center;
-          font-size: 1em;
-        }
-      }
-
-    }
-  }
-
-  #case {
-
-    .section.case {
-      .wrap {
-        padding: 10px;
-      }
-      .ui.card .header {
-        font-size: 3.6em;
-      }
-      .ui.card .meta {
-        font-size: 1.1em;
-      }
-    }
-
-  }
-
-  .fp-verticalArrow {
-    display: none;
-  }
-
-  #home .section.portfolio .slide .frame .ui.header,
-  #case .section.case.head .frame .ui.header {
-    padding: 0em 0.2em 0.4em 0.2em;
-    font-size: 2.8em;
-  }
-
-  #case .section.case .info-bg,
-  #case .section.case .ui.card {
-    width: 100%;
-  }
-
-  #case .section.case .ui.card .description {
-    max-width: 90%;
-  }
-
-  #case .section.case .ui.card .header,
-  #case .section.case .ui.card .meta,
-  #case .section.case .ui.card .description {
-    color: $color-white;
-  }
-
-  #case .section.case .ui.card .header,
-  #case .section.case .ui.card .meta {
-    text-align: center;
-  }
-
-  body-fazer .section.case .info-bg {
-    background: $color-fazer;
-    opacity: 0.8;
-  }
-
-  body-2t .section.case .info-bg {
-    background: $color-2t;
-    opacity: 0.8;
-  }
-
-  body-flight .section.case .info-bg {
-    background: $color-flight;
-    opacity: 0.8;
-  }
-
-  body-sokolniki .section.case .info-bg {
-    background: $color-sokolniki;
-    opacity: 0.8;
-  }
-
-}
-
-/* Tablet */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-
-  #nav {
-    margin-top: 10px;
-    margin-left: 10px;
-    .item {
-      padding-left: 0.4em;
-      padding-right: 0.4em;
-    }
-    .item.phone {
-      display: none;
-    }
-  }
-
-  .fp-verticalArrow {
-    display: none;
-  }
-
-  #home .section.services .ui.card.big .meta {
-    top: 50px;
-  }
-
-  #home .section.services .ui.card.big .description {
-    top: 70px;
-  }
-
-  #home .section.portfolio .slide .frame .ui.header,
-  #case .section.case.head .frame .ui.header {
-    padding: 0em 0.4em 0.4em 0.4em;
-    font-size: 4em;
-  }
-
-  #case .section.case .info-bg,
-  #case .section.case .ui.card {
-    width: 100%;
-  }
-
-  #case .section.case .ui.card .description {
-    max-width: 90%;
-  }
-
-  #case .section.case .ui.card .header,
-  #case .section.case .ui.card .meta,
-  #case .section.case .ui.card .description {
-    color: $color-white;
-  }
-
-  #case .section.case .ui.card .header,
-  #case .section.case .ui.card .meta {
-    text-align: center;
-  }
-
-  body-fazer .section.case .info-bg {
-    background: $color-fazer;
-    opacity: 0.8;
-  }
-
-  body-2t .section.case .info-bg {
-    background: $color-2t;
-    opacity: 0.8;
-  }
-
-  body-flight .section.case .info-bg {
-    background: $color-flight;
-    opacity: 0.8;
-  }
-
-  body-sokolniki .section.case .info-bg {
-    background: $color-sokolniki;
-    opacity: 0.8;
-  }
 
 }

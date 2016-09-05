@@ -3,10 +3,11 @@
 
 @import "normalize";
 @import "bourbon/bourbon";
-@import "core/base";
+@import "core/grid_settings";
 @import "neat/neat";
+@import "core/base";
 
 @import "jquery.fullPage.scss";
 
-@import "grid_settings";
+
 @import 'layout';
