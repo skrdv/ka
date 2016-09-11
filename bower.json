@@ -29,6 +29,7 @@
     "bourbon": "^4.2.7",
     "normalize-scss": "normalize.scss#^5.0.3",
     "bitters": "^1.4.0",
-    "neat": "^1.8.0"
+    "neat": "^1.8.0",
+    "PACE": "pace#^1.0.2"
   }
 }
