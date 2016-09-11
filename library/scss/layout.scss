@@ -833,20 +833,22 @@ $color-testogenon: rgb(175,179,165);
     @include transition(all 0.5s ease-in-out);
   }
   &.fp-prev {
-    left: 20px;
+    left: 25px;
     svg {
       float: right;
     }
     &:hover {
+    	left: 20px;
       @include transform(scale(1.2));
     }
   }
   &.fp-next {
-    right: 20px;
+    right: 25px;
     svg {
       float: left;
     }
     &:hover {
+    	right: 20px;
       @include transform(scale(1.2));
     }
   }
@@ -867,14 +869,14 @@ $color-testogenon: rgb(175,179,165);
   &.fp-up {
     top: 20px;
     &:hover {
-      top: 15px;
+      top: 25px;
       @include transform(scale(1.2));
     }
   }
   &.fp-down {
     bottom: 20px;
     &:hover {
-      bottom: 15px;
+      bottom: 25px;
       @include transform(scale(1.2));
     }
   }
@@ -1018,11 +1020,67 @@ $color-testogenon: rgb(175,179,165);
 *******************************/
 body.home {
 
+  .fp-verticalArrow,
+  .fp-controlArrow {
+    &.start {
+      display: none;
+    }
+  }
+
   // Start
   &.fp-viewing-portfolio-0 {
-    @include home-color($color-white, $color-white);
-    .fp-verticalArrow.fp-up {
+    @include home-color($color-pink, $color-white);
+    .fp-verticalArrow {
       display: none;
+      &.start {
+        display: inline-block;
+        // border: 1px solid red;
+        width: 600px;
+        height: 30% !important;
+        margin-left: -300px !important;
+        position: absolute !important;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        @include media($mobile) {
+          width: 60px;
+          margin-left: -30px !important;
+        }
+        @include media($tablet) {
+          width: 400px;
+          margin-left: -200px !important;
+        }
+      }
+
+    }
+    .fp-controlArrow {
+      display: none;
+      &.start {
+        display: inline-block;
+        // border: 1px solid red;
+        width: 30% !important;
+        height: 600px;
+        margin-top: -300px !important;
+        @include media($mobile) {
+          height: 60px;
+          margin-top: -30px !important;
+        }
+        @include media($tablet) {
+          height: 400px;
+          margin-top: -200px !important;
+        }
+        &.fp-prev {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+        }
+        &.fp-next {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+        }
+      }
+
     }
   }
 

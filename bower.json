@@ -1,23 +1,19 @@
 {
-  "name": "WPGulp",
-  "description": "Gulp with WordPress. Start using Gulp with your WordPress plugins and themes.",
+  "name": "KA",
+  "description": "Gulp with WordPress",
   "main": "gulpfile.js",
   "authors": [
-    "ahmadawais <me@ahmadawais.com> (http://ahmadawais.com)"
+    "skrdv <skrdvx@gmail.com> (http://skrdv.com)"
   ],
   "license": "MIT",
   "keywords": [
-    "WPGulp",
     "wordpress",
-    "gulp",
-    "js",
-    "wp",
-    "gulp wp"
+    "gulp"
   ],
-  "homepage": "https://github.com/ahmadawais/WPGulp",
+  "homepage": "https://github.com/skrdv/ka",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ahmadawais/WPGulp.git"
+    "url": "https://github.com/skrdv/ka.git"
   },
   "ignore": [
     "**/.*",
@@ -25,5 +21,14 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "jquery": "1.9.1",
+    "fullpage.js": "fullpage#^2.8.6",
+    "jquery-backstretch": "backstretch#^2.0.4",
+    "bourbon": "^4.2.7",
+    "normalize-scss": "normalize.scss#^5.0.3",
+    "bitters": "^1.4.0",
+    "neat": "^1.8.0"
+  }
 }

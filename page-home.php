@@ -30,6 +30,16 @@
 
 					<?php } ?>
 					<?php wp_reset_postdata(); ?>
+          
+          <div class="fp-controlArrow fp-prev start">
+						<?php include( 'library/svg/arrow_up.svg' ); ?>
+					</div>
+					<div class="fp-controlArrow fp-next start">
+						<?php include( 'library/svg/arrow_down.svg' ); ?>
+					</div>
+					<div class="fp-verticalArrow fp-down start">
+						<?php include( 'library/svg/arrow_down.svg' ); ?>
+					</div>
 
 				</section>
 

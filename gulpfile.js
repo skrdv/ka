@@ -5,9 +5,6 @@ var bower = require('gulp-bower');
 var notify = require('gulp-notify');
 var rename = require('gulp-rename');
 
-// Load plugins
-//var $ = require('gulp-load-plugins')();
-
 // Styles
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
@@ -77,7 +74,7 @@ gulp.task('styles', function () {
       uglyComments: true
     }))
     .pipe(gulp.dest(config.styles.build))
-    .pipe(notify({message: 'task: "styles" completed!', onLast: true }))
+    .pipe(notify({message: 'Styles - OK!', onLast: true }))
 });
 
 gulp.task( 'scripts', function() {
@@ -89,14 +86,14 @@ gulp.task( 'scripts', function() {
     }))
     .pipe(uglify())
     .pipe(gulp.dest(config.scripts.build))
-    .pipe(notify({message: 'task: "scripts" completed!', onLast: true }));
+    .pipe(notify({message: 'Scripts - OK!', onLast: true }));
 });
 
 // Fonts
 gulp.task('fonts', function() {
    gulp.src('./library/fonts/**/*.{ttf,woff,woff2,eot,svg}')
    .pipe(gulp.dest('./fonts'))
-   .pipe(notify({message: 'task: "fonts" completed!', onLast: true }));
+   .pipe(notify({message: 'task: "FONTS" OK!', onLast: true }));
 });
 
 // Images
@@ -122,7 +119,7 @@ gulp.task('images', function () {
           svgoPlugins: [{removeViewBox: false}]
         } ) )
     .pipe(gulp.dest( imagesDestination ))
-    .pipe( notify( { message: 'task: "images" Completed! 💯', onLast: true } ) );
+    .pipe( notify( { message: 'task: "IMAGES" OK!', onLast: true } ) );
  });
 
 
