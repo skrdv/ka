@@ -483,6 +483,9 @@ $color-testogenon: rgb(175,179,165);
 
 // Portfolio
 .section.portfolio {
+	.slide {
+		 background-size: cover !important;
+	}
 
   .frame {
     overflow: hidden;
@@ -557,6 +560,7 @@ $color-testogenon: rgb(175,179,165);
 
 // Services
 .section.services {
+	
   .container {
     @include media($mobile) {
       padding: 100px 20px !important;
@@ -589,9 +593,12 @@ $color-testogenon: rgb(175,179,165);
 // Contact
 .section.contact {
 
-  .slide.contact {}
+  .slide.contact {
+		background-size: cover !important;
+	}
 
   .slide.feedback {
+		background-size: cover !important;
     .ui.card {
       &.big {
         .header,
@@ -607,6 +614,9 @@ $color-testogenon: rgb(175,179,165);
 			}
 			.nf-field-container {
 				margin: 0;
+			}
+			.nf-error-msg {
+				color: $color-pink !important;
 			}
 			.nf-error {
     		position: relative;
@@ -632,49 +642,7 @@ $color-testogenon: rgb(175,179,165);
 					color: $color-pink !important;
 				}
 			}
-		
-		
-    
-}
-		
-		
-		
-		
-		
-    .ui.form {
-      span,
-      input,
-      textarea,
-      .wpcf7-mail-sent-ok {
-
-        font-weight: normal;
-        border-radius: 0;
-        transition: 1s all;
-      }
-      input:focus,
-      textarea:focus {
-        border-color: $color-pink;
-      }
-      .wpcf7-form-control-wrap {
-        position: initial;
-      }
-      .field {
-        position: relative;
-      }
-      .wpcf7-not-valid-tip,
-      .wpcf7-response-output {
-        font-family: 'Lato Regular' !important;
-        font-weight: normal;
-      }
-      .wpcf7-form label.error {
-        color: $color-pink !important;
-      }
-      .theme_1.wpcf7-form input.error,
-      .theme_1.wpcf7-form select.error,
-      .theme_1.wpcf7-form textarea.error {
-        border-bottom: 2px solid $color-pink !important;
-      }
-    }
+		}
 
   }
 
@@ -801,7 +769,7 @@ $color-testogenon: rgb(175,179,165);
 
 // Case
 .section.case {
-
+	background-size: cover !important;
 	&.head {
 		.fp-controlArrow a {
 			display: block;
@@ -967,6 +935,7 @@ $color-testogenon: rgb(175,179,165);
 
   // Team
   .section.team {
+		background-size: cover !important;
 
   }
 
@@ -1244,6 +1213,7 @@ body.zu {
 		@include case-color($color-zu, $color-white);
 	}
   &.fp-viewing-8 {
+		@include case-color($color-zu, $color-white);
     .fp-verticalArrow.fp-down {
       display: none !important;
     }

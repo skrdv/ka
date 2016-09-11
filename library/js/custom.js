@@ -29,47 +29,6 @@ function loadGravatars() {
 }
 
 
-// Bg Portfolio
-function setBgHome() {
-		jQuery('.slide').each(function(){
-		var slide_bg = jQuery(this).data('bs'),
-				slide_bg_800 = slide_bg.replace('.jpg','-800x450.jpg'),
-				slide_bg_1280 = slide_bg.replace('.jpg','-1280x720.jpg'),
-				slide_bg_1600 = slide_bg.replace('.jpg','-1600x900.jpg'),
-				slide_bg_1920 = slide_bg.replace('.jpg','-1920x1080.jpg');
-		if (viewport.width < 768) {
-			jQuery(this).backstretch(slide_bg_800);
-		} else if (viewport.width < 1280) {
-			jQuery(this).backstretch(slide_bg_1280);
-		}  else if (viewport.width < 1600) {
-			jQuery(this).backstretch(slide_bg_1600);
-		} else if (viewport.width >= 1600) {
-			jQuery(this).backstretch(slide_bg);
-		}
-	});
-}
-
-// Bg Case
-function setBgCase() {
-	jQuery('.section').each(function(){
-		var slide_bg = jQuery(this).data('bs'),
-				slide_bg_800 = slide_bg.replace('.jpg','-800x450.jpg'),
-				slide_bg_1280 = slide_bg.replace('.jpg','-1280x720.jpg'),
-				slide_bg_1600 = slide_bg.replace('.jpg','-1600x900.jpg'),
-				slide_bg_1920 = slide_bg.replace('.jpg','-1920x1080.jpg');
-		if (viewport.width < 768) {
-			jQuery(this).backstretch(slide_bg_800);
-		} else if (viewport.width < 1280) {
-			jQuery(this).backstretch(slide_bg_1280);
-		}  else if (viewport.width < 1600) {
-			jQuery(this).backstretch(slide_bg_1600);
-		} else if (viewport.width >= 1600) {
-			jQuery(this).backstretch(slide_bg);
-		}
-	});
-}
-
-
 
 jQuery(document).ready(function($) {
 	
@@ -103,9 +62,6 @@ jQuery(document).ready(function($) {
 			sectionSelector: '.section',
 			slideSelector: '.slide',
 		});
-		
-		// Home Bg
-		setBgHome();
 	
 		//SVG Arrows
 		$('.fp-controlArrow.fp-next').html('<svg width="20" height="60" xmlns="http://www.w3.org/2000/svg"><path class="arrow-right" fill="rgb(35,21,32)" stroke="black" stroke-width="1" d="m19.973758,29.958522l-18.425238,-29.304412l-1.494917,0.938956l17.847211,28.384871l-17.874572,28.428114l1.49315,0.93984l18.426116,-29.304412l-0.052067,-0.032652l0.080306,-0.0503l0.00001,-0.000005z" clip-rule="evenodd" fill-rule="evenodd"  /></svg>');
@@ -148,10 +104,6 @@ jQuery(document).ready(function($) {
 		$('#case').fullpage({
 			anchors:['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
 		});
-	
-		// Case Bg
-		setBgCase();
-		
 		
 		$('.button.show').click(function(){
 			$('.case.info').addClass('action');
@@ -192,7 +144,3 @@ jQuery(document).ready(function($) {
 
 });
 
-jQuery(window).resize(function($) {
-	setBgHome();
-	setBgCase();
-});

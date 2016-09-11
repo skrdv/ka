@@ -42,7 +42,6 @@ var config = {
   },
   scripts: {
     files:  ['./bower_components/fullpage.js/dist/jquery.fullpage.js',
-            './bower_components/jquery-backstretch/jquery.backstretch.js',
             './library/js/custom.js'],
 		parts:	'./bower_components/PACE/pace.js',
     build:  '../../../assets/js'

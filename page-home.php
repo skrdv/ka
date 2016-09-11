@@ -5,27 +5,27 @@
 ?>
 
 <?php get_header(); ?>
-
 <main role="main">
-
+	
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	<article id="home" role="article">
 
 				<section class="section portfolio">
 					<?php $query = new WP_Query( array( 'category_name' => 'portfolio') ); ?>
 					<?php while ( $query->have_posts() ) { ?>
-					<?php $query->the_post(); ?>
-					<div class="slide <?php echo $post->post_name ?>" data-bs="<?php the_field('case_head'); ?>">
-						<div class="frame link">
-							<h2 class="title">
-								<span><?php the_title(); ?></span>
-								<div class="sub"><?php the_field('case_meta1'); ?></div>
-							</h2>
-							<a class="more" href="<?php echo get_the_permalink() ?>" rel="bookmark">Подробнее...</a>
+						<?php $query->the_post(); ?>
+						<div class="slide <?php echo $post->post_name ?>" style="background: url(<?php the_field('case_head'); ?>) 0 0 no-repeat">
+							<div class="frame link">
+								<h2 class="title">
+									<span><?php the_title(); ?></span>
+									<div class="sub"><?php the_field('case_meta1'); ?></div>
+								</h2>
+								<a class="more" href="<?php echo get_the_permalink() ?>" rel="bookmark">Подробнее...</a>
+							</div>
 						</div>
-					</div>
-					<?php } ?>
+						<?php } ?>
 					<?php wp_reset_postdata(); ?>
+					
           <div class="fp-controlArrow fp-prev start">
 						<?php include( 'library/svg/arrow_up.svg' ); ?>
 					</div>
@@ -43,7 +43,7 @@
 					</div>
 				</section>
 
-				<section class="section team" data-bs="/wp-content/uploads/team_bwo.jpg">
+				<section class="section team" style="background: url(/wp-content/uploads/team_bwo.jpg) 0 0 no-repeat">
 					<div class="wrap">
 						<div class="frame">
 							<h3 class="ui title">Мы
@@ -54,7 +54,7 @@
 				</section>
 
 				<section class="section contact">
-					<div class="slide contact" data-bs="/wp-content/uploads/contact_circle.jpg">
+					<div class="slide contact" style="background: url(/wp-content/uploads/contact_circle.jpg) 0 0 no-repeat">
 							<div class="container">
 						  	<div class="six column">
 									<div class="card contact">
@@ -81,7 +81,7 @@
 						</div>
 					</div>
 
-				<div class="slide map" data-bs="/wp-content/uploads/contact_map.jpg">
+				<div class="slide map" style="background: url(/wp-content/uploads/contact_map.jpg) 0 0 no-repeat">
 					<div class="wrap">
 						<div class="frame">
 							<div class="ui title">Мы здесь
@@ -91,7 +91,7 @@
 					</div>
 				</div>
 		
-				<div class="slide feedback" data-bs="/wp-content/uploads/contact_form.jpg">
+				<div class="slide feedback" style="background: url(/wp-content/uploads/contact_form.jpg) 0 0 no-repeat">
 					<div class="container">
 						<div class="six column">
 							<?php echo do_shortcode( '[ninja_form id=1]' ); ?>
