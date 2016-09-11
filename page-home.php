@@ -94,7 +94,7 @@
 				<div class="slide feedback" data-bs="/wp-content/uploads/contact_form.jpg">
 					<div class="container">
 						<div class="six column">
-							<?php echo do_shortcode( '[contact-form-7 id="1744" title="Обратная связь"]' ); ?>
+							<?php echo do_shortcode( '[ninja_form id=1]' ); ?>
 						</div>
 						<div class="six column">
 							<div class="ui card feedback big">

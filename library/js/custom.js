@@ -112,30 +112,28 @@ jQuery(document).ready(function($) {
 		$('.fp-controlArrow.fp-prev').html('<svg width="20" height="60" xmlns="http://www.w3.org/2000/svg"><path class="arrow-left" fill="rgb(35,21,32)" transform="rotate(180 10,30) " stroke="black" stroke-width="1" d="m19.973758,29.958522l-18.425238,-29.304412l-1.494917,0.938956l17.847211,28.384871l-17.874572,28.428114l1.49315,0.93984l18.426116,-29.304412l-0.052067,-0.032652l0.080306,-0.0503l0.00001,-0.000005z" clip-rule="evenodd" fill-rule="evenodd" /></svg>');
 	
 		// Services events
-		$('.card.pr').on('mouseover', function () {
-				$('.item.branding').hide();
-				$('.item.advertice').hide();
-				$('.item.digital').hide();
-				$('.item.pr').toggle('slide');
+		$('.card.service.pr .content').on('mouseover', function() {
+					$('.item.pr').addClass('action');
+		}).on('mouseout', function() {
+					$('.item.pr').removeClass('action');
 		});
-		$('.card.branding').on('mouseover', function() {
-			$('.item.pr').hide();
-			$('.item.advertice').hide();
-			$('.item.digital').hide();
-			$('.item.branding').toggle('slide');
-;
+		
+		$('.card.service.brand  .content').on('mouseover', function() {
+					$('.item.brand').addClass('action');
+		}).on('mouseout', function() {
+					$('.item.brand').removeClass('action');
 		});
-		$('.card.advertice').on('mouseover', function() {
-			$('.item.pr').hide();
-			$('.item.branding').hide();
-			$('.item.digital').hide();
-			$('.item.advertice').toggle('slide');
+		
+		$('.card.service.adv .content').on('mouseover', function() {
+					$('.item.adv').addClass('action');
+		}).on('mouseout', function() {
+					$('.item.adv').removeClass('action');
 		});
-		$('.card.digital').on('mouseover', function() {
-			$('.item.pr').hide();
-			$('.item.branding').hide();
-			$('.item.advertice').hide();
-			$('.item.digital').toggle('slide');
+		
+		$('.card.service.digital  .content').on('mouseover', function() {
+					$('.item.digital').addClass('action');
+		}).on('mouseout', function() {
+					$('.item.digital').removeClass('action');
 		});
 
 		// Team Bg
