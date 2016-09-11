@@ -114,10 +114,10 @@ function bones_scripts_and_styles() {
 		// wp_register_script( 'semantic-js', get_stylesheet_directory_uri() . '/bower_components/semantic-ui-sass/app/assets/javascripts/semantic-ui/transition.js', array('jquery'), '', true );
 		// wp_register_script( 'custom-js', get_stylesheet_directory_uri() . '/library/js/custom/custom.js', array('jquery'), '', true );
 
-		wp_deregister_script('jquery');
-    wp_register_script('jquery', '', '', '', true);
-		wp_register_script('script', '/assets/js/script.js', array('jquery'), '', true);
-		wp_register_style('style', '/assets/css/style.css', array(), '', 'all');
+		// wp_deregister_script('jquery');
+    // wp_register_script('jquery', '', '', '', true);
+		wp_register_script('script', '/assets/js/script.min.js', array('jquery'), '', true);
+		wp_register_style('style', '/assets/css/style.min.css', array(), '', 'all');
 		// wp_register_script( 'fullpage-js', get_stylesheet_directory_uri() . '/library/js/jquery.fullpage.js', array( 'jquery' ), '', true );
 		// wp_register_script( 'custom-js', get_stylesheet_directory_uri() . '/library/js/custom.js', array( 'jquery' ), '', true );
 

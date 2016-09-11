@@ -40,7 +40,7 @@ endif;
 				<span class="text">Меню</span>
 			</button>
 			<div class="menu">
-				<a class="item" href="/#portfolio">Работы</a>
+				<a class="item" href="/#portfolio">Проекты</a>
 				<a class="item" href="/#services">Услуги</a>
 				<a class="item" href="/#team">Мы</a>
 				<a class="item" href="/#contact">Контакты</a>

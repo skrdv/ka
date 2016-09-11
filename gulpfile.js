@@ -4,6 +4,10 @@ var gulp = require('gulp');
 var bower = require('gulp-bower');
 var notify = require('gulp-notify');
 var rename = require('gulp-rename');
+var browserSync  = require('browser-sync').create();
+var reload       = browserSync.reload;
+var wpPot        = require('gulp-wp-pot');
+var sort         = require('gulp-sort');
 
 // Styles
 var sass = require('gulp-sass');
@@ -18,28 +22,30 @@ var stylish = require('jshint-stylish');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 
+// Images
+var imagemin = require('gulp-imagemin');
 
+// Config
 var config = {
   project:  'ka',
   url:      'ka.skrdv.com',
-  bower:    './bower_components',
+  assets:    '../../../assets',
   styles: {
     files:  './library/scss/main.scss',
     build:  '../../../assets/css'
   },
   scripts: {
-    files:  ['./bower_components/jquery/jquery.js',
-            './bower_components/fullpage.js/dist/jquery.fullpage.js',
+    files:  ['./bower_components/fullpage.js/dist/jquery.fullpage.js',
             './bower_components/jquery-backstretch/jquery.backstretch.js',
             './library/js/custom.js'],
     build:  '../../../assets/js'
   },
   fonts: {
-    files:  '[./library/fonts/**]',
+    files:  './library/fonts/**/*',
     build:  '../../../assets/fonts'
   },
-  img: {
-    files:    './library/img/raw/**/*.{png,jpg,gif}',
+  images: {
+    files:    './library/img/**/*.{png,jpg,gif}',
     build:  '../../../assets/img'
   },
   svg: {
@@ -53,6 +59,17 @@ var config = {
   }
 };
 
+// Browser
+gulp.task( 'browser-sync', function() {
+  browserSync.init({
+    proxy: 'dev.kira-all.ru',
+    open: true,
+    injectChanges: true,
+    // port: 7000,
+  });
+});
+
+// Styles
 gulp.task('styles', function () {
   return gulp.src(config.styles.files)
     .pipe(rename({basename: 'style'}))
@@ -74,9 +91,11 @@ gulp.task('styles', function () {
       uglyComments: true
     }))
     .pipe(gulp.dest(config.styles.build))
+		.pipe( browserSync.stream() )
     .pipe(notify({message: 'Styles - OK!', onLast: true }))
 });
 
+// Scripts
 gulp.task( 'scripts', function() {
   return gulp.src(config.scripts.files)
     .pipe(concat('script.js'))
@@ -91,66 +110,36 @@ gulp.task( 'scripts', function() {
 
 // Fonts
 gulp.task('fonts', function() {
-   gulp.src('./library/fonts/**/*.{ttf,woff,woff2,eot,svg}')
-   .pipe(gulp.dest('./fonts'))
-   .pipe(notify({message: 'task: "FONTS" OK!', onLast: true }));
+   gulp.src(config.fonts.files, {base: './library/fonts'})
+   .pipe(gulp.dest(config.fonts.build))
+   .pipe(notify({message: 'Fonts - OK!', onLast: true }));
 });
 
 // Images
-gulp.task('images', function () {
-    return gulp.src([
-    		'app/images/**/*',
-    		'app/lib/images/*'])
-        .pipe($.cache($.imagemin({
-            optimizationLevel: 3,
-            progressive: true,
-            interlaced: true
-        })))
-        .pipe(gulp.dest('dist/images'))
-        .pipe($.size());
-});
-
  gulp.task( 'images', function() {
-  gulp.src( imagesSRC )
+  gulp.src( config.images.files )
     .pipe( imagemin( {
           progressive: true,
           optimizationLevel: 3, // 0-7 low-high
           interlaced: true,
           svgoPlugins: [{removeViewBox: false}]
         } ) )
-    .pipe(gulp.dest( imagesDestination ))
-    .pipe( notify( { message: 'task: "IMAGES" OK!', onLast: true } ) );
- });
-
-
-
-
- gulp.task( 'translate', function () {
-     return gulp.src( projectPHPWatchFiles )
-         .pipe(sort())
-         .pipe(wpPot( {
-             domain        : text_domain,
-             destFile      : destFile,
-             package       : packageName,
-             bugReport     : bugReport,
-             lastTranslator: lastTranslator,
-             team          : team
-         } ))
-        .pipe(gulp.dest(translatePath))
-        .pipe( notify( { message: 'task: "translate" Completed! 💯', onLast: true } ) )
-
+    .pipe(gulp.dest( config.images.build ))
+    .pipe( notify( { message: 'Images - OK!', onLast: true } ) );
  });
 
  // Clean
  gulp.task('clean', function () {
-    //  return gulp.src(['dist/styles', 'dist/scripts', 'dist/images'], { read: false }).pipe($.clean());
+    return gulp.src(config.assets, { read: false })
+			.pipe($.clean());
  });
 
-gulp.task('build', ['styles', 'scripts']);
+// Build
+gulp.task('build', ['styles', 'scripts', 'fonts', 'images']);
 
- gulp.task( 'default', ['styles', 'vendorsJs', 'customJS', 'images', 'browser-sync'], function () {
-  gulp.watch( projectPHPWatchFiles, reload ); // Reload on PHP file changes.
-  gulp.watch( styleWatchFiles, [ 'styles' ] ); // Reload on SCSS file changes.
-  gulp.watch( vendorJSWatchFiles, [ 'vendorsJs', reload ] ); // Reload on vendorsJs file changes.
-  gulp.watch( customJSWatchFiles, [ 'customJS', reload ] ); // Reload on customJS file changes.
+// Default
+gulp.task( 'default', ['styles', 'scripts', 'browser-sync'], function () {
+  gulp.watch( config.watch.scss, [ 'styles' ] );
+  gulp.watch( config.watch.js, [ 'scripts', reload ] );
+	gulp.watch( config.watch.php, reload );
  });
