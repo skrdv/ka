@@ -19,6 +19,7 @@ $color-2tb:   rgb(72,61,54);
 $color-sokolniki: rgb(32,79,38);
 $color-sokolnikib:   rgb(77,179,72);
 $color-fazer: rgb(247,145,0);
+$color-fazerb: rgb(227,66,28);
 $color-testogenon: rgb(175,179,165);
 
 
@@ -195,14 +196,6 @@ $color-testogenon: rgb(175,179,165);
     color:  $color-main;
     background-color: $color-active;
   }
-  .card {
-    color: $color-main;
-    p, a {
-      color: $color-main;
-    }
-  }
-  &.fp-viewing-0,
-  &.fp-viewing-1 {
     .nav {
       .logo {
        .out path {
@@ -253,23 +246,30 @@ $color-testogenon: rgb(175,179,165);
         color: $color-main;
       }
     }
+		.back {
+      background: rgba($color-active, .7);
+    }
     .card {
+      color: $color-black;
+      p, a {
+        color: $color-black;
+      }
+    }
+    .card.info {
       color: $color-main;
       p, a {
         color: $color-main;
       }
     }
-    .back {
-      background: rgba($color-active, .5);
-    }
     .button.show {
-      color: $color-main;
-      border: 1px solid $color-active;
-      background-color: rgba($color-active, .5);
-      &:hover {
-        color: $color-active;
-        border: 1px solid $color-active;
-        background-color: rgba($color-active, 0);
+			color: $color-main;
+      border: 2px solid transparent;
+      background-color: rgba($color-active, .7);
+      &:hover,
+			&:focus {
+       	color: $color-active;
+      	border: 2px solid transparent;
+      	background-color: rgba($color-main, .7);
       }
     }
     .fp-controlArrow,
@@ -288,22 +288,15 @@ $color-testogenon: rgb(175,179,165);
       }
     }
 
-  }
+}
 
-  &.fp-viewing-2,
-  &.fp-viewing-3,
-  &.fp-viewing-4,
-  &.fp-viewing-5,
-  &.fp-viewing-6,
-  &.fp-viewing-7,
-  &.fp-viewing-8,
-  &.fp-viewing-9,
-  &.fp-viewing-10,
-  &.fp-viewing-11 {
-    .nav {
+
+
+@mixin slide-color($color-active: false, $color-main: false){
+	.nav {
       .logo {
        .out path {
-         fill: $color-active;
+         fill: $color-main;
        }
        .in path {
          fill: transparent;
@@ -318,11 +311,11 @@ $color-testogenon: rgb(175,179,165);
        }
      }
      .browse {
-       color: $color-active;
+       color: $color-main;
        .browse-inner,
        .browse-inner:before,
        .browse-inner:after {
-         background-color: $color-active;
+         background-color: $color-main;
        }
        &:hover,
        &.action {
@@ -336,18 +329,19 @@ $color-testogenon: rgb(175,179,165);
      }
      .item,
      .phone {
-       color: $color-active;
+       color: $color-main;
        &:hover {
          color: $color-active;
        }
      }
     }
-    .fp-controlArrow,
+		
+		.fp-controlArrow,
     .fp-verticalArrow {
-      color: $color-active;
+      color: $color-main;
       path {
-        fill: $color-active;
-        stroke: $color-active;
+        fill: $color-main;
+        stroke: $color-main;
       }
       &:hover {
         color: $color-active;
@@ -357,20 +351,7 @@ $color-testogenon: rgb(175,179,165);
         }
       }
     }
-    .card {
-      color: $color-black;
-      p, a {
-        color: $color-black;
-      }
-    }
-    .card.info {
-      color: $color-main;
-      p, a {
-        color: $color-main;
-      }
-    }
-
-  }
+		
 
 }
 
@@ -601,9 +582,7 @@ $color-testogenon: rgb(175,179,165);
 // Contact
 .section.contact {
 
-  .slide.contact {
-
-  }
+  .slide.contact {}
 
   .slide.feedback {
     .ui.card {
@@ -775,7 +754,19 @@ $color-testogenon: rgb(175,179,165);
 // Case
 .section.case {
 
+	&.head {
+		.fp-controlArrow a {
+			display: block;
+    	width: 20px;
+    	height: 60px;
+    	position: absolute;
+		}
+	}
+
   &.info {
+		.container {
+			position: relative;
+		}
     .back {
       width: 50%;
       height: 100%;
@@ -787,13 +778,6 @@ $color-testogenon: rgb(175,179,165);
       opacity: 0;
       left: -100%;
     }
-    &.action {
-      .back,
-      .card  {
-        opacity: 1;
-        left: 0;
-      }
-    }
     .button {
       @include transition(all 0.5s ease-in-out);
       outline: none;
@@ -802,15 +786,36 @@ $color-testogenon: rgb(175,179,165);
         background-color: transparent;
       }
       &.show {
-        @include position(absolute, auto auto 20% 20%);
-        border: 1px solid $color-white;
+        @include position(absolute, auto auto 20% 0);
+        // border: 2px solid $color-white;
+				// background-color: transparent;
         text-transform: none;
+				display: block;
+				opacity: 1;
       }
       &.hide {
-        width: 100%;
+				@include position(absolute, 0 0 auto auto);
+        width: 50%;
         height: 100%;
-        cursor: none;
+        cursor: default;
+				display: none;
+				opacity: 0;
       }
+    }
+		&.action {
+      .back,
+      .card  {
+        opacity: 1;
+        left: 0;
+      }
+			.button.show {
+				display: none;
+				opacity: 0;
+			}
+			.button.hide {
+				display: block;
+				opacity: 1;
+			}
     }
 
   }
@@ -1179,12 +1184,17 @@ body.home {
 
 
 body.zu {
-  @include case-color($color-zu, $color-white);
+  @include case-color($color-black, $color-zu);
+	
   &.fp-viewing-0 {
+		@include case-color($color-zu, $color-white);
     .fp-verticalArrow.fp-up {
       display: none;
     }
   }
+	&.fp-viewing-1 {
+		@include case-color($color-zu, $color-white);
+	}
   &.fp-viewing-8 {
     .fp-verticalArrow.fp-down {
       display: none !important;
@@ -1198,13 +1208,19 @@ body.zu {
 
 
 body.flight {
-  @include case-color($color-flight, $color-white);
+  @include case-color($color-black, $color-flight);
+	
   &.fp-viewing-0 {
+		@include case-color($color-flight, $color-white);
     .fp-verticalArrow.fp-up {
       display: none;
     }
   }
+	&.fp-viewing-1 {
+		@include case-color($color-flight, $color-white);
+	}
   &.fp-viewing-6 {
+	@include slide-color($color-flight, $color-white);
     .fp-verticalArrow.fp-down {
       display: none !important;
     }
@@ -1218,13 +1234,21 @@ body.flight {
 
 
 body.gallery-2t {
-  @include case-color($color-2t, $color-white);
+  @include case-color($color-2tb, $color-2t);
+	
   &.fp-viewing-0 {
+		@include case-color($color-2t, $color-white);
     .fp-verticalArrow.fp-up {
       display: none;
     }
   }
-  &.fp-viewing-6 {
+	&.fp-viewing-1 {
+		@include case-color($color-2t, $color-white);
+		.back {
+			background: $color-2tb;
+		}
+	}
+  &.fp-viewing-7 {
     .fp-verticalArrow.fp-down {
       display: none !important;
     }
@@ -1239,8 +1263,10 @@ body.gallery-2t {
 
 
 body.sokolniki {
-  @include case-color($color-sokolniki, $color-white);
+  @include case-color($color-white, $color-sokolniki);
+	
   &.fp-viewing-0 {
+		@include case-color($color-sokolniki, $color-white);
     .fp-verticalArrow.fp-up {
       display: none;
     }
@@ -1253,7 +1279,11 @@ body.sokolniki {
       }
     }
   }
-  &.fp-viewing-11 {
+	&.fp-viewing-1 {
+		@include case-color($color-sokolniki, $color-white);
+	}
+  &.fp-viewing-10 {
+		@include slide-color($color-sokolniki, $color-white);
     .fp-verticalArrow.fp-down {
       display: none !important;
     }
@@ -1268,70 +1298,24 @@ body.sokolniki {
 
 
 body.fazer {
-  @include case-color($color-fazer, $color-white);
+	@include case-color($color-fazerb, $color-fazer);
   &.fp-viewing-0 {
+		@include case-color($color-fazer, $color-white);
     .fp-verticalArrow.fp-up {
       display: none;
     }
   }
   &.fp-viewing-1 {
-    .nav {
-      .logo {
-       .out path {
-         fill: $color-fazer;
-       }
-       .in path {
-         fill: transparent;
-       }
-       &:hover {
-         .out path {
-           fill: transparent;
-         }
-         .in path {
-           fill: $color-fazer;
-         }
-       }
-     }
-     .browse {
-       color: $color-fazer;
-       .browse-inner,
-       .browse-inner:before,
-       .browse-inner:after {
-         background-color: $color-fazer;
-       }
-       &:hover,
-       &.action {
-         color: $color-fazer;
-         .browse-inner,
-         .browse-inner:before,
-         .browse-inner:after {
-           background-color: $color-fazer;
-         }
-       }
-     }
-     .item,
-     .phone {
-       color: $color-fazer;
-       &:hover {
-         color: $color-fazer;
-       }
-     }
-    }
-    .fp-controlArrow,
-    .fp-verticalArrow {
-      color: $color-fazer;
-      path {
-        fill: $color-fazer;
-        stroke: $color-fazer;
-      }
-      &:hover {
-        color: $color-fazer;
-        path {
-          fill: $color-fazer;
-          stroke: $color-fazer;
-        }
-      }
-    }
+		@include case-color($color-fazer, $color-white);
+		.back {
+			background: rgba($color-fazer, .7);
+		}
+    .button.show {
+			color: $color-white;
+		}
+		.card {
+		color: $color-white;
+		}
   }
   &.fp-viewing-5 {
     .fp-verticalArrow.fp-down {
@@ -1348,12 +1332,17 @@ body.fazer {
 
 
 body.testogenon {
-  @include case-color($color-testogenon, $color-white);
+  @include case-color($color-black, $color-testogenon);
+	
   &.fp-viewing-0 {
+		@include case-color($color-testogenon, $color-white);
     .fp-verticalArrow.fp-up {
       display: none;
     }
   }
+	&.fp-viewing-1 {
+		@include case-color($color-testogenon, $color-white);
+	}
   &.fp-viewing-4 {
     .fp-verticalArrow.fp-down {
       display: none !important;

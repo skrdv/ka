@@ -5,20 +5,20 @@
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<article id="case" role="article">
 
-		  <section class="section case head <?php echo $post->post_name; ?>"
-							 data-bs="<?php the_field('case_head'); ?>"
-							 data-alt="<?php the_title(); ?> <?php the_field('case_meta1'); ?>">
+		  <section class="section case head <?php echo $post->post_name; ?>" data-bs="<?php the_field('case_head'); ?>">
 					<div class="frame">
 						<h2 class="title">
 							<span><?php the_title(); ?></span>
 							<div class="sub"><?php the_field('case_meta1'); ?></div>
 						</h2>
 					</div>
+				<?php previous_post_link('<div class="fp-controlArrow fp-next">%link<svg width="20" height="60" xmlns="http://www.w3.org/2000/svg"><path class="arrow-right" fill="rgb(35,21,32)" stroke="black" stroke-width="0" d="m19.973758,29.958522l-18.425238,-29.304412l-1.494917,0.938956l17.847211,28.384871l-17.874572,28.428114l1.49315,0.93984l18.426116,-29.304412l-0.052067,-0.032652l0.080306,-0.0503l0.00001,-0.000005z" clip-rule="evenodd" fill-rule="evenodd"  /></svg>
+</div>', '', TRUE); ?>
+					<?php next_post_link('<div class="fp-controlArrow fp-prev">%link<svg width="20" height="60" xmlns="http://www.w3.org/2000/svg"><path class="arrow-left" fill="rgb(35,21,32)" transform="rotate(180 10,30) " stroke="black" stroke-width="0" d="m19.973758,29.958522l-18.425238,-29.304412l-1.494917,0.938956l17.847211,28.384871l-17.874572,28.428114l1.49315,0.93984l18.426116,-29.304412l-0.052067,-0.032652l0.080306,-0.0503l0.00001,-0.000005z" clip-rule="evenodd" fill-rule="evenodd" /></svg>
+</div>', '', TRUE, 0); ?>
 		  </section>
 
-		  <section class="section case info <?php echo $post->post_name; ?>"
-				data-bs="<?php the_field('case_info'); ?>"
-				data-alt="<?php the_title(); ?> <?php the_field('case_meta1'); ?>">
+		  <section class="section case info <?php echo $post->post_name; ?>" data-bs="<?php the_field('case_info'); ?>">
 				<div class="back"></div>
 				<div class="container">
 					<div class="six column">
@@ -32,20 +32,15 @@
 			        </div>
 			      </div>
 					</div>
-					<div class="six column">
-						<button class="button hide hidden"></button>
-					</div>
+					<button class="button show">Показать описание</button>
 				</div>
-				<button class="button show">Показать описание</button>
+				<button class="button hide"></button>
 		  </section>
 
 		  <?php for ($i=1; $i < 11; $i++) { ?>
 		    <?php if( get_field('case_'.$i) ) { ?>
-
 		      <section class="section case slide"
-					data-bs="<?php the_field('case_'.$i); ?>"
-					data-alt="<?php the_field('alt_'.$i); ?>">
-
+					data-bs="<?php the_field('case_'.$i); ?>">
 		        <?php if( get_field('text_'.$i) ) { ?>
 						<div class="container">
 							<div class="six column">
@@ -61,9 +56,7 @@
 							</div>
 		        </div>
 		        <?php } ?>
-
 		      </section>
-
 		    <?php } ?>
 		  <?php } ?>
 
@@ -79,7 +72,6 @@
 		  <?php include( 'library/svg/arrow_up.svg' ); ?>
 			<span>наверх</span>
 		</div>
-
 
 	<?php endwhile; ?>
 
@@ -100,5 +92,4 @@
 	<?php endif; ?>
 
 </main>
-
 <?php get_footer(); ?>

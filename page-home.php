@@ -9,15 +9,12 @@
 <main role="main">
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
 	<article id="home" role="article">
 
 				<section class="section portfolio">
-
 					<?php $query = new WP_Query( array( 'category_name' => 'portfolio') ); ?>
 					<?php while ( $query->have_posts() ) { ?>
 					<?php $query->the_post(); ?>
-
 					<div class="slide <?php echo $post->post_name ?>" data-bs="<?php the_field('case_head'); ?>">
 						<div class="frame link">
 							<h2 class="title">
@@ -27,10 +24,8 @@
 							<a class="more" href="<?php echo get_the_permalink() ?>" rel="bookmark">Подробнее...</a>
 						</div>
 					</div>
-
 					<?php } ?>
 					<?php wp_reset_postdata(); ?>
-          
           <div class="fp-controlArrow fp-prev start">
 						<?php include( 'library/svg/arrow_up.svg' ); ?>
 					</div>
@@ -40,90 +35,15 @@
 					<div class="fp-verticalArrow fp-down start">
 						<?php include( 'library/svg/arrow_down.svg' ); ?>
 					</div>
-
 				</section>
 
 				<section class="section services">
-
 					<div class="container">
-
-						<div class="two column">
-							<div class="card service pr">
-								<div class="content">
-    							<div class="title">PR</div>
-    							<div class="description">
-      							<p>О вас будут говорить так, как вы хотите.</p>
-    							</div>
-								</div>
-							</div>
-						</div>
-						<div class="two column">
-							<div class="card service brand">
-  							<div class="content">
-    							<div class="title">Branding</div>
-    							<div class="description">
-      							<p>Вы будете похожи на себя, а другие захотят быть похожими на вас.</p>
-    							</div>
-  							</div>
-							</div>
-						</div>
-						<div class="two column">
-							<div class="card service adv">
-  							<div class="content">
-    							<div class="title">Реклама</div>
-    							<div class="description">
-      							<p>Вы хотите рассказать о своем продукте – мы знаем, как сделать, чтобы вас слушали.</p>
-    							</div>
-  							</div>
-							</div>
-						</div>
-						<div class="two column">
-							<div class="card service digital">
-  							<div class="content">
-    							<div class="title">Digital</div>
-    							<div class="description">
-      							<p>Сайты, социальные сети, поисковое продвижение, контент маркетинг, вот это вот всё.</p>
-    							</div>
-  							</div>
-							</div>
-						</div>
-						<div class="four column">
-							<div class="card service big">
-  							<div class="content">
-    							<div class="title">Услуги</div>
-									<div class="item pr">
-										<div class="meta">PR</div>
-	    							<div class="description">
-	      							<p>Создаем и реализуем информационные поводы, инициируем публикации, организуем выступления, готовим интервью etc. В выборе инструментов опираемся на PR стратегию. У вас нет стратегии? Мы  разработаем!</p>
-	    							</div>
-									</div>
-									<div class="item branding">
-										<div class="meta">Branding</div>
-	    							<div class="description">
-	      							<p>Создаем бренды с нуля, проводим ребрендинг, пишем бренд-платформы, придумываем вербальную айдентику, логотипы, фирменные стили, чек-листы для текстов. Опираемся на пожелания заказчика, специфику продукта и предпочтения целевой аудитории.</p>
-	    							</div>
-									</div>
-									<div class="item advertice">
-										<div class="meta">Реклама</div>
-	    							<div class="description">
-	      							<p>Разработаем вам новую Big idea или будем действовать в рамках готовой. Создадим рекламный креатив, заточенный под вашу целевую аудиторию. Подберем носители, подготовим медиа-план, снимем, смонтируем, сверстаем, напечатаем – и запустим вашу рекламу в пространство и время! Работаем с традиционными носителями, придумываем эмбиент. Никогда не воруем креатив!</p>
-	    							</div>
-									</div>
-									<div class="item digital">
-										<div class="meta">Digital</div>
-	    							<div class="description">
-	      							<p>Создадим группу и наполним ее органикой, изгоним ботов, придумаем интересный контент и произведем его, настроим контекст и таргет, поддержим комментарийную программу, разработаем механики активации и реализуем, определим KPI и достигнем результата.</p>
-	    							</div>
-									</div>
-  							</div>
-							</div>
-						</div>
+						<?php the_content(); ?>
 					</div>
-
 				</section>
 
 				<section class="section team" data-bs="/wp-content/uploads/team_bwo.jpg">
-
 					<div class="wrap">
 						<div class="frame">
 							<h3 class="ui title">Мы
@@ -131,14 +51,11 @@
 							</a>
 						</div>
 					</div>
-
 				</section>
 
 				<section class="section contact">
-
 					<div class="slide contact" data-bs="/wp-content/uploads/contact_circle.jpg">
 							<div class="container">
-
 						  	<div class="six column">
 									<div class="card contact">
 	  								<div class="content">
@@ -152,7 +69,6 @@
 										</div>
 	  							</div>
 								</div>
-
 								<div class="six column">
 									<div class="card contact big">
 										<div class="content">
@@ -162,12 +78,10 @@
 									</div>
 								</div>
 							</div>
-
 						</div>
 					</div>
 
 				<div class="slide map" data-bs="/wp-content/uploads/contact_map.jpg">
-
 					<div class="wrap">
 						<div class="frame">
 							<div class="ui title">Мы здесь
@@ -175,15 +89,13 @@
 							</div>
 						</div>
 					</div>
-
 				</div>
+		
 				<div class="slide feedback" data-bs="/wp-content/uploads/contact_form.jpg">
 					<div class="container">
-
 						<div class="six column">
 							<?php echo do_shortcode( '[contact-form-7 id="1744" title="Обратная связь"]' ); ?>
 						</div>
-
 						<div class="six column">
 							<div class="ui card feedback big">
 								<div class="content">
@@ -192,17 +104,12 @@
 								</div>
 							</div>
 						</div>
-
 					</div>
 				</div>
 
 			</section>
 
-			<?php //the_content(); ?>
-
 	</article>
-
-
 
 	<div class="fp-verticalArrow fp-up">
 		<?php include( 'library/svg/arrow_up.svg' ); ?>
@@ -240,8 +147,6 @@
 		</div>
 	</div>
 	*/ ?>
-
-
 
 	<?php endwhile; else : ?>
 

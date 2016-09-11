@@ -1,16 +1,15 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
-	<title><?php wp_title(''); ?></title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="HandheldFriendly" content="True">
 	<meta name="MobileOptimized" content="360">
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
+	<title><?php wp_title(''); ?></title>
 	<?php wp_head(); ?>
 </head>
-
 <?php
 if(is_single()):
 	$pre = 'case';
@@ -23,13 +22,8 @@ else:
 	$slug = '';
 endif;
 ?>
-
 <body <?php body_class($slug); ?> >
-	<div class="preloader">
-		<div class="ui active dimmer">
-			<div class="ui large loader"></div>
-		</div>
-	</div>
+	<div class="preloader"></div>
 	<header class="header" role="banner">
 		<nav class="nav container" role="navigation">
 			<a class="logo" href="<?php echo get_site_url(); ?>">
