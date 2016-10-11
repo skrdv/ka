@@ -21,6 +21,9 @@ $color-sokolnikib:   rgb(77,179,72);
 $color-fazer: rgb(247,145,0);
 $color-fazerb: rgb(227,66,28);
 $color-testogenon: rgb(175,179,165);
+$color-arhproekt-red: rgb(204,0,1);
+$color-arhproekt-yellow: rgb(254,242,0);
+$color-arhproekt-green: rgb(0,204,73);
 
 
 
@@ -464,7 +467,7 @@ $color-testogenon: rgb(175,179,165);
   .browse-inner:after {
     width: 24px;
     height: 3px;
-    background-color: $color-flight;
+    background-color: $color-white;
     @include transition(all 0.5s ease-in-out);
   }
   .browse-inner:before,
@@ -833,9 +836,16 @@ $color-testogenon: rgb(175,179,165);
 				opacity: 1;
 			}
     }
-
   }
 
+  &.slide {
+    .back {
+      width: 50%;
+      height: 100%;
+      @include position(absolute, 0 auto auto 0);
+      @include transition(all 0.5s ease-in-out);
+    }
+  }
 
 }
 
@@ -1163,6 +1173,14 @@ body.home {
     }
   }
 
+  // Portfolio Testogenon
+  &.fp-viewing-portfolio-7 {
+    @include home-color($color-black, $color-white);
+    .fp-verticalArrow.fp-up {
+      display: none;
+    }
+  }
+
   // Services
   &.fp-viewing-services {
     @include home-color($color-pink, $color-black);
@@ -1205,7 +1223,8 @@ body.zu {
 	
   &.fp-viewing-0 {
 		@include case-color($color-zu, $color-white);
-    .fp-verticalArrow.fp-up {
+    .fp-verticalArrow.fp-up,
+    .fp-controlArrow.fp-prev {
       display: none;
     }
   }
@@ -1370,6 +1389,49 @@ body.testogenon {
       display: block;
     }
   }
+}
 
-
+body.arhproekt {
+  @include case-color($color-black, $color-white);
+  
+  &.fp-viewing-0 {
+    @include case-color($color-black, $color-white);
+    .fp-verticalArrow.fp-up {
+      display: none;
+    }
+  }
+  &.fp-viewing-1 {
+    @include case-color($color-black, $color-white);
+    .back {
+      background: rgba($color-arhproekt-red, .6);
+    }
+  }
+  &.fp-viewing-2 {
+    @include case-color($color-arhproekt-red, $color-white);
+  }
+  &.fp-viewing-3 {
+    @include case-color($color-white, $color-black);
+    .back {
+      background: rgba($color-arhproekt-yellow, .6);
+    }
+  }
+  &.fp-viewing-4 {
+    @include case-color($color-white, $color-black);
+  }
+  &.fp-viewing-5 {
+    @include case-color($color-black, $color-white);
+    .back {
+      background: rgba($color-arhproekt-green, .7);
+    }
+  }
+  &.fp-viewing-7 {
+    @include case-color($color-arhproekt-green, $color-black);
+    .fp-verticalArrow.fp-down {
+      display: none !important;
+    }
+    .fp-verticalArrow.fp-top {
+      opacity: 1;
+      display: block;
+    }
+  }
 }

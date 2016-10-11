@@ -92,9 +92,7 @@ jQuery(document).ready(function($) {
 					$('.item.digital').removeClass('action');
 		});
 
-		// Team Bg
-		var team_bg = $('.section.team').data('bs');
-		$('.section.team').backstretch(team_bg);
+	
 	}
 	
 	
@@ -136,11 +134,6 @@ jQuery(document).ready(function($) {
 		e.preventDefault();
 		$.fn.fullpage.moveTo(0);
 	});
-
-	// 404 Bg
-	if ($('body').hasClass('error404')) {
-		$('#error404').backstretch('http://ka.skrdv.com/wp-content/uploads/404-1600x900.jpg');
-	}
 
 });
 

@@ -41,6 +41,7 @@
 		    <?php if( get_field('case_'.$i) ) { ?>
 		      <section class="section case slide" style="background: url(<?php the_field('case_'.$i); ?>) 0px 0px no-repeat;">
 		        <?php if( get_field('text_'.$i) ) { ?>
+		        		<div class="back"></div>
 						<div class="container">
 							<div class="six column">
 								<div class="card case">
