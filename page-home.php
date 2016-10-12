@@ -14,7 +14,7 @@
 					<?php $query = new WP_Query( array( 'category_name' => 'portfolio') ); ?>
 					<?php while ( $query->have_posts() ) { ?>
 						<?php $query->the_post(); ?>
-						<div class="slide <?php echo $post->post_name ?>" style="background: url(<?php the_field('case_head'); ?>) 0 0 no-repeat">
+						<div class="slide <?php echo $post->post_name ?>" style="background: url(<?php the_field('case_head'); ?>) center center no-repeat">
 							<div class="frame link">
 								<h2 class="title">
 									<span><?php the_title(); ?></span>
@@ -43,7 +43,7 @@
 					</div>
 				</section>
 
-				<section class="section team" style="background: url(/wp-content/uploads/team_bwo.jpg) 0 0 no-repeat">
+				<section class="section team" style="background: url(/wp-content/uploads/team_bwo.jpg) center center no-repeat">
 					<div class="wrap">
 						<div class="frame">
 							<h3 class="ui title">Мы
@@ -54,7 +54,7 @@
 				</section>
 
 				<section class="section contact">
-					<div class="slide contact" style="background: url(/wp-content/uploads/contact_circle.jpg) 0 0 no-repeat">
+					<div class="slide contact" style="background: url(/wp-content/uploads/contact_circle.jpg) center center no-repeat">
 							<div class="container">
 						  	<div class="six column">
 									<div class="card contact">
@@ -81,7 +81,7 @@
 						</div>
 					</div>
 
-				<div class="slide map" style="background: url(/wp-content/uploads/contact_map.jpg) 0 0 no-repeat">
+				<div class="slide map" style="background: url(/wp-content/uploads/contact_map.jpg) center center no-repeat">
 					<div class="wrap">
 						<div class="frame">
 							<div class="ui title">Мы здесь
@@ -91,7 +91,7 @@
 					</div>
 				</div>
 		
-				<div class="slide feedback" style="background: url(/wp-content/uploads/contact_form.jpg) 0 0 no-repeat">
+				<div class="slide feedback" style="background: url(/wp-content/uploads/contact_form.jpg) center center no-repeat">
 					<div class="container">
 						<div class="six column">
 							<?php echo do_shortcode( '[ninja_form id=1]' ); ?>

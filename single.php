@@ -5,7 +5,7 @@
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<article id="case" role="article">
 
-		  <section class="section case head <?php echo $post->post_name; ?>" style="background: url(<?php the_field('case_head'); ?>) 0px 0px no-repeat;">
+		  <section class="section case head <?php echo $post->post_name; ?>" style="background: url(<?php the_field('case_head'); ?>) center center no-repeat;">
 					<div class="frame">
 						<h2 class="title">
 							<span><?php the_title(); ?></span>
@@ -18,7 +18,7 @@
 </div>', '', TRUE, 0); ?>
 		  </section>
 
-		  <section class="section case info <?php echo $post->post_name; ?>" style="background: url(<?php the_field('case_info'); ?>) 0px 0px no-repeat;">
+		  <section class="section case info <?php echo $post->post_name; ?>" style="background: url(<?php the_field('case_info'); ?>) center center no-repeat;">
 				<div class="back"></div>
 				<div class="container">
 					<div class="six column">
@@ -39,7 +39,7 @@
 
 		  <?php for ($i=1; $i < 11; $i++) { ?>
 		    <?php if( get_field('case_'.$i) ) { ?>
-		      <section class="section case slide" style="background: url(<?php the_field('case_'.$i); ?>) 0px 0px no-repeat;">
+		      <section class="section case slide" style="background: url(<?php the_field('case_'.$i); ?>) center center no-repeat;">
 		        <?php if( get_field('text_'.$i) ) { ?>
 		        		<div class="back"></div>
 						<div class="container">

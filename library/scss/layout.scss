@@ -537,17 +537,30 @@ $color-arhproekt-green: rgb(0,204,73);
   text-align: center;
   @include box-shadow(rgba($color-black, .3));
   @include transition(all 0.5s ease-in-out);
+  @include media($mobile) {
+    padding: 0 1em;
+  }
   .title {
     display: block;
     margin: 0;
     @include font-lato(4em, 1.2, normal, lowercase);
     @include text-shadow(rgba($color-black, .5));
     @include transition(all 0.5s ease-in-out);
+    @include media($mobile) {
+    	font-size: 2em;
+    	line-height: 1;
+  	}
   }
   .sub {
     @include font-lato-light(1.5rem, 1.5, normal, uppercase);
     @include text-shadow(rgba($color-black, .5));
     @include transition(all 0.5s ease-in-out);
+    @include media($mobile) {
+    	font-size: 1rem;
+    	line-height: 1;
+    	margin-top: 15px;
+    	margin-bottom: 15px;
+  	}
   }
   .more {
     display: inline-block;
@@ -556,6 +569,10 @@ $color-arhproekt-green: rgb(0,204,73);
     @include position(absolute, 150% auto auto 0);
     @include font-lato-light(2rem, 4em, normal, lowercase);
     @include transition(all 0.5s ease-in-out);
+    @include media($mobile) {
+    	font-size: 1.6rem;
+    	line-height: 2em;
+  	}
   }
 }
 
@@ -667,6 +684,10 @@ $color-arhproekt-green: rgb(0,204,73);
   .title {
     text-align: left;
     @include font-lato(2em, 1, normal, lowercase);
+    @include media($mobile) {
+    	margin-top: 80px;
+			line-height: 1;
+  	}
   }
   .description {
     text-align: left;
@@ -677,10 +698,16 @@ $color-arhproekt-green: rgb(0,204,73);
     .title {
       text-align: right;
       @include font-lato(4em, 1, normal, lowercase);
+      @include media($mobile) {
+    		text-align: center;
+  		}
     }
     .meta {
       text-align: right;
       @include font-lato-light(1.5em, 1, normal, uppercase);
+      @include media($mobile) {
+   			text-align: center;
+  		}
     }
     .description {
       padding-top: 1em;
@@ -706,6 +733,7 @@ $color-arhproekt-green: rgb(0,204,73);
     .title {
       text-align: left;
       @include font-lato(1.5em, 1.5, bold, lowercase);
+      margin: 0 !important;
     }
     .description {
       text-align: left;
@@ -754,6 +782,10 @@ $color-arhproekt-green: rgb(0,204,73);
     .title {
       text-align: left;
       @include font-lato(4em, 1.5, normal, lowercase);
+      @include media($mobile) {
+    		margin-top: 80px;
+    		line-height: 1;
+  		}
     }
     .meta {
       text-align: left;
@@ -780,6 +812,10 @@ $color-arhproekt-green: rgb(0,204,73);
     	height: 60px;
     	position: absolute;
 		}
+		.fp-controlArrow.fp-prev,
+		.fp-controlArrow.fp-next {
+			display: block !important;
+		}
 	}
 
   &.info {
@@ -791,6 +827,9 @@ $color-arhproekt-green: rgb(0,204,73);
       height: 100%;
       @include position(absolute, 0 auto auto 0);
       @include transition(all 0.5s ease-in-out);
+      @include media($mobile) {
+    		width: 100%;
+  		}
     }
     .back,
     .card {
@@ -811,6 +850,10 @@ $color-arhproekt-green: rgb(0,204,73);
         text-transform: none;
 				display: block;
 				opacity: 1;
+				@include media($mobile) {
+    			left: 50%;
+    			margin-left: -90px;
+  			}
       }
       &.hide {
 				@include position(absolute, 0 0 auto auto);
@@ -844,6 +887,9 @@ $color-arhproekt-green: rgb(0,204,73);
       height: 100%;
       @include position(absolute, 0 auto auto 0);
       @include transition(all 0.5s ease-in-out);
+      @include media($mobile) {
+    		width: 100%;
+  		}
     }
   }
 
@@ -862,6 +908,9 @@ $color-arhproekt-green: rgb(0,204,73);
   @include transition(all 0.5s ease-in-out);
   path {
     @include transition(all 0.5s ease-in-out);
+  }
+  @include media($mobile) {
+    display: none;
   }
   &.fp-prev {
     left: 25px;
@@ -896,6 +945,9 @@ $color-arhproekt-green: rgb(0,204,73);
   @include transition(all 0.5s ease-in-out);
   path {
     @include transition(all 0.5s ease-in-out);
+  }
+  @include media($mobile) {
+    display: none;
   }
   &.fp-up {
     top: 25px;
