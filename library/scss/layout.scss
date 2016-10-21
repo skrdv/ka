@@ -18,6 +18,7 @@ $color-2t: rgb(125,211,243);
 $color-2tb:   rgb(72,61,54);
 $color-sokolniki: rgb(32,79,38);
 $color-sokolnikib:   rgb(77,179,72);
+$color-sokolniki2:   rgb(251,196,32);
 $color-fazer: rgb(247,145,0);
 $color-fazerb: rgb(227,66,28);
 $color-testogenon: rgb(175,179,165);
@@ -1193,15 +1194,15 @@ body.home {
 
   // Portfolio Sokolniki
   &.fp-viewing-portfolio-4 {
-    @include home-color($color-sokolniki, $color-white);
+    @include home-color($color-sokolniki2, $color-white);
     .fp-verticalArrow.fp-up {
       display: none;
     }
     .frame {
-      border-color: $color-sokolniki;
+      border-color: $color-sokolniki2;
       .title,
       .sub {
-        color: $color-sokolniki;
+        color: $color-sokolniki2;
       }
       .more {
         color: $color-white;
@@ -1355,16 +1356,16 @@ body.sokolniki {
   @include case-color($color-white, $color-sokolniki);
 	
   &.fp-viewing-0 {
-		@include case-color($color-sokolniki, $color-white);
+		@include case-color($color-sokolniki2, $color-white);
     .fp-verticalArrow.fp-up {
       display: none;
     }
     .frame {
-      border-color: $color-sokolniki;
+      border-color: $color-sokolniki2;
       .title,
       .sub,
       .more {
-        color: $color-sokolniki;
+        color: $color-sokolniki2;
       }
     }
   }
