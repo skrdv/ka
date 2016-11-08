@@ -31,6 +31,7 @@ $color-arhproekt-green: rgb(0,204,73);
 // Grid
 .container {
   @include outer-container;
+  $desktop: new-breakpoint(min-width $tablet-width max-width $max-width);
   $mobile: new-breakpoint(max-width $mobile-width 4);
   $tablet: new-breakpoint(min-width $mobile-width max-width $tablet-width 8);
   @include media($mobile) {
@@ -38,6 +39,9 @@ $color-arhproekt-green: rgb(0,204,73);
   }
   @include media($tablet) {
     padding: 0 20px;
+  }
+  @include media($desktop) {
+    padding: 0 60px;
   }
   .two.column {
     @include span-columns(2);
@@ -293,8 +297,6 @@ $color-arhproekt-green: rgb(0,204,73);
     }
 
 }
-
-
 
 @mixin slide-color($color-active: false, $color-main: false){
 	.nav {
@@ -626,6 +628,9 @@ $color-arhproekt-green: rgb(0,204,73);
         .meta {
           color: $color-black;
         }
+        .title {
+          margin-top: 40px;
+        }
       }
     }
 		#nf-form-1-cont {
@@ -834,10 +839,11 @@ $color-arhproekt-green: rgb(0,204,73);
     }
     .back,
     .card {
-      opacity: 0;
-      left: -100%;
+      // opacity: 0;
+      // left: -100%;
     }
     .button {
+
       @include transition(all 0.5s ease-in-out);
       outline: none;
       &:hover,
@@ -845,11 +851,12 @@ $color-arhproekt-green: rgb(0,204,73);
         background-color: transparent;
       }
       &.show {
+      	display: none;
         @include position(absolute, auto auto 20% 0);
         // border: 2px solid $color-white;
 				// background-color: transparent;
         text-transform: none;
-				display: block;
+				// display: block;
 				opacity: 1;
 				@include media($mobile) {
     			left: 50%;
@@ -886,6 +893,7 @@ $color-arhproekt-green: rgb(0,204,73);
     .back {
       width: 50%;
       height: 100%;
+      opacity: 0;
       @include position(absolute, 0 auto auto 0);
       @include transition(all 0.5s ease-in-out);
       @include media($mobile) {
@@ -911,6 +919,9 @@ $color-arhproekt-green: rgb(0,204,73);
     @include transition(all 0.5s ease-in-out);
   }
   @include media($mobile) {
+    display: none;
+  }
+  @include media($tablet) {
     display: none;
   }
   &.fp-prev {
@@ -948,6 +959,9 @@ $color-arhproekt-green: rgb(0,204,73);
     @include transition(all 0.5s ease-in-out);
   }
   @include media($mobile) {
+    display: none;
+  }
+  @include media($tablet) {
     display: none;
   }
   &.fp-up {
@@ -1309,6 +1323,21 @@ body.flight {
 	&.fp-viewing-1 {
 		@include case-color($color-flight, $color-white);
 	}
+	&.fp-viewing-2 {
+		.back {
+			@include media($mobile) {
+          		opacity: 1 !important;
+          		background: rgba($color-flight, .7);
+        	}
+		}
+		.content {
+			.title,
+			.meta,
+			.description p {
+				color: $color-white;
+			}
+		}
+	}
   &.fp-viewing-6 {
 	@include slide-color($color-flight, $color-white);
     .fp-verticalArrow.fp-down {
@@ -1336,6 +1365,21 @@ body.gallery-2t {
 		@include case-color($color-2t, $color-white);
 		.back {
 			background: $color-2tb;
+		}
+	}
+	&.fp-viewing-2 {
+		.back {
+			@include media($mobile) {
+          		opacity: 1 !important;
+          		background: rgba($color-2tb, .7);
+        	}
+		}
+		.content {
+			.title,
+			.meta,
+			.description p {
+				color: $color-white;
+			}
 		}
 	}
   &.fp-viewing-7 {
@@ -1432,6 +1476,21 @@ body.testogenon {
   }
 	&.fp-viewing-1 {
 		@include case-color($color-testogenon, $color-white);
+	}
+	&.fp-viewing-3 {
+		.back {
+			@include media($mobile) {
+          		opacity: 1 !important;
+          		background: rgba($color-testogenon, .7);
+        	}
+		}
+		.content {
+			.title,
+			.meta,
+			.description p {
+				color: $color-white;
+			}
+		}
 	}
   &.fp-viewing-4 {
     .fp-verticalArrow.fp-down {
